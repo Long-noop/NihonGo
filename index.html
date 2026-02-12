@@ -1,0 +1,1017 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JLPT N3 Grammar Flashcards - 120 Mẫu Ngữ Pháp</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: url(./image.png);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 800px;
+        width: 100%;
+      }
+
+      .header {
+        text-align: center;
+        color: white;
+        margin-bottom: 30px;
+      }
+
+      .header h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        background-color: greenyellow;
+        border-radius: 20px;
+      }
+
+      .header p {
+        font-size: 1.1em;
+        opacity: 0.9;
+      }
+
+      .card-container {
+        perspective: 1000px;
+        margin-bottom: 30px;
+      }
+
+      .flashcard {
+        width: 100%;
+        height: 450px;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform 0.6s;
+        cursor: pointer;
+      }
+
+      .flashcard.flipped {
+        transform: rotateY(180deg);
+      }
+
+      .card-face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 20px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+        text-align: center;
+      }
+
+      .card-front {
+        background: linear-gradient(135deg, #ffffff 0%, #f5f7fa 100%);
+        color: #2d3748;
+      }
+
+      .card-back {
+        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        color: white;
+        transform: rotateY(180deg);
+      }
+
+      .card-front h2 {
+        font-size: 3em;
+        margin-bottom: 20px;
+        color: #667eea;
+        font-weight: bold;
+      }
+
+      .card-back h3 {
+        font-size: 1.8em;
+        margin-bottom: 25px;
+        font-weight: bold;
+        border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+        padding-bottom: 15px;
+      }
+
+      .example {
+        font-size: 1.3em;
+        line-height: 1.8;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 15px;
+      }
+
+      .controls {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 20px;
+      }
+
+      .btn {
+        padding: 12px 30px;
+        font-size: 1.1em;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: all 0.3s;
+        font-weight: bold;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .btn-prev,
+      .btn-next {
+        background: white;
+        color: #667eea;
+      }
+
+      .btn-prev:hover,
+      .btn-next:hover {
+        background: #667eea;
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      .btn-flip {
+        background: #48bb78;
+        color: white;
+      }
+
+      .btn-flip:hover {
+        background: #38a169;
+        transform: translateY(-2px);
+      }
+
+      .progress {
+        background-color: greenyellow;
+        border-radius: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        color: white;
+        font-size: 1.2em;
+        font-weight: bold;
+      }
+
+      .flip-hint {
+        text-align: center;
+        color: white;
+        font-size: 0.9em;
+        margin-top: 10px;
+        opacity: 0.8;
+      }
+
+      @media (max-width: 600px) {
+        .header h1 {
+          font-size: 1.8em;
+        }
+
+        .flashcard {
+          height: 400px;
+        }
+
+        .card-front h2 {
+          font-size: 2.2em;
+        }
+
+        .card-back h3 {
+          font-size: 1.4em;
+        }
+
+        .example {
+          font-size: 1.1em;
+        }
+
+        .btn {
+          padding: 10px 20px;
+          font-size: 1em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>📚 JLPT N3 Grammar Flashcards</h1>
+        <p>120 Mẫu Ngữ Pháp Cơ Bản</p>
+      </div>
+
+      <div class="card-container">
+        <div class="flashcard" id="flashcard">
+          <div class="card-face card-front">
+            <h2 id="grammar-pattern">～ことにしている</h2>
+          </div>
+          <div class="card-face card-back">
+            <h3 id="meaning">Tôi quyết định, tôi có thói quen</h3>
+            <div class="example" id="example">
+              毎日7時に起きることにしています。<br />
+              (Tôi đã quyết định mỗi ngày dậy lúc 7 giờ.)
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button class="btn btn-prev" onclick="previousCard()">◀ Trước</button>
+        <button class="btn btn-flip" onclick="flipCard()">🔄 Lật Thẻ</button>
+        <button class="btn btn-next" onclick="nextCard()">Sau ▶</button>
+      </div>
+
+      <div class="progress">
+        <span id="current-card">1</span> / <span id="total-cards">112</span>
+      </div>
+
+      <div class="flip-hint">💡 Nhấp vào thẻ hoặc nhấn Spacebar để lật</div>
+    </div>
+
+    <script>
+      const flashcards = [
+        {
+          pattern: "～ことにしている",
+          meaning: "Tôi quyết định, tôi có thói quen",
+          example:
+            "毎日7時に起きることにしています。<br>(Tôi đã quyết định mỗi ngày dậy lúc 7 giờ.)",
+        },
+        {
+          pattern: "～ことになっている",
+          meaning: "Có quy định, được quyết định",
+          example:
+            "会社では9時に出勤することになっています。<br>(Công ty quy định phải đến lúc 9 giờ.)",
+        },
+        {
+          pattern: "～ようになっている",
+          meaning: "(chỉ tính năng tự động của điện, máy móc..)",
+          example:
+            "このドアは自動で閉まるようになっている。<br>(Cánh cửa này được thiết kế tự động đóng.)",
+        },
+        {
+          pattern: "よう",
+          meaning: "1. Dường như    2. Giống như",
+          example:
+            "雨が降るようだから、傘を持って行こう。<br>(Có vẻ sẽ mưa nên mang ô đi thôi.)",
+        },
+        {
+          pattern: "Ｎみたい",
+          meaning: "1. Dường như    2. Giống như",
+          example:
+            "彼は学生みたいな服を着ている。<br>(Anh ấy mặc quần áo giống sinh viên.)",
+        },
+        {
+          pattern: "～らしい",
+          meaning:
+            "1. Dường như    2. Nghe nói     3. Ra vẻ, đích thiệt là, đúng nghĩa là",
+          example:
+            "田中さんは風邪をひいたらしい。<br>(Nghe nói Tanaka bị cảm.)",
+        },
+        {
+          pattern: "Ｖた、Ｖている、Nの、Ａつもりだったが、～",
+          meaning: "Tưởng đã V, nhưng không",
+          example:
+            "電気を消したつもりだったが、まだついていた。<br>(Tưởng đã tắt đèn rồi nhưng vẫn còn sáng.)",
+        },
+        {
+          pattern: "Ｖてくる",
+          meaning:
+            "(chỉ sự thay đổi của trạng thái: máu đổ, mồ hôi tuôn, nước mắt rơi)",
+          example: "だんだん暖かくなってきた。<br>(Dần dần trở nên ấm lên.)",
+        },
+        {
+          pattern: "Ｖてほしい、Ｖてもらいたい",
+          meaning:
+            "Mình muốn người khác V, Mình cầu mong cho người khác được V",
+          example: "明日来てほしいです。<br>(Tôi muốn bạn đến vào ngày mai.)",
+        },
+        {
+          pattern: "～Ｖば、たら、と…たい、のに、よかった",
+          meaning: "Nếu ~ thì ~",
+          example:
+            "お金があれば、新しいパソコンが買いたい。<br>(Nếu có tiền thì muốn mua máy tính mới.)",
+        },
+        {
+          pattern: "Ｖ使役",
+          meaning: "Bắt, Cho phép, Khiến cho, Xin phép (người nói làm)",
+          example:
+            "先生は学生に本を読ませた。<br>(Giáo viên bắt học sinh đọc sách.)",
+        },
+        {
+          pattern: "Chủ ngữ là đồ vật thì động từ đứng sau là Tự động từ",
+          meaning: "(không chia sang thể khả năng)",
+          example:
+            "このカメラは軽くて使いやすい。<br>(Chiếc máy ảnh này nhẹ và dễ sử dụng.)",
+        },
+        {
+          pattern: "み",
+          meaning: "(chỉ tâm trạng, nỗi niềm)",
+          example:
+            "この仕事の楽しみは人と話すことだ。<br>(Niềm vui của công việc này là được nói chuyện với mọi người.)",
+        },
+        {
+          pattern: "～のではないだろうか/～ないかと思う",
+          meaning: "(Chẳng phải là ~ hay sao？)",
+          example:
+            "これは間違っているのではないだろうか。<br>(Chẳng phải cái này sai sao?)",
+        },
+        {
+          pattern: "Ｖている　―>　Ｖてる",
+          meaning: "Những cách nói rút gọn",
+          example: "今、何してる？<br>(Bây giờ đang làm gì?)",
+        },
+        {
+          pattern: "～から～にかけて",
+          meaning: "Từ ~ đến",
+          example:
+            "9月から10月にかけて涼しくなる。<br>(Từ tháng 9 đến tháng 10 trời mát dần.)",
+        },
+        {
+          pattern: "Ｎだらけ",
+          meaning: "Đầy rẫy N (-)",
+          example: "部屋がほこりだらけだ。<br>(Phòng đầy bụi bặm.)",
+        },
+        {
+          pattern: "～おかげで",
+          meaning: "Nhờ (kết quả tốt)",
+          example: "先生のおかげで合格できました。<br>(Nhờ thầy mà tôi đã đỗ.)",
+        },
+        {
+          pattern: "～せいで",
+          meaning: "Tại (kết quả xấu)",
+          example:
+            "雨のせいで試合が中止になった。<br>(Tại trời mưa nên trận đấu bị hủy.)",
+        },
+        {
+          pattern: "～とおりに/Ｎどおりに",
+          meaning: "Làm hành động gì đó theo như ~",
+          example:
+            "レシピどおりに作ってください。<br>(Hãy làm theo công thức.)",
+        },
+        {
+          pattern: "～について",
+          meaning: "Về~",
+          example:
+            "環境問題について話し合った。<br>(Đã thảo luận về vấn đề môi trường.)",
+        },
+        {
+          pattern: "～に関して",
+          meaning: "Liên quan tới",
+          example:
+            "この件に関して質問があります。<br>(Tôi có câu hỏi liên quan đến việc này.)",
+        },
+        {
+          pattern: "～にくらべて",
+          meaning: "So với ~",
+          example:
+            "去年に比べて暑くなった。<br>(So với năm ngoái thì nóng hơn.)",
+        },
+        {
+          pattern: "～にえて",
+          meaning: "~~thêm vào đó ...",
+          example:
+            "仕事に加えて勉強もしている。<br>(Ngoài công việc ra còn học thêm.)",
+        },
+        {
+          pattern: "～に対して",
+          meaning:
+            "1. Đối với (tình cảm, hành động của A đối với B)         2. Đối lập với~",
+          example:
+            "子供に対して優しく話してください。<br>(Hãy nói chuyện với trẻ em một cách nhẹ nhàng.)",
+        },
+        {
+          pattern: "～Ｖる/Ｎの　たびに",
+          meaning: "Cứ mỗi lần",
+          example:
+            "日本に来るたびに友達に会う。<br>(Cứ mỗi lần đến Nhật là gặp bạn bè.)",
+        },
+        {
+          pattern: "たとえ～ても/でも",
+          meaning: "Giả sử dẫu cho~",
+          example: "たとえ雨でも行きます。<br>(Dẫu cho trời mưa tôi vẫn đi.)",
+        },
+        {
+          pattern: "～って",
+          meaning: "Nghe nói",
+          example: "明日は休みだって。<br>(Nghe nói ngày mai nghỉ.)",
+        },
+        {
+          pattern: "～くらい",
+          meaning: "1. Cở như là  　　2. Ít nhất là, tối thiểu là",
+          example: "これくらいなら簡単だ。<br>(Cỡ này thì dễ.)",
+        },
+        {
+          pattern: "Ｖるくらいなら～",
+          meaning: "Thà ~ còn hơn V",
+          example:
+            "失敗するくらいなら、やめたい。<br>(Thà thôi còn hơn thất bại.)",
+        },
+        {
+          pattern: "～うちに",
+          meaning: "Trong lúc, trong khi",
+          example: "若いうちに勉強しなさい。<br>(Hãy học trong khi còn trẻ.)",
+        },
+        {
+          pattern: "～を中心に",
+          meaning: "Lấy ~ làm trung tâm",
+          example:
+            "駅を中心に発展している。<br>(Phát triển lấy nhà ga làm trung tâm.)",
+        },
+        {
+          pattern: "～をはじめ",
+          meaning: "Tiêu biểu là~",
+          example:
+            "寿司をはじめ、日本料理が好きだ。<br>(Thích ẩm thực Nhật, đặc biệt là sushi.)",
+        },
+        {
+          pattern: "～において　/　におけるＮ",
+          meaning: "Ở (bằng vớiで/に)",
+          example:
+            "東京において会議が開かれる。<br>(Hội nghị được tổ chức tại Tokyo.)",
+        },
+        {
+          pattern: "～にわたって",
+          meaning: "1. Suốt TG cụ thể   2. Toàn bộ, Khắp nơi chốn/lĩnh vực",
+          example: "3日間にわたって雨が降った。<br>(Mưa suốt 3 ngày.)",
+        },
+        {
+          pattern: "～にとって",
+          meaning: "Đối với ai đó ~ (phía sau đưa ra quan điểm, ý kiến...)",
+          example:
+            "私にとって家族が一番大切だ。<br>(Đối với tôi gia đình là quan trọng nhất.)",
+        },
+        {
+          pattern: "～によって",
+          meaning:
+            "1. Tùy theo  　2. Bằng cách  　3. Do bởi (chỉ nguyên nhân & chỉ thành quả)",
+          example:
+            "天気によって予定が変わる。<br>(Kế hoạch thay đổi tùy thời tiết.)",
+        },
+        {
+          pattern: "～に違いない",
+          meaning: "Chắc chắn",
+          example: "彼は来るに違いない。<br>(Chắc chắn anh ấy sẽ đến.)",
+        },
+        {
+          pattern: "～とは・というのは",
+          meaning: "(dùng để định nghĩa, giải thích)",
+          example:
+            "平和とは戦争がないことだ。<br>(Hòa bình là không có chiến tranh.)",
+        },
+        {
+          pattern: "～Ｖたとたん",
+          meaning:
+            "Ngay khi V thì lập tức...(phía sau là trạng thái, tự động từ)",
+          example:
+            "家を出たとたん、雨が降り出した。<br>(Ngay khi ra khỏi nhà trời bắt đầu mưa.)",
+        },
+        {
+          pattern: "～につれて    =   ～にしたがって",
+          meaning: "Cùng với",
+          example:
+            "年を取るにつれて忘れっぽくなる。<br>(Càng về già càng hay quên.)",
+        },
+        {
+          pattern: "Ｖている・Ｎの最中",
+          meaning: "Khi đang",
+          example:
+            "勉強している最中に電話が来た。<br>(Giữa lúc đang học thì có điện thoại.)",
+        },
+        {
+          pattern: "Ｖてからでないと～ない",
+          meaning: "Nếu chưa/không thì không ~",
+          example:
+            "見てからでないと決められない。<br>(Không xem thì không quyết định được.)",
+        },
+        {
+          pattern: "Ｖて以来",
+          meaning: "Sau khi V rồi, trạng đó diễn ra suốt luôn",
+          example:
+            "日本に来て以来、忙しい。<br>(Từ khi đến Nhật đến giờ vẫn bận.)",
+        },
+        {
+          pattern: "～一方だ",
+          meaning: "Có khuynh hướng ngày càng (xấu)",
+          example: "物価が上がる一方だ。<br>(Giá cả cứ tăng mãi.)",
+        },
+        {
+          pattern: "Ｖるしかない",
+          meaning: "Chỉ còn cách V",
+          example: "頑張るしかない。<br>(Chỉ còn cách cố gắng thôi.)",
+        },
+        {
+          pattern: "Ａはもちろん、Ｂも",
+          meaning: "A là đương nhiên, B cũng",
+          example:
+            "漢字はもちろん、ひらがなも書ける。<br>(Không chỉ kanji mà còn viết được hiragana.)",
+        },
+        {
+          pattern: "ついでに",
+          meaning: "Tiện thể",
+          example:
+            "買い物のついでに郵便局に寄った。<br>(Tiện thể đi mua sắm ghé bưu điện luôn.)",
+        },
+        {
+          pattern: "～ということだ",
+          meaning: "1. Nghe nói　　　2. Có nghĩa là",
+          example: "会議は中止だということだ。<br>(Nghe nói cuộc họp bị hủy.)",
+        },
+        {
+          pattern: "Ｖることはない",
+          meaning: "Không cần thiết phải V",
+          example: "心配することはありません。<br>(Không cần phải lo lắng.)",
+        },
+        {
+          pattern: "Ｖる・Ｖない・Ｎのこと",
+          meaning: "Nên/ không nên (mệnh lệnh nhẹ)",
+          example: "明日は8時に来ること。<br>(Ngày mai hãy đến lúc 8 giờ.)",
+        },
+        {
+          pattern: "ないことはない",
+          meaning: "Cũng có thể, cũng có lúc, không có chuyện không",
+          example:
+            "できないことはないが、難しい。<br>(Không phải là không làm được nhưng khó.)",
+        },
+        {
+          pattern: "だって　～　だもの・もん",
+          meaning: "Vì",
+          example: "だって、お金がないんだもん。<br>(Vì không có tiền mà.)",
+        },
+        {
+          pattern: "ものだから",
+          meaning: "Vì",
+          example:
+            "寝坊したものですから遅れました。<br>(Vì ngủ quên nên tôi đến muộn.)",
+        },
+        {
+          pattern: "～ものか",
+          meaning: "Tuyệt đối không",
+          example: "二度と会うものか。<br>(Tuyệt đối không gặp lần nữa.)",
+        },
+        {
+          pattern: "Ｖたところ",
+          meaning: "Sau khi V (phía sau đưa ra kết quả mới mẻ, bất ngờ)",
+          example:
+            "調べたところ、間違いが見つかった。<br>(Sau khi kiểm tra thì phát hiện lỗi.)",
+        },
+        {
+          pattern: "ところに、へ、を、で",
+          meaning: "(chỉ tình huống, quá trình, thời điểm)",
+          example:
+            "出かけようとしたところに友達が来た。<br>(Đúng lúc định ra ngoài thì bạn đến.)",
+        },
+        {
+          pattern: "Ｖるところだった",
+          meaning: "Suýt, Xém",
+          example: "危うく転ぶところだった。<br>(Suýt té.)",
+        },
+        {
+          pattern: "～ほど　=　～くらい",
+          meaning: "1. Khoảng  　　 2. Đến độ    　3. Không gì bằng",
+          example: "10分ほど待ってください。<br>(Hãy đợi khoảng 10 phút.)",
+        },
+        {
+          pattern: "～ば～ほど",
+          meaning: "Càng ~ càng",
+          example: "勉強すればするほど面白い。<br>(Càng học càng thú vị.)",
+        },
+        {
+          pattern: "～ほど",
+          meaning: "Về phía",
+          example: "新しいものほど高い。<br>(Cái nào mới cái đó đắt.)",
+        },
+        {
+          pattern: "など、なんか、なんて",
+          meaning:
+            "1. Ba cái thứ  　　 2. Phía sau đưa ra cái không thể tin...",
+          example:
+            "こんな所に来るなんて驚いた。<br>(Ngạc nhiên là đến chỗ này.)",
+        },
+        {
+          pattern: "などと・なんてと言う/思う",
+          meaning: "Nghĩ, nói ba cái chuyện",
+          example: "無理だなんて思わない。<br>(Không nghĩ rằng là không thể.)",
+        },
+        {
+          pattern: "～からには",
+          meaning: "Một khi",
+          example:
+            "始めたからには最後までやる。<br>(Đã bắt đầu thì làm đến cùng.)",
+        },
+        {
+          pattern: "Ｖきる",
+          meaning: "V hết, Rất V",
+          example:
+            "この本は難しくて読みきれない。<br>(Cuốn sách này khó quá đọc không hết.)",
+        },
+        {
+          pattern: "Ｎ、Ｖっぽい",
+          meaning: "Có cảm giác  ~ một chút (xấu)",
+          example:
+            "子供っぽい行動はやめなさい。<br>(Hãy ngừng hành động trẻ con.)",
+        },
+        {
+          pattern: "Ｎ、Ｖがち",
+          meaning: "Thường hay có khuynh hướng (xấu)",
+          example: "最近は休みがちだ。<br>(Dạo này hay nghỉ.)",
+        },
+        {
+          pattern: "Ｎ向き",
+          meaning: "Thích hợp với N",
+          example:
+            "初心者向きの本を探している。<br>(Đang tìm sách dành cho người mới.)",
+        },
+        {
+          pattern: "～向けに",
+          meaning: "Nhằm tới, Dành cho",
+          example:
+            "子供向けに作られた番組だ。<br>(Chương trình được làm cho trẻ em.)",
+        },
+        {
+          pattern: "～を通じて/～を通して",
+          meaning:
+            "1. Suốt (TG chung)         2. Thông qua môi giới, trung gian",
+          example:
+            "スポーツを通じて友達ができた。<br>(Qua thể thao mà có được bạn bè.)",
+        },
+        {
+          pattern: "っぽい",
+          meaning:
+            "1. V (dễ, hay)      2. Màu (hơi hơi)       3. Người (giống như nghĩa xấu)",
+          example: "この服は安っぽく見える。<br>(Quần áo này trông rẻ tiền.)",
+        },
+        {
+          pattern: "とともに",
+          meaning: "1. Cùng với        2. Đồng thời với",
+          example:
+            "年齢とともに体力が落ちる。<br>(Cùng với tuổi tác, thể lực giảm sút.)",
+        },
+        {
+          pattern: "ともに（ともにする）",
+          meaning: "Cùng với",
+          example: "友達とともに旅行に行った。<br>(Đã đi du lịch cùng bạn bè.)",
+        },
+        {
+          pattern: "～にちがいない",
+          meaning: "Chắc chắn",
+          example:
+            "彼女は怒っているに違いない。<br>(Chắc chắn cô ấy đang giận.)",
+        },
+        {
+          pattern: "っけ",
+          meaning:
+            "(1.hỏi để xác nhận lại thông tin    2.hỏi tường chuyện trong QK)",
+          example: "明日は何曜日だったっけ？<br>(Ngày mai là thứ mấy nhỉ?)",
+        },
+        {
+          pattern: "ように",
+          meaning: "1. Giống như (đưa ra dẫn chứng)        2. Để sao cho",
+          example: "早く帰れるように頑張る。<br>(Cố gắng để về sớm.)",
+        },
+        {
+          pattern: "Ｖることができない",
+          meaning: "Không thể  (do hết cách)",
+          example:
+            "忙しくて行くことができない。<br>(Bận quá nên không thể đi.)",
+        },
+        {
+          pattern: "～わけだ",
+          meaning: "Chắc chắn   　Nhớ/chắc chắn là vậy, thế mà...",
+          example:
+            "練習しないから、上手にならないわけだ。<br>(Không luyện tập thì đương nhiên không giỏi.)",
+        },
+        {
+          pattern: "～わけではない",
+          meaning: "1. Là phải rồi      2. Có nghĩa là",
+          example: "嫌いなわけではない。<br>(Không phải là ghét.)",
+        },
+        {
+          pattern: "～わけにはいかない",
+          meaning: "Không có lý nào",
+          example:
+            "約束したから、行かないわけにはいかない。<br>(Đã hứa rồi nên không thể không đi.)",
+        },
+        {
+          pattern: "かわりに（の）",
+          meaning:
+            "1. Thay cho, Đại diện cho     2. Bù lại, bù cho    3. Trái lại",
+          example: "父のかわりに会議に出た。<br>(Ra họp thay cho bố.)",
+        },
+        {
+          pattern: "のかわりに",
+          meaning: "Thay cho, Đại diện cho",
+          example:
+            "手伝ってくれたかわりにごちそうした。<br>(Để đáp lại việc giúp đỡ, tôi đã mời ăn.)",
+        },
+        {
+          pattern: "こそ",
+          meaning: "Chính",
+          example:
+            "これこそ私が探していた本だ。<br>(Đây chính là cuốn sách tôi đang tìm.)",
+        },
+        {
+          pattern: "も",
+          meaning: "Cả",
+          example:
+            "子供でも分かる問題だ。<br>(Ngay cả trẻ con cũng hiểu vấn đề này.)",
+        },
+        {
+          pattern: "Ｎとして",
+          meaning: "Với tư cách, Như là",
+          example: "代表として参加する。<br>(Tham gia với tư cách đại diện.)",
+        },
+        {
+          pattern: "～とはいえ",
+          meaning:
+            'Nói là vì ~ nhưng (phía sau thường đi với ngữ pháp "Không hẳn là")',
+          example:
+            "冬とはいえ、今日は暖かい。<br>(Tuy nói là mùa đông nhưng hôm nay ấm.)",
+        },
+        {
+          pattern: "もとに",
+          meaning: "Căn cứ vào, Dựa vào",
+          example:
+            "データをもとに報告書を作る。<br>(Dựa vào dữ liệu để làm báo cáo.)",
+        },
+        {
+          pattern: "～もとで（にもとづいて）",
+          meaning: "Căn cứ vào, Dựa trên, từ ~",
+          example:
+            "法律にもとづいて判断する。<br>(Phán xét dựa trên luật pháp.)",
+        },
+        {
+          pattern: "～ものの（もっとも）",
+          meaning: "Nhưng mặt khác (đưa ra cái ngược lại)",
+          example:
+            "安いものの、品質がよくない。<br>(Tuy rẻ nhưng chất lượng không tốt.)",
+        },
+        {
+          pattern: "Ｖt自発",
+          meaning: "(hể mà ~ thì chuyện suy nghĩ  V là tự nhiên)",
+          example:
+            "子供の頃がつい思い出される。<br>(Vô tình nhớ đến thời thơ ấu.)",
+        },
+        {
+          pattern: "あ～てたまらない",
+          meaning: "Rất (chủ ngữ là Tôi)",
+          example: "暑くてたまらない。<br>(Nóng không chịu được.)",
+        },
+        {
+          pattern: "～とか",
+          meaning: "1. Nào là     2. Nghe nói",
+          example: "明日は雨だとか。<br>(Nghe nói ngày mai mưa.)",
+        },
+        {
+          pattern: "ばかり",
+          meaning: "1. Chỉ      2. Đến mức tới đa",
+          example: "ゲームばかりしている。<br>(Chỉ chơi game thôi.)",
+        },
+        {
+          pattern: "～かのようだ・ような・ように",
+          meaning: "Không chỉ ~ mà còn",
+          example: "本当のことかのように話す。<br>(Nói như thể là sự thật.)",
+        },
+        {
+          pattern: "Ｖかける",
+          meaning: "Đang V dễ dàng, sắp",
+          example: "本を読みかけて寝てしまった。<br>(Đọc sách dở rồi ngủ mất.)",
+        },
+        {
+          pattern: "～込む",
+          meaning: "Gói ghém/ chứa chất hết tình cảm, tấm lòng...",
+          example: "考え込んでいる。<br>(Đang suy nghĩ chìm đắm.)",
+        },
+        {
+          pattern: "～ことは～が",
+          meaning: "1. Mặc dù     2. So với (dịch từ sau lên)",
+          example:
+            "料理はできることはできるが、下手だ。<br>(Nấu ăn thì có làm được nhưng dở.)",
+        },
+        {
+          pattern: "～というより～",
+          meaning:
+            "Mặc dù (phía sau đưa ra tâm trạng xem thường, trách móc, khẩn đẩn...)",
+          example:
+            "怒っているというより、悲しんでいる。<br>(Hơn là tức giận thì đang buồn.)",
+        },
+        {
+          pattern: "～ばかりでなく/～だけでなく～",
+          meaning: "V cho mà coi",
+          example:
+            "日本語ばかりでなく英語も話せる。<br>(Không chỉ tiếng Nhật mà còn nói được tiếng Anh.)",
+        },
+        {
+          pattern: "Ｖやすい",
+          meaning:
+            "Nhân cơ hội, nhân dịp, từ việc ~ (đưa ra thay đổi, phát triển)",
+          example: "この椅子は座りやすい。<br>(Cái ghế này dễ ngồi.)",
+        },
+        {
+          pattern: "～こめる",
+          meaning: "Giả sử coi A như là B",
+          example: "心を込めて作った。<br>(Làm với cả tấm lòng.)",
+        },
+        {
+          pattern: "～ものの",
+          meaning: "Khi (dùng trang trọng)",
+          example:
+            "高いものの、買ってしまった。<br>(Mặc dù đắt nhưng vẫn mua.)",
+        },
+        {
+          pattern: "くせに",
+          meaning: "E là, có nỗi lo là",
+          example:
+            "知っているくせに教えてくれない。<br>(Mặc dù biết nhưng không chỉ cho.)",
+        },
+        {
+          pattern: "Ｖてみる",
+          meaning: "Cố ý nguyền ~ (xấu)",
+          example: "一度食べてみてください。<br>(Hãy thử ăn một lần xem.)",
+        },
+        {
+          pattern: "～にあたって（にあたり）",
+          meaning: "Cầu mong, Vái trời",
+          example:
+            "卒業にあたって感謝の言葉を述べた。<br>(Nhân dịp tốt nghiệp đã nói lời cảm ơn.)",
+        },
+        {
+          pattern: "Ａを、として、とすると、とすれば、Ｂ",
+          meaning: "Đã định V nhưng~",
+          example:
+            "1万円を1ドルとすると、100ドルは100万円だ。<br>(Nếu coi 1 vạn yên là 1 đô la thì 100 đô la là 100 vạn yên.)",
+        },
+        {
+          pattern: "～としたら",
+          meaning: "Kể từ khi V thì không ~ nữa",
+          example:
+            "休みだとしたら、どこへ行きますか。<br>(Nếu như nghỉ thì sẽ đi đâu?)",
+        },
+        {
+          pattern: "～ものなら",
+          meaning: "B hơn là A",
+          example:
+            "できるものなら、やってみたい。<br>(Nếu làm được thì muốn thử.)",
+        },
+        {
+          pattern: "～において",
+          meaning: "Nếu nói tới (đưa ra đặc trưng, ấn tượng)",
+          example:
+            "会議において重要な決定がされた。<br>(Tại cuộc họp đã có quyết định quan trọng.)",
+        },
+        {
+          pattern: "おそれがある",
+          meaning: "Đâu bảo rằng là",
+          example: "台風が来るおそれがある。<br>(Có nguy cơ bão đến.)",
+        },
+        {
+          pattern: "わざと",
+          meaning: "Hãy thử  (lời nói với nhẹ)",
+          example: "わざと遅く来た。<br>(Cố ý đến muộn.)",
+        },
+        {
+          pattern: "どうか～てください",
+          meaning: "Mà không",
+          example: "どうか助けてください。<br>(Xin hãy giúp tôi.)",
+        },
+        {
+          pattern: "Ｖつもりだった～",
+          meaning: "Thế mà  (đưa ra sự bất ngờ)",
+          example:
+            "行くつもりだったが、用事ができた。<br>(Đã định đi nhưng có việc.)",
+        },
+        {
+          pattern: "Ｖっきり",
+          meaning: "Nên, Phải",
+          example:
+            "会ったっきり、連絡がない。<br>(Từ lần gặp đó không liên lạc nữa.)",
+        },
+        {
+          pattern: "Ａというより、Ｂ",
+          meaning: "(nói về chuyện trong quá khứ)",
+          example:
+            "暑いというより、蒸し暑い。<br>(Hơn là nóng thì đúng hơn là oi bức.)",
+        },
+        {
+          pattern: "～といえば・～というと",
+          meaning: "Giả bộ, giả vờ, bắt chước",
+          example: "夏といえば海だ。<br>(Nói đến mùa hè thì là biển.)",
+        },
+        {
+          pattern: "だからこそ",
+          meaning: "~ thì có ~ nhưng",
+          example:
+            "難しいからこそ、やりがいがある。<br>(Chính vì khó nên mới có ý nghĩa.)",
+        },
+        {
+          pattern: "Ｖてごらん",
+          meaning:
+            "Kể từ khi V mới để ý, nhận thức, giỏi lên, giác ngộ ra được điều hay gì đó.",
+          example: "この料理を食べてごらん。<br>(Hãy thử ăn món này xem.)",
+        },
+        {
+          pattern: "Ｖずに＝Ｖないで",
+          meaning:
+            "Kể từ khi V mới để ý, nhận thức, giỏi lên, giác ngộ ra được điều hay gì đó.",
+          example:
+            "朝ご飯を食べずに学校へ行った。<br>(Đã đến trường mà không ăn sáng.)",
+        },
+        {
+          pattern: "のに",
+          meaning: "Thế mà  (đưa ra sự bất ngờ)",
+          example: "努力したのに、失敗した。<br>(Đã cố gắng mà vẫn thất bại.)",
+        },
+        {
+          pattern: "ものの",
+          meaning: "Dẫu là",
+          example:
+            "難しいものの、できないことはない。<br>(Tuy khó nhưng không phải không làm được.)",
+        },
+        {
+          pattern: "QKものだ",
+          meaning: "(nói về chuyện trong quá khứ)",
+          example: "昔はよく遊んだものだ。<br>(Ngày xưa hay chơi lắm.)",
+        },
+        {
+          pattern: "ふりをする",
+          meaning: "Giả bộ, giả vờ, bắt chước",
+          example: "知らないふりをした。<br>(Giả vờ không biết.)",
+        },
+        {
+          pattern: "～ことは～が",
+          meaning: "~ thì có ~ nhưng",
+          example:
+            "泳げることは泳げるが、遅い。<br>(Bơi thì có bơi được nhưng chậm.)",
+        },
+        {
+          pattern: "Ｖてはじめて",
+          meaning:
+            "Kể từ khi V mới để ý, nhận thức, giỏi lên, giác ngộ ra được điều hay gì đó.",
+          example:
+            "失敗してはじめて分かった。<br>(Mới hiểu ra khi đã thất bại.)",
+        },
+      ];
+
+      let currentCardIndex = 0;
+      const flashcard = document.getElementById("flashcard");
+      const grammarPattern = document.getElementById("grammar-pattern");
+      const meaning = document.getElementById("meaning");
+      const example = document.getElementById("example");
+      const currentCardElement = document.getElementById("current-card");
+      const totalCardsElement = document.getElementById("total-cards");
+
+      totalCardsElement.textContent = flashcards.length;
+
+      function updateCard() {
+        const card = flashcards[currentCardIndex];
+        grammarPattern.textContent = card.pattern;
+        meaning.innerHTML = card.meaning;
+        example.innerHTML = card.example;
+        currentCardElement.textContent = currentCardIndex + 1;
+
+        // Reset flip state
+        flashcard.classList.remove("flipped");
+      }
+
+      function flipCard() {
+        flashcard.classList.toggle("flipped");
+      }
+
+      function nextCard() {
+        currentCardIndex = (currentCardIndex + 1) % flashcards.length;
+        updateCard();
+      }
+
+      function previousCard() {
+        currentCardIndex =
+          (currentCardIndex - 1 + flashcards.length) % flashcards.length;
+        updateCard();
+      }
+
+      // Click on card to flip
+      flashcard.addEventListener("click", flipCard);
+
+      // Keyboard shortcuts
+      document.addEventListener("keydown", (e) => {
+        if (e.key === " " || e.key === "Spacebar") {
+          e.preventDefault();
+          flipCard();
+        } else if (e.key === "ArrowLeft") {
+          previousCard();
+        } else if (e.key === "ArrowRight") {
+          nextCard();
+        }
+      });
+
+      // Initialize
+      updateCard();
+    </script>
+  </body>
+</html>
