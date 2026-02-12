@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JLPT N3 Grammar Flashcards - 120 Mẫu Ngữ Pháp</title>
+    <link rel="stylesheet" href="./asserts/styles.css" />
+    <style>
+      :root {
+        --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        --front-gradient: linear-gradient(135deg, #ffffff 0%, #f5f7fa 100%);
+        --back-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        --btn-accent: #667eea;
+        --pattern-color: #667eea;
+        --home-btn-bg: green;
+        --home-btn-bg-hover: greenyellow;
+      }
+
+      /* small grammar-specific tweaks */
+      .card-front h2 {
+        font-size: 3em;
+      }
+
+      .card-back h3 {
+        font-size: 1.8em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>📚 JLPT N3 Grammar Flashcards</h1>
+        <p>120 Mẫu Ngữ Pháp Cơ Bản</p>
+      </div>
+
+      <div class="card-container">
+        <div class="flashcard" id="flashcard">
+          <div class="card-face card-front">
+            <h2 id="grammar-pattern">～ことにしている</h2>
+          </div>
+          <div class="card-face card-back">
+            <h3 id="meaning">Tôi quyết định, tôi có thói quen</h3>
+            <div class="example" id="example">
+              毎日7時に起きることにしています。<br />
+              (Tôi đã quyết định mỗi ngày dậy lúc 7 giờ.)
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button class="btn btn-prev" onclick="previousCard()">◀ Trước</button>
+        <button class="btn btn-flip" onclick="flipCard()">🔄 Lật Thẻ</button>
+        <button class="btn btn-next" onclick="nextCard()">Sau ▶</button>
+      </div>
+
+      <div class="progress">
+        <div class="bar">
+          <span id="current-card">1</span> / <span id="total-cards">112</span>
+        </div>
+      </div>
+
+      <div class="flip-hint">💡 Nhấp vào thẻ hoặc nhấn Spacebar để lật</div>
+    </div>
+    <a href="index.html" class="home-btn">🏠 Home</a>
+
+    <!-- home button uses shared styles; page variables above control colors -->
+
+    <script>
+      let flashcards = [];
+      let currentCardIndex = 0;
+      const flashcard = document.getElementById("flashcard");
+      const grammarPattern = document.getElementById("grammar-pattern");
+      const meaning = document.getElementById("meaning");
+      const example = document.getElementById("example");
+      const currentCardElement = document.getElementById("current-card");
+      const totalCardsElement = document.getElementById("total-cards");
+
+      // Load flashcards from JSON file
+      async function loadFlashcards() {
+        try {
+          const response = await fetch("./data/grammar.json");
+          flashcards = await response.json();
+          totalCardsElement.textContent = flashcards.length;
+          updateCard();
+        } catch (error) {
+          console.error("Error loading flashcards:", error);
+          totalCardsElement.textContent = 0;
+          grammarPattern.textContent = "Lỗi tải dữ liệu";
+        }
+      }
+
+      // Load flashcards when page loads
+      loadFlashcards();
+
+      function updateCard() {
+        if (!flashcards || flashcards.length === 0) {
+          grammarPattern.textContent = "Đang tải...";
+          meaning.innerHTML = "";
+          example.innerHTML = "";
+          currentCardElement.textContent = 0;
+          totalCardsElement.textContent = 0;
+          // ensure card is not flipped while loading
+          flashcard.classList.remove("flipped");
+          return;
+        }
+
+        const card = flashcards[currentCardIndex];
+        grammarPattern.textContent = card.pattern;
+        meaning.innerHTML = card.meaning;
+        example.innerHTML = card.example;
+        currentCardElement.textContent = currentCardIndex + 1;
+
+        // Reset flip state
+        flashcard.classList.remove("flipped");
+      }
+
+      function flipCard() {
+        flashcard.classList.toggle("flipped");
+      }
+
+      function nextCard() {
+        currentCardIndex = (currentCardIndex + 1) % flashcards.length;
+        updateCard();
+      }
+
+      function previousCard() {
+        currentCardIndex =
+          (currentCardIndex - 1 + flashcards.length) % flashcards.length;
+        updateCard();
+      }
+
+      // Click on card to flip
+      flashcard.addEventListener("click", flipCard);
+
+      // Keyboard shortcuts
+      document.addEventListener("keydown", (e) => {
+        if (e.key === " " || e.key === "Spacebar") {
+          e.preventDefault();
+          flipCard();
+        } else if (e.key === "ArrowLeft") {
+          previousCard();
+        } else if (e.key === "ArrowRight") {
+          nextCard();
+        }
+      });
+
+      // Initialize: do not call updateCard() here because data loads asynchronously
+    </script>
+  </body>
+</html>

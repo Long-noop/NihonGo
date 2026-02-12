@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(
+    --font-family,
+    "Segoe UI",
+    Tahoma,
+    Geneva,
+    Verdana,
+    sans-serif
+  );
+  background: url(image.png);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+}
+
+.header {
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  background-color: greenyellow;
+  border-radius: 20px;
+}
+
+.header p {
+  font-size: 1.1em;
+  opacity: 0.9;
+}
+
+.card-container {
+  perspective: 1000px;
+  margin-bottom: 30px;
+}
+
+.flashcard {
+  width: 100%;
+  height: 450px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  cursor: pointer;
+}
+
+.flashcard.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  text-align: center;
+}
+
+.card-front {
+  background: var(
+    --front-gradient,
+    linear-gradient(135deg, #ffffff 0%, #f5f7fa 100%)
+  );
+  color: var(--front-color, #2d3748);
+}
+
+.card-back {
+  background: var(
+    --back-gradient,
+    linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)
+  );
+  color: var(--back-color, white);
+  transform: rotateY(180deg);
+}
+
+.card-front h2 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: var(--pattern-color, #667eea);
+  font-weight: bold;
+}
+
+.card-back h3 {
+  font-size: 1.8em;
+  margin-bottom: 25px;
+  font-weight: bold;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+  padding-bottom: 15px;
+}
+
+.example {
+  font-size: 1.3em;
+  line-height: 1.8;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 12px 30px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-prev,
+.btn-next {
+  background: white;
+  color: var(--btn-accent, #667eea);
+}
+
+.btn-prev:hover,
+.btn-next:hover {
+  background: var(--btn-accent, #667eea);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-flip {
+  background: #48bb78;
+  color: white;
+}
+
+.btn-flip:hover {
+  background: #38a169;
+  transform: translateY(-2px);
+}
+
+.progress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+.progress .bar {
+  width: 50%;
+  text-align: center;
+  background-color: greenyellow;
+  border-radius: 20px;
+}
+
+.flip-hint {
+  text-align: center;
+  color: white;
+  font-size: 0.9em;
+  margin-top: 10px;
+  opacity: 0.8;
+}
+
+.home-btn {
+  position: fixed;
+  bottom: 80px;
+  right: 25px;
+  background-color: var(--home-btn-bg, green);
+  color: white;
+  padding: 12px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease;
+  z-index: 1000;
+}
+
+.home-btn:hover {
+  background-color: var(--home-btn-bg-hover, greenyellow);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 1.8em;
+  }
+
+  .flashcard {
+    height: 400px;
+  }
+
+  .card-front h2 {
+    font-size: 2.2em;
+  }
+
+  .card-back h3 {
+    font-size: 1.4em;
+  }
+
+  .example {
+    font-size: 1.1em;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+}
+
+/* small utility classes often-used by pages */
+.text-large {
+  font-size: 1.8em;
+}
