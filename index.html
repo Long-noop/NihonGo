@@ -45,8 +45,7 @@
       .nav-links a {
         color: white;
         text-decoration: none;
-        /* margin-left: 20px; */
-        font-size: 23x;
+        font-size: 16px;
         transition: 0.3s;
         font-weight: bolder;
       }
@@ -54,7 +53,6 @@
       .nav-links a:hover {
         opacity: 0.9;
         color: yellow;
-        /* background: #666; */
         transform: translateY(-2px);
       }
 
@@ -102,6 +100,7 @@
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         text-align: center;
         transition: 0.3s;
+        cursor: pointer;
       }
 
       .card:hover {
@@ -119,7 +118,8 @@
         color: #666;
       }
 
-      .card a {
+      .card a,
+      .card button {
         display: inline-block;
         padding: 10px 20px;
         background-color: #2563eb;
@@ -128,10 +128,119 @@
         text-decoration: none;
         font-size: 14px;
         transition: 0.3s;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
       }
 
-      .card a:hover {
+      .card a:hover,
+      .card button:hover {
         background-color: #1d4ed8;
+      }
+
+      /* Modal/Popup */
+      .modal-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .modal-overlay.active {
+        display: flex;
+      }
+
+      .modal {
+        background-color: white;
+        border-radius: 20px;
+        padding: 40px;
+        max-width: 500px;
+        width: 90%;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        position: relative;
+        animation: slideDown 0.3s ease;
+      }
+
+      @keyframes slideDown {
+        from {
+          opacity: 0;
+          transform: translateY(-50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .modal-close {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 28px;
+        cursor: pointer;
+        color: #999;
+        transition: 0.3s;
+      }
+
+      .modal-close:hover {
+        color: #333;
+      }
+
+      .modal h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #1e3a8a;
+        font-size: 26px;
+      }
+
+      .vocab-options {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .vocab-option {
+        padding: 15px 20px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .vocab-option:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      .vocab-option.verb {
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      }
+
+      .vocab-option.noun {
+        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+      }
+
+      .vocab-option.adj {
+        background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+      }
+
+      .vocab-option.adv {
+        background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+      }
+
+      .vocab-option.all {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       }
 
       /* Footer */
@@ -157,6 +266,14 @@
         .hero h1 {
           font-size: 30px;
         }
+
+        .modal {
+          padding: 30px 20px;
+        }
+
+        .modal h2 {
+          font-size: 22px;
+        }
       }
     </style>
   </head>
@@ -168,7 +285,14 @@
         <a href="index.html">Trang chủ</a>
         <a href="grammar.html">Ngữ pháp</a>
         <a href="kanji.html">Kanji</a>
-        <a href="vocabulary.html">Từ vựng</a>
+        <a
+          href="#"
+          onclick="
+            openVocabModal();
+            return false;
+          "
+          >Từ vựng</a
+        >
         <a href="about.html">Giới thiệu</a>
       </div>
     </nav>
@@ -187,21 +311,87 @@
         <!-- Grammar -->
         <div class="card">
           <h3>📘 Ngữ Pháp</h3>
-          <!-- <p>Học ngữ pháp JLPT từ N5 đến N3/N2 với ví dụ dễ hiểu.</p> -->
+          <!-- <p>Học ngữ pháp JLPT từ N5 đến N3</p> -->
           <a href="grammar.html">Vào học</a>
         </div>
 
         <!-- Kanji -->
         <div class="card">
           <h3>🈶 Kanji</h3>
-          <!-- <p>Học chữ Hán theo cấp độ, bộ thủ và cách ghi nhớ.</p> -->
+          <!-- <p>521 hán tự JLPT N3</p> -->
           <a href="kanji.html">Vào học</a>
         </div>
+
+        <!-- Vocabulary Flashcard - NEW -->
+        <div class="card">
+          <h3>📚 Flashcard Từ Vựng</h3>
+          <!-- <p>Học từ vựng theo loại: động từ, danh từ, tính từ...</p> -->
+          <button onclick="openVocabModal()">Vào học</button>
+        </div>
+      </div>
     </main>
+
+    <!-- Vocabulary Modal/Popup -->
+    <div class="modal-overlay" id="vocabModal">
+      <div class="modal">
+        <span class="modal-close" onclick="closeVocabModal()">&times;</span>
+        <h2>📚 Chọn Loại Từ Vựng</h2>
+        <div class="vocab-options">
+          <button class="vocab-option verb" onclick="goToFlashcard('verb')">
+            🔴 Động từ (40 từ)
+          </button>
+          <button class="vocab-option noun" onclick="goToFlashcard('noun')">
+            🔵 Danh từ (30 từ)
+          </button>
+          <button class="vocab-option adj" onclick="goToFlashcard('adj')">
+            🟢 Tính từ (20 từ)
+          </button>
+          <button class="vocab-option adv" onclick="goToFlashcard('adv')">
+            🟡 Trạng từ (10 từ)
+          </button>
+          <button class="vocab-option all" onclick="goToFlashcard('all')">
+            ⭐ Tất cả (100 từ)
+          </button>
+        </div>
+      </div>
+    </div>
 
     <!-- Footer -->
     <footer>
       <p>© 2026 Nihongo Study | Tự học tiếng Nhật cùng bạn mỗi ngày</p>
     </footer>
+
+    <script>
+      // Mở modal từ vựng
+      function openVocabModal() {
+        document.getElementById("vocabModal").classList.add("active");
+      }
+
+      // Đóng modal
+      function closeVocabModal() {
+        document.getElementById("vocabModal").classList.remove("active");
+      }
+
+      // Chuyển sang trang flashcard với type
+      function goToFlashcard(type) {
+        window.location.href = `vocab.html?type=${type}`;
+      }
+
+      // Đóng modal khi click bên ngoài
+      document
+        .getElementById("vocabModal")
+        .addEventListener("click", function (e) {
+          if (e.target === this) {
+            closeVocabModal();
+          }
+        });
+
+      // Đóng modal khi nhấn ESC
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          closeVocabModal();
+        }
+      });
+    </script>
   </body>
 </html>

@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./asserts/styles.css" />
+    <title>Flashcard Từ Vựng - JLPT N3</title>
+    <style>
+      :root {
+        --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        --front-gradient: linear-gradient(135deg, #ffffff 0%, #f5f7fa 100%);
+        --back-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        --btn-accent: #667eea;
+        --pattern-color: #667eea;
+        --home-btn-bg: green;
+        --home-btn-bg-hover: greenyellow;
+      }
+
+      /* small grammar-specific tweaks */
+      .card-front h2 {
+        font-size: 3em;
+      }
+
+      .card-back h3 {
+        font-size: 1.8em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>📚 Flashcard Từ Vựng</h1>
+        <span class="type-badge" id="typeBadge">Tất cả</span>
+        <p id="subtitle">100 từ vựng JLPT N3</p>
+      </div>
+
+      <div class="card-container">
+        <div class="flashcard" id="flashcard">
+          <div class="card-face card-front">
+            <h2 id="word">渇く（かわく）</h2>
+          </div>
+          <div class="card-face card-back">
+            <h3 id="meaning">Khát nước</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button class="btn btn-prev" onclick="previousCard()">◀ Trước</button>
+        <button class="btn btn-flip" onclick="flipCard()">🔄 Lật</button>
+        <button class="btn btn-next" onclick="nextCard()">Sau ▶</button>
+        <button class="btn btn-home" onclick="goHome()">🏠 Trang chủ</button>
+      </div>
+
+      <div class="progress">
+        <div class="bar">
+          <span id="current-card">1</span> / <span id="total-cards">100</span>
+        </div>
+      </div>
+
+      <div class="flip-hint">
+        💡 Nhấp vào thẻ hoặc nhấn Spacebar để lật | ← → để chuyển thẻ
+      </div>
+    </div>
+
+    <a href="index.html" class="home-btn">🏠 Home</a>
+
+    <script src="./data/vocab.js"></script>
+    <script>
+      let currentVocab = [];
+      let currentIndex = 0;
+      let currentType = "all";
+
+      // Lấy type từ URL
+      function getTypeFromURL() {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get("type") || "all";
+      }
+
+      // Tên tiếng Việt cho từng loại
+      const typeNames = {
+        verb: "Động từ",
+        noun: "Danh từ",
+        adj: "Tính từ",
+        adv: "Trạng từ",
+        all: "Tất cả",
+      };
+
+      // Load dữ liệu theo type
+      function loadVocabByType() {
+        currentType = getTypeFromURL();
+
+        // Lọc từ vựng theo type
+        if (currentType === "all") {
+          currentVocab = [...vocabData];
+        } else {
+          currentVocab = vocabData.filter((v) => v.type === currentType);
+        }
+
+        // Cập nhật UI
+        updateTypeDisplay();
+        updateCard();
+      }
+
+      // Cập nhật hiển thị loại từ
+      function updateTypeDisplay() {
+        const badge = document.getElementById("typeBadge");
+        const subtitle = document.getElementById("subtitle");
+
+        badge.className = `type-badge type-${currentType}`;
+        badge.textContent = typeNames[currentType];
+        subtitle.textContent = `${currentVocab.length} từ vựng JLPT N3`;
+
+        document.getElementById("total-cards").textContent =
+          currentVocab.length;
+      }
+
+      // Cập nhật thẻ
+      function updateCard() {
+        if (currentVocab.length === 0) {
+          alert("Không có dữ liệu từ vựng!");
+          return;
+        }
+
+        const card = currentVocab[currentIndex];
+        document.getElementById("word").textContent = card.word;
+        document.getElementById("meaning").textContent = card.meaning;
+        document.getElementById("current-card").textContent = currentIndex + 1;
+
+        // Reset flip
+        document.getElementById("flashcard").classList.remove("flipped");
+      }
+
+      // Lật thẻ
+      function flipCard() {
+        document.getElementById("flashcard").classList.toggle("flipped");
+      }
+
+      // Thẻ tiếp theo
+      function nextCard() {
+        currentIndex = (currentIndex + 1) % currentVocab.length;
+        updateCard();
+      }
+
+      // Thẻ trước
+      function previousCard() {
+        currentIndex =
+          (currentIndex - 1 + currentVocab.length) % currentVocab.length;
+        updateCard();
+      }
+
+      // Về trang chủ
+      function goHome() {
+        window.location.href = "index.html";
+      }
+
+      // Click to flip
+      document.getElementById("flashcard").addEventListener("click", flipCard);
+
+      // Keyboard shortcuts
+      document.addEventListener("keydown", (e) => {
+        if (e.key === " " || e.key === "Spacebar") {
+          e.preventDefault();
+          flipCard();
+        } else if (e.key === "ArrowLeft") {
+          previousCard();
+        } else if (e.key === "ArrowRight") {
+          nextCard();
+        } else if (e.key === "Escape") {
+          goHome();
+        }
+      });
+
+      // Load data khi trang mở
+      loadVocabByType();
+    </script>
+  </body>
+</html>
