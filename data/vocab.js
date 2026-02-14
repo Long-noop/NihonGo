@@ -22,7 +22,7 @@ const vocabData = [
   { word: "流行る（はやる）", meaning: "Thịnh hành", type: "verb" },
   { word: "経つ（たつ）", meaning: "Trôi qua (thời gian)", type: "verb" },
   { word: "通う（かよう）", meaning: "Đi lại thường xuyên", type: "verb" },
-  { word: "込む（こむ）", meaning: "Đông đúc", type: "verb" },
+  { word: "混む（こむ）", meaning: "Đông đúc", type: "verb" },
   { word: "すれ違う", meaning: "Lướt qua nhau", type: "verb" },
   { word: "拭く（ふく）", meaning: "Lau", type: "verb" },
   { word: "包む（つつむ）", meaning: "Gói", type: "verb" },
