@@ -84,11 +84,8 @@
             <div class="audio-buttons">
               <button
                 class="btn-speak"
-                onclick="
-                  event.stopPropagation();
-                  speakCurrentExample();
-                "
-                title="Đọc từ ví dụ"
+                onclick="speakKanjiExample(event)"
+                title="Đọc từ ví dụ (chỉ tiếng Nhật)"
               >
                 🔊 Nghe
               </button>
@@ -144,6 +141,18 @@
       let allKanji = [];
       let currentIndex = 0;
 
+      // Function to speak only Japanese part of example
+      function speakKanjiExample(event) {
+        // Prevent event bubbling to flashcard
+        event.stopPropagation();
+
+        const exampleHTML = document.getElementById("example").innerHTML;
+        const japaneseOnly = extractJapaneseOnly(exampleHTML);
+        if (japaneseOnly) {
+          speakJapanese(japaneseOnly, 0.85);
+        }
+      }
+
       // Load dữ liệu từ file JSON
       async function loadKanjiData() {
         try {
@@ -153,9 +162,7 @@
           updateCard();
         } catch (error) {
           console.error("Error loading kanji data:", error);
-          alert(
-            "❌ Không thể tải dữ liệu. Vui lòng kiểm tra file kanji_data.json",
-          );
+          alert("❌ Không thể tải dữ liệu. Vui lòng kiểm tra file kanji.json");
         }
       }
 
@@ -166,33 +173,17 @@
         document.getElementById("kanji").textContent = card.kanji;
         document.getElementById("han-viet").textContent = card.han_viet;
         document.getElementById("meaning").textContent = card.meaning;
+
+        // Format example: replace " - " with <br>
         document.getElementById("example").innerHTML = card.example.replace(
           " - ",
           "<br>",
         );
+
         document.getElementById("current-card").textContent = currentIndex + 1;
 
         // Reset flip
         document.getElementById("flashcard").classList.remove("flipped");
-      }
-
-      // Helper function to extract and speak the kanji example (reading)
-      function speakCurrentExample() {
-        const exampleText = document.getElementById("example").textContent;
-        // Extract only the Japanese reading part (before the dash)
-        const reading = exampleText.split("\n")[0].trim();
-        if (reading) {
-          speakJapanese(reading);
-        }
-      }
-
-      // Helper function for kanji front card
-      function speakKanjiExample() {
-        const exampleText = document.getElementById("example").textContent;
-        const reading = exampleText.split("\n")[0].trim();
-        if (reading) {
-          speakJapanese(reading);
-        }
       }
 
       function flipCard() {

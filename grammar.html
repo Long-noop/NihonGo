@@ -47,11 +47,8 @@
             <div class="audio-buttons">
               <button
                 class="btn-speak"
-                onclick="
-                  event.stopPropagation();
-                  speakJapanese(document.getElementById('example').textContent);
-                "
-                title="Đọc câu ví dụ"
+                onclick="speakGrammarExample(event)"
+                title="Đọc câu ví dụ (chỉ tiếng Nhật)"
               >
                 🔊 Nghe
               </button>
@@ -76,8 +73,6 @@
     </div>
     <a href="index.html" class="home-btn">🏠 Home</a>
 
-    <!-- home button uses shared styles; page variables above control colors -->
-
     <script src="./data/tts.js"></script>
     <script>
       let flashcards = [];
@@ -88,6 +83,18 @@
       const example = document.getElementById("example");
       const currentCardElement = document.getElementById("current-card");
       const totalCardsElement = document.getElementById("total-cards");
+
+      // Function to speak only Japanese part of example
+      function speakGrammarExample(event) {
+        // Prevent event bubbling to flashcard
+        event.stopPropagation();
+
+        const exampleHTML = document.getElementById("example").innerHTML;
+        const japaneseOnly = extractJapaneseOnly(exampleHTML);
+        if (japaneseOnly) {
+          speakJapanese(japaneseOnly, 0.85);
+        }
+      }
 
       // Load flashcards from JSON file
       async function loadFlashcards() {
@@ -113,7 +120,6 @@
           example.innerHTML = "";
           currentCardElement.textContent = 0;
           totalCardsElement.textContent = 0;
-          // ensure card is not flipped while loading
           flashcard.classList.remove("flipped");
           return;
         }

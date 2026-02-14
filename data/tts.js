@@ -20,64 +20,107 @@ function cleanJapaneseText(text) {
 }
 
 /**
+ * Extract only Japanese text from example (remove Vietnamese translation)
+ * @param {string} text - Full example text with Japanese and Vietnamese
+ * @returns {string} Only Japanese part
+ */
+function extractJapaneseOnly(text) {
+  if (!text) return "";
+
+  // Remove HTML tags first
+  let cleanText = text.replace(/<br\s*\/?>/gi, "\n");
+  cleanText = cleanText.replace(/<[^>]*>/g, "");
+
+  // Split by newline and take only first part (Japanese)
+  const lines = cleanText.split("\n");
+  if (lines.length > 0) {
+    let japanesePart = lines[0].trim();
+
+    // Remove Vietnamese in parentheses at the end: "text (Vietnamese)" → "text"
+    japanesePart = japanesePart.replace(/\s*[（(].*?[）)]\s*$/g, "");
+
+    // Clean furigana within the Japanese text
+    japanesePart = cleanJapaneseText(japanesePart);
+
+    return japanesePart;
+  }
+
+  return cleanJapaneseText(text);
+}
+
+/**
  * Speaks Japanese text using Web Speech API
  * @param {string} text - Japanese text to speak
  * @param {number} rate - Speech rate (0.5 - 2.0), default 0.85
  */
 function speakJapanese(text, rate = 0.85) {
+  // Clean and validate text
   const cleanText = cleanJapaneseText(text);
 
-  if (!cleanText) return;
+  if (!cleanText || cleanText.trim() === "") {
+    console.warn("TTS: Empty text provided");
+    return;
+  }
 
-  try {
-    if (synth.speaking || synth.pending) {
-      synth.cancel();
-    }
-    setTimeout(() => {
+  // Stop any ongoing speech IMMEDIATELY
+  stopSpeech();
+
+  // Wait a tiny bit for cleanup
+  setTimeout(() => {
+    try {
+      // Create new utterance
       currentUtterance = new SpeechSynthesisUtterance(cleanText);
 
+      // Set properties
       currentUtterance.lang = "ja-JP";
       currentUtterance.rate = rate;
-      currentUtterance.pitch = 1;
-      currentUtterance.volume = 1;
+      currentUtterance.pitch = 1.0;
+      currentUtterance.volume = 1.0;
 
+      // Get voices
       const voices = synth.getVoices();
 
+      // Try to find best Japanese voice
       const googleVoice = voices.find(
         (v) => v.lang === "ja-JP" && v.name.includes("Google"),
       );
-
-      const jpVoice = voices.find((v) => v.lang === "ja-JP");
+      const japaneseVoice = voices.find((v) => v.lang === "ja-JP");
 
       if (googleVoice) {
         currentUtterance.voice = googleVoice;
-      } else if (jpVoice) {
-        currentUtterance.voice = jpVoice;
+      } else if (japaneseVoice) {
+        currentUtterance.voice = japaneseVoice;
       }
 
+      // Event handlers
       currentUtterance.onstart = () => {
         isSpeaking = true;
-        console.log("🔊 Speaking:", cleanText);
+        console.log("🔊 Speaking:", cleanText.substring(0, 50));
       };
 
       currentUtterance.onend = () => {
         isSpeaking = false;
         currentUtterance = null;
+        console.log("✓ Speech ended");
       };
 
-      currentUtterance.onerror = (e) => {
-        if (e.error !== "interrupted") {
-          console.error("TTS error:", e.error);
+      currentUtterance.onerror = (event) => {
+        // Only log real errors, not "interrupted"
+        if (event.error !== "interrupted" && event.error !== "cancelled") {
+          console.error("❌ Speech error:", event.error);
         }
         isSpeaking = false;
         currentUtterance = null;
       };
 
+      // Speak
+      isSpeaking = true;
       synth.speak(currentUtterance);
-    }, 500);
-  } catch (err) {
-    console.error("TTS Error:", err);
-  }
+    } catch (error) {
+      console.error("TTS Error:", error);
+      isSpeaking = false;
+    }
+  }, 50); // Very short delay for stability
 }
 
 /**
