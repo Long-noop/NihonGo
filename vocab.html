@@ -41,6 +41,18 @@
           </div>
           <div class="card-face card-back">
             <h3 id="meaning">Khát nước</h3>
+            <div class="audio-buttons">
+              <button
+                class="btn-speak"
+                onclick="
+                  event.stopPropagation();
+                  speakJapanese(document.getElementById('word').textContent);
+                "
+                title="Đọc từ"
+              >
+                🔊 Nghe
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -65,6 +77,7 @@
 
     <a href="index.html" class="home-btn">🏠 Home</a>
 
+    <script src="./data/tts.js"></script>
     <script src="./data/vocab.js"></script>
     <script>
       let currentVocab = [];

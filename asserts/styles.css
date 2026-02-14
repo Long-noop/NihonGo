@@ -232,6 +232,83 @@ body {
   }
 }
 
+/* Audio/TTS Button Styles */
+.btn-speak {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  font-weight: bold;
+  white-space: nowrap;
+  min-width: 44px;
+  height: 44px;
+}
+
+.btn-speak:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.btn-speak:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+}
+
+/* Alternative color variations */
+.btn-speak.primary {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  box-shadow: 0 4px 12px rgba(79, 172, 254, 0.4);
+}
+
+.btn-speak.primary:hover {
+  box-shadow: 0 6px 20px rgba(79, 172, 254, 0.6);
+}
+
+.btn-speak.success {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  box-shadow: 0 4px 12px rgba(67, 233, 123, 0.4);
+}
+
+.btn-speak.success:hover {
+  box-shadow: 0 6px 20px rgba(67, 233, 123, 0.6);
+}
+
+/* Container for audio buttons */
+.audio-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+/* Speaking state animation */
+.btn-speak.speaking {
+  animation: pulse 0.6s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  }
+  50% {
+    box-shadow: 0 4px 20px rgba(102, 126, 234, 0.8);
+  }
+  100% {
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  }
+}
+
 /* small utility classes often-used by pages */
 .text-large {
   font-size: 1.8em;

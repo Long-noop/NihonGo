@@ -44,6 +44,18 @@
               毎日7時に起きることにしています。<br />
               (Tôi đã quyết định mỗi ngày dậy lúc 7 giờ.)
             </div>
+            <div class="audio-buttons">
+              <button
+                class="btn-speak"
+                onclick="
+                  event.stopPropagation();
+                  speakJapanese(document.getElementById('example').textContent);
+                "
+                title="Đọc câu ví dụ"
+              >
+                🔊 Nghe
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -66,6 +78,7 @@
 
     <!-- home button uses shared styles; page variables above control colors -->
 
+    <script src="./data/tts.js"></script>
     <script>
       let flashcards = [];
       let currentCardIndex = 0;
@@ -144,8 +157,6 @@
           nextCard();
         }
       });
-
-      // Initialize: do not call updateCard() here because data loads asynchronously
     </script>
   </body>
 </html>

@@ -81,6 +81,18 @@
               看護師 (かんごし)<br />
               Y tá
             </div>
+            <div class="audio-buttons">
+              <button
+                class="btn-speak"
+                onclick="
+                  event.stopPropagation();
+                  speakCurrentExample();
+                "
+                title="Đọc từ ví dụ"
+              >
+                🔊 Nghe
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -127,6 +139,7 @@
       }
     </style>
 
+    <script src="./data/tts.js"></script>
     <script>
       let allKanji = [];
       let currentIndex = 0;
@@ -161,6 +174,25 @@
 
         // Reset flip
         document.getElementById("flashcard").classList.remove("flipped");
+      }
+
+      // Helper function to extract and speak the kanji example (reading)
+      function speakCurrentExample() {
+        const exampleText = document.getElementById("example").textContent;
+        // Extract only the Japanese reading part (before the dash)
+        const reading = exampleText.split("\n")[0].trim();
+        if (reading) {
+          speakJapanese(reading);
+        }
+      }
+
+      // Helper function for kanji front card
+      function speakKanjiExample() {
+        const exampleText = document.getElementById("example").textContent;
+        const reading = exampleText.split("\n")[0].trim();
+        if (reading) {
+          speakJapanese(reading);
+        }
       }
 
       function flipCard() {
