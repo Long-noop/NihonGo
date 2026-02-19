@@ -13,8 +13,7 @@
       rel="stylesheet"
     />
 
-    <!-- Hanzi Writer for Kanji Animation -->
-    <script src="https://cdn.jsdelivr.net/npm/hanzi-writer@3.5/dist/hanzi-writer.min.js"></script>
+    <!-- Using local KanjiVG SVGs for animations (no HanziWriter CDN) -->
 
     <link rel="stylesheet" href="./asserts/styles.css" />
     <style>
@@ -43,6 +42,10 @@
         border-radius: 15px;
         /* padding: 2px; */
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .kanji-svg svg text {
+        opacity: 0 !important;
       }
 
       .animation-controls {
@@ -165,7 +168,11 @@
           <div class="card-face card-front">
             <!-- Animation Wrapper -->
             <div class="kanji-animation-wrapper">
-              <svg id="kanji-animation" width="250" height="250"></svg>
+              <div
+                id="kanji-animation"
+                class="kanji-svg"
+                aria-hidden="true"
+              ></div>
 
               <!-- Animation Controls -->
               <div class="animation-controls">
@@ -246,130 +253,255 @@
         background-color: #1d4ed8;
         transform: translateY(-3px);
       }
+      .kanji-svg {
+        width: 250px;
+        height: 250px;
+        display: block;
+      }
+
+      /* Make SVG responsive inside the container */
+      .kanji-svg svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+
+      /* Stroke default style applied to injected KanjiVG paths */
+      .kanji-svg .kanji-stroke {
+        fill: none;
+        stroke: #e74c3c;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
     </style>
 
-    <script src="./data/tts.js"></script>
     <script src="./data/tts.js"></script>
     <script>
       let allKanji = [];
       let currentIndex = 0;
-      let writer = null;
       let autoLoop = false;
       let loopInterval = null;
 
-      // Load Kanji Animation with Hanzi Writer
-      function loadKanjiAnimation(character) {
-        const target = document.getElementById("kanji-animation");
+      // Cache for fetched SVG text/documents
+      const svgCache = new Map();
 
-        // Clear previous writer
-        if (writer) {
-          writer = null;
+      function codepointHex(character) {
+        return Array.from(character)
+          .map((c) => c.codePointAt(0).toString(16).toLowerCase())
+          .join("-");
+      }
+
+      async function fetchKanjiSvg(character) {
+        const hex = codepointHex(character);
+        const candidates = [
+          `./data/kanjivg/0${hex}.svg`,
+          `./data/kanjivg/${hex}.svg`,
+          `./data/kanjivg/0${encodeURIComponent(character)}.svg`,
+        ];
+
+        for (const url of candidates) {
+          try {
+            // check cache first
+            if (svgCache.has(url)) return svgCache.get(url);
+
+            const res = await fetch(url, { cache: "force-cache" });
+            if (!res.ok) continue;
+            const text = await res.text();
+            svgCache.set(url, text);
+            console.debug("Loaded KanjiVG from:", url);
+            return text;
+          } catch (e) {
+            continue;
+          }
         }
 
-        // Clear any existing loop
+        return null;
+      }
+
+      function injectSvgIntoContainer(svgText, container) {
+        // Parse SVG text and insert a cloned node into container
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(svgText, "image/svg+xml");
+        const svg = doc.documentElement;
+
+        // Normalize the svg for responsiveness
+        svg.removeAttribute("width");
+        svg.removeAttribute("height");
+        if (!svg.getAttribute("viewBox")) {
+          // attempt to build a viewBox from bbox if possible later
+        }
+        svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
+        svg.classList.add("injected-kanji");
+
+        // Ensure strokes are targetable and styled
+        const strokeCandidates = svg.querySelectorAll(
+          "path, line, polyline, polygon",
+        );
+        strokeCandidates.forEach((el) => {
+          el.classList.add("kanji-stroke");
+          try {
+            const bg = el.cloneNode(true);
+            // Remove kanji-stroke class from background to prevent animation reset
+            bg.classList.remove("kanji-stroke");
+            bg.classList.add("kanji-stroke-bg"); // Add separate class for background
+            bg.style.stroke = "#ddd";
+            bg.style.strokeWidth = "4";
+            bg.style.fill = "none";
+            bg.style.strokeDasharray = "none";
+            bg.style.strokeDashoffset = "0";
+            bg.style.transition = "none";
+
+            const len = el.getTotalLength ? el.getTotalLength() : 0;
+            el.style.strokeDasharray = len;
+            el.style.strokeDashoffset = len;
+            el.style.transition = "none";
+            el.style.fill = "none";
+            el.parentNode.insertBefore(bg, el);
+          } catch (e) {
+            // some elements may not support getTotalLength
+          }
+        });
+
+        // Clear container and append
+        container.innerHTML = "";
+        container.appendChild(svg);
+        return svg;
+      }
+
+      // Animate strokes sequentially using stroke-dashoffset
+      function animateSvgStrokes(svg, options = {}) {
+        const strokes = Array.from(svg.querySelectorAll(".kanji-stroke"));
+        if (strokes.length === 0) return 0;
+
+        const perStrokeBase = options.perStrokeBase || 220; // ms
+        const gap = options.gap || 150; // ms between strokes
+
+        let total = 0;
+        strokes.forEach((el, idx) => {
+          let len = 0;
+          try {
+            len = el.getTotalLength();
+          } catch (e) {
+            len = 120;
+          }
+          const duration = Math.max(
+            120,
+            Math.round((len / 100) * perStrokeBase),
+          );
+          const delay = idx === 0 ? 0 : gap;
+
+          const startAt = total + delay;
+          // schedule
+          setTimeout(() => {
+            el.style.transition = `stroke-dashoffset ${duration}ms linear`;
+            // trigger reflow to ensure transition
+            // eslint-disable-next-line no-unused-expressions
+            el.getBoundingClientRect();
+            el.style.strokeDashoffset = "0";
+          }, startAt);
+
+          total += duration + gap;
+        });
+
+        return total;
+      }
+
+      async function loadKanjiAnimation(character) {
+        const container = document.getElementById("kanji-animation");
+
+        // Clear any running loop
         if (loopInterval) {
           clearInterval(loopInterval);
           loopInterval = null;
         }
 
-        // Clear SVG
-        target.innerHTML = "";
+        container.innerHTML = "";
 
-        try {
-          // Create new Hanzi Writer instance
-          writer = HanziWriter.create(target, character, {
-            width: 250,
-            height: 250,
-            padding: 20,
-            strokeColor: "#e74c3c",
-            strokeAnimationSpeed: 1.2,
-            delayBetweenStrokes: 120,
-            showOutline: true,
-            showCharacter: false,
-            radicalColor: "#168eea",
-            strokeFadeDuration: 400,
-          });
-
-          console.log("✅ Loaded Kanji:", character);
-
-          // Auto-animate if auto loop is on
-          if (autoLoop) {
-            startAutoLoop();
-          }
-        } catch (error) {
-          console.error("❌ Error loading kanji:", error);
-          // Fallback to static display
-          const staticEl = document.getElementById("kanji-static");
-          staticEl.textContent = character;
-          staticEl.style.display = "block";
-          target.style.display = "none";
-        }
-      }
-
-      // Animate Kanji stroke order
-      function animateKanji(event) {
-        if (event) event.stopPropagation();
-
-        if (!writer) {
-          console.log("No writer instance");
+        const svgText = await fetchKanjiSvg(character);
+        if (!svgText) {
+          console.warn("KanjiVG SVG not found for:", character);
+          // No static fallback per requirement; show empty placeholder
+          container.innerHTML = "";
           return;
         }
 
-        writer.showCharacter();
-        setTimeout(() => {
-          writer.animateCharacter({
-            onComplete: function () {
-              console.log("Animation complete");
+        const svg = injectSvgIntoContainer(svgText, container);
+
+        // Auto-animate if requested
+        if (autoLoop) {
+          const total = animateSvgStrokes(svg);
+          // restart loop after animation completes
+          loopInterval = setInterval(
+            () => {
+              // reset
+              svg.querySelectorAll(".kanji-stroke").forEach((el) => {
+                try {
+                  const len = el.getTotalLength();
+                  el.style.transition = "none";
+                  el.style.strokeDasharray = len;
+                  el.style.strokeDashoffset = len;
+                } catch (e) {}
+              });
+              setTimeout(() => animateSvgStrokes(svg), 50);
             },
-          });
-        }, 100);
+            Math.max(1000, total + 300),
+          );
+        }
       }
 
-      // Toggle Auto Loop
+      function animateKanji(event) {
+        if (event) event.stopPropagation();
+        const container = document.getElementById("kanji-animation");
+        const svg = container.querySelector("svg");
+        if (!svg) return;
+
+        // Reset strokes
+        svg.querySelectorAll(".kanji-stroke").forEach((el) => {
+          try {
+            const len = el.getTotalLength();
+            el.style.transition = "none";
+            el.style.strokeDasharray = len;
+            el.style.strokeDashoffset = len;
+          } catch (e) {}
+        });
+
+        setTimeout(() => animateSvgStrokes(svg), 50);
+      }
+
       function toggleAutoLoop(event) {
         if (event) event.stopPropagation();
-
         autoLoop = !autoLoop;
         const btn = document.getElementById("autoLoopBtn");
-
         if (autoLoop) {
           btn.classList.add("active");
           btn.textContent = "⏸️ Stop";
-          startAutoLoop();
+          // start loop for current card
+          const container = document.getElementById("kanji-animation");
+          const svg = container.querySelector("svg");
+          if (svg) {
+            const total = animateSvgStrokes(svg);
+            loopInterval = setInterval(
+              () => {
+                svg.querySelectorAll(".kanji-stroke").forEach((el) => {
+                  try {
+                    const len = el.getTotalLength();
+                    el.style.transition = "none";
+                    el.style.strokeDasharray = len;
+                    el.style.strokeDashoffset = len;
+                  } catch (e) {}
+                });
+                setTimeout(() => animateSvgStrokes(svg), 50);
+              },
+              Math.max(1000, total + 300),
+            );
+          }
         } else {
           btn.classList.remove("active");
           btn.textContent = "🔁 Animate";
-          stopAutoLoop();
-        }
-      }
-
-      // Start auto loop animation
-      function startAutoLoop() {
-        if (!writer) return;
-
-        // Clear any existing interval
-        if (loopInterval) {
-          clearInterval(loopInterval);
-        }
-
-        // Initial animation
-        animateKanji(null);
-
-        // Set interval to repeat
-        // Calculate total animation time: ~200ms per stroke average + delays
-        const avgStrokesPerKanji = 30; // Average estimate
-        const animationTime = avgStrokesPerKanji * 200 + 2000; // Add buffer
-
-        loopInterval = setInterval(() => {
-          animateKanji(null);
-        }, animationTime);
-      }
-
-      // Stop auto loop
-      function stopAutoLoop() {
-        if (loopInterval) {
-          clearInterval(loopInterval);
-          loopInterval = null;
+          if (loopInterval) {
+            clearInterval(loopInterval);
+            loopInterval = null;
+          }
         }
       }
 
@@ -412,7 +544,8 @@
         document.getElementById("current-card").textContent = currentIndex + 1;
 
         // Load kanji animation on front side
-        loadKanjiAnimation(card.kanji);
+        const chars = card.kanji.split("");
+        loadKanjiAnimation(chars[0]);
 
         // Update static fallback
         document.getElementById("kanji-static").textContent = card.kanji;
