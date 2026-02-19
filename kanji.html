@@ -4,15 +4,81 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JLPT N3 Kanji Flashcards - 521 Hán Tự</title>
+
+    <!-- Google Fonts - Japanese -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Hanzi Writer for Kanji Animation -->
+    <script src="https://cdn.jsdelivr.net/npm/hanzi-writer@3.5/dist/hanzi-writer.min.js"></script>
+
     <link rel="stylesheet" href="./asserts/styles.css" />
     <style>
       :root {
-        --font-family: "Segoe UI", "Noto Sans JP", sans-serif;
+        --font-sans: "Noto Sans JP", sans-serif;
+        --font-serif: "Noto Serif JP", serif;
+        --font-family: var(--font-sans);
         --front-gradient: linear-gradient(135deg, #ffffff 0%, #ffeaa7 100%);
         --back-gradient: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%);
         --btn-accent: #e74c3c;
         --home-btn-bg: #2563eb;
         --home-btn-bg-hover: #1d4ed8;
+      }
+
+      /* Animation wrapper */
+      .kanji-animation-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 20px;
+      }
+
+      #kanji-animation {
+        background: white;
+        border-radius: 15px;
+        /* padding: 2px; */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .animation-controls {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .anim-btn {
+        padding: 10px 20px;
+        background: white;
+        color: #667eea;
+        border: 2px solid #667eea;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 600;
+        transition: all 0.3s;
+        font-family: var(--font-sans);
+      }
+
+      .anim-btn:hover {
+        background: #667eea;
+        color: white;
+        transform: translateY(-2px);
+      }
+
+      .anim-btn:active {
+        transform: translateY(0);
+      }
+
+      .anim-btn.active {
+        background: #48bb78;
+        color: white;
+        border-color: #48bb78;
       }
 
       /* kanji-specific styles */
@@ -22,7 +88,8 @@
         color: #e74c3c;
         text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
         margin-bottom: 20px;
-        font-family: "MS Mincho", "Noto Sans JP", serif;
+        font-family: var(--font-serif);
+        display: none; /* Hidden by default, use animation */
       }
 
       .han-viet {
@@ -31,16 +98,30 @@
         margin-bottom: 20px;
         border-bottom: 3px solid rgba(255, 255, 255, 0.5);
         padding-bottom: 15px;
+        font-family: var(--font-sans);
       }
 
       .meaning {
         font-size: 1.8em;
         margin-bottom: 25px;
         font-style: italic;
+        font-weight: 300;
       }
 
       .example {
         font-size: 1.4em;
+        font-family: var(--font-sans);
+      }
+
+      @media (max-width: 768px) {
+        #kanji-animation {
+          padding: 15px;
+        }
+
+        .anim-btn {
+          padding: 8px 15px;
+          font-size: 12px;
+        }
       }
 
       @media (max-width: 600px) {
@@ -59,6 +140,16 @@
         .flashcard {
           height: 450px;
         }
+
+        #kanji-animation {
+          padding: 10px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .kanji-animation-wrapper {
+          gap: 15px;
+        }
       }
     </style>
   </head>
@@ -72,7 +163,27 @@
       <div class="card-container">
         <div class="flashcard" id="flashcard">
           <div class="card-face card-front">
-            <div class="kanji-display" id="kanji">護</div>
+            <!-- Animation Wrapper -->
+            <div class="kanji-animation-wrapper">
+              <svg id="kanji-animation" width="250" height="250"></svg>
+
+              <!-- Animation Controls -->
+              <div class="animation-controls">
+                <!-- <button class="anim-btn" onclick="animateKanji(event)">
+                  ▶️ Animate
+                </button> -->
+                <button
+                  class="anim-btn"
+                  onclick="toggleAutoLoop(event)"
+                  id="autoLoopBtn"
+                >
+                  🔁 Animate
+                </button>
+              </div>
+            </div>
+
+            <!-- Fallback: Static Display -->
+            <div class="kanji-display" id="kanji-static">護</div>
           </div>
           <div class="card-face card-back">
             <div class="han-viet" id="han-viet">HỘ</div>
@@ -107,7 +218,8 @@
       </div>
 
       <div class="flip-hint">
-        💡 Nhấp vào thẻ hoặc nhấn Spacebar để lật | ← → để chuyển thẻ
+        💡 Nhấp vào thẻ hoặc nhấn Spacebar để lật | ← → để chuyển thẻ | A để
+        Animate | L để Loop
       </div>
     </div>
 
@@ -137,13 +249,132 @@
     </style>
 
     <script src="./data/tts.js"></script>
+    <script src="./data/tts.js"></script>
     <script>
       let allKanji = [];
       let currentIndex = 0;
+      let writer = null;
+      let autoLoop = false;
+      let loopInterval = null;
+
+      // Load Kanji Animation with Hanzi Writer
+      function loadKanjiAnimation(character) {
+        const target = document.getElementById("kanji-animation");
+
+        // Clear previous writer
+        if (writer) {
+          writer = null;
+        }
+
+        // Clear any existing loop
+        if (loopInterval) {
+          clearInterval(loopInterval);
+          loopInterval = null;
+        }
+
+        // Clear SVG
+        target.innerHTML = "";
+
+        try {
+          // Create new Hanzi Writer instance
+          writer = HanziWriter.create(target, character, {
+            width: 250,
+            height: 250,
+            padding: 20,
+            strokeColor: "#e74c3c",
+            strokeAnimationSpeed: 1.2,
+            delayBetweenStrokes: 120,
+            showOutline: true,
+            showCharacter: false,
+            radicalColor: "#168eea",
+            strokeFadeDuration: 400,
+          });
+
+          console.log("✅ Loaded Kanji:", character);
+
+          // Auto-animate if auto loop is on
+          if (autoLoop) {
+            startAutoLoop();
+          }
+        } catch (error) {
+          console.error("❌ Error loading kanji:", error);
+          // Fallback to static display
+          const staticEl = document.getElementById("kanji-static");
+          staticEl.textContent = character;
+          staticEl.style.display = "block";
+          target.style.display = "none";
+        }
+      }
+
+      // Animate Kanji stroke order
+      function animateKanji(event) {
+        if (event) event.stopPropagation();
+
+        if (!writer) {
+          console.log("No writer instance");
+          return;
+        }
+
+        writer.showCharacter();
+        setTimeout(() => {
+          writer.animateCharacter({
+            onComplete: function () {
+              console.log("Animation complete");
+            },
+          });
+        }, 100);
+      }
+
+      // Toggle Auto Loop
+      function toggleAutoLoop(event) {
+        if (event) event.stopPropagation();
+
+        autoLoop = !autoLoop;
+        const btn = document.getElementById("autoLoopBtn");
+
+        if (autoLoop) {
+          btn.classList.add("active");
+          btn.textContent = "⏸️ Stop";
+          startAutoLoop();
+        } else {
+          btn.classList.remove("active");
+          btn.textContent = "🔁 Animate";
+          stopAutoLoop();
+        }
+      }
+
+      // Start auto loop animation
+      function startAutoLoop() {
+        if (!writer) return;
+
+        // Clear any existing interval
+        if (loopInterval) {
+          clearInterval(loopInterval);
+        }
+
+        // Initial animation
+        animateKanji(null);
+
+        // Set interval to repeat
+        // Calculate total animation time: ~200ms per stroke average + delays
+        const avgStrokesPerKanji = 30; // Average estimate
+        const animationTime = avgStrokesPerKanji * 200 + 2000; // Add buffer
+
+        loopInterval = setInterval(() => {
+          animateKanji(null);
+        }, animationTime);
+      }
+
+      // Stop auto loop
+      function stopAutoLoop() {
+        if (loopInterval) {
+          clearInterval(loopInterval);
+          loopInterval = null;
+        }
+      }
 
       // Function to speak only Japanese part of example
       function speakKanjiExample(event) {
-        // Prevent event bubbling to flashcard
         event.stopPropagation();
 
         const exampleHTML = document.getElementById("example").innerHTML;
@@ -170,17 +401,21 @@
         if (allKanji.length === 0) return;
 
         const card = allKanji[currentIndex];
-        document.getElementById("kanji").textContent = card.kanji;
+
+        // Update back side
         document.getElementById("han-viet").textContent = card.han_viet;
         document.getElementById("meaning").textContent = card.meaning;
-
-        // Format example: replace " - " with <br>
         document.getElementById("example").innerHTML = card.example.replace(
           " - ",
           "<br>",
         );
-
         document.getElementById("current-card").textContent = currentIndex + 1;
+
+        // Load kanji animation on front side
+        loadKanjiAnimation(card.kanji);
+
+        // Update static fallback
+        document.getElementById("kanji-static").textContent = card.kanji;
 
         // Reset flip
         document.getElementById("flashcard").classList.remove("flipped");
@@ -200,8 +435,19 @@
         updateCard();
       }
 
-      // Click to flip
-      document.getElementById("flashcard").addEventListener("click", flipCard);
+      // Click to flip (but not on animation controls)
+      document
+        .getElementById("flashcard")
+        .addEventListener("click", function (e) {
+          // Don't flip if clicking animation controls or SVG
+          if (
+            e.target.closest(".animation-controls") ||
+            e.target.closest("#kanji-animation")
+          ) {
+            return;
+          }
+          flipCard();
+        });
 
       // Keyboard shortcuts
       document.addEventListener("keydown", (e) => {
@@ -212,6 +458,10 @@
           previousCard();
         } else if (e.key === "ArrowRight") {
           nextCard();
+        } else if (e.key === "a" || e.key === "A") {
+          animateKanji(new Event("click"));
+        } else if (e.key === "l" || e.key === "L") {
+          toggleAutoLoop(new Event("click"));
         }
       });
 
