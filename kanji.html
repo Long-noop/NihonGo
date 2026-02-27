@@ -154,13 +154,141 @@
           gap: 15px;
         }
       }
+
+      /* Modal Styles */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 10000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        animation: fadeIn 0.3s;
+      }
+
+      .modal.show {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .modal-content {
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        max-width: 500px;
+        width: 90%;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        animation: slideUp 0.3s;
+        text-align: center;
+      }
+
+      .modal-content h2 {
+        color: #667eea;
+        margin-bottom: 15px;
+        font-size: 2em;
+      }
+
+      .modal-content p {
+        color: #666;
+        margin-bottom: 30px;
+        font-size: 1.1em;
+      }
+
+      .kanji-options {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .kanji-option {
+        padding: 20px 30px;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+        font-size: 1.2em;
+        font-weight: bold;
+        color: white;
+        transition: all 0.3s;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .kanji-option:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      .kanji-option.n3 {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+
+      .kanji-option.intermediate {
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideUp {
+        from {
+          transform: translateY(50px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .modal-content {
+          padding: 30px 20px;
+        }
+
+        .modal-content h2 {
+          font-size: 1.5em;
+        }
+
+        .kanji-option {
+          padding: 15px 20px;
+          font-size: 1em;
+        }
+      }
     </style>
   </head>
   <body>
-    <div class="container">
+    <!-- Modal Selection -->
+    <div class="modal" id="kanjiModal">
+      <div class="modal-content">
+        <h2>📚 Chọn Bộ Kanji</h2>
+        <p>Chọn tập Kanji bạn muốn học</p>
+        <div class="kanji-options">
+          <button class="kanji-option n3" onclick="selectKanjiSet('n3')">
+            📝 JLPT N3 Kanji
+            <br />
+            <small style="opacity: 0.9">521 Hán Tự</small>
+          </button>
+          <button class="kanji-option intermediate" onclick="selectKanjiSet('intermediate')">
+            🎓 Kanji Sơ Trung Cấp
+            <br />
+            <small style="opacity: 0.9">~ 1200 Hán Tự</small>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="mainContainer" style="display: none">
       <div class="header">
-        <h1>📝 JLPT N3 Kanji Flashcards</h1>
-        <p>521 Hán Tự Cần Thiết</p>
+        <h1 id="headerTitle">📝 JLPT N3 Kanji Flashcards</h1>
+        <p id="headerSubtitle">521 Hán Tự Cần Thiết</p>
       </div>
 
       <div class="card-container">
@@ -281,9 +409,63 @@
       let currentIndex = 0;
       let autoLoop = false;
       let loopInterval = null;
+      let currentDataset = ''; // Track which dataset is loaded
 
       // Cache for fetched SVG text/documents
       const svgCache = new Map();
+
+      // Dataset configuration
+      const datasets = {
+        'n3': {
+          file: './data/kanji.json',
+          title: '📝 JLPT N3 Kanji Flashcards',
+          subtitle: '521 Hán Tự Cần Thiết',
+          count: 521
+        },
+        'intermediate': {
+          file: './data/kanji_intermediate.json',
+          title: '🎓 Kanji Sơ Trung Cấp Flashcards',
+          subtitle: '~ 1200 Hán Tự Sơ Trung Cấp',
+          count: 1227
+        }
+      };
+
+      // Show modal on page load
+      window.addEventListener('DOMContentLoaded', () => {
+        // Check if dataset is in URL params
+        const urlParams = new URLSearchParams(window.location.search);
+        const dataset = urlParams.get('set');
+        
+        if (dataset && datasets[dataset]) {
+          selectKanjiSet(dataset);
+        } else {
+          // Show modal
+          document.getElementById('kanjiModal').classList.add('show');
+        }
+      });
+
+      // Select kanji set
+      function selectKanjiSet(set) {
+        if (!datasets[set]) {
+          console.error('Invalid dataset:', set);
+          return;
+        }
+
+        currentDataset = set;
+        
+        // Hide modal
+        document.getElementById('kanjiModal').classList.remove('show');
+        
+        // Show main container
+        document.getElementById('mainContainer').style.display = 'block';
+        
+        // Update header
+        document.getElementById('headerTitle').textContent = datasets[set].title;
+        document.getElementById('headerSubtitle').textContent = datasets[set].subtitle;
+        
+        // Load data
+        loadKanjiData(datasets[set].file, datasets[set].count);
+      }
 
       function codepointHex(character) {
         return Array.from(character)
@@ -517,15 +699,20 @@
       }
 
       // Load dữ liệu từ file JSON
-      async function loadKanjiData() {
+      async function loadKanjiData(filePath, expectedCount) {
         try {
-          const response = await fetch("./data/kanji.json");
+          const response = await fetch(filePath);
           allKanji = await response.json();
           document.getElementById("total-cards").textContent = allKanji.length;
+          
+          console.log(`✅ Loaded ${allKanji.length} kanji from ${filePath}`);
+          
+          // Reset to first card
+          currentIndex = 0;
           updateCard();
         } catch (error) {
           console.error("Error loading kanji data:", error);
-          alert("❌ Không thể tải dữ liệu. Vui lòng kiểm tra file kanji.json");
+          alert(`❌ Không thể tải dữ liệu từ ${filePath}`);
         }
       }
 
@@ -598,8 +785,7 @@
         }
       });
 
-      // Load data when page loads
-      loadKanjiData();
+      // Data is loaded via modal selection (selectKanjiSet function)
     </script>
   </body>
 </html>
