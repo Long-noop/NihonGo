@@ -276,7 +276,10 @@
             <br />
             <small style="opacity: 0.9">521 Hán Tự</small>
           </button>
-          <button class="kanji-option intermediate" onclick="selectKanjiSet('intermediate')">
+          <button
+            class="kanji-option intermediate"
+            onclick="selectKanjiSet('intermediate')"
+          >
             🎓 Kanji Sơ Trung Cấp
             <br />
             <small style="opacity: 0.9">~ 1200 Hán Tự</small>
@@ -313,6 +316,20 @@
                   id="autoLoopBtn"
                 >
                   🔁 Animate
+                </button>
+                <button
+                  id="btn-learn"
+                  class="anim-btn"
+                  onclick="toggleLearned()"
+                >
+                  ⭐ Đang học
+                </button>
+                <button
+                  class="anim-btn"
+                  onclick="resetProgress()"
+                  style="color: #e74c3c; border-color: #e74c3c"
+                >
+                  🗑 Reset All
                 </button>
               </div>
             </div>
@@ -361,26 +378,6 @@
     <a href="index.html" class="home-btn">🏠 Home</a>
 
     <style>
-      .home-btn {
-        position: fixed;
-        bottom: 80px;
-        right: 25px;
-        background-color: #2563eb;
-        color: white;
-        padding: 12px 18px;
-        border-radius: 50px;
-        text-decoration: none;
-        font-size: 15px;
-        font-weight: bold;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        transition: 0.3s ease;
-        z-index: 1000;
-      }
-
-      .home-btn:hover {
-        background-color: #1d4ed8;
-        transform: translateY(-3px);
-      }
       .kanji-svg {
         width: 250px;
         height: 250px;
@@ -409,62 +406,144 @@
       let currentIndex = 0;
       let autoLoop = false;
       let loopInterval = null;
-      let currentDataset = ''; // Track which dataset is loaded
+      let currentDataset = ""; // Track which dataset is loaded
+
+      // --- STATE MANAGEMENT ---
+      const STORAGE_KEY = "FLASHCARD_APP_V1";
+      let appState = {
+        currentDataset: "",
+        currentCardIndex: 0,
+        isFlipped: false,
+        learnedCards: {},
+      };
+
+      function loadState() {
+        try {
+          const saved = localStorage.getItem(STORAGE_KEY);
+          if (saved) {
+            appState = { ...appState, ...JSON.parse(saved) };
+            if (!appState.learnedCards) appState.learnedCards = {};
+          }
+        } catch (error) {
+          console.warn("Lỗi khi đọc localStorage, dùng state mặc định:", error);
+        }
+      }
+
+      function saveState() {
+        appState.currentDataset = currentDataset;
+        appState.currentCardIndex = currentIndex;
+        appState.isFlipped = document
+          .getElementById("flashcard")
+          .classList.contains("flipped");
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(appState));
+      }
+
+      function resetProgress() {
+        if (confirm("Bạn có chắc chắn muốn xóa toàn bộ tiến trình học?")) {
+          localStorage.removeItem(STORAGE_KEY);
+          location.reload();
+        }
+      }
+
+      function toggleLearned() {
+        if (!appState.learnedCards[currentDataset]) {
+          appState.learnedCards[currentDataset] = [];
+        }
+
+        const learnedList = appState.learnedCards[currentDataset];
+        const indexPos = learnedList.indexOf(currentIndex);
+
+        if (indexPos === -1) {
+          learnedList.push(currentIndex);
+        } else {
+          learnedList.splice(indexPos, 1);
+        }
+
+        updateLearnedUI();
+        saveState();
+      }
+
+      function updateLearnedUI() {
+        const isLearned =
+          appState.learnedCards[currentDataset] &&
+          appState.learnedCards[currentDataset].includes(currentIndex);
+        const btnLearn = document.getElementById("btn-learn");
+        if (!btnLearn) return;
+
+        if (isLearned) {
+          btnLearn.classList.add("active");
+          btnLearn.textContent = "✅ Đã học";
+        } else {
+          btnLearn.classList.remove("active");
+          btnLearn.textContent = "⭐ Đang học";
+        }
+      }
+      // ------------------------
 
       // Cache for fetched SVG text/documents
       const svgCache = new Map();
 
       // Dataset configuration
       const datasets = {
-        'n3': {
-          file: './data/kanji.json',
-          title: '📝 JLPT N3 Kanji Flashcards',
-          subtitle: '521 Hán Tự Cần Thiết',
-          count: 521
+        n3: {
+          file: "./data/kanji.json",
+          title: "📝 JLPT N3 Kanji Flashcards",
+          subtitle: "521 Hán Tự Cần Thiết",
+          count: 521,
         },
-        'intermediate': {
-          file: './data/kanji_intermediate.json',
-          title: '🎓 Kanji Sơ Trung Cấp Flashcards',
-          subtitle: '~ 1200 Hán Tự Sơ Trung Cấp',
-          count: 1227
-        }
+        intermediate: {
+          file: "./data/kanji_intermediate.json",
+          title: "🎓 Kanji Sơ Trung Cấp Flashcards",
+          subtitle: "~ 1200 Hán Tự Sơ Trung Cấp",
+          count: 1227,
+        },
       };
 
       // Show modal on page load
-      window.addEventListener('DOMContentLoaded', () => {
+      window.addEventListener("DOMContentLoaded", () => {
+        loadState(); // Khôi phục trạng thái từ localStorage
+
         // Check if dataset is in URL params
         const urlParams = new URLSearchParams(window.location.search);
-        const dataset = urlParams.get('set');
-        
+        const dataset = urlParams.get("set");
+
         if (dataset && datasets[dataset]) {
           selectKanjiSet(dataset);
+        } else if (
+          appState.currentDataset &&
+          datasets[appState.currentDataset]
+        ) {
+          // Khôi phục dataset từ state nếu không có tham số URL
+          selectKanjiSet(appState.currentDataset, true);
         } else {
           // Show modal
-          document.getElementById('kanjiModal').classList.add('show');
+          document.getElementById("kanjiModal").classList.add("show");
         }
       });
 
       // Select kanji set
-      function selectKanjiSet(set) {
+      function selectKanjiSet(set, isRestore = false) {
         if (!datasets[set]) {
-          console.error('Invalid dataset:', set);
+          console.error("Invalid dataset:", set);
           return;
         }
 
         currentDataset = set;
-        
+
         // Hide modal
-        document.getElementById('kanjiModal').classList.remove('show');
-        
+        document.getElementById("kanjiModal").classList.remove("show");
+
         // Show main container
-        document.getElementById('mainContainer').style.display = 'block';
-        
+        document.getElementById("mainContainer").style.display = "block";
+
         // Update header
-        document.getElementById('headerTitle').textContent = datasets[set].title;
-        document.getElementById('headerSubtitle').textContent = datasets[set].subtitle;
-        
+        document.getElementById("headerTitle").textContent =
+          datasets[set].title;
+        document.getElementById("headerSubtitle").textContent =
+          datasets[set].subtitle;
+
         // Load data
-        loadKanjiData(datasets[set].file, datasets[set].count);
+        loadKanjiData(datasets[set].file, datasets[set].count, isRestore);
       }
 
       function codepointHex(character) {
@@ -699,17 +778,26 @@
       }
 
       // Load dữ liệu từ file JSON
-      async function loadKanjiData(filePath, expectedCount) {
+      async function loadKanjiData(filePath, expectedCount, isRestore = false) {
         try {
           const response = await fetch(filePath);
           allKanji = await response.json();
           document.getElementById("total-cards").textContent = allKanji.length;
-          
+
           console.log(`✅ Loaded ${allKanji.length} kanji from ${filePath}`);
-          
-          // Reset to first card
-          currentIndex = 0;
-          updateCard();
+
+          if (isRestore && appState.currentDataset === currentDataset) {
+            currentIndex = appState.currentCardIndex || 0;
+            if (currentIndex >= allKanji.length) currentIndex = 0;
+            updateCard();
+            if (appState.isFlipped) {
+              document.getElementById("flashcard").classList.add("flipped");
+            }
+          } else {
+            currentIndex = 0;
+            updateCard();
+            saveState(); // Lưu trạng thái khởi tạo
+          }
         } catch (error) {
           console.error("Error loading kanji data:", error);
           alert(`❌ Không thể tải dữ liệu từ ${filePath}`);
@@ -739,20 +827,26 @@
 
         // Reset flip
         document.getElementById("flashcard").classList.remove("flipped");
+
+        // Cập nhật giao diện nút đã học
+        updateLearnedUI();
       }
 
       function flipCard() {
         document.getElementById("flashcard").classList.toggle("flipped");
+        saveState();
       }
 
       function nextCard() {
         currentIndex = (currentIndex + 1) % allKanji.length;
         updateCard();
+        saveState();
       }
 
       function previousCard() {
         currentIndex = (currentIndex - 1 + allKanji.length) % allKanji.length;
         updateCard();
+        saveState();
       }
 
       // Click to flip (but not on animation controls)

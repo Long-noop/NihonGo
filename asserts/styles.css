@@ -186,7 +186,7 @@ body {
 
 .home-btn {
   position: fixed;
-  bottom: 80px;
+  bottom: 10px;
   right: 25px;
   background-color: var(--home-btn-bg, green);
   color: white;
