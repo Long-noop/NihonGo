@@ -1,0 +1,933 @@
+[
+  {
+    "id": 1,
+    "kanji": "亭",
+    "han_viet": "ĐÌNH",
+    "meaning": "Nhà trạm, lầu nhỏ",
+    "example": "東屋 (あずまや) - Chòi lá"
+  },
+  {
+    "id": 2,
+    "kanji": "丘",
+    "han_viet": "KHÂU",
+    "meaning": "Gò đất, đồi nhỏ",
+    "example": "丘陵 (きゅうりょう) - Đồi núi"
+  },
+  {
+    "id": 3,
+    "kanji": "丙",
+    "han_viet": "BÍNH",
+    "meaning": "Can thứ ba (thiên can)",
+    "example": "丙午 (ひのえうま) - Bính Ngọ"
+  },
+  {
+    "id": 4,
+    "kanji": "串",
+    "han_viet": "XUYẾN",
+    "meaning": "Xiên, chuỗi",
+    "example": "串焼き (くしやき) - Đồ nướng xiên"
+  },
+  {
+    "id": 5,
+    "kanji": "丼",
+    "han_viet": "ĐỈNH",
+    "meaning": "Tô cơm, bát cơm phủ topping",
+    "example": "牛丼 (ぎゅうどん) - Cơm thịt bò"
+  },
+  {
+    "id": 6,
+    "kanji": "井",
+    "han_viet": "TỈNH",
+    "meaning": "Giếng nước",
+    "example": "井戸 (いど) - Cái giếng"
+  },
+  {
+    "id": 7,
+    "kanji": "仮",
+    "han_viet": "GIẢ",
+    "meaning": "Tạm thời, giả dối",
+    "example": "仮面 (かめん) - Mặt nạ"
+  },
+  {
+    "id": 8,
+    "kanji": "企",
+    "han_viet": "KỲ",
+    "meaning": "Kế hoạch, dự án",
+    "example": "企業 (きぎょう) - Doanh nghiệp"
+  },
+  {
+    "id": 9,
+    "kanji": "伎",
+    "han_viet": "KỸ",
+    "meaning": "Kỹ năng, nghệ thuật",
+    "example": "歌舞伎 (かぶき) - Kịch Kabuki"
+  },
+  {
+    "id": 10,
+    "kanji": "侍",
+    "han_viet": "THỊ",
+    "meaning": "Samurai, võ sĩ hầu cận",
+    "example": "侍 (さむらい) - Võ sĩ samurai"
+  },
+  {
+    "id": 11,
+    "kanji": "併",
+    "han_viet": "TINH",
+    "meaning": "Sáp nhập, hợp nhất",
+    "example": "合併 (がっぺい) - Sáp nhập"
+  },
+  {
+    "id": 12,
+    "kanji": "侵",
+    "han_viet": "XÂM",
+    "meaning": "Xâm lược, xâm phạm",
+    "example": "侵略 (しんりゃく) - Xâm lược"
+  },
+  {
+    "id": 13,
+    "kanji": "俗",
+    "han_viet": "TỤC",
+    "meaning": "Tục lệ, thế tục",
+    "example": "風俗 (ふうぞく) - Phong tục"
+  },
+  {
+    "id": 14,
+    "kanji": "促",
+    "han_viet": "XÚC",
+    "meaning": "Thúc đẩy, thúc giục",
+    "example": "促進 (そくしん) - Thúc đẩy"
+  },
+  {
+    "id": 15,
+    "kanji": "侶",
+    "han_viet": "LỮ",
+    "meaning": "Bạn đồng hành, bạn đạo",
+    "example": "僧侶 (そうりょ) - Tăng lữ"
+  },
+  {
+    "id": 16,
+    "kanji": "倫",
+    "han_viet": "LUÂN",
+    "meaning": "Đạo đức, luân lý",
+    "example": "倫理 (りんり) - Đạo đức"
+  },
+  {
+    "id": 17,
+    "kanji": "偽",
+    "han_viet": "NGỤY",
+    "meaning": "Giả mạo, dối trá",
+    "example": "偽物 (にせもの) - Đồ giả"
+  },
+  {
+    "id": 18,
+    "kanji": "偵",
+    "han_viet": "TRINH",
+    "meaning": "Trinh thám, do thám",
+    "example": "探偵 (たんてい) - Thám tử"
+  },
+  {
+    "id": 19,
+    "kanji": "偏",
+    "han_viet": "THIÊN",
+    "meaning": "Lệch lạc, thiên vị",
+    "example": "偏見 (へんけん) - Định kiến"
+  },
+  {
+    "id": 20,
+    "kanji": "僧",
+    "han_viet": "TĂNG",
+    "meaning": "Nhà sư, tăng lữ",
+    "example": "僧侶 (そうりょ) - Tăng lữ"
+  },
+  {
+    "id": 21,
+    "kanji": "催",
+    "han_viet": "THÔI",
+    "meaning": "Thúc giục, tổ chức sự kiện",
+    "example": "開催 (かいさい) - Tổ chức sự kiện"
+  },
+  {
+    "id": 22,
+    "kanji": "儒",
+    "han_viet": "NHO",
+    "meaning": "Nho giáo, học giả",
+    "example": "儒教 (じゅきょう) - Nho giáo"
+  },
+  {
+    "id": 23,
+    "kanji": "儲",
+    "han_viet": "TRỮ",
+    "meaning": "Tích trữ, dự trữ, kiếm lợi",
+    "example": "儲蓄 (ちょちく) - Tiết kiệm"
+  },
+  {
+    "id": 24,
+    "kanji": "党",
+    "han_viet": "ĐẢNG",
+    "meaning": "Đảng phái, nhóm",
+    "example": "政党 (せいとう) - Đảng chính trị"
+  },
+  {
+    "id": 25,
+    "kanji": "兵",
+    "han_viet": "BINH",
+    "meaning": "Binh lính, quân đội",
+    "example": "兵士 (へいし) - Binh sĩ"
+  },
+  {
+    "id": 26,
+    "kanji": "兼",
+    "han_viet": "KIÊM",
+    "meaning": "Kiêm nhiệm, đồng thời",
+    "example": "兼業 (けんぎょう) - Kiêm nghề"
+  },
+  {
+    "id": 27,
+    "kanji": "凄",
+    "han_viet": "THÊ",
+    "meaning": "Lạnh lẽo, kinh khủng, tuyệt vời",
+    "example": "凄い (すごい) - Tuyệt vời / Đáng sợ"
+  },
+  {
+    "id": 28,
+    "kanji": "凝",
+    "han_viet": "NGƯNG",
+    "meaning": "Đông đặc, tập trung cao độ",
+    "example": "凝固 (ぎょうこ) - Đông đặc"
+  },
+  {
+    "id": 29,
+    "kanji": "便",
+    "han_viet": "TIỆN",
+    "meaning": "Tiện lợi, bưu kiện",
+    "example": "便利 (べんり) - Tiện lợi"
+  },
+  {
+    "id": 30,
+    "kanji": "刈",
+    "han_viet": "CẮT",
+    "meaning": "Cắt, gặt hái",
+    "example": "草刈り (くさかり) - Cắt cỏ"
+  },
+  {
+    "id": 31,
+    "kanji": "刊",
+    "han_viet": "SAN",
+    "meaning": "Xuất bản, phát hành",
+    "example": "週刊 (しゅうかん) - Tuần san"
+  },
+  {
+    "id": 32,
+    "kanji": "勘",
+    "han_viet": "KHÁM",
+    "meaning": "Trực giác, tra xét, kiểm tra",
+    "example": "勘違い (かんちがい) - Hiểu lầm"
+  },
+  {
+    "id": 33,
+    "kanji": "呉",
+    "han_viet": "NGÔ",
+    "meaning": "Nước Ngô (cổ), cho, trao",
+    "example": "呉服 (ごふく) - Vải lụa truyền thống"
+  },
+  {
+    "id": 34,
+    "kanji": "哀",
+    "han_viet": "AI",
+    "meaning": "Buồn thương, thương xót",
+    "example": "哀れ (あわれ) - Thương xót"
+  },
+  {
+    "id": 35,
+    "kanji": "咽",
+    "han_viet": "YẾT",
+    "meaning": "Họng, nghẹn ngào",
+    "example": "咽頭 (いんとう) - Hầu họng"
+  },
+  {
+    "id": 36,
+    "kanji": "咳",
+    "han_viet": "CÁI",
+    "meaning": "Ho",
+    "example": "咳 (せき) - Tiếng ho"
+  },
+  {
+    "id": 37,
+    "kanji": "唇",
+    "han_viet": "THẦN",
+    "meaning": "Môi",
+    "example": "唇 (くちびる) - Đôi môi"
+  },
+  {
+    "id": 38,
+    "kanji": "哺",
+    "han_viet": "BỘ",
+    "meaning": "Cho ăn, bú mớm",
+    "example": "哺乳 (ほにゅう) - Cho con bú"
+  },
+  {
+    "id": 39,
+    "kanji": "唱",
+    "han_viet": "XƯỚNG",
+    "meaning": "Hát, xướng lên",
+    "example": "合唱 (がっしょう) - Hợp xướng"
+  },
+  {
+    "id": 40,
+    "kanji": "啓",
+    "han_viet": "KHẢI",
+    "meaning": "Mở ra, khai sáng",
+    "example": "啓発 (けいはつ) - Khai sáng"
+  },
+  {
+    "id": 41,
+    "kanji": "唾",
+    "han_viet": "THÓA",
+    "meaning": "Nước bọt",
+    "example": "唾液 (だえき) - Nước bọt"
+  },
+  {
+    "id": 42,
+    "kanji": "喉",
+    "han_viet": "HẦU",
+    "meaning": "Họng, cổ họng",
+    "example": "喉 (のど) - Cổ họng"
+  },
+  {
+    "id": 43,
+    "kanji": "嗅",
+    "han_viet": "TU",
+    "meaning": "Ngửi mùi",
+    "example": "嗅覚 (きゅうかく) - Khứu giác"
+  },
+  {
+    "id": 44,
+    "kanji": "圏",
+    "han_viet": "KHUYÊN",
+    "meaning": "Vùng, phạm vi, khu vực",
+    "example": "首都圏 (しゅとけん) - Vùng thủ đô"
+  },
+  {
+    "id": 45,
+    "kanji": "堅",
+    "han_viet": "KIÊN",
+    "meaning": "Cứng chắc, kiên cố",
+    "example": "堅固 (けんご) - Kiên cố"
+  },
+  {
+    "id": 46,
+    "kanji": "堪",
+    "han_viet": "KHAM",
+    "meaning": "Chịu đựng, nhẫn nhịn",
+    "example": "堪忍 (かんにん) - Nhẫn nại"
+  },
+  {
+    "id": 47,
+    "kanji": "塞",
+    "han_viet": "TẮC",
+    "meaning": "Bịt lại, chặn đứng",
+    "example": "閉塞 (へいそく) - Tắc nghẽn"
+  },
+  {
+    "id": 48,
+    "kanji": "墜",
+    "han_viet": "TRỤY",
+    "meaning": "Rơi xuống, sụp đổ",
+    "example": "墜落 (ついらく) - Rơi xuống, nổi máy bay"
+  },
+  {
+    "id": 49,
+    "kanji": "壮",
+    "han_viet": "TRÁNG",
+    "meaning": "Hùng tráng, mạnh mẽ",
+    "example": "壮大 (そうだい) - Hùng vĩ"
+  },
+  {
+    "id": 50,
+    "kanji": "奪",
+    "han_viet": "ĐOẠT",
+    "meaning": "Cướp đoạt, giành lấy",
+    "example": "奪う (うばう) - Cướp lấy"
+  },
+  {
+    "id": 51,
+    "kanji": "奮",
+    "han_viet": "PHẤN",
+    "meaning": "Phấn chấn, hăng hái",
+    "example": "奮闘 (ふんとう) - Chiến đấu hết mình"
+  },
+  {
+    "id": 52,
+    "kanji": "妊",
+    "han_viet": "NHÂM",
+    "meaning": "Mang thai, có thai",
+    "example": "妊娠 (にんしん) - Mang thai"
+  },
+  {
+    "id": 53,
+    "kanji": "妥",
+    "han_viet": "TÁ",
+    "meaning": "Thỏa đáng, ổn thỏa",
+    "example": "妥協 (だきょう) - Thỏa hiệp"
+  },
+  {
+    "id": 54,
+    "kanji": "姓",
+    "han_viet": "TÍNH",
+    "meaning": "Họ (họ tên)",
+    "example": "姓名 (せいめい) - Họ tên"
+  },
+  {
+    "id": 55,
+    "kanji": "姻",
+    "han_viet": "NHÂN",
+    "meaning": "Hôn nhân, thông gia",
+    "example": "婚姻 (こんいん) - Hôn nhân"
+  },
+  {
+    "id": 56,
+    "kanji": "娯",
+    "han_viet": "NGU",
+    "meaning": "Giải trí, vui chơi",
+    "example": "娯楽 (ごらく) - Giải trí"
+  },
+  {
+    "id": 57,
+    "kanji": "娠",
+    "han_viet": "THẦN",
+    "meaning": "Mang thai",
+    "example": "妊娠 (にんしん) - Mang thai"
+  },
+  {
+    "id": 58,
+    "kanji": "婿",
+    "han_viet": "TẾ",
+    "meaning": "Con rể, chú rể",
+    "example": "婿 (むこ) - Con rể"
+  },
+  {
+    "id": 59,
+    "kanji": "嫁",
+    "han_viet": "GIÁ",
+    "meaning": "Lấy chồng, cô dâu, con dâu",
+    "example": "嫁 (よめ) - Cô dâu / Con dâu"
+  },
+  {
+    "id": 60,
+    "kanji": "孤",
+    "han_viet": "CÔ",
+    "meaning": "Cô đơn, mồ côi",
+    "example": "孤独 (こどく) - Cô đơn"
+  },
+  {
+    "id": 61,
+    "kanji": "宜",
+    "han_viet": "NGHI",
+    "meaning": "Thích hợp, phù hợp",
+    "example": "便宜 (べんぎ) - Tiện lợi"
+  },
+  {
+    "id": 62,
+    "kanji": "宛",
+    "han_viet": "UYỂN",
+    "meaning": "Như thể, gửi đến, địa chỉ",
+    "example": "宛先 (あてさき) - Địa chỉ người nhận"
+  },
+  {
+    "id": 63,
+    "kanji": "宣",
+    "han_viet": "TUYÊN",
+    "meaning": "Tuyên bố, công bố",
+    "example": "宣言 (せんげん) - Tuyên ngôn"
+  },
+  {
+    "id": 64,
+    "kanji": "審",
+    "han_viet": "THẨM",
+    "meaning": "Xét xử, thẩm tra",
+    "example": "審査 (しんさ) - Xét duyệt"
+  },
+  {
+    "id": 65,
+    "kanji": "屈",
+    "han_viet": "KHUẤT",
+    "meaning": "Cong xuống, khuất phục",
+    "example": "屈服 (くっぷく) - Khuất phục"
+  },
+  {
+    "id": 66,
+    "kanji": "属",
+    "han_viet": "THUỘC",
+    "meaning": "Thuộc về, loài",
+    "example": "所属 (しょぞく) - Thuộc về"
+  },
+  {
+    "id": 67,
+    "kanji": "巨",
+    "han_viet": "CỰ",
+    "meaning": "To lớn, khổng lồ",
+    "example": "巨大 (きょだい) - Khổng lồ"
+  },
+  {
+    "id": 68,
+    "kanji": "帝",
+    "han_viet": "ĐẾ",
+    "meaning": "Hoàng đế, thiên tử",
+    "example": "帝国 (ていこく) - Đế quốc"
+  },
+  {
+    "id": 69,
+    "kanji": "幅",
+    "han_viet": "PHÚC",
+    "meaning": "Chiều rộng, bề rộng",
+    "example": "幅 (はば) - Chiều rộng"
+  },
+  {
+    "id": 70,
+    "kanji": "幕",
+    "han_viet": "MẠC",
+    "meaning": "Màn, rèm, thời đại phong kiến",
+    "example": "幕府 (ばくふ) - Mạc phủ"
+  },
+  {
+    "id": 71,
+    "kanji": "幣",
+    "han_viet": "TỆ",
+    "meaning": "Tiền tệ, đồng tiền",
+    "example": "貨幣 (かへい) - Tiền tệ"
+  },
+  {
+    "id": 72,
+    "kanji": "庁",
+    "han_viet": "SẢNH",
+    "meaning": "Cơ quan nhà nước, sảnh đường",
+    "example": "官庁 (かんちょう) - Cơ quan nhà nước"
+  },
+  {
+    "id": 73,
+    "kanji": "序",
+    "han_viet": "TỰ",
+    "meaning": "Thứ tự, lời tựa, mở đầu",
+    "example": "序章 (じょしょう) - Lời mở đầu"
+  },
+  {
+    "id": 74,
+    "kanji": "底",
+    "han_viet": "ĐÁY",
+    "meaning": "Đáy, tận cùng",
+    "example": "底 (そこ) - Đáy"
+  },
+  {
+    "id": 75,
+    "kanji": "府",
+    "han_viet": "PHỦ",
+    "meaning": "Phủ, tỉnh thành, chính phủ",
+    "example": "政府 (せいふ) - Chính phủ"
+  },
+  {
+    "id": 76,
+    "kanji": "廷",
+    "han_viet": "ĐÌNH",
+    "meaning": "Triều đình, tòa án",
+    "example": "法廷 (ほうてい) - Tòa án"
+  },
+  {
+    "id": 77,
+    "kanji": "延",
+    "han_viet": "DIÊN",
+    "meaning": "Kéo dài, trì hoãn",
+    "example": "延長 (えんちょう) - Kéo dài"
+  },
+  {
+    "id": 78,
+    "kanji": "弊",
+    "han_viet": "TỆ",
+    "meaning": "Tệ hại, hư hỏng (khiêm tốn)",
+    "example": "弊社 (へいしゃ) - Công ty chúng tôi (khiêm)"
+  },
+  {
+    "id": 79,
+    "kanji": "彫",
+    "han_viet": "ĐIÊU",
+    "meaning": "Khắc, chạm trổ",
+    "example": "彫刻 (ちょうこく) - Điêu khắc"
+  },
+  {
+    "id": 80,
+    "kanji": "径",
+    "han_viet": "KÍNH",
+    "meaning": "Đường kính, đường tắt",
+    "example": "直径 (ちょっけい) - Đường kính"
+  },
+  {
+    "id": 81,
+    "kanji": "徐",
+    "han_viet": "TỪ",
+    "meaning": "Chậm chạp, từ từ",
+    "example": "徐々に (じょじょに) - Dần dần"
+  },
+  {
+    "id": 82,
+    "kanji": "徹",
+    "han_viet": "TRIỆT",
+    "meaning": "Thấu suốt, triệt để",
+    "example": "徹底 (てってい) - Triệt để"
+  },
+  {
+    "id": 83,
+    "kanji": "忠",
+    "han_viet": "TRUNG",
+    "meaning": "Trung thành, trung thực",
+    "example": "忠実 (ちゅうじつ) - Trung thực, trung thành"
+  },
+  {
+    "id": 84,
+    "kanji": "恩",
+    "han_viet": "ÂN",
+    "meaning": "Ân huệ, ơn nghĩa",
+    "example": "恩人 (おんじん) - Ân nhân"
+  },
+  {
+    "id": 85,
+    "kanji": "恵",
+    "han_viet": "HUỆ",
+    "meaning": "Ân huệ, lợi ích, ban ơn",
+    "example": "恵み (めぐみ) - Ân sủng"
+  },
+  {
+    "id": 86,
+    "kanji": "愚",
+    "han_viet": "NGU",
+    "meaning": "Ngu ngốc, dại dột",
+    "example": "愚か (おろか) - Ngu ngốc"
+  },
+  {
+    "id": 87,
+    "kanji": "憲",
+    "han_viet": "HIẾN",
+    "meaning": "Hiến pháp, luật pháp",
+    "example": "憲法 (けんぽう) - Hiến pháp"
+  },
+  {
+    "id": 88,
+    "kanji": "恨",
+    "han_viet": "HẬN",
+    "meaning": "Oán hận, thù hận",
+    "example": "恨む (うらむ) - Oán hận"
+  },
+  {
+    "id": 89,
+    "kanji": "悟",
+    "han_viet": "NGỘ",
+    "meaning": "Giác ngộ, hiểu ra",
+    "example": "悟り (さとり) - Giác ngộ"
+  },
+  {
+    "id": 90,
+    "kanji": "惨",
+    "han_viet": "THẢM",
+    "meaning": "Thê thảm, bi thảm, thảm khốc",
+    "example": "惨事 (さんじ) - Thảm họa"
+  },
+  {
+    "id": 91,
+    "kanji": "憧",
+    "han_viet": "ĐỒNG",
+    "meaning": "Mơ ước, ngưỡng mộ, khao khát",
+    "example": "憧れ (あこがれ) - Sự ngưỡng mộ"
+  },
+  {
+    "id": 92,
+    "kanji": "戒",
+    "han_viet": "GIỚI",
+    "meaning": "Răn đe, cảnh giới, giới luật",
+    "example": "戒律 (かいりつ) - Giới luật"
+  },
+  {
+    "id": 93,
+    "kanji": "扇",
+    "han_viet": "PHIẾN",
+    "meaning": "Cái quạt",
+    "example": "扇風機 (せんぷうき) - Quạt điện"
+  },
+  {
+    "id": 94,
+    "kanji": "扉",
+    "han_viet": "PHI",
+    "meaning": "Cánh cửa, trang bìa",
+    "example": "扉 (とびら) - Cánh cửa"
+  },
+  {
+    "id": 95,
+    "kanji": "扱",
+    "han_viet": "CẤP",
+    "meaning": "Xử lý, đối xử, thao tác",
+    "example": "取り扱い (とりあつかい) - Cách xử lý"
+  },
+  {
+    "id": 96,
+    "kanji": "批",
+    "han_viet": "PHÊ",
+    "meaning": "Phê bình, chỉ trích",
+    "example": "批判 (ひはん) - Phê bình"
+  },
+  {
+    "id": 97,
+    "kanji": "抗",
+    "han_viet": "KHÁNG",
+    "meaning": "Phản kháng, chống lại",
+    "example": "抵抗 (ていこう) - Kháng cự"
+  },
+  {
+    "id": 98,
+    "kanji": "抜",
+    "han_viet": "BẠT",
+    "meaning": "Rút ra, bứt ra, vượt trội",
+    "example": "抜ける (ぬける) - Rút ra, thoát ra"
+  },
+  {
+    "id": 99,
+    "kanji": "択",
+    "han_viet": "TRẠCH",
+    "meaning": "Lựa chọn",
+    "example": "選択 (せんたく) - Lựa chọn"
+  },
+  {
+    "id": 100,
+    "kanji": "抑",
+    "han_viet": "ỨC",
+    "meaning": "Kìm nén, ức chế",
+    "example": "抑制 (よくせい) - Ức chế"
+  },
+  {
+    "id": 101,
+    "kanji": "拡",
+    "han_viet": "KHOÁNG",
+    "meaning": "Mở rộng, khuếch trương",
+    "example": "拡大 (かくだい) - Mở rộng"
+  },
+  {
+    "id": 102,
+    "kanji": "拠",
+    "han_viet": "CỨ",
+    "meaning": "Căn cứ, dựa vào",
+    "example": "根拠 (こんきょ) - Căn cứ, lý do"
+  },
+  {
+    "id": 103,
+    "kanji": "抵",
+    "han_viet": "ĐỀ",
+    "meaning": "Kháng cự, chống lại, đối kháng",
+    "example": "抵抗 (ていこう) - Kháng cự"
+  },
+  {
+    "id": 104,
+    "kanji": "抽",
+    "han_viet": "TRỪU",
+    "meaning": "Rút ra, trừu xuất",
+    "example": "抽選 (ちゅうせん) - Bốc thăm"
+  },
+  {
+    "id": 105,
+    "kanji": "拒",
+    "han_viet": "CỰ",
+    "meaning": "Từ chối, cự tuyệt",
+    "example": "拒否 (きょひ) - Từ chối"
+  },
+  {
+    "id": 106,
+    "kanji": "挟",
+    "han_viet": "HIỆP",
+    "meaning": "Kẹp chặt, kẹp vào giữa",
+    "example": "挟む (はさむ) - Kẹp vào"
+  },
+  {
+    "id": 107,
+    "kanji": "挑",
+    "han_viet": "KHIÊU",
+    "meaning": "Thách thức, khiêu khích",
+    "example": "挑戦 (ちょうせん) - Thách thức"
+  },
+  {
+    "id": 108,
+    "kanji": "拶",
+    "han_viet": "TÁT",
+    "meaning": "Chen lấn, chào hỏi (ghép chữ)",
+    "example": "挨拶 (あいさつ) - Lời chào hỏi"
+  },
+  {
+    "id": 109,
+    "kanji": "拭",
+    "han_viet": "THỨC",
+    "meaning": "Lau chùi, lau sạch",
+    "example": "拭く (ふく) - Lau chùi"
+  },
+  {
+    "id": 110,
+    "kanji": "捕",
+    "han_viet": "BỘ",
+    "meaning": "Bắt giữ, bắt giam",
+    "example": "逮捕 (たいほ) - Bắt giữ"
+  },
+  {
+    "id": 111,
+    "kanji": "捜",
+    "han_viet": "TẦU",
+    "meaning": "Tìm kiếm, lục soát",
+    "example": "捜索 (そうさく) - Tìm kiếm"
+  },
+  {
+    "id": 112,
+    "kanji": "挿",
+    "han_viet": "TẠP",
+    "meaning": "Cắm vào, chèn vào",
+    "example": "挿入 (そうにゅう) - Chèn vào"
+  },
+  {
+    "id": 113,
+    "kanji": "挨",
+    "han_viet": "ÁI",
+    "meaning": "Chào hỏi (ghép chữ)",
+    "example": "挨拶 (あいさつ) - Lời chào hỏi"
+  },
+  {
+    "id": 114,
+    "kanji": "推",
+    "han_viet": "SUY",
+    "meaning": "Đẩy, suy luận, tiến cử",
+    "example": "推測 (すいそく) - Suy đoán"
+  },
+  {
+    "id": 115,
+    "kanji": "掘",
+    "han_viet": "QUẬT",
+    "meaning": "Đào bới, khai quật",
+    "example": "掘る (ほる) - Đào"
+  },
+  {
+    "id": 116,
+    "kanji": "掲",
+    "han_viet": "KIẾT",
+    "meaning": "Treo lên, đăng tải",
+    "example": "掲示 (けいじ) - Thông báo (bảng niêm yết)"
+  },
+  {
+    "id": 117,
+    "kanji": "排",
+    "han_viet": "BÀI",
+    "meaning": "Xếp hàng, loại trừ, bài trừ",
+    "example": "排除 (はいじょ) - Loại bỏ"
+  },
+  {
+    "id": 118,
+    "kanji": "捻",
+    "han_viet": "NIỆM",
+    "meaning": "Vặn, xoắn, bóp",
+    "example": "捻挫 (ねんざ) - Bong gân"
+  },
+  {
+    "id": 119,
+    "kanji": "提",
+    "han_viet": "ĐỀ",
+    "meaning": "Đề xuất, đưa ra, nêu lên",
+    "example": "提案 (ていあん) - Đề xuất"
+  },
+  {
+    "id": 120,
+    "kanji": "揮",
+    "han_viet": "HUY",
+    "meaning": "Vẫy, chỉ huy, phát huy",
+    "example": "指揮 (しき) - Chỉ huy"
+  },
+  {
+    "id": 121,
+    "kanji": "掌",
+    "han_viet": "CHƯỞNG",
+    "meaning": "Lòng bàn tay, nắm quyền",
+    "example": "掌握 (しょうあく) - Nắm trong tay"
+  },
+  {
+    "id": 122,
+    "kanji": "搾",
+    "han_viet": "TẠC",
+    "meaning": "Ép, vắt, bóc lột",
+    "example": "搾取 (さくしゅ) - Bóc lột"
+  },
+  {
+    "id": 123,
+    "kanji": "撃",
+    "han_viet": "KÍCH",
+    "meaning": "Đánh, tấn công",
+    "example": "攻撃 (こうげき) - Tấn công"
+  },
+  {
+    "id": 124,
+    "kanji": "摘",
+    "han_viet": "ĐỊCH",
+    "meaning": "Hái, chỉ ra, vạch trần",
+    "example": "指摘 (してき) - Chỉ ra, nhận xét"
+  },
+  {
+    "id": 125,
+    "kanji": "擦",
+    "han_viet": "SÁT",
+    "meaning": "Cọ xát, lau, sây xước",
+    "example": "摩擦 (まさつ) - Ma sát"
+  },
+  {
+    "id": 126,
+    "kanji": "擬",
+    "han_viet": "NGHI",
+    "meaning": "Bắt chước, giả vờ, mô phỏng",
+    "example": "擬似 (ぎじ) - Giả, mô phỏng"
+  },
+  {
+    "id": 127,
+    "kanji": "承",
+    "han_viet": "THỪA",
+    "meaning": "Chấp nhận, tiếp nhận, thừa kế",
+    "example": "承認 (しょうにん) - Chấp nhận"
+  },
+  {
+    "id": 128,
+    "kanji": "敵",
+    "han_viet": "ĐỊCH",
+    "meaning": "Kẻ thù, đối thủ, địch thủ",
+    "example": "敵 (てき) - Kẻ thù"
+  },
+  {
+    "id": 129,
+    "kanji": "敷",
+    "han_viet": "PHÚ",
+    "meaning": "Trải ra, lót, phủ khắp",
+    "example": "敷く (しく) - Trải ra, lót"
+  },
+  {
+    "id": 130,
+    "kanji": "斜",
+    "han_viet": "TÀ",
+    "meaning": "Nghiêng, xiên, chéo",
+    "example": "斜面 (しゃめん) - Sườn dốc"
+  },
+  {
+    "id": 131,
+    "kanji": "旗",
+    "han_viet": "KỲ",
+    "meaning": "Cờ, lá cờ, cờ hiệu",
+    "example": "旗 (はた) - Lá cờ"
+  },
+  {
+    "id": 132,
+    "kanji": "既",
+    "han_viet": "KÝ",
+    "meaning": "Đã, trước đó, rồi",
+    "example": "既に (すでに) - Đã rồi"
+  },
+  {
+    "id": 133,
+    "kanji": "旧",
+    "han_viet": "CỰU",
+    "meaning": "Cũ, xưa cũ, cựu",
+    "example": "旧式 (きゅうしき) - Kiểu cũ"
+  }
+]

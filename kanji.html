@@ -5,15 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JLPT N3 Kanji Flashcards - 521 Hán Tự</title>
 
-    <!-- Google Fonts - Japanese -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Using local KanjiVG SVGs for animations (no HanziWriter CDN) -->
 
     <link rel="stylesheet" href="./asserts/styles.css" />
     <style>
@@ -28,7 +25,6 @@
         --home-btn-bg-hover: #1d4ed8;
       }
 
-      /* Animation wrapper */
       .kanji-animation-wrapper {
         display: flex;
         flex-direction: column;
@@ -40,7 +36,6 @@
       #kanji-animation {
         background: white;
         border-radius: 15px;
-        /* padding: 2px; */
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       }
 
@@ -73,18 +68,15 @@
         color: white;
         transform: translateY(-2px);
       }
-
       .anim-btn:active {
         transform: translateY(0);
       }
-
       .anim-btn.active {
         background: #48bb78;
         color: white;
         border-color: #48bb78;
       }
 
-      /* kanji-specific styles */
       .kanji-display {
         font-size: 12em;
         font-weight: bold;
@@ -92,7 +84,7 @@
         text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
         margin-bottom: 20px;
         font-family: var(--font-serif);
-        display: none; /* Hidden by default, use animation */
+        display: none;
       }
 
       .han-viet {
@@ -110,52 +102,35 @@
         font-style: italic;
         font-weight: 300;
       }
-
       .example {
         font-size: 1.4em;
         font-family: var(--font-sans);
       }
 
-      @media (max-width: 768px) {
-        #kanji-animation {
-          padding: 15px;
-        }
-
-        .anim-btn {
-          padding: 8px 15px;
-          font-size: 12px;
-        }
+      /* Switch-set button in header */
+      .btn-switch-set {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 8px 18px;
+        background: rgba(255, 255, 255, 0.15);
+        border: 2px solid rgba(255, 255, 255, 0.55);
+        border-radius: 20px;
+        color: white;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.25s;
+        margin-top: 8px;
+        font-family: var(--font-sans);
+      }
+      .btn-switch-set:hover {
+        background: rgba(255, 255, 255, 0.3);
+        border-color: white;
+        transform: translateY(-1px);
       }
 
-      @media (max-width: 600px) {
-        .kanji-display {
-          font-size: 8em;
-        }
-        .han-viet {
-          font-size: 2em;
-        }
-        .meaning {
-          font-size: 1.4em;
-        }
-        .example {
-          font-size: 1.2em;
-        }
-        .flashcard {
-          height: 450px;
-        }
-
-        #kanji-animation {
-          padding: 10px;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .kanji-animation-wrapper {
-          gap: 15px;
-        }
-      }
-
-      /* Modal Styles */
+      /* Modal */
       .modal {
         display: none;
         position: fixed;
@@ -167,7 +142,6 @@
         background-color: rgba(0, 0, 0, 0.6);
         animation: fadeIn 0.3s;
       }
-
       .modal.show {
         display: flex;
         justify-content: center;
@@ -184,14 +158,12 @@
         animation: slideUp 0.3s;
         text-align: center;
       }
-
       .modal-content h2 {
         color: #667eea;
         margin-bottom: 15px;
         font-size: 2em;
       }
-
-      .modal-content p {
+      .modal-content > p {
         color: #666;
         margin-bottom: 30px;
         font-size: 1.1em;
@@ -213,19 +185,59 @@
         color: white;
         transition: all 0.3s;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        position: relative;
+        line-height: 1.5;
       }
-
       .kanji-option:hover {
         transform: translateY(-3px);
         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
       }
 
+      /* Badge hiển thị "đang ở thẻ X" */
+      .resume-badge {
+        position: absolute;
+        top: -9px;
+        right: -9px;
+        background: #ffd200;
+        color: #333;
+        font-size: 0.62em;
+        padding: 2px 9px;
+        border-radius: 10px;
+        font-weight: 700;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+        white-space: nowrap;
+      }
+
       .kanji-option.n3 {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       }
-
       .kanji-option.intermediate {
         background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      }
+      .kanji-option.advanced {
+        background: linear-gradient(135deg, #f7971e 0%, #ffd200 100%);
+        color: #333;
+      }
+
+      /* Reset area — tách riêng, ở dưới cùng modal */
+      .modal-reset-area {
+        margin-top: 25px;
+        padding-top: 20px;
+        border-top: 1px solid #eee;
+      }
+      .btn-modal-reset {
+        background: none;
+        border: none;
+        color: #e74c3c;
+        font-size: 0.85em;
+        cursor: pointer;
+        text-decoration: underline;
+        padding: 4px 8px;
+        transition: opacity 0.2s;
+        font-family: var(--font-sans);
+      }
+      .btn-modal-reset:hover {
+        opacity: 0.65;
       }
 
       @keyframes fadeIn {
@@ -236,7 +248,6 @@
           opacity: 1;
         }
       }
-
       @keyframes slideUp {
         from {
           transform: translateY(50px);
@@ -248,68 +259,115 @@
         }
       }
 
+      @media (max-width: 768px) {
+        #kanji-animation {
+          padding: 15px;
+        }
+        .anim-btn {
+          padding: 8px 15px;
+          font-size: 12px;
+        }
+      }
       @media (max-width: 600px) {
+        .kanji-display {
+          font-size: 8em;
+        }
+        .han-viet {
+          font-size: 2em;
+        }
+        .meaning {
+          font-size: 1.4em;
+        }
+        .example {
+          font-size: 1.2em;
+        }
+        .flashcard {
+          height: 450px;
+        }
+        #kanji-animation {
+          padding: 10px;
+        }
         .modal-content {
           padding: 30px 20px;
         }
-
         .modal-content h2 {
           font-size: 1.5em;
         }
-
         .kanji-option {
           padding: 15px 20px;
           font-size: 1em;
         }
       }
+      @media (max-width: 480px) {
+        .kanji-animation-wrapper {
+          gap: 15px;
+        }
+      }
     </style>
   </head>
   <body>
-    <!-- Modal Selection -->
+    <!-- ── Modal chọn bộ ── -->
     <div class="modal" id="kanjiModal">
       <div class="modal-content">
         <h2>📚 Chọn Bộ Kanji</h2>
         <p>Chọn tập Kanji bạn muốn học</p>
         <div class="kanji-options">
-          <button class="kanji-option n3" onclick="selectKanjiSet('n3')">
+          <button
+            class="kanji-option n3"
+            id="btn-n3"
+            onclick="selectKanjiSet('n3')"
+          >
             📝 JLPT N3 Kanji
-            <br />
-            <small style="opacity: 0.9">521 Hán Tự</small>
+            <br /><small style="opacity: 0.9">521 Hán Tự</small>
           </button>
           <button
             class="kanji-option intermediate"
+            id="btn-intermediate"
             onclick="selectKanjiSet('intermediate')"
           >
-            🎓 Kanji Sơ Trung Cấp
-            <br />
-            <small style="opacity: 0.9">~ 1200 Hán Tự</small>
+            🎓 Kanji 1200
+            <br /><small style="opacity: 0.9">~ 1200 Hán Tự Sơ Trung Cấp</small>
+          </button>
+          <button
+            class="kanji-option advanced"
+            id="btn-advanced"
+            onclick="selectKanjiSet('advanced')"
+          >
+            🏆 Kanji 1600
+            <br /><small style="opacity: 0.85">~ 1600 Hán Tự Trung Cấp</small>
           </button>
         </div>
+
+        <!-- Reset nằm ở cuối modal, không lẫn với nút chọn bộ -->
+        <!-- <div class="modal-reset-area">
+          <button class="btn-modal-reset" onclick="resetAllProgress()">
+            🗑 Xóa toàn bộ tiến trình học
+          </button>
+        </div> -->
       </div>
     </div>
 
+    <!-- ── Main ── -->
     <div class="container" id="mainContainer" style="display: none">
       <div class="header">
         <h1 id="headerTitle">📝 JLPT N3 Kanji Flashcards</h1>
         <p id="headerSubtitle">521 Hán Tự Cần Thiết</p>
+        <!-- Nút đổi bộ không cần Reset All -->
+        <button class="btn-switch-set" onclick="openModal()">
+          ⇄ Đổi bộ Kanji
+        </button>
       </div>
 
       <div class="card-container">
         <div class="flashcard" id="flashcard">
           <div class="card-face card-front">
-            <!-- Animation Wrapper -->
             <div class="kanji-animation-wrapper">
               <div
                 id="kanji-animation"
                 class="kanji-svg"
                 aria-hidden="true"
               ></div>
-
-              <!-- Animation Controls -->
               <div class="animation-controls">
-                <!-- <button class="anim-btn" onclick="animateKanji(event)">
-                  ▶️ Animate
-                </button> -->
                 <button
                   class="anim-btn"
                   onclick="toggleAutoLoop(event)"
@@ -318,37 +376,25 @@
                   🔁 Animate
                 </button>
                 <button
-                  id="btn-learn"
                   class="anim-btn"
+                  id="btn-learn"
                   onclick="toggleLearned()"
                 >
                   ⭐ Đang học
                 </button>
-                <button
-                  class="anim-btn"
-                  onclick="resetProgress()"
-                  style="color: #e74c3c; border-color: #e74c3c"
-                >
-                  🗑 Reset All
-                </button>
               </div>
             </div>
-
-            <!-- Fallback: Static Display -->
             <div class="kanji-display" id="kanji-static">護</div>
           </div>
           <div class="card-face card-back">
             <div class="han-viet" id="han-viet">HỘ</div>
             <div class="meaning" id="meaning">Bảo vệ, che chở</div>
-            <div class="example" id="example">
-              看護師 (かんごし)<br />
-              Y tá
-            </div>
+            <div class="example" id="example">看護師 (かんごし)<br />Y tá</div>
             <div class="audio-buttons">
               <button
                 class="btn-speak"
                 onclick="speakKanjiExample(event)"
-                title="Đọc từ ví dụ (chỉ tiếng Nhật)"
+                title="Đọc từ ví dụ"
               >
                 🔊 Nghe
               </button>
@@ -370,8 +416,8 @@
       </div>
 
       <div class="flip-hint">
-        💡 Nhấp vào thẻ hoặc nhấn Spacebar để lật | ← → để chuyển thẻ | A để
-        Animate | L để Loop
+        💡 Nhấp vào thẻ hoặc Spacebar để lật | ← → chuyển thẻ | A Animate | L
+        Loop
       </div>
     </div>
 
@@ -383,15 +429,11 @@
         height: 250px;
         display: block;
       }
-
-      /* Make SVG responsive inside the container */
       .kanji-svg svg {
         width: 100%;
         height: 100%;
         display: block;
       }
-
-      /* Stroke default style applied to injected KanjiVG paths */
       .kanji-svg .kanji-stroke {
         fill: none;
         stroke: #e74c3c;
@@ -402,414 +444,185 @@
 
     <script src="./data/tts.js"></script>
     <script>
-      let allKanji = [];
-      let currentIndex = 0;
-      let autoLoop = false;
-      let loopInterval = null;
-      let currentDataset = ""; // Track which dataset is loaded
-
-      // --- STATE MANAGEMENT ---
-      const STORAGE_KEY = "FLASHCARD_APP_V1";
-      let appState = {
-        currentDataset: "",
-        currentCardIndex: 0,
-        isFlipped: false,
-        learnedCards: {},
-      };
-
-      function loadState() {
-        try {
-          const saved = localStorage.getItem(STORAGE_KEY);
-          if (saved) {
-            appState = { ...appState, ...JSON.parse(saved) };
-            if (!appState.learnedCards) appState.learnedCards = {};
-          }
-        } catch (error) {
-          console.warn("Lỗi khi đọc localStorage, dùng state mặc định:", error);
-        }
-      }
-
-      function saveState() {
-        appState.currentDataset = currentDataset;
-        appState.currentCardIndex = currentIndex;
-        appState.isFlipped = document
-          .getElementById("flashcard")
-          .classList.contains("flipped");
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(appState));
-      }
-
-      function resetProgress() {
-        if (confirm("Bạn có chắc chắn muốn xóa toàn bộ tiến trình học?")) {
-          localStorage.removeItem(STORAGE_KEY);
-          location.reload();
-        }
-      }
-
-      function toggleLearned() {
-        if (!appState.learnedCards[currentDataset]) {
-          appState.learnedCards[currentDataset] = [];
-        }
-
-        const learnedList = appState.learnedCards[currentDataset];
-        const indexPos = learnedList.indexOf(currentIndex);
-
-        if (indexPos === -1) {
-          learnedList.push(currentIndex);
-        } else {
-          learnedList.splice(indexPos, 1);
-        }
-
-        updateLearnedUI();
-        saveState();
-      }
-
-      function updateLearnedUI() {
-        const isLearned =
-          appState.learnedCards[currentDataset] &&
-          appState.learnedCards[currentDataset].includes(currentIndex);
-        const btnLearn = document.getElementById("btn-learn");
-        if (!btnLearn) return;
-
-        if (isLearned) {
-          btnLearn.classList.add("active");
-          btnLearn.textContent = "✅ Đã học";
-        } else {
-          btnLearn.classList.remove("active");
-          btnLearn.textContent = "⭐ Đang học";
-        }
-      }
-      // ------------------------
-
-      // Cache for fetched SVG text/documents
-      const svgCache = new Map();
-
-      // Dataset configuration
+      // ═══════════════════════════════════════════════
+      //  CONFIG
+      // ═══════════════════════════════════════════════
       const datasets = {
         n3: {
           file: "./data/kanji.json",
           title: "📝 JLPT N3 Kanji Flashcards",
           subtitle: "521 Hán Tự Cần Thiết",
-          count: 521,
         },
         intermediate: {
           file: "./data/kanji_intermediate.json",
-          title: "🎓 Kanji Sơ Trung Cấp Flashcards",
+          title: "🎓 Kanji 1200 Flashcards",
           subtitle: "~ 1200 Hán Tự Sơ Trung Cấp",
-          count: 1227,
+        },
+        advanced: {
+          file: "./data/kanji_advanced.json",
+          title: "🏆 Kanji 1600 Flashcards",
+          subtitle: "~ 1600 Hán Tự Trung Cấp",
         },
       };
 
-      // Show modal on page load
-      window.addEventListener("DOMContentLoaded", () => {
-        loadState(); // Khôi phục trạng thái từ localStorage
+      // ═══════════════════════════════════════════════
+      //  STATE — mỗi dataset lưu riêng
+      //  {
+      //    lastDataset: "n3",
+      //    datasets: {
+      //      n3:           { cardIndex: 0, isFlipped: false, learned: [] },
+      //      intermediate: { cardIndex: 0, isFlipped: false, learned: [] },
+      //      advanced:     { cardIndex: 0, isFlipped: false, learned: [] },
+      //    }
+      //  }
+      // ═══════════════════════════════════════════════
+      const STORAGE_KEY = "KANJI_APP_V2";
+      let appState = { lastDataset: "", datasets: {} };
 
-        // Check if dataset is in URL params
-        const urlParams = new URLSearchParams(window.location.search);
-        const dataset = urlParams.get("set");
-
-        if (dataset && datasets[dataset]) {
-          selectKanjiSet(dataset);
-        } else if (
-          appState.currentDataset &&
-          datasets[appState.currentDataset]
-        ) {
-          // Khôi phục dataset từ state nếu không có tham số URL
-          selectKanjiSet(appState.currentDataset, true);
-        } else {
-          // Show modal
-          document.getElementById("kanjiModal").classList.add("show");
-        }
-      });
-
-      // Select kanji set
-      function selectKanjiSet(set, isRestore = false) {
-        if (!datasets[set]) {
-          console.error("Invalid dataset:", set);
-          return;
-        }
-
-        currentDataset = set;
-
-        // Hide modal
-        document.getElementById("kanjiModal").classList.remove("show");
-
-        // Show main container
-        document.getElementById("mainContainer").style.display = "block";
-
-        // Update header
-        document.getElementById("headerTitle").textContent =
-          datasets[set].title;
-        document.getElementById("headerSubtitle").textContent =
-          datasets[set].subtitle;
-
-        // Load data
-        loadKanjiData(datasets[set].file, datasets[set].count, isRestore);
-      }
-
-      function codepointHex(character) {
-        return Array.from(character)
-          .map((c) => c.codePointAt(0).toString(16).toLowerCase())
-          .join("-");
-      }
-
-      async function fetchKanjiSvg(character) {
-        const hex = codepointHex(character);
-        const candidates = [
-          `./data/kanjivg/0${hex}.svg`,
-          `./data/kanjivg/${hex}.svg`,
-          `./data/kanjivg/0${encodeURIComponent(character)}.svg`,
-        ];
-
-        for (const url of candidates) {
-          try {
-            // check cache first
-            if (svgCache.has(url)) return svgCache.get(url);
-
-            const res = await fetch(url, { cache: "force-cache" });
-            if (!res.ok) continue;
-            const text = await res.text();
-            svgCache.set(url, text);
-            console.debug("Loaded KanjiVG from:", url);
-            return text;
-          } catch (e) {
-            continue;
-          }
-        }
-
-        return null;
-      }
-
-      function injectSvgIntoContainer(svgText, container) {
-        // Parse SVG text and insert a cloned node into container
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(svgText, "image/svg+xml");
-        const svg = doc.documentElement;
-
-        // Normalize the svg for responsiveness
-        svg.removeAttribute("width");
-        svg.removeAttribute("height");
-        if (!svg.getAttribute("viewBox")) {
-          // attempt to build a viewBox from bbox if possible later
-        }
-        svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
-        svg.classList.add("injected-kanji");
-
-        // Ensure strokes are targetable and styled
-        const strokeCandidates = svg.querySelectorAll(
-          "path, line, polyline, polygon",
-        );
-        strokeCandidates.forEach((el) => {
-          el.classList.add("kanji-stroke");
-          try {
-            const bg = el.cloneNode(true);
-            // Remove kanji-stroke class from background to prevent animation reset
-            bg.classList.remove("kanji-stroke");
-            bg.classList.add("kanji-stroke-bg"); // Add separate class for background
-            bg.style.stroke = "#ddd";
-            bg.style.strokeWidth = "4";
-            bg.style.fill = "none";
-            bg.style.strokeDasharray = "none";
-            bg.style.strokeDashoffset = "0";
-            bg.style.transition = "none";
-
-            const len = el.getTotalLength ? el.getTotalLength() : 0;
-            el.style.strokeDasharray = len;
-            el.style.strokeDashoffset = len;
-            el.style.transition = "none";
-            el.style.fill = "none";
-            el.parentNode.insertBefore(bg, el);
-          } catch (e) {
-            // some elements may not support getTotalLength
-          }
-        });
-
-        // Clear container and append
-        container.innerHTML = "";
-        container.appendChild(svg);
-        return svg;
-      }
-
-      // Animate strokes sequentially using stroke-dashoffset
-      function animateSvgStrokes(svg, options = {}) {
-        const strokes = Array.from(svg.querySelectorAll(".kanji-stroke"));
-        if (strokes.length === 0) return 0;
-
-        const perStrokeBase = options.perStrokeBase || 220; // ms
-        const gap = options.gap || 150; // ms between strokes
-
-        let total = 0;
-        strokes.forEach((el, idx) => {
-          let len = 0;
-          try {
-            len = el.getTotalLength();
-          } catch (e) {
-            len = 120;
-          }
-          const duration = Math.max(
-            120,
-            Math.round((len / 100) * perStrokeBase),
-          );
-          const delay = idx === 0 ? 0 : gap;
-
-          const startAt = total + delay;
-          // schedule
-          setTimeout(() => {
-            el.style.transition = `stroke-dashoffset ${duration}ms linear`;
-            // trigger reflow to ensure transition
-            // eslint-disable-next-line no-unused-expressions
-            el.getBoundingClientRect();
-            el.style.strokeDashoffset = "0";
-          }, startAt);
-
-          total += duration + gap;
-        });
-
-        return total;
-      }
-
-      async function loadKanjiAnimation(character) {
-        const container = document.getElementById("kanji-animation");
-
-        // Clear any running loop
-        if (loopInterval) {
-          clearInterval(loopInterval);
-          loopInterval = null;
-        }
-
-        container.innerHTML = "";
-
-        const svgText = await fetchKanjiSvg(character);
-        if (!svgText) {
-          console.warn("KanjiVG SVG not found for:", character);
-          // No static fallback per requirement; show empty placeholder
-          container.innerHTML = "";
-          return;
-        }
-
-        const svg = injectSvgIntoContainer(svgText, container);
-
-        // Auto-animate if requested
-        if (autoLoop) {
-          const total = animateSvgStrokes(svg);
-          // restart loop after animation completes
-          loopInterval = setInterval(
-            () => {
-              // reset
-              svg.querySelectorAll(".kanji-stroke").forEach((el) => {
-                try {
-                  const len = el.getTotalLength();
-                  el.style.transition = "none";
-                  el.style.strokeDasharray = len;
-                  el.style.strokeDashoffset = len;
-                } catch (e) {}
-              });
-              setTimeout(() => animateSvgStrokes(svg), 50);
-            },
-            Math.max(1000, total + 300),
-          );
-        }
-      }
-
-      function animateKanji(event) {
-        if (event) event.stopPropagation();
-        const container = document.getElementById("kanji-animation");
-        const svg = container.querySelector("svg");
-        if (!svg) return;
-
-        // Reset strokes
-        svg.querySelectorAll(".kanji-stroke").forEach((el) => {
-          try {
-            const len = el.getTotalLength();
-            el.style.transition = "none";
-            el.style.strokeDasharray = len;
-            el.style.strokeDashoffset = len;
-          } catch (e) {}
-        });
-
-        setTimeout(() => animateSvgStrokes(svg), 50);
-      }
-
-      function toggleAutoLoop(event) {
-        if (event) event.stopPropagation();
-        autoLoop = !autoLoop;
-        const btn = document.getElementById("autoLoopBtn");
-        if (autoLoop) {
-          btn.classList.add("active");
-          btn.textContent = "⏸️ Stop";
-          // start loop for current card
-          const container = document.getElementById("kanji-animation");
-          const svg = container.querySelector("svg");
-          if (svg) {
-            const total = animateSvgStrokes(svg);
-            loopInterval = setInterval(
-              () => {
-                svg.querySelectorAll(".kanji-stroke").forEach((el) => {
-                  try {
-                    const len = el.getTotalLength();
-                    el.style.transition = "none";
-                    el.style.strokeDasharray = len;
-                    el.style.strokeDashoffset = len;
-                  } catch (e) {}
-                });
-                setTimeout(() => animateSvgStrokes(svg), 50);
-              },
-              Math.max(1000, total + 300),
-            );
-          }
-        } else {
-          btn.classList.remove("active");
-          btn.textContent = "🔁 Animate";
-          if (loopInterval) {
-            clearInterval(loopInterval);
-            loopInterval = null;
-          }
-        }
-      }
-
-      // Function to speak only Japanese part of example
-      function speakKanjiExample(event) {
-        event.stopPropagation();
-
-        const exampleHTML = document.getElementById("example").innerHTML;
-        const japaneseOnly = extractJapaneseOnly(exampleHTML);
-        if (japaneseOnly) {
-          speakJapanese(japaneseOnly, 0.85);
-        }
-      }
-
-      // Load dữ liệu từ file JSON
-      async function loadKanjiData(filePath, expectedCount, isRestore = false) {
+      function loadState() {
         try {
-          const response = await fetch(filePath);
-          allKanji = await response.json();
+          const raw = localStorage.getItem(STORAGE_KEY);
+          if (raw) appState = JSON.parse(raw);
+          if (!appState.datasets) appState.datasets = {};
+        } catch (e) {
+          console.warn("Lỗi đọc state:", e);
+        }
+      }
+
+      function getDS(key) {
+        if (!appState.datasets[key])
+          appState.datasets[key] = {
+            cardIndex: 0,
+            isFlipped: false,
+            learned: [],
+          };
+        return appState.datasets[key];
+      }
+
+      function saveState() {
+        if (!currentDataset) return;
+        const ds = getDS(currentDataset);
+        ds.cardIndex = currentIndex;
+        ds.isFlipped = document
+          .getElementById("flashcard")
+          .classList.contains("flipped");
+        appState.lastDataset = currentDataset;
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(appState));
+      }
+
+      function resetAllProgress() {
+        if (confirm("Xóa toàn bộ tiến trình của tất cả bộ Kanji?")) {
+          localStorage.removeItem(STORAGE_KEY);
+          location.reload();
+        }
+      }
+
+      // ═══════════════════════════════════════════════
+      //  RUNTIME
+      // ═══════════════════════════════════════════════
+      let allKanji = [];
+      let currentIndex = 0;
+      let currentDataset = "";
+      let autoLoop = false;
+      let loopInterval = null;
+      const svgCache = new Map();
+
+      // ═══════════════════════════════════════════════
+      //  MODAL
+      // ═══════════════════════════════════════════════
+      function openModal() {
+        saveState(); // lưu vị trí bộ đang học trước khi mở
+        updateModalBadges();
+        document.getElementById("kanjiModal").classList.add("show");
+      }
+
+      function closeModal() {
+        document.getElementById("kanjiModal").classList.remove("show");
+      }
+
+      // Gắn badge "▶ thẻ X" lên nút của bộ đang có tiến trình
+      function updateModalBadges() {
+        Object.keys(datasets).forEach((key) => {
+          const btn = document.getElementById(`btn-${key}`);
+          if (!btn) return;
+          const old = btn.querySelector(".resume-badge");
+          if (old) old.remove();
+
+          const ds = appState.datasets[key];
+          if (ds && ds.cardIndex > 0) {
+            const badge = document.createElement("span");
+            badge.className = "resume-badge";
+            badge.textContent = `▶ thẻ ${ds.cardIndex + 1}`;
+            btn.appendChild(badge);
+          }
+        });
+      }
+
+      function selectKanjiSet(key) {
+        if (!datasets[key]) return;
+        // Lưu state bộ cũ trước khi chuyển
+        if (currentDataset && currentDataset !== key) saveState();
+
+        currentDataset = key;
+        closeModal();
+        document.getElementById("mainContainer").style.display = "block";
+        document.getElementById("headerTitle").textContent =
+          datasets[key].title;
+        document.getElementById("headerSubtitle").textContent =
+          datasets[key].subtitle;
+        loadKanjiData(datasets[key].file, key);
+      }
+
+      // ═══════════════════════════════════════════════
+      //  LEARNED
+      // ═══════════════════════════════════════════════
+      function toggleLearned() {
+        const ds = getDS(currentDataset);
+        const pos = ds.learned.indexOf(currentIndex);
+        if (pos === -1) ds.learned.push(currentIndex);
+        else ds.learned.splice(pos, 1);
+        updateLearnedUI();
+        saveState();
+      }
+
+      function updateLearnedUI() {
+        const ds = getDS(currentDataset);
+        const isLearned = ds.learned.includes(currentIndex);
+        const btn = document.getElementById("btn-learn");
+        if (!btn) return;
+        btn.classList.toggle("active", isLearned);
+        btn.textContent = isLearned ? "✅ Đã học" : "⭐ Đang học";
+      }
+
+      // ═══════════════════════════════════════════════
+      //  DATA LOADING
+      // ═══════════════════════════════════════════════
+      async function loadKanjiData(filePath, key) {
+        try {
+          const res = await fetch(filePath);
+          allKanji = await res.json();
           document.getElementById("total-cards").textContent = allKanji.length;
 
-          console.log(`✅ Loaded ${allKanji.length} kanji from ${filePath}`);
+          // Khôi phục vị trí thẻ riêng của bộ này
+          const ds = getDS(key);
+          currentIndex = Math.min(ds.cardIndex, allKanji.length - 1);
+          updateCard();
 
-          if (isRestore && appState.currentDataset === currentDataset) {
-            currentIndex = appState.currentCardIndex || 0;
-            if (currentIndex >= allKanji.length) currentIndex = 0;
-            updateCard();
-            if (appState.isFlipped) {
-              document.getElementById("flashcard").classList.add("flipped");
-            }
-          } else {
-            currentIndex = 0;
-            updateCard();
-            saveState(); // Lưu trạng thái khởi tạo
+          if (ds.isFlipped) {
+            document.getElementById("flashcard").classList.add("flipped");
           }
-        } catch (error) {
-          console.error("Error loading kanji data:", error);
+        } catch (err) {
+          console.error("Lỗi tải dữ liệu:", err);
           alert(`❌ Không thể tải dữ liệu từ ${filePath}`);
         }
       }
 
+      // ═══════════════════════════════════════════════
+      //  CARD LOGIC
+      // ═══════════════════════════════════════════════
       function updateCard() {
-        if (allKanji.length === 0) return;
-
+        if (!allKanji.length) return;
         const card = allKanji[currentIndex];
-
-        // Update back side
         document.getElementById("han-viet").textContent = card.han_viet;
         document.getElementById("meaning").textContent = card.meaning;
         document.getElementById("example").innerHTML = card.example.replace(
@@ -817,18 +630,9 @@
           "<br>",
         );
         document.getElementById("current-card").textContent = currentIndex + 1;
-
-        // Load kanji animation on front side
-        const chars = card.kanji.split("");
-        loadKanjiAnimation(chars[0]);
-
-        // Update static fallback
         document.getElementById("kanji-static").textContent = card.kanji;
-
-        // Reset flip
         document.getElementById("flashcard").classList.remove("flipped");
-
-        // Cập nhật giao diện nút đã học
+        loadKanjiAnimation(card.kanji.split("")[0]);
         updateLearnedUI();
       }
 
@@ -849,37 +653,208 @@
         saveState();
       }
 
-      // Click to flip (but not on animation controls)
+      // ═══════════════════════════════════════════════
+      //  SVG ANIMATION
+      // ═══════════════════════════════════════════════
+      function codepointHex(ch) {
+        return Array.from(ch)
+          .map((c) => c.codePointAt(0).toString(16).toLowerCase())
+          .join("-");
+      }
+
+      async function fetchKanjiSvg(ch) {
+        const hex = codepointHex(ch);
+        const candidates = [
+          `./data/kanjivg/0${hex}.svg`,
+          `./data/kanjivg/${hex}.svg`,
+          `./data/kanjivg/0${encodeURIComponent(ch)}.svg`,
+        ];
+        for (const url of candidates) {
+          try {
+            if (svgCache.has(url)) return svgCache.get(url);
+            const res = await fetch(url, { cache: "force-cache" });
+            if (!res.ok) continue;
+            const text = await res.text();
+            svgCache.set(url, text);
+            return text;
+          } catch {
+            continue;
+          }
+        }
+        return null;
+      }
+
+      function injectSvgIntoContainer(svgText, container) {
+        const doc = new DOMParser().parseFromString(svgText, "image/svg+xml");
+        const svg = doc.documentElement;
+        svg.removeAttribute("width");
+        svg.removeAttribute("height");
+        svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
+
+        svg.querySelectorAll("path, line, polyline, polygon").forEach((el) => {
+          el.classList.add("kanji-stroke");
+          try {
+            const bg = el.cloneNode(true);
+            bg.classList.remove("kanji-stroke");
+            bg.style.cssText =
+              "stroke:#ddd;stroke-width:4;fill:none;stroke-dasharray:none;stroke-dashoffset:0;transition:none;";
+            const len = el.getTotalLength ? el.getTotalLength() : 0;
+            el.style.strokeDasharray = len;
+            el.style.strokeDashoffset = len;
+            el.style.transition = "none";
+            el.style.fill = "none";
+            el.parentNode.insertBefore(bg, el);
+          } catch {}
+        });
+
+        container.innerHTML = "";
+        container.appendChild(svg);
+        return svg;
+      }
+
+      function animateSvgStrokes(svg, opts = {}) {
+        const strokes = [...svg.querySelectorAll(".kanji-stroke")];
+        if (!strokes.length) return 0;
+        const base = opts.perStrokeBase || 220;
+        const gap = opts.gap || 150;
+        let total = 0;
+        strokes.forEach((el, i) => {
+          let len = 120;
+          try {
+            len = el.getTotalLength();
+          } catch {}
+          const dur = Math.max(120, Math.round((len / 100) * base));
+          const start = total + (i === 0 ? 0 : gap);
+          setTimeout(() => {
+            el.style.transition = `stroke-dashoffset ${dur}ms linear`;
+            el.getBoundingClientRect();
+            el.style.strokeDashoffset = "0";
+          }, start);
+          total += dur + gap;
+        });
+        return total;
+      }
+
+      async function loadKanjiAnimation(ch) {
+        const container = document.getElementById("kanji-animation");
+        if (loopInterval) {
+          clearInterval(loopInterval);
+          loopInterval = null;
+        }
+        container.innerHTML = "";
+        const svgText = await fetchKanjiSvg(ch);
+        if (!svgText) return;
+        const svg = injectSvgIntoContainer(svgText, container);
+        if (autoLoop) startLoop(svg);
+      }
+
+      function startLoop(svg) {
+        const total = animateSvgStrokes(svg);
+        loopInterval = setInterval(
+          () => {
+            svg.querySelectorAll(".kanji-stroke").forEach((el) => {
+              try {
+                const len = el.getTotalLength();
+                el.style.transition = "none";
+                el.style.strokeDasharray = len;
+                el.style.strokeDashoffset = len;
+              } catch {}
+            });
+            setTimeout(() => animateSvgStrokes(svg), 50);
+          },
+          Math.max(1000, total + 300),
+        );
+      }
+
+      function animateKanji(event) {
+        if (event) event.stopPropagation();
+        const svg = document
+          .getElementById("kanji-animation")
+          .querySelector("svg");
+        if (!svg) return;
+        svg.querySelectorAll(".kanji-stroke").forEach((el) => {
+          try {
+            const len = el.getTotalLength();
+            el.style.transition = "none";
+            el.style.strokeDasharray = len;
+            el.style.strokeDashoffset = len;
+          } catch {}
+        });
+        setTimeout(() => animateSvgStrokes(svg), 50);
+      }
+
+      function toggleAutoLoop(event) {
+        if (event) event.stopPropagation();
+        autoLoop = !autoLoop;
+        const btn = document.getElementById("autoLoopBtn");
+        if (autoLoop) {
+          btn.classList.add("active");
+          btn.textContent = "⏸️ Stop";
+          const svg = document
+            .getElementById("kanji-animation")
+            .querySelector("svg");
+          if (svg) startLoop(svg);
+        } else {
+          btn.classList.remove("active");
+          btn.textContent = "🔁 Animate";
+          if (loopInterval) {
+            clearInterval(loopInterval);
+            loopInterval = null;
+          }
+        }
+      }
+
+      function speakKanjiExample(event) {
+        event.stopPropagation();
+        const jpOnly = extractJapaneseOnly(
+          document.getElementById("example").innerHTML,
+        );
+        if (jpOnly) speakJapanese(jpOnly, 0.85);
+      }
+
+      // ═══════════════════════════════════════════════
+      //  INIT
+      // ═══════════════════════════════════════════════
+      window.addEventListener("DOMContentLoaded", () => {
+        loadState();
+
+        const setParam = new URLSearchParams(window.location.search).get("set");
+        if (setParam && datasets[setParam]) {
+          selectKanjiSet(setParam);
+        } else if (appState.lastDataset && datasets[appState.lastDataset]) {
+          // Tự động tiếp tục bộ đã học lần trước
+          selectKanjiSet(appState.lastDataset);
+        } else {
+          updateModalBadges();
+          document.getElementById("kanjiModal").classList.add("show");
+        }
+      });
+
+      // ═══════════════════════════════════════════════
+      //  EVENTS
+      // ═══════════════════════════════════════════════
       document
         .getElementById("flashcard")
         .addEventListener("click", function (e) {
-          // Don't flip if clicking animation controls or SVG
           if (
             e.target.closest(".animation-controls") ||
             e.target.closest("#kanji-animation")
-          ) {
+          )
             return;
-          }
           flipCard();
         });
 
-      // Keyboard shortcuts
       document.addEventListener("keydown", (e) => {
         if (e.key === " " || e.key === "Spacebar") {
           e.preventDefault();
           flipCard();
-        } else if (e.key === "ArrowLeft") {
-          previousCard();
-        } else if (e.key === "ArrowRight") {
-          nextCard();
-        } else if (e.key === "a" || e.key === "A") {
+        } else if (e.key === "ArrowLeft") previousCard();
+        else if (e.key === "ArrowRight") nextCard();
+        else if (e.key === "a" || e.key === "A")
           animateKanji(new Event("click"));
-        } else if (e.key === "l" || e.key === "L") {
+        else if (e.key === "l" || e.key === "L")
           toggleAutoLoop(new Event("click"));
-        }
       });
-
-      // Data is loaded via modal selection (selectKanjiSet function)
     </script>
   </body>
 </html>
