@@ -382,6 +382,14 @@
                 >
                   ⭐ Đang học
                 </button>
+
+                <button
+                  class="anim-btn"
+                  onclick="resetProgress()"
+                  style="color: #e74c3c; border-color: #e74c3c"
+                >
+                  🗑 Reset All
+                </button>
               </div>
             </div>
             <div class="kanji-display" id="kanji-static">護</div>
@@ -801,6 +809,13 @@
             clearInterval(loopInterval);
             loopInterval = null;
           }
+        }
+      }
+
+      function resetProgress() {
+        if (confirm("Bạn có chắc chắn muốn xóa toàn bộ tiến trình học?")) {
+          localStorage.removeItem(STORAGE_KEY);
+          location.reload();
         }
       }
 
