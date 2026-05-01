@@ -1,0 +1,6 @@
+node_module*
+package-lock.json
+package.json
+main.py
+kanji_advanced.json.bak
+settings.json
