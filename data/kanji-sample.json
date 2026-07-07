@@ -1,0 +1,91 @@
+[
+  {
+    "kanji": "一",
+    "han_viet": "NHẤT",
+    "meaning": "Một, số một",
+    "examples": [
+      { "word": "一日", "hiragana": "いちにち", "meaning": "Một ngày" },
+      { "word": "一番", "hiragana": "いちばん", "meaning": "Số một, tốt nhất" },
+      {
+        "word": "一生懸命",
+        "hiragana": "いっしょうけんめい",
+        "meaning": "Hết sức, nỗ lực hết mình"
+      },
+      { "word": "統一", "hiragana": "とういつ", "meaning": "Thống nhất" }
+    ]
+  },
+  {
+    "kanji": "丁",
+    "han_viet": "ĐINH",
+    "meaning": "Can thứ tư; đơn vị đếm vật mỏng, khối phố",
+    "examples": [
+      {
+        "word": "丁寧",
+        "hiragana": "ていねい",
+        "meaning": "Lịch sự, cẩn thận"
+      },
+      {
+        "word": "一丁目",
+        "hiragana": "いっちょうめ",
+        "meaning": "Khu phố số 1"
+      },
+      { "word": "包丁", "hiragana": "ほうちょう", "meaning": "Dao làm bếp" }
+    ]
+  },
+  {
+    "kanji": "七",
+    "han_viet": "THẤT",
+    "meaning": "Bảy",
+    "examples": [
+      { "word": "七月", "hiragana": "しちがつ", "meaning": "Tháng bảy" },
+      {
+        "word": "七夕",
+        "hiragana": "たなばた",
+        "meaning": "Lễ Thất tịch (Tanabata)"
+      },
+      {
+        "word": "七五三",
+        "hiragana": "しちごさん",
+        "meaning": "Lễ Shichi-Go-San"
+      }
+    ]
+  },
+  {
+    "kanji": "三",
+    "han_viet": "TAM",
+    "meaning": "Ba",
+    "examples": [
+      { "word": "三月", "hiragana": "さんがつ", "meaning": "Tháng ba" },
+      {
+        "word": "三角形",
+        "hiragana": "さんかっけい",
+        "meaning": "Hình tam giác"
+      },
+      {
+        "word": "三日",
+        "hiragana": "みっか",
+        "meaning": "Ba ngày, ngày mùng ba"
+      }
+    ]
+  },
+  {
+    "kanji": "上",
+    "han_viet": "THƯỢNG",
+    "meaning": "Trên, phía trên",
+    "examples": [
+      { "word": "上手", "hiragana": "じょうず", "meaning": "Giỏi, khéo léo" },
+      { "word": "上司", "hiragana": "じょうし", "meaning": "Cấp trên, sếp" },
+      { "word": "以上", "hiragana": "いじょう", "meaning": "Trở lên, như trên" }
+    ]
+  },
+  {
+    "kanji": "下",
+    "han_viet": "HẠ",
+    "meaning": "Dưới, phía dưới",
+    "examples": [
+      { "word": "下手", "hiragana": "へた", "meaning": "Vụng, kém" },
+      { "word": "地下", "hiragana": "ちか", "meaning": "Tầng hầm, dưới đất" },
+      { "word": "下着", "hiragana": "したぎ", "meaning": "Đồ lót" }
+    ]
+  }
+]
