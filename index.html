@@ -2,9 +2,15 @@
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
     <title>Kanji Flashcards</title>
-    <meta name="description" content="Bộ flashcard Hán tự tương tác với thứ tự nét, âm Hán Việt và từ vựng mẫu." />
+    <meta
+      name="description"
+      content="Bộ flashcard Hán tự tương tác với thứ tự nét, âm Hán Việt và từ vựng mẫu."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,50 +20,61 @@
     <style>
       /* ── Design tokens ─────────────────────────────────────────────── */
       :root {
-        --bg:           #fafaf8;
-        --fg:           #16150f;
-        --muted:        #87837a;
-        --card:         #ffffff;
-        --border:       #e6e3da;
-        --accent:       #ae3427;
-        --accent-fg:    #fff8f3;
-        --stroke-color: #16150f;          /* SVG foreground stroke – light */
-        --stroke-track: rgba(0,0,0,0.10); /* ghost track – light           */
+        --bg: #fafaf8;
+        --fg: #16150f;
+        --muted: #87837a;
+        --card: #ffffff;
+        --border: #e6e3da;
+        --accent: #ae3427;
+        --accent-fg: #fff8f3;
+        --stroke-color: #16150f; /* SVG foreground stroke – light */
+        --stroke-track: rgba(0, 0, 0, 0.1); /* ghost track – light           */
         --shadow:
-          0 1px 2px rgba(20,18,10,0.04),
-          0 12px 32px -16px rgba(20,18,10,0.14);
+          0 1px 2px rgba(20, 18, 10, 0.04),
+          0 12px 32px -16px rgba(20, 18, 10, 0.14);
         --radius: 18px;
         --flip-duration: 620ms;
       }
       html[data-theme="dark"] {
-        --bg:           #121210;
-        --fg:           #f2f0e9;
-        --muted:        #8f8b80;
-        --card:         #1a1a17;
-        --border:       #2c2a24;
-        --accent:       #e2694f;
-        --accent-fg:    #181410;
-        --stroke-color: #f2f0e9;            /* SVG foreground stroke – dark */
-        --stroke-track: rgba(255,255,255,0.12);
+        --bg: #121210;
+        --fg: #f2f0e9;
+        --muted: #8f8b80;
+        --card: #1a1a17;
+        --border: #2c2a24;
+        --accent: #e2694f;
+        --accent-fg: #181410;
+        --stroke-color: #f2f0e9; /* SVG foreground stroke – dark */
+        --stroke-track: rgba(255, 255, 255, 0.12);
         --shadow:
-          0 1px 2px rgba(0,0,0,0.3),
-          0 20px 40px -20px rgba(0,0,0,0.6);
+          0 1px 2px rgba(0, 0, 0, 0.3), 0 20px 40px -20px rgba(0, 0, 0, 0.6);
       }
 
       /* ── Reset ─────────────────────────────────────────────────────── */
-      *, *::before, *::after { box-sizing: border-box; }
-      html, body { height: 100%; }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+      }
       body {
         margin: 0;
         background: var(--bg);
         color: var(--fg);
-        font-family: "Inter", -apple-system, sans-serif;
+        font-family:
+          "Inter",
+          -apple-system,
+          sans-serif;
         display: flex;
         flex-direction: column;
         align-items: center;
         min-height: 100vh;
         padding: 20px 16px 32px;
-        transition: background .35s ease, color .35s ease;
+        transition:
+          background 0.35s ease,
+          color 0.35s ease;
         -webkit-font-smoothing: antialiased;
       }
 
@@ -70,22 +87,44 @@
         justify-content: space-between;
         padding: 6px 2px 22px;
       }
-      .brand { font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
-      .brand b { color: var(--fg); font-weight: 700; }
+      .brand {
+        font-size: 13px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--muted);
+        font-weight: 600;
+      }
+      .brand b {
+        color: var(--fg);
+        font-weight: 700;
+      }
 
       .theme-toggle {
-        width: 38px; height: 38px;
+        width: 38px;
+        height: 38px;
         border-radius: 50%;
         border: 1px solid var(--border);
         background: var(--card);
-        display: flex; align-items: center; justify-content: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         cursor: pointer;
         color: var(--fg);
-        transition: transform .25s ease, background .3s ease, border-color .3s ease;
+        transition:
+          transform 0.25s ease,
+          background 0.3s ease,
+          border-color 0.3s ease;
       }
-      .theme-toggle:hover  { transform: translateY(-1px); }
-      .theme-toggle:active { transform: scale(.94); }
-      .theme-toggle svg { width: 18px; height: 18px; }
+      .theme-toggle:hover {
+        transform: translateY(-1px);
+      }
+      .theme-toggle:active {
+        transform: scale(0.94);
+      }
+      .theme-toggle svg {
+        width: 18px;
+        height: 18px;
+      }
 
       /* ── Stage & Scene ─────────────────────────────────────────────── */
       .stage {
@@ -106,15 +145,20 @@
       /* ── Card 3-D flip ─────────────────────────────────────────────── */
       .card {
         position: relative;
-        width: 100%; height: 100%;
+        width: 100%;
+        height: 100%;
         cursor: pointer;
         transform-style: preserve-3d;
-        transition: transform var(--flip-duration) cubic-bezier(.4,.1,.2,1);
+        transition: transform var(--flip-duration)
+          cubic-bezier(0.4, 0.1, 0.2, 1);
       }
-      .card.flipped { transform: rotateY(180deg); }
+      .card.flipped {
+        transform: rotateY(180deg);
+      }
 
       .face {
-        position: absolute; inset: 0;
+        position: absolute;
+        inset: 0;
         background: var(--card);
         border: 1px solid var(--border);
         border-radius: var(--radius);
@@ -125,26 +169,40 @@
         flex-direction: column;
         overflow: hidden;
       }
-      .face.back { transform: rotateY(180deg); }
+      .face.back {
+        transform: rotateY(180deg);
+      }
 
       /* corner marks */
       .corner {
         position: absolute;
-        width: 14px; height: 14px;
+        width: 14px;
+        height: 14px;
         border-color: var(--accent);
-        opacity: .55;
+        opacity: 0.55;
         pointer-events: none;
       }
-      .corner.tl { top: 14px; left: 14px; border-top: 2px solid; border-left: 2px solid; }
-      .corner.br { bottom: 14px; right: 14px; border-bottom: 2px solid; border-right: 2px solid; }
+      .corner.tl {
+        top: 14px;
+        left: 14px;
+        border-top: 2px solid;
+        border-left: 2px solid;
+      }
+      .corner.br {
+        bottom: 14px;
+        right: 14px;
+        border-bottom: 2px solid;
+        border-right: 2px solid;
+      }
 
       .index-mark {
         position: absolute;
-        top: 16px; right: 18px;
+        top: 16px;
+        right: 18px;
         writing-mode: vertical-rl;
         font-family: "Noto Serif JP", serif;
         font-size: 12px;
-        letter-spacing: .1em;
+        letter-spacing: 0.1em;
         color: var(--muted);
         font-variant-numeric: tabular-nums;
         pointer-events: none;
@@ -152,7 +210,9 @@
       }
 
       /* ── Front face ────────────────────────────────────────────────── */
-      .face.front { padding: 20px 20px 16px; }
+      .face.front {
+        padding: 20px 20px 16px;
+      }
 
       /*
        * kanji-wrapper — flex column, centred.
@@ -227,7 +287,7 @@
         font-weight: 700;
         font-size: clamp(80px, 26vw, 148px);
         line-height: 1;
-        color: var(--border);            /* muted, just a size hint */
+        color: var(--border); /* muted, just a size hint */
         user-select: none;
       }
 
@@ -250,36 +310,81 @@
         font-family: inherit;
         font-size: 12.5px;
         font-weight: 600;
-        letter-spacing: .05em;
+        letter-spacing: 0.05em;
         padding: 8px 18px;
         border-radius: 999px;
         cursor: pointer;
-        transition: background .2s ease, color .2s ease, border-color .2s ease, transform .15s ease;
+        transition:
+          background 0.2s ease,
+          color 0.2s ease,
+          border-color 0.2s ease,
+          transform 0.15s ease;
         white-space: nowrap;
       }
-      .stroke-btn:hover  { background: var(--fg); color: var(--bg); border-color: var(--fg); transform: translateY(-1px); }
-      .stroke-btn:active { transform: scale(.94); }
-      .stroke-btn.loading { opacity: .55; cursor: default; pointer-events: none; }
-      .stroke-btn svg { width: 14px; height: 14px; flex-shrink: 0; }
+      .stroke-btn:hover {
+        background: var(--fg);
+        color: var(--bg);
+        border-color: var(--fg);
+        transform: translateY(-1px);
+      }
+      .stroke-btn:active {
+        transform: scale(0.94);
+      }
+      .stroke-btn.loading {
+        opacity: 0.55;
+        cursor: default;
+        pointer-events: none;
+      }
+      .stroke-btn svg {
+        width: 14px;
+        height: 14px;
+        flex-shrink: 0;
+      }
 
       .tap-hint {
         text-align: center;
         font-size: 11px;
-        letter-spacing: .14em;
+        letter-spacing: 0.14em;
         text-transform: uppercase;
         color: var(--muted);
       }
 
       /* ── Back face ─────────────────────────────────────────────────── */
-      .face.back { padding: 26px 24px 20px; }
-      .back-header { display: flex; align-items: baseline; gap: 10px; margin-bottom: 4px; }
-      .han-viet   { font-family: "Noto Serif JP", serif; font-weight: 700; font-size: 22px; letter-spacing: .04em; color: var(--accent); }
-      .back-kanji-mini { font-family: "Noto Serif JP", serif; color: var(--muted); font-size: 15px; }
-      .meaning    { font-size: 15px; color: var(--fg); margin: 2px 0 16px; line-height: 1.5; }
-      .divider    { height: 1px; background: var(--border); margin: 2px 0 14px; }
+      .face.back {
+        padding: 26px 24px 20px;
+      }
+      .back-header {
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+        margin-bottom: 4px;
+      }
+      .han-viet {
+        font-family: "Noto Serif JP", serif;
+        font-weight: 700;
+        font-size: 22px;
+        letter-spacing: 0.04em;
+        color: var(--accent);
+      }
+      .back-kanji-mini {
+        font-family: "Noto Serif JP", serif;
+        color: var(--muted);
+        font-size: 15px;
+      }
+      .meaning {
+        font-size: 15px;
+        color: var(--fg);
+        margin: 2px 0 16px;
+        line-height: 1.5;
+      }
+      .divider {
+        height: 1px;
+        background: var(--border);
+        margin: 2px 0 14px;
+      }
       .examples-label {
         font-size: 11px;
-        letter-spacing: .14em;
+        letter-spacing: 0.14em;
         text-transform: uppercase;
         color: var(--muted);
         margin-bottom: 10px;
@@ -296,8 +401,13 @@
         overflow-y: auto;
         padding-right: 2px;
       }
-      .examples::-webkit-scrollbar { width: 3px; }
-      .examples::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+      .examples::-webkit-scrollbar {
+        width: 3px;
+      }
+      .examples::-webkit-scrollbar-thumb {
+        background: var(--border);
+        border-radius: 4px;
+      }
 
       /* ── Vocab card ─────────────────────────────────────────────── */
       .example-item {
@@ -308,7 +418,9 @@
         background: var(--bg);
         border: 1px solid var(--border);
         overflow: hidden;
-        transition: border-color .2s ease, box-shadow .2s ease;
+        transition:
+          border-color 0.2s ease,
+          box-shadow 0.2s ease;
       }
       .example-item:hover {
         border-color: var(--accent);
@@ -320,7 +432,7 @@
         width: 3px;
         flex-shrink: 0;
         background: var(--accent);
-        opacity: .6;
+        opacity: 0.6;
       }
 
       /* Right content area */
@@ -356,7 +468,7 @@
         padding: 2px 7px;
         border-radius: 999px;
         white-space: nowrap;
-        letter-spacing: .02em;
+        letter-spacing: 0.02em;
       }
 
       /* Bottom row: Vietnamese meaning */
@@ -367,50 +479,127 @@
       }
 
       /* ── Navigation controls ───────────────────────────────────────── */
-      .controls { width: 100%; display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 22px; }
+      .controls {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+        margin-top: 22px;
+      }
       .ctrl-btn {
-        width: 46px; height: 46px;
+        width: 46px;
+        height: 46px;
         border-radius: 50%;
         border: 1px solid var(--border);
         background: var(--card);
         color: var(--fg);
-        display: flex; align-items: center; justify-content: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         cursor: pointer;
-        transition: transform .18s ease, background .25s ease;
+        transition:
+          transform 0.18s ease,
+          background 0.25s ease;
       }
-      .ctrl-btn svg { width: 18px; height: 18px; }
-      .ctrl-btn:hover  { transform: translateY(-1px); }
-      .ctrl-btn:active { transform: scale(.92); }
-      .ctrl-btn.primary { background: var(--fg); color: var(--bg); border-color: var(--fg); width: 56px; height: 56px; }
+      .ctrl-btn svg {
+        width: 18px;
+        height: 18px;
+      }
+      .ctrl-btn:hover {
+        transform: translateY(-1px);
+      }
+      .ctrl-btn:active {
+        transform: scale(0.92);
+      }
+      .ctrl-btn.primary {
+        background: var(--fg);
+        color: var(--bg);
+        border-color: var(--fg);
+        width: 56px;
+        height: 56px;
+      }
 
       /* ── Progress ──────────────────────────────────────────────────── */
-      .progress { margin-top: 16px; font-size: 12px; letter-spacing: .08em; color: var(--muted); font-variant-numeric: tabular-nums; }
-      .progress b { color: var(--fg); }
-      .progress-track { width: 100%; max-width: 200px; height: 2px; background: var(--border); margin-top: 10px; border-radius: 2px; overflow: hidden; }
-      .progress-fill  { height: 100%; background: var(--accent); transition: width .3s ease; }
+      .progress {
+        margin-top: 16px;
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        color: var(--muted);
+        font-variant-numeric: tabular-nums;
+      }
+      .progress b {
+        color: var(--fg);
+      }
+      .page-label {
+        margin-top: 6px;
+        font-size: 11px;
+        letter-spacing: 0.08em;
+        color: var(--muted);
+        font-variant-numeric: tabular-nums;
+      }
+      .progress-track {
+        width: 100%;
+        max-width: 200px;
+        height: 2px;
+        background: var(--border);
+        margin-top: 10px;
+        border-radius: 2px;
+        overflow: hidden;
+      }
+      .progress-fill {
+        height: 100%;
+        background: var(--accent);
+        transition: width 0.3s ease;
+      }
 
       /* ── Reduced motion ────────────────────────────────────────────── */
       @media (prefers-reduced-motion: reduce) {
-        .card { transition: none; }
+        .card {
+          transition: none;
+        }
       }
 
       /* ── Mobile ────────────────────────────────────────────────────── */
       @media (max-width: 380px) {
-        .kanji-svg-container { width: clamp(100px, 52vw, 160px); height: clamp(100px, 52vw, 160px); }
+        .kanji-svg-container {
+          width: clamp(100px, 52vw, 160px);
+          height: clamp(100px, 52vw, 160px);
+        }
       }
     </style>
   </head>
   <body>
-
     <div class="topbar">
       <div class="brand"><b>漢字</b> · Flashcards</div>
-      <button class="theme-toggle" id="themeToggle" aria-label="Đổi giao diện sáng / tối">
-        <svg id="iconSun"  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
-          <circle cx="12" cy="12" r="4"/>
-          <path d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/>
+      <button
+        class="theme-toggle"
+        id="themeToggle"
+        aria-label="Đổi giao diện sáng / tối"
+      >
+        <svg
+          id="iconSun"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+        >
+          <circle cx="12" cy="12" r="4" />
+          <path
+            d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"
+          />
         </svg>
-        <svg id="iconMoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" style="display:none">
-          <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/>
+        <svg
+          id="iconMoon"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          style="display: none"
+        >
+          <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z" />
         </svg>
       </button>
     </div>
@@ -418,7 +607,6 @@
     <div class="stage">
       <div class="scene" id="scene">
         <div class="card" id="card">
-
           <!-- ── FRONT ── -->
           <div class="face front">
             <span class="corner tl"></span>
@@ -437,10 +625,23 @@
             </div>
 
             <div class="front-actions">
-              <button class="stroke-btn" id="strokeBtn" aria-label="Xem thứ tự nét viết">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 20h9"/>
-                  <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+              <button
+                class="stroke-btn"
+                id="strokeBtn"
+                aria-label="Xem thứ tự nét viết"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M12 20h9" />
+                  <path
+                    d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"
+                  />
                 </svg>
                 Thứ tự nét
               </button>
@@ -461,274 +662,347 @@
             <div class="examples-label">Từ vựng liên quan</div>
             <ul class="examples" id="examplesList"></ul>
           </div>
-
         </div>
       </div>
 
       <!-- Navigation -->
       <div class="controls">
         <button class="ctrl-btn" id="prevBtn" aria-label="Thẻ trước">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
         </button>
         <button class="ctrl-btn primary" id="flipBtn" aria-label="Lật thẻ">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M17 2.1l4 4-4 4"/>
-            <path d="M3 12.9V11a4 4 0 0 1 4-4h14"/>
-            <path d="M7 21.9l-4-4 4-4"/>
-            <path d="M21 11.1V13a4 4 0 0 1-4 4H3"/>
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M17 2.1l4 4-4 4" />
+            <path d="M3 12.9V11a4 4 0 0 1 4-4h14" />
+            <path d="M7 21.9l-4-4 4-4" />
+            <path d="M21 11.1V13a4 4 0 0 1-4 4H3" />
           </svg>
         </button>
         <button class="ctrl-btn" id="nextBtn" aria-label="Thẻ kế tiếp">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M9 18l6-6-6-6" />
+          </svg>
         </button>
       </div>
 
-      <div class="progress"><b id="posNow">1</b> / <span id="posTotal">6</span></div>
-      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      <div class="progress">
+        <b id="posNow">1</b> / <span id="posTotal">6</span>
+      </div>
+      <div class="page-label" id="pageLabel">Trang 1 / 27</div>
+      <div class="progress-track">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
     </div>
 
     <script>
-    // ══════════════════════════════════════════════════════════════════
-    //  STATE  (DATA được load động từ kanji-sample.json)
-    // ══════════════════════════════════════════════════════════════════
-    let DATA      = [];
-    let idx       = 0;
-    let flipped   = false;
-    let animating = false;
-    let animTimers = [];
+      // ══════════════════════════════════════════════════════════════════
+      //  STATE  (DATA được load động từ kanji-sample.json)
+      // ══════════════════════════════════════════════════════════════════
+      let DATA = [];
+      let idx = 0;
+      let pageNumber = 1;
+      let pageTotal = 27;
+      let flipped = false;
+      let animating = false;
+      let animTimers = [];
 
-    const svgCache = new Map();   // ch → raw SVG text (or null if not found)
+      const svgCache = new Map(); // ch → raw SVG text (or null if not found)
 
-    // ── DOM refs ──────────────────────────────────────────────────────
-    const card            = document.getElementById("card");
-    const kanjiSvgCont    = document.getElementById("kanjiSvgContainer");
-    const kanjiPlaceholder= document.getElementById("kanjiPlaceholder");
-    const miniKanji       = document.getElementById("miniKanji");
-    const hanViet         = document.getElementById("hanViet");
-    const meaningText     = document.getElementById("meaningText");
-    const examplesList    = document.getElementById("examplesList");
-    const indexMark       = document.getElementById("indexMark");
-    const posNow          = document.getElementById("posNow");
-    const posTotal        = document.getElementById("posTotal");
-    const progressFill    = document.getElementById("progressFill");
-    const strokeBtn       = document.getElementById("strokeBtn");
+      // ── DOM refs ──────────────────────────────────────────────────────
+      const card = document.getElementById("card");
+      const kanjiSvgCont = document.getElementById("kanjiSvgContainer");
+      const kanjiPlaceholder = document.getElementById("kanjiPlaceholder");
+      const miniKanji = document.getElementById("miniKanji");
+      const hanViet = document.getElementById("hanViet");
+      const meaningText = document.getElementById("meaningText");
+      const examplesList = document.getElementById("examplesList");
+      const indexMark = document.getElementById("indexMark");
+      const posNow = document.getElementById("posNow");
+      const posTotal = document.getElementById("posTotal");
+      const pageLabel = document.getElementById("pageLabel");
+      const progressFill = document.getElementById("progressFill");
+      const strokeBtn = document.getElementById("strokeBtn");
 
-    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const reducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)",
+      ).matches;
 
-    // ══════════════════════════════════════════════════════════════════
-    //  KANJIVG FETCH  (unchanged from NihonGo/kanji.html approach)
-    // ══════════════════════════════════════════════════════════════════
+      // ══════════════════════════════════════════════════════════════════
+      //  KANJIVG FETCH  (unchanged from NihonGo/kanji.html approach)
+      // ══════════════════════════════════════════════════════════════════
 
-    function codepointHex(ch) {
-      return Array.from(ch).map(c => c.codePointAt(0).toString(16).toLowerCase()).join("-");
-    }
-
-    async function fetchKanjiSvg(ch) {
-      if (svgCache.has(ch)) return svgCache.get(ch);
-      const hex = codepointHex(ch);
-      const candidates = [`./data/kanjivg/0${hex}.svg`, `./data/kanjivg/${hex}.svg`];
-      for (const url of candidates) {
-        try {
-          const res = await fetch(url, { cache: "force-cache" });
-          if (!res.ok) continue;
-          const text = await res.text();
-          svgCache.set(ch, text);
-          return text;
-        } catch { continue; }
+      function codepointHex(ch) {
+        return Array.from(ch)
+          .map((c) => c.codePointAt(0).toString(16).toLowerCase())
+          .join("-");
       }
-      svgCache.set(ch, null);
-      return null;
-    }
 
-    // ══════════════════════════════════════════════════════════════════
-    //  SVG BUILDER
-    //  Parses the raw KanjiVG text and produces a clean SVG element
-    //  whose paths are tagged as .stroke-static (fully visible, no anim).
-    //  Returns { svg, paths } where paths is the NodeList of path elements.
-    // ══════════════════════════════════════════════════════════════════
+      async function fetchKanjiSvg(ch) {
+        if (svgCache.has(ch)) return svgCache.get(ch);
+        const hex = codepointHex(ch);
+        const candidates = [
+          `./data/kanjivg/0${hex}.svg`,
+          `./data/kanjivg/${hex}.svg`,
+        ];
+        for (const url of candidates) {
+          try {
+            const res = await fetch(url, { cache: "force-cache" });
+            if (!res.ok) continue;
+            const text = await res.text();
+            svgCache.set(ch, text);
+            return text;
+          } catch {
+            continue;
+          }
+        }
+        svgCache.set(ch, null);
+        return null;
+      }
 
-    function buildStaticSvg(svgText) {
-      const doc  = new DOMParser().parseFromString(svgText, "image/svg+xml");
-      const orig = doc.documentElement;
+      // ══════════════════════════════════════════════════════════════════
+      //  SVG BUILDER
+      //  Parses the raw KanjiVG text and produces a clean SVG element
+      //  whose paths are tagged as .stroke-static (fully visible, no anim).
+      //  Returns { svg, paths } where paths is the NodeList of path elements.
+      // ══════════════════════════════════════════════════════════════════
 
-      // Remove stroke-number text nodes entirely
-      orig.querySelectorAll("text, tspan").forEach(el => el.remove());
+      function buildStaticSvg(svgText) {
+        const doc = new DOMParser().parseFromString(svgText, "image/svg+xml");
+        const orig = doc.documentElement;
 
-      const ns  = "http://www.w3.org/2000/svg";
-      const svg = document.createElementNS(ns, "svg");
-      svg.setAttribute("viewBox", orig.getAttribute("viewBox") || "0 0 109 109");
-      svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
+        // Remove stroke-number text nodes entirely
+        orig.querySelectorAll("text, tspan").forEach((el) => el.remove());
 
-      // Copy all path elements, assigning the static class
-      const paths = [...orig.querySelectorAll("path")];
-      paths.forEach(p => {
-        const d = p.getAttribute("d");
-        if (!d) return;
-        const el = document.createElementNS(ns, "path");
-        el.setAttribute("d", d);
-        el.classList.add("stroke-static");
-        svg.appendChild(el);
-      });
+        const ns = "http://www.w3.org/2000/svg";
+        const svg = document.createElementNS(ns, "svg");
+        svg.setAttribute(
+          "viewBox",
+          orig.getAttribute("viewBox") || "0 0 109 109",
+        );
+        svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
 
-      return svg;
-    }
-
-    // ══════════════════════════════════════════════════════════════════
-    //  ANIMATION
-    //  Works directly on the SVG that is already displayed as the kanji.
-    //  Steps:
-    //    1. Grab the existing .stroke-static paths.
-    //    2. Insert .stroke-track clones behind each one (ghost guides).
-    //    3. Set dashoffset = totalLength on each .stroke-static path.
-    //    4. Animate them sequentially.
-    //    5. When done, remove track clones and clear dasharray/dashoffset.
-    // ══════════════════════════════════════════════════════════════════
-
-    function clearAnimTimers() {
-      animTimers.forEach(id => clearTimeout(id));
-      animTimers = [];
-    }
-
-    function playAnimation(svg) {
-      const ns     = "http://www.w3.org/2000/svg";
-      const paths  = [...svg.querySelectorAll(".stroke-static")];
-      if (!paths.length) return;
-
-      // Remove any lingering track clones from a previous run
-      svg.querySelectorAll(".stroke-track").forEach(el => el.remove());
-
-      // Insert ghost tracks behind each path
-      paths.forEach(path => {
-        const track = document.createElementNS(ns, "path");
-        track.setAttribute("d", path.getAttribute("d"));
-        track.classList.add("stroke-track");
-        svg.insertBefore(track, path);
-      });
-
-      // Initialise all paths as invisible
-      paths.forEach(el => {
-        let len = 200;
-        try { len = el.getTotalLength(); } catch {}
-        el.style.transition     = "none";
-        el.style.strokeDasharray  = len;
-        el.style.strokeDashoffset = len;
-        void el.getBoundingClientRect(); // force reflow
-      });
-
-      if (reducedMotion) {
-        // Skip anim — just show everything immediately
-        paths.forEach(el => {
-          el.style.strokeDashoffset = "0";
+        // Copy all path elements, assigning the static class
+        const paths = [...orig.querySelectorAll("path")];
+        paths.forEach((p) => {
+          const d = p.getAttribute("d");
+          if (!d) return;
+          const el = document.createElementNS(ns, "path");
+          el.setAttribute("d", d);
+          el.classList.add("stroke-static");
+          svg.appendChild(el);
         });
-        finishAnimation(svg, paths);
-        return;
+
+        return svg;
       }
 
-      // Animate each path sequentially
-      const PER_BASE = 240; // ms per 100px of path length
-      const GAP      = 110; // ms between strokes
-      const MIN_DUR  = 180;
-      let cursor = 0;
+      // ══════════════════════════════════════════════════════════════════
+      //  ANIMATION
+      //  Works directly on the SVG that is already displayed as the kanji.
+      //  Steps:
+      //    1. Grab the existing .stroke-static paths.
+      //    2. Insert .stroke-track clones behind each one (ghost guides).
+      //    3. Set dashoffset = totalLength on each .stroke-static path.
+      //    4. Animate them sequentially.
+      //    5. When done, remove track clones and clear dasharray/dashoffset.
+      // ══════════════════════════════════════════════════════════════════
 
-      paths.forEach((el, i) => {
-        let len = 200;
-        try { len = el.getTotalLength(); } catch {}
-        const dur   = Math.max(MIN_DUR, Math.round((len / 100) * PER_BASE));
-        const delay = cursor + (i === 0 ? 0 : GAP);
+      function clearAnimTimers() {
+        animTimers.forEach((id) => clearTimeout(id));
+        animTimers = [];
+      }
 
-        const tid = setTimeout(() => {
-          el.style.transition       = `stroke-dashoffset ${dur}ms linear`;
-          el.style.strokeDashoffset = "0";
-        }, delay);
-        animTimers.push(tid);
-        cursor += dur + (i === 0 ? 0 : GAP);
-      });
+      function playAnimation(svg) {
+        const ns = "http://www.w3.org/2000/svg";
+        const paths = [...svg.querySelectorAll(".stroke-static")];
+        if (!paths.length) return;
 
-      // After all strokes complete, clean up
-      const finishId = setTimeout(() => finishAnimation(svg, paths), cursor + 500);
-      animTimers.push(finishId);
-    }
+        // Remove any lingering track clones from a previous run
+        svg.querySelectorAll(".stroke-track").forEach((el) => el.remove());
 
-    function finishAnimation(svg, paths) {
-      animating = false;
+        // Insert ghost tracks behind each path
+        paths.forEach((path) => {
+          const track = document.createElementNS(ns, "path");
+          track.setAttribute("d", path.getAttribute("d"));
+          track.classList.add("stroke-track");
+          svg.insertBefore(track, path);
+        });
 
-      // Restore paths to normal (no dasharray — fully visible, crisp)
-      paths.forEach(el => {
-        el.style.transition       = "none";
-        el.style.strokeDasharray  = "";
-        el.style.strokeDashoffset = "";
-      });
+        // Initialise all paths as invisible
+        paths.forEach((el) => {
+          let len = 200;
+          try {
+            len = el.getTotalLength();
+          } catch {}
+          el.style.transition = "none";
+          el.style.strokeDasharray = len;
+          el.style.strokeDashoffset = len;
+          void el.getBoundingClientRect(); // force reflow
+        });
 
-      // Remove ghost tracks
-      svg.querySelectorAll(".stroke-track").forEach(el => el.remove());
-    }
+        if (reducedMotion) {
+          // Skip anim — just show everything immediately
+          paths.forEach((el) => {
+            el.style.strokeDashoffset = "0";
+          });
+          finishAnimation(svg, paths);
+          return;
+        }
 
-    // ══════════════════════════════════════════════════════════════════
-    //  STROKE ORDER BUTTON HANDLER
-    // ══════════════════════════════════════════════════════════════════
+        // Animate each path sequentially
+        const PER_BASE = 240; // ms per 100px of path length
+        const GAP = 110; // ms between strokes
+        const MIN_DUR = 180;
+        let cursor = 0;
 
-    function setStrokeBtnLabel(text) {
-      strokeBtn.innerHTML = `
+        paths.forEach((el, i) => {
+          let len = 200;
+          try {
+            len = el.getTotalLength();
+          } catch {}
+          const dur = Math.max(MIN_DUR, Math.round((len / 100) * PER_BASE));
+          const delay = cursor + (i === 0 ? 0 : GAP);
+
+          const tid = setTimeout(() => {
+            el.style.transition = `stroke-dashoffset ${dur}ms linear`;
+            el.style.strokeDashoffset = "0";
+          }, delay);
+          animTimers.push(tid);
+          cursor += dur + (i === 0 ? 0 : GAP);
+        });
+
+        // After all strokes complete, clean up
+        const finishId = setTimeout(
+          () => finishAnimation(svg, paths),
+          cursor + 500,
+        );
+        animTimers.push(finishId);
+      }
+
+      function finishAnimation(svg, paths) {
+        animating = false;
+
+        // Restore paths to normal (no dasharray — fully visible, crisp)
+        paths.forEach((el) => {
+          el.style.transition = "none";
+          el.style.strokeDasharray = "";
+          el.style.strokeDashoffset = "";
+        });
+
+        // Remove ghost tracks
+        svg.querySelectorAll(".stroke-track").forEach((el) => el.remove());
+      }
+
+      // ══════════════════════════════════════════════════════════════════
+      //  STROKE ORDER BUTTON HANDLER
+      // ══════════════════════════════════════════════════════════════════
+
+      function setStrokeBtnLabel(text) {
+        strokeBtn.innerHTML = `
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
              stroke-linecap="round" stroke-linejoin="round">
           <path d="M12 20h9"/>
           <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
         </svg>${text}`;
-    }
+      }
 
-    async function handleStrokeOrder() {
-      // If mid-animation, abort and restart
-      if (animating) {
-        clearAnimTimers();
-        animating = false;
-        const svg = kanjiSvgCont.querySelector("svg");
-        if (svg) {
-          // Clean up leftover anim state
-          svg.querySelectorAll(".stroke-track").forEach(el => el.remove());
-          svg.querySelectorAll(".stroke-static").forEach(el => {
-            el.style.transition       = "none";
-            el.style.strokeDasharray  = "";
-            el.style.strokeDashoffset = "";
-          });
+      async function handleStrokeOrder() {
+        // If mid-animation, abort and restart
+        if (animating) {
+          clearAnimTimers();
+          animating = false;
+          const svg = kanjiSvgCont.querySelector("svg");
+          if (svg) {
+            // Clean up leftover anim state
+            svg.querySelectorAll(".stroke-track").forEach((el) => el.remove());
+            svg.querySelectorAll(".stroke-static").forEach((el) => {
+              el.style.transition = "none";
+              el.style.strokeDasharray = "";
+              el.style.strokeDashoffset = "";
+            });
+          }
+          // Brief pause so user can see the reset
+          await new Promise((r) => setTimeout(r, 60));
         }
-        // Brief pause so user can see the reset
-        await new Promise(r => setTimeout(r, 60));
+
+        // Make sure SVG is loaded (it should be from render(), but guard anyway)
+        let svg = kanjiSvgCont.querySelector("svg");
+        if (!svg) {
+          // SVG not yet loaded — fetch it now
+          const ch = DATA[idx].kanji;
+          strokeBtn.classList.add("loading");
+          strokeBtn.textContent = "⋯ đang tải";
+          const svgText = await fetchKanjiSvg(ch);
+          strokeBtn.classList.remove("loading");
+          setStrokeBtnLabel(" Thứ tự nét");
+          if (!svgText) return;
+          svg = buildStaticSvg(svgText);
+          kanjiPlaceholder.remove();
+          kanjiSvgCont.appendChild(svg);
+        }
+
+        animating = true;
+        playAnimation(svg);
       }
 
-      // Make sure SVG is loaded (it should be from render(), but guard anyway)
-      let svg = kanjiSvgCont.querySelector("svg");
-      if (!svg) {
-        // SVG not yet loaded — fetch it now
-        const ch = DATA[idx].kanji;
-        strokeBtn.classList.add("loading");
-        strokeBtn.textContent = "⋯ đang tải";
-        const svgText = await fetchKanjiSvg(ch);
-        strokeBtn.classList.remove("loading");
-        setStrokeBtnLabel(" Thứ tự nét");
-        if (!svgText) return;
-        svg = buildStaticSvg(svgText);
-        kanjiPlaceholder.remove();
-        kanjiSvgCont.appendChild(svg);
+      // ══════════════════════════════════════════════════════════════════
+      //  PAGE LOADER
+      //  Loads one of the page JSON files instead of kanji-sample.json.
+      // ══════════════════════════════════════════════════════════════════
+
+      async function loadPage(pageNo) {
+        const safePage = Math.min(Math.max(1, pageNo), pageTotal);
+        const url = `./data/pages/page-${safePage}.json`;
+        const res = await fetch(url);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+        const pageData = await res.json();
+        DATA = Array.isArray(pageData) ? pageData : [];
+        pageNumber = safePage;
+        idx = 0;
+        posTotal.textContent = DATA.length;
+        pageLabel.textContent = `Trang ${pageNumber} / ${pageTotal}`;
+        return DATA;
       }
 
-      animating = true;
-      playAnimation(svg);
-    }
+      // ══════════════════════════════════════════════════════════════════
+      //  CARD RENDER
+      //  Loads and displays the KanjiVG SVG as the primary kanji glyph.
+      // ══════════════════════════════════════════════════════════════════
 
-    // ══════════════════════════════════════════════════════════════════
-    //  CARD RENDER
-    //  Loads and displays the KanjiVG SVG as the primary kanji glyph.
-    // ══════════════════════════════════════════════════════════════════
+      async function render() {
+        const item = DATA[idx];
 
-    async function render() {
-      const item = DATA[idx];
-
-      // Back-face text content (sync, fast)
-      miniKanji.textContent   = item.kanji;
-      hanViet.textContent     = item.han_viet;
-      meaningText.textContent = item.meaning;
-      indexMark.textContent   = String(idx + 1).padStart(2, "0");
-      examplesList.innerHTML  = item.examples.map(ex => `
+        // Back-face text content (sync, fast)
+        miniKanji.textContent = item.kanji;
+        hanViet.textContent = item.han_viet;
+        meaningText.textContent = item.meaning;
+        indexMark.textContent = String(idx + 1).padStart(2, "0");
+        examplesList.innerHTML = item.examples
+          .map(
+            (ex) => `
         <li class="example-item">
           <div class="example-bar"></div>
           <div class="example-body">
@@ -739,145 +1013,193 @@
             <div class="example-meaning">${ex.meaning}</div>
           </div>
         </li>
-      `).join("");
-      posNow.textContent      = idx + 1;
-      progressFill.style.width = ((idx + 1) / DATA.length) * 100 + "%";
+      `,
+          )
+          .join("");
+        posNow.textContent = idx + 1;
+        pageLabel.textContent = `Trang ${pageNumber} / ${pageTotal}`;
+        progressFill.style.width = ((idx + 1) / DATA.length) * 100 + "%";
 
-      // Front-face: show placeholder while loading
-      kanjiSvgCont.innerHTML = `<div class="kanji-placeholder">${item.kanji}</div>`;
+        // Front-face: show placeholder while loading
+        kanjiSvgCont.innerHTML = `<div class="kanji-placeholder">${item.kanji}</div>`;
 
-      // Fetch and inject KanjiVG SVG
-      const svgText = await fetchKanjiSvg(item.kanji);
-      if (!svgText) {
-        // No KanjiVG data — leave the text placeholder
-        return;
+        // Fetch and inject KanjiVG SVG
+        const svgText = await fetchKanjiSvg(item.kanji);
+        if (!svgText) {
+          // No KanjiVG data — leave the text placeholder
+          return;
+        }
+
+        // Only update if we're still on the same card
+        // (user might have navigated away while awaiting)
+        if (DATA[idx].kanji !== item.kanji) return;
+
+        const svg = buildStaticSvg(svgText);
+        kanjiSvgCont.innerHTML = "";
+        kanjiSvgCont.appendChild(svg);
       }
 
-      // Only update if we're still on the same card
-      // (user might have navigated away while awaiting)
-      if (DATA[idx].kanji !== item.kanji) return;
+      // ══════════════════════════════════════════════════════════════════
+      //  NAVIGATION
+      // ══════════════════════════════════════════════════════════════════
 
-      const svg = buildStaticSvg(svgText);
-      kanjiSvgCont.innerHTML = "";
-      kanjiSvgCont.appendChild(svg);
-    }
-
-    // ══════════════════════════════════════════════════════════════════
-    //  NAVIGATION
-    // ══════════════════════════════════════════════════════════════════
-
-    function abortAnimation() {
-      if (!animating) return;
-      clearAnimTimers();
-      animating = false;
-      const svg = kanjiSvgCont.querySelector("svg");
-      if (svg) {
-        svg.querySelectorAll(".stroke-track").forEach(el => el.remove());
-        svg.querySelectorAll(".stroke-static").forEach(el => {
-          el.style.transition       = "none";
-          el.style.strokeDasharray  = "";
-          el.style.strokeDashoffset = "";
-        });
+      function abortAnimation() {
+        if (!animating) return;
+        clearAnimTimers();
+        animating = false;
+        const svg = kanjiSvgCont.querySelector("svg");
+        if (svg) {
+          svg.querySelectorAll(".stroke-track").forEach((el) => el.remove());
+          svg.querySelectorAll(".stroke-static").forEach((el) => {
+            el.style.transition = "none";
+            el.style.strokeDasharray = "";
+            el.style.strokeDashoffset = "";
+          });
+        }
       }
-    }
 
-    function setFlipped(v) {
-      flipped = v;
-      card.classList.toggle("flipped", flipped);
-    }
+      function setFlipped(v) {
+        flipped = v;
+        card.classList.toggle("flipped", flipped);
+      }
 
-    function go(delta) {
-      abortAnimation();
-      idx = (idx + delta + DATA.length) % DATA.length;
-      setFlipped(false);
-      // Small delay to let the flip animation start before re-rendering
-      setTimeout(render, 90);
-    }
+      async function go(delta) {
+        abortAnimation();
 
-    // ── Event listeners ───────────────────────────────────────────────
+        const nextIndex = idx + delta;
+        if (nextIndex >= 0 && nextIndex < DATA.length) {
+          idx = nextIndex;
+          setFlipped(false);
+          setTimeout(render, 90);
+          return;
+        }
 
-    strokeBtn.addEventListener("click", e => {
-      e.stopPropagation();
-      handleStrokeOrder();
-    });
+        const targetPage = pageNumber + (delta > 0 ? 1 : -1);
+        if (targetPage >= 1 && targetPage <= pageTotal) {
+          try {
+            await loadPage(targetPage);
+            idx = delta > 0 ? 0 : DATA.length - 1;
+            setFlipped(false);
+            setTimeout(render, 90);
+          } catch (err) {
+            console.error("[kanji] Failed to load page data:", err);
+          }
+          return;
+        }
 
-    card.addEventListener("click", () => {
-      abortAnimation();
-      setFlipped(!flipped);
-    });
+        idx = (idx + delta + DATA.length) % DATA.length;
+        setFlipped(false);
+        setTimeout(render, 90);
+      }
 
-    document.getElementById("flipBtn").addEventListener("click", e => {
-      e.stopPropagation();
-      abortAnimation();
-      setFlipped(!flipped);
-    });
-    document.getElementById("prevBtn").addEventListener("click", e => { e.stopPropagation(); go(-1); });
-    document.getElementById("nextBtn").addEventListener("click", e => { e.stopPropagation(); go(1); });
+      // ── Event listeners ───────────────────────────────────────────────
 
-    document.addEventListener("keydown", e => {
-      if (e.code === "Space" || e.code === "Enter") { e.preventDefault(); abortAnimation(); setFlipped(!flipped); }
-      if (e.code === "ArrowRight") go(1);
-      if (e.code === "ArrowLeft")  go(-1);
-      if (e.key === "s" || e.key === "S") handleStrokeOrder();
-    });
+      strokeBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        handleStrokeOrder();
+      });
 
-    // Swipe
-    let touchStartX = null;
-    document.getElementById("scene").addEventListener("touchstart", e => {
-      touchStartX = e.touches[0].clientX;
-    }, { passive: true });
-    document.getElementById("scene").addEventListener("touchend", e => {
-      if (touchStartX === null) return;
-      const dx = e.changedTouches[0].clientX - touchStartX;
-      if (Math.abs(dx) > 50) go(dx < 0 ? 1 : -1);
-      touchStartX = null;
-    }, { passive: true });
+      card.addEventListener("click", () => {
+        abortAnimation();
+        setFlipped(!flipped);
+      });
 
-    // ══════════════════════════════════════════════════════════════════
-    //  THEME
-    // ══════════════════════════════════════════════════════════════════
-    const root    = document.documentElement;
-    const iconSun = document.getElementById("iconSun");
-    const iconMoon= document.getElementById("iconMoon");
-    let theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.getElementById("flipBtn").addEventListener("click", (e) => {
+        e.stopPropagation();
+        abortAnimation();
+        setFlipped(!flipped);
+      });
+      document.getElementById("prevBtn").addEventListener("click", (e) => {
+        e.stopPropagation();
+        go(-1);
+      });
+      document.getElementById("nextBtn").addEventListener("click", (e) => {
+        e.stopPropagation();
+        go(1);
+      });
 
-    function applyTheme() {
-      root.setAttribute("data-theme", theme);
-      iconSun.style.display  = theme === "dark" ? "block" : "none";
-      iconMoon.style.display = theme === "dark" ? "none"  : "block";
-    }
-    document.getElementById("themeToggle").addEventListener("click", () => {
-      theme = theme === "dark" ? "light" : "dark";
-      applyTheme();
-    });
+      document.addEventListener("keydown", (e) => {
+        if (e.code === "Space" || e.code === "Enter") {
+          e.preventDefault();
+          abortAnimation();
+          setFlipped(!flipped);
+        }
+        if (e.code === "ArrowRight") go(1);
+        if (e.code === "ArrowLeft") go(-1);
+        if (e.key === "s" || e.key === "S") handleStrokeOrder();
+      });
 
-    // ══════════════════════════════════════════════════════════════════
-    //  BOOT — fetch JSON, then start app
-    // ══════════════════════════════════════════════════════════════════
-    async function init() {
-      // Show loading hint inside the kanji area
-      kanjiSvgCont.innerHTML = `<div class="kanji-placeholder" style="font-size:14px;color:var(--muted)">読み込み中…</div>`;
+      // Swipe
+      let touchStartX = null;
+      document.getElementById("scene").addEventListener(
+        "touchstart",
+        (e) => {
+          touchStartX = e.touches[0].clientX;
+        },
+        { passive: true },
+      );
+      document.getElementById("scene").addEventListener(
+        "touchend",
+        (e) => {
+          if (touchStartX === null) return;
+          const dx = e.changedTouches[0].clientX - touchStartX;
+          if (Math.abs(dx) > 50) go(dx < 0 ? 1 : -1);
+          touchStartX = null;
+        },
+        { passive: true },
+      );
 
-      try {
-        const res = await fetch("./data/kanji-sample.json");
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        DATA = await res.json();
-      } catch (err) {
-        kanjiSvgCont.innerHTML =
-          `<div style="font-size:13px;color:var(--accent);text-align:center;padding:8px">
-             ⚠ Không tải được dữ liệu.<br>
+      // ══════════════════════════════════════════════════════════════════
+      //  THEME
+      // ══════════════════════════════════════════════════════════════════
+      const root = document.documentElement;
+      const iconSun = document.getElementById("iconSun");
+      const iconMoon = document.getElementById("iconMoon");
+      let theme = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
+
+      function applyTheme() {
+        root.setAttribute("data-theme", theme);
+        iconSun.style.display = theme === "dark" ? "block" : "none";
+        iconMoon.style.display = theme === "dark" ? "none" : "block";
+      }
+      document.getElementById("themeToggle").addEventListener("click", () => {
+        theme = theme === "dark" ? "light" : "dark";
+        applyTheme();
+      });
+
+      // ══════════════════════════════════════════════════════════════════
+      //  BOOT — fetch JSON, then start app
+      // ══════════════════════════════════════════════════════════════════
+      async function init() {
+        // Show loading hint inside the kanji area
+        kanjiSvgCont.innerHTML = `<div class="kanji-placeholder" style="font-size:14px;color:var(--muted)">読み込み中…</div>`;
+
+        try {
+          const urlParams = new URLSearchParams(window.location.search);
+          const requestedPage = Number(urlParams.get("page"));
+          const initialPage =
+            Number.isInteger(requestedPage) &&
+            requestedPage >= 1 &&
+            requestedPage <= pageTotal
+              ? requestedPage
+              : 1;
+          await loadPage(initialPage);
+        } catch (err) {
+          kanjiSvgCont.innerHTML = `<div style="font-size:13px;color:var(--accent);text-align:center;padding:8px">
+             ⚠ Không tải được dữ liệu trang.<br>
              <span style="color:var(--muted);font-size:11px">${err.message}</span>
            </div>`;
-        console.error("[kanji] Failed to load kanji-sample.json:", err);
-        return;
+          console.error("[kanji] Failed to load page data:", err);
+          return;
+        }
+
+        render();
       }
 
-      posTotal.textContent = DATA.length;
-      render();
-    }
-
-    applyTheme();
-    init();
+      applyTheme();
+      init();
     </script>
   </body>
 </html>
