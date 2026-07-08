@@ -531,6 +531,48 @@
         color: var(--muted);
         font-variant-numeric: tabular-nums;
       }
+      .jump-controls {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 10px;
+        width: min(100%, 320px);
+      }
+      .jump-field {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 8px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: var(--card);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+      }
+      .jump-field span {
+        font-size: 11px;
+        color: var(--muted);
+        white-space: nowrap;
+      }
+      .jump-field input {
+        width: 54px;
+        border: none;
+        outline: none;
+        background: transparent;
+        color: var(--fg);
+        font-size: 13px;
+        text-align: center;
+      }
+      .jump-btn {
+        border: none;
+        border-radius: 999px;
+        background: var(--accent);
+        color: white;
+        padding: 7px 12px;
+        font-size: 12px;
+        font-weight: 600;
+        cursor: pointer;
+      }
       .progress-track {
         width: 100%;
         max-width: 200px;
@@ -693,6 +735,29 @@
 
       <div class="progress"><b id="posNow">1</b> / <span id="posTotal">6</span></div>
       <div class="page-label" id="pageLabel">Trang 1 / 27</div>
+      <div class="jump-controls">
+        <label class="jump-field" for="cardJumpInput">
+          <span>Thẻ</span>
+          <input
+            id="cardJumpInput"
+            inputmode="numeric"
+            pattern="[0-9]*"
+            placeholder="1"
+            aria-label="Nhập số thẻ"
+          />
+        </label>
+        <label class="jump-field" for="pageJumpInput">
+          <span>Trang</span>
+          <input
+            id="pageJumpInput"
+            inputmode="numeric"
+            pattern="[0-9]*"
+            placeholder="1"
+            aria-label="Nhập số trang"
+          />
+        </label>
+        <button class="jump-btn" id="jumpBtn" type="button">Đi tới</button>
+      </div>
       <div class="progress-track">
         <div class="progress-fill" id="progressFill"></div>
       </div>
@@ -726,6 +791,9 @@
       const pageLabel = document.getElementById('pageLabel');
       const progressFill = document.getElementById('progressFill');
       const strokeBtn = document.getElementById('strokeBtn');
+      const cardJumpInput = document.getElementById('cardJumpInput');
+      const pageJumpInput = document.getElementById('pageJumpInput');
+      const jumpBtn = document.getElementById('jumpBtn');
 
       const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -960,6 +1028,9 @@
         idx = 0;
         posTotal.textContent = DATA.length;
         pageLabel.textContent = `Trang ${pageNumber} / ${pageTotal}`;
+        const nextUrl = new URL(window.location.href);
+        nextUrl.searchParams.set('page', String(pageNumber));
+        window.history.replaceState({}, '', nextUrl);
         return DATA;
       }
 
@@ -1070,6 +1141,47 @@
         setTimeout(render, 90);
       }
 
+      function jumpToCard(cardNo) {
+        const targetCard = Number(cardNo);
+        if (!Number.isInteger(targetCard) || targetCard < 1 || targetCard > DATA.length) {
+          return;
+        }
+        idx = targetCard - 1;
+        setFlipped(false);
+        setTimeout(render, 90);
+      }
+
+      async function jumpToPage(pageNo) {
+        const targetPage = Number(pageNo);
+        if (!Number.isInteger(targetPage) || targetPage < 1 || targetPage > pageTotal) {
+          return;
+        }
+        try {
+          await loadPage(targetPage);
+          idx = 0;
+          setFlipped(false);
+          setTimeout(render, 90);
+        } catch (err) {
+          console.error('[kanji] Failed to jump to page data:', err);
+        }
+      }
+
+      function handleJump() {
+        const requestedCard = cardJumpInput.value.trim();
+        const requestedPage = pageJumpInput.value.trim();
+
+        if (requestedPage) {
+          jumpToPage(requestedPage);
+          pageJumpInput.value = '';
+          return;
+        }
+
+        if (requestedCard) {
+          jumpToCard(requestedCard);
+          cardJumpInput.value = '';
+        }
+      }
+
       // ── Event listeners ───────────────────────────────────────────────
 
       strokeBtn.addEventListener('click', (e) => {
@@ -1094,6 +1206,22 @@
       document.getElementById('nextBtn').addEventListener('click', (e) => {
         e.stopPropagation();
         go(1);
+      });
+      jumpBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        handleJump();
+      });
+      cardJumpInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          handleJump();
+        }
+      });
+      pageJumpInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          handleJump();
+        }
       });
 
       document.addEventListener('keydown', (e) => {
