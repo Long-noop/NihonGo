@@ -2,7 +2,10 @@
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
     <title>Kanji Flashcards</title>
     <meta
       name="description"
@@ -14,600 +17,16 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;700;900&family=Noto+Sans+JP:wght@400;500&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <style>
-      /* ── Design tokens ─────────────────────────────────────────────── */
-      :root {
-        --bg: #fafaf8;
-        --fg: #16150f;
-        --muted: #87837a;
-        --card: #ffffff;
-        --border: #e6e3da;
-        --accent: #ae3427;
-        --accent-fg: #fff8f3;
-        --stroke-color: #16150f; /* SVG foreground stroke – light */
-        --stroke-track: rgba(0, 0, 0, 0.1); /* ghost track – light           */
-        --shadow: 0 1px 2px rgba(20, 18, 10, 0.04), 0 12px 32px -16px rgba(20, 18, 10, 0.14);
-        --radius: 18px;
-        --flip-duration: 620ms;
-      }
-      html[data-theme='dark'] {
-        --bg: #121210;
-        --fg: #f2f0e9;
-        --muted: #8f8b80;
-        --card: #1a1a17;
-        --border: #2c2a24;
-        --accent: #e2694f;
-        --accent-fg: #181410;
-        --stroke-color: #f2f0e9; /* SVG foreground stroke – dark */
-        --stroke-track: rgba(255, 255, 255, 0.12);
-        --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 20px 40px -20px rgba(0, 0, 0, 0.6);
-      }
-
-      /* ── Reset ─────────────────────────────────────────────────────── */
-      *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-      }
-      html,
-      body {
-        height: 100%;
-      }
-      body {
-        margin: 0;
-        background: var(--bg);
-        color: var(--fg);
-        font-family:
-          'Inter',
-          -apple-system,
-          sans-serif;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        min-height: 100vh;
-        padding: 20px 16px 32px;
-        transition:
-          background 0.35s ease,
-          color 0.35s ease;
-        -webkit-font-smoothing: antialiased;
-      }
-
-      /* ── Topbar ────────────────────────────────────────────────────── */
-      .topbar {
-        width: 100%;
-        max-width: 460px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 6px 2px 22px;
-      }
-      .brand {
-        font-size: 13px;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-        color: var(--muted);
-        font-weight: 600;
-      }
-      .brand b {
-        color: var(--fg);
-        font-weight: 700;
-      }
-
-      .theme-toggle {
-        width: 38px;
-        height: 38px;
-        border-radius: 50%;
-        border: 1px solid var(--border);
-        background: var(--card);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        color: var(--fg);
-        transition:
-          transform 0.25s ease,
-          background 0.3s ease,
-          border-color 0.3s ease;
-      }
-      .theme-toggle:hover {
-        transform: translateY(-1px);
-      }
-      .theme-toggle:active {
-        transform: scale(0.94);
-      }
-      .theme-toggle svg {
-        width: 18px;
-        height: 18px;
-      }
-
-      /* ── Stage & Scene ─────────────────────────────────────────────── */
-      .stage {
-        width: 100%;
-        max-width: 460px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        flex: 1;
-      }
-      .scene {
-        width: 100%;
-        height: min(560px, 66vh);
-        perspective: 1600px;
-        touch-action: pan-y;
-      }
-
-      /* ── Card 3-D flip ─────────────────────────────────────────────── */
-      .card {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        cursor: pointer;
-        transform-style: preserve-3d;
-        transition: transform var(--flip-duration) cubic-bezier(0.4, 0.1, 0.2, 1);
-      }
-      .card.flipped {
-        transform: rotateY(180deg);
-      }
-
-      .face {
-        position: absolute;
-        inset: 0;
-        background: var(--card);
-        border: 1px solid var(--border);
-        border-radius: var(--radius);
-        box-shadow: var(--shadow);
-        backface-visibility: hidden;
-        -webkit-backface-visibility: hidden;
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-      }
-      .face.back {
-        transform: rotateY(180deg);
-      }
-
-      /* corner marks */
-      .corner {
-        position: absolute;
-        width: 14px;
-        height: 14px;
-        border-color: var(--accent);
-        opacity: 0.55;
-        pointer-events: none;
-      }
-      .corner.tl {
-        top: 14px;
-        left: 14px;
-        border-top: 2px solid;
-        border-left: 2px solid;
-      }
-      .corner.br {
-        bottom: 14px;
-        right: 14px;
-        border-bottom: 2px solid;
-        border-right: 2px solid;
-      }
-
-      .index-mark {
-        position: absolute;
-        top: 16px;
-        right: 18px;
-        writing-mode: vertical-rl;
-        font-family: 'Noto Serif JP', serif;
-        font-size: 12px;
-        letter-spacing: 0.1em;
-        color: var(--muted);
-        font-variant-numeric: tabular-nums;
-        pointer-events: none;
-        z-index: 2;
-      }
-
-      /* ── Front face ────────────────────────────────────────────────── */
-      .face.front {
-        padding: 20px 20px 16px;
-      }
-
-      /*
-       * kanji-wrapper — flex column, centred.
-       * flex:1 fills remaining vertical space.
-       */
-      .kanji-wrapper {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-height: 0;
-      }
-
-      /*
-       * kanji-svg-container — the SVG lives here.
-       * Square, responsive. We let the SVG fill it completely.
-       *
-       * KanjiVG viewBox is 109×109, so any square container gives a perfect glyph.
-       */
-      .kanji-svg-container {
-        width: clamp(120px, 42vw, 220px);
-        height: clamp(120px, 42vw, 220px);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      /* The SVG element itself (injected dynamically) */
-      .kanji-svg-container svg {
-        display: block;
-        width: 100%;
-        height: 100%;
-        overflow: visible;
-      }
-
-      /* Hide KanjiVG stroke-number text in ALL states */
-      .kanji-svg-container text,
-      .kanji-svg-container tspan {
-        display: none !important;
-      }
-
-      /*
-       * Stroke styles — used by JS when building the SVG DOM.
-       * Using CSS vars so they follow the theme automatically.
-       */
-      .kanji-svg-container .stroke-static {
-        fill: none;
-        stroke: var(--stroke-color);
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        stroke-width: 3.5;
-      }
-      .kanji-svg-container .stroke-track {
-        fill: none;
-        stroke: var(--stroke-track);
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        stroke-width: 3.5;
-      }
-      .kanji-svg-container .stroke-anim {
-        fill: none;
-        stroke: var(--stroke-color);
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        stroke-width: 3.5;
-      }
-
-      /* Placeholder shown while SVG is loading */
-      .kanji-placeholder {
-        font-family: 'Noto Serif JP', serif;
-        font-weight: 700;
-        font-size: clamp(80px, 26vw, 148px);
-        line-height: 1;
-        color: var(--border); /* muted, just a size hint */
-        user-select: none;
-      }
-
-      /* ── Stroke-order button ───────────────────────────────────────── */
-      .front-actions {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
-        padding-bottom: 2px;
-      }
-
-      .stroke-btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 7px;
-        border: 1px solid var(--border);
-        background: transparent;
-        color: var(--muted);
-        font-family: inherit;
-        font-size: 12.5px;
-        font-weight: 600;
-        letter-spacing: 0.05em;
-        padding: 8px 18px;
-        border-radius: 999px;
-        cursor: pointer;
-        transition:
-          background 0.2s ease,
-          color 0.2s ease,
-          border-color 0.2s ease,
-          transform 0.15s ease;
-        white-space: nowrap;
-      }
-      .stroke-btn:hover {
-        background: var(--fg);
-        color: var(--bg);
-        border-color: var(--fg);
-        transform: translateY(-1px);
-      }
-      .stroke-btn:active {
-        transform: scale(0.94);
-      }
-      .stroke-btn.loading {
-        opacity: 0.55;
-        cursor: default;
-        pointer-events: none;
-      }
-      .stroke-btn svg {
-        width: 14px;
-        height: 14px;
-        flex-shrink: 0;
-      }
-
-      .tap-hint {
-        text-align: center;
-        font-size: 11px;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-        color: var(--muted);
-      }
-
-      /* ── Back face ─────────────────────────────────────────────────── */
-      .face.back {
-        padding: 26px 24px 20px;
-      }
-      .back-header {
-        display: flex;
-        align-items: baseline;
-        gap: 10px;
-        margin-bottom: 4px;
-      }
-      .han-viet {
-        font-family: 'Noto Serif JP', serif;
-        font-weight: 700;
-        font-size: 22px;
-        letter-spacing: 0.04em;
-        color: var(--accent);
-      }
-      .back-kanji-mini {
-        font-family: 'Noto Serif JP', serif;
-        color: var(--muted);
-        font-size: 15px;
-      }
-      .meaning {
-        font-size: 15px;
-        color: var(--fg);
-        margin: 2px 0 16px;
-        line-height: 1.5;
-      }
-      .divider {
-        height: 1px;
-        background: var(--border);
-        margin: 2px 0 14px;
-      }
-      .examples-label {
-        font-size: 11px;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-        color: var(--muted);
-        margin-bottom: 10px;
-      }
-
-      /* Scrollable vocab list */
-      .examples {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        overflow-y: auto;
-        padding-right: 2px;
-      }
-      .examples::-webkit-scrollbar {
-        width: 3px;
-      }
-      .examples::-webkit-scrollbar-thumb {
-        background: var(--border);
-        border-radius: 4px;
-      }
-
-      /* ── Vocab card ─────────────────────────────────────────────── */
-      .example-item {
-        display: flex;
-        align-items: stretch;
-        gap: 0;
-        border-radius: 10px;
-        background: var(--bg);
-        border: 1px solid var(--border);
-        overflow: hidden;
-        transition:
-          border-color 0.2s ease,
-          box-shadow 0.2s ease;
-      }
-      .example-item:hover {
-        border-color: var(--accent);
-        box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 12%, transparent);
-      }
-
-      /* Left accent bar */
-      .example-bar {
-        width: 3px;
-        flex-shrink: 0;
-        background: var(--accent);
-        opacity: 0.6;
-      }
-
-      /* Right content area */
-      .example-body {
-        flex: 1;
-        padding: 9px 12px;
-        display: flex;
-        flex-direction: column;
-        gap: 3px;
-        min-width: 0;
-      }
-
-      /* Top row: word + reading pill */
-      .example-top {
-        display: flex;
-        align-items: baseline;
-        gap: 8px;
-        flex-wrap: wrap;
-      }
-      .example-word {
-        font-family: 'Noto Serif JP', serif;
-        font-size: 18px;
-        font-weight: 600;
-        color: var(--fg);
-        line-height: 1.2;
-      }
-      .example-hira {
-        font-family: 'Noto Sans JP', sans-serif;
-        font-size: 11px;
-        font-weight: 500;
-        color: var(--accent);
-        background: color-mix(in srgb, var(--accent) 10%, transparent);
-        padding: 2px 7px;
-        border-radius: 999px;
-        white-space: nowrap;
-        letter-spacing: 0.02em;
-      }
-
-      /* Bottom row: Vietnamese meaning */
-      .example-meaning {
-        font-size: 12.5px;
-        color: var(--muted);
-        line-height: 1.4;
-      }
-
-      /* ── Navigation controls ───────────────────────────────────────── */
-      .controls {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 14px;
-        margin-top: 22px;
-      }
-      .ctrl-btn {
-        width: 46px;
-        height: 46px;
-        border-radius: 50%;
-        border: 1px solid var(--border);
-        background: var(--card);
-        color: var(--fg);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        transition:
-          transform 0.18s ease,
-          background 0.25s ease;
-      }
-      .ctrl-btn svg {
-        width: 18px;
-        height: 18px;
-      }
-      .ctrl-btn:hover {
-        transform: translateY(-1px);
-      }
-      .ctrl-btn:active {
-        transform: scale(0.92);
-      }
-      .ctrl-btn.primary {
-        background: var(--fg);
-        color: var(--bg);
-        border-color: var(--fg);
-        width: 56px;
-        height: 56px;
-      }
-
-      /* ── Progress ──────────────────────────────────────────────────── */
-      .progress {
-        margin-top: 16px;
-        font-size: 12px;
-        letter-spacing: 0.08em;
-        color: var(--muted);
-        font-variant-numeric: tabular-nums;
-      }
-      .progress b {
-        color: var(--fg);
-      }
-      .page-label {
-        margin-top: 6px;
-        font-size: 11px;
-        letter-spacing: 0.08em;
-        color: var(--muted);
-        font-variant-numeric: tabular-nums;
-      }
-      .jump-controls {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 8px;
-        margin-top: 10px;
-        width: min(100%, 320px);
-      }
-      .jump-field {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        padding: 6px 8px;
-        border: 1px solid var(--border);
-        border-radius: 999px;
-        background: var(--card);
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
-      }
-      .jump-field span {
-        font-size: 11px;
-        color: var(--muted);
-        white-space: nowrap;
-      }
-      .jump-field input {
-        width: 54px;
-        border: none;
-        outline: none;
-        background: transparent;
-        color: var(--fg);
-        font-size: 13px;
-        text-align: center;
-      }
-      .jump-btn {
-        border: none;
-        border-radius: 999px;
-        background: var(--accent);
-        color: white;
-        padding: 7px 12px;
-        font-size: 12px;
-        font-weight: 600;
-        cursor: pointer;
-      }
-      .progress-track {
-        width: 100%;
-        max-width: 200px;
-        height: 2px;
-        background: var(--border);
-        margin-top: 10px;
-        border-radius: 2px;
-        overflow: hidden;
-      }
-      .progress-fill {
-        height: 100%;
-        background: var(--accent);
-        transition: width 0.3s ease;
-      }
-
-      /* ── Reduced motion ────────────────────────────────────────────── */
-      @media (prefers-reduced-motion: reduce) {
-        .card {
-          transition: none;
-        }
-      }
-
-      /* ── Mobile ────────────────────────────────────────────────────── */
-      @media (max-width: 380px) {
-        .kanji-svg-container {
-          width: clamp(100px, 52vw, 160px);
-          height: clamp(100px, 52vw, 160px);
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="asserts/styles.css" />
   </head>
   <body>
     <div class="topbar">
       <div class="brand"><b>漢字</b> · Flashcards</div>
-      <button class="theme-toggle" id="themeToggle" aria-label="Đổi giao diện sáng / tối">
+      <button
+        class="theme-toggle"
+        id="themeToggle"
+        aria-label="Đổi giao diện sáng / tối"
+      >
         <svg
           id="iconSun"
           viewBox="0 0 24 24"
@@ -656,7 +75,11 @@
             </div>
 
             <div class="front-actions">
-              <button class="stroke-btn" id="strokeBtn" aria-label="Xem thứ tự nét viết">
+              <button
+                class="stroke-btn"
+                id="strokeBtn"
+                aria-label="Xem thứ tự nét viết"
+              >
                 <svg
                   viewBox="0 0 24 24"
                   fill="none"
@@ -666,7 +89,9 @@
                   stroke-linejoin="round"
                 >
                   <path d="M12 20h9" />
-                  <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+                  <path
+                    d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"
+                  />
                 </svg>
                 Thứ tự nét
               </button>
@@ -733,7 +158,9 @@
         </button>
       </div>
 
-      <div class="progress"><b id="posNow">1</b> / <span id="posTotal">6</span></div>
+      <div class="progress">
+        <b id="posNow">1</b> / <span id="posTotal">6</span>
+      </div>
       <div class="page-label" id="pageLabel">Trang 1 / 27</div>
       <div class="jump-controls">
         <label class="jump-field" for="cardJumpInput">
@@ -778,24 +205,26 @@
       const svgCache = new Map(); // ch → raw SVG text (or null if not found)
 
       // ── DOM refs ──────────────────────────────────────────────────────
-      const card = document.getElementById('card');
-      const kanjiSvgCont = document.getElementById('kanjiSvgContainer');
-      const kanjiPlaceholder = document.getElementById('kanjiPlaceholder');
-      const miniKanji = document.getElementById('miniKanji');
-      const hanViet = document.getElementById('hanViet');
-      const meaningText = document.getElementById('meaningText');
-      const examplesList = document.getElementById('examplesList');
-      const indexMark = document.getElementById('indexMark');
-      const posNow = document.getElementById('posNow');
-      const posTotal = document.getElementById('posTotal');
-      const pageLabel = document.getElementById('pageLabel');
-      const progressFill = document.getElementById('progressFill');
-      const strokeBtn = document.getElementById('strokeBtn');
-      const cardJumpInput = document.getElementById('cardJumpInput');
-      const pageJumpInput = document.getElementById('pageJumpInput');
-      const jumpBtn = document.getElementById('jumpBtn');
+      const card = document.getElementById("card");
+      const kanjiSvgCont = document.getElementById("kanjiSvgContainer");
+      const kanjiPlaceholder = document.getElementById("kanjiPlaceholder");
+      const miniKanji = document.getElementById("miniKanji");
+      const hanViet = document.getElementById("hanViet");
+      const meaningText = document.getElementById("meaningText");
+      const examplesList = document.getElementById("examplesList");
+      const indexMark = document.getElementById("indexMark");
+      const posNow = document.getElementById("posNow");
+      const posTotal = document.getElementById("posTotal");
+      const pageLabel = document.getElementById("pageLabel");
+      const progressFill = document.getElementById("progressFill");
+      const strokeBtn = document.getElementById("strokeBtn");
+      const cardJumpInput = document.getElementById("cardJumpInput");
+      const pageJumpInput = document.getElementById("pageJumpInput");
+      const jumpBtn = document.getElementById("jumpBtn");
 
-      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const reducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)",
+      ).matches;
 
       // ══════════════════════════════════════════════════════════════════
       //  KANJIVG FETCH  (unchanged from NihonGo/kanji.html approach)
@@ -804,21 +233,24 @@
       function codepointHex(ch) {
         return Array.from(ch)
           .map((c) => c.codePointAt(0).toString(16).toLowerCase())
-          .join('-');
+          .join("-");
       }
 
       function getDisplayKanji(item) {
-        if (!item || typeof item.kanji !== 'string') return '';
-        return Array.from(item.kanji)[0] || '';
+        if (!item || typeof item.kanji !== "string") return "";
+        return Array.from(item.kanji)[0] || "";
       }
 
       async function fetchKanjiSvg(ch) {
         if (svgCache.has(ch)) return svgCache.get(ch);
         const hex = codepointHex(ch);
-        const candidates = [`./data/kanjivg/0${hex}.svg`, `./data/kanjivg/${hex}.svg`];
+        const candidates = [
+          `./data/kanjivg/0${hex}.svg`,
+          `./data/kanjivg/${hex}.svg`,
+        ];
         for (const url of candidates) {
           try {
-            const res = await fetch(url, { cache: 'force-cache' });
+            const res = await fetch(url, { cache: "force-cache" });
             if (!res.ok) continue;
             const text = await res.text();
             svgCache.set(ch, text);
@@ -839,25 +271,28 @@
       // ══════════════════════════════════════════════════════════════════
 
       function buildStaticSvg(svgText) {
-        const doc = new DOMParser().parseFromString(svgText, 'image/svg+xml');
+        const doc = new DOMParser().parseFromString(svgText, "image/svg+xml");
         const orig = doc.documentElement;
 
         // Remove stroke-number text nodes entirely
-        orig.querySelectorAll('text, tspan').forEach((el) => el.remove());
+        orig.querySelectorAll("text, tspan").forEach((el) => el.remove());
 
-        const ns = 'http://www.w3.org/2000/svg';
-        const svg = document.createElementNS(ns, 'svg');
-        svg.setAttribute('viewBox', orig.getAttribute('viewBox') || '0 0 109 109');
-        svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
+        const ns = "http://www.w3.org/2000/svg";
+        const svg = document.createElementNS(ns, "svg");
+        svg.setAttribute(
+          "viewBox",
+          orig.getAttribute("viewBox") || "0 0 109 109",
+        );
+        svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
 
         // Copy all path elements, assigning the static class
-        const paths = [...orig.querySelectorAll('path')];
+        const paths = [...orig.querySelectorAll("path")];
         paths.forEach((p) => {
-          const d = p.getAttribute('d');
+          const d = p.getAttribute("d");
           if (!d) return;
-          const el = document.createElementNS(ns, 'path');
-          el.setAttribute('d', d);
-          el.classList.add('stroke-static');
+          const el = document.createElementNS(ns, "path");
+          el.setAttribute("d", d);
+          el.classList.add("stroke-static");
           svg.appendChild(el);
         });
 
@@ -881,18 +316,18 @@
       }
 
       function playAnimation(svg) {
-        const ns = 'http://www.w3.org/2000/svg';
-        const paths = [...svg.querySelectorAll('.stroke-static')];
+        const ns = "http://www.w3.org/2000/svg";
+        const paths = [...svg.querySelectorAll(".stroke-static")];
         if (!paths.length) return;
 
         // Remove any lingering track clones from a previous run
-        svg.querySelectorAll('.stroke-track').forEach((el) => el.remove());
+        svg.querySelectorAll(".stroke-track").forEach((el) => el.remove());
 
         // Insert ghost tracks behind each path
         paths.forEach((path) => {
-          const track = document.createElementNS(ns, 'path');
-          track.setAttribute('d', path.getAttribute('d'));
-          track.classList.add('stroke-track');
+          const track = document.createElementNS(ns, "path");
+          track.setAttribute("d", path.getAttribute("d"));
+          track.classList.add("stroke-track");
           svg.insertBefore(track, path);
         });
 
@@ -902,7 +337,7 @@
           try {
             len = el.getTotalLength();
           } catch {}
-          el.style.transition = 'none';
+          el.style.transition = "none";
           el.style.strokeDasharray = len;
           el.style.strokeDashoffset = len;
           void el.getBoundingClientRect(); // force reflow
@@ -911,7 +346,7 @@
         if (reducedMotion) {
           // Skip anim — just show everything immediately
           paths.forEach((el) => {
-            el.style.strokeDashoffset = '0';
+            el.style.strokeDashoffset = "0";
           });
           finishAnimation(svg, paths);
           return;
@@ -933,14 +368,17 @@
 
           const tid = setTimeout(() => {
             el.style.transition = `stroke-dashoffset ${dur}ms linear`;
-            el.style.strokeDashoffset = '0';
+            el.style.strokeDashoffset = "0";
           }, delay);
           animTimers.push(tid);
           cursor += dur + (i === 0 ? 0 : GAP);
         });
 
         // After all strokes complete, clean up
-        const finishId = setTimeout(() => finishAnimation(svg, paths), cursor + 500);
+        const finishId = setTimeout(
+          () => finishAnimation(svg, paths),
+          cursor + 500,
+        );
         animTimers.push(finishId);
       }
 
@@ -949,13 +387,13 @@
 
         // Restore paths to normal (no dasharray — fully visible, crisp)
         paths.forEach((el) => {
-          el.style.transition = 'none';
-          el.style.strokeDasharray = '';
-          el.style.strokeDashoffset = '';
+          el.style.transition = "none";
+          el.style.strokeDasharray = "";
+          el.style.strokeDashoffset = "";
         });
 
         // Remove ghost tracks
-        svg.querySelectorAll('.stroke-track').forEach((el) => el.remove());
+        svg.querySelectorAll(".stroke-track").forEach((el) => el.remove());
       }
 
       // ══════════════════════════════════════════════════════════════════
@@ -976,14 +414,14 @@
         if (animating) {
           clearAnimTimers();
           animating = false;
-          const svg = kanjiSvgCont.querySelector('svg');
+          const svg = kanjiSvgCont.querySelector("svg");
           if (svg) {
             // Clean up leftover anim state
-            svg.querySelectorAll('.stroke-track').forEach((el) => el.remove());
-            svg.querySelectorAll('.stroke-static').forEach((el) => {
-              el.style.transition = 'none';
-              el.style.strokeDasharray = '';
-              el.style.strokeDashoffset = '';
+            svg.querySelectorAll(".stroke-track").forEach((el) => el.remove());
+            svg.querySelectorAll(".stroke-static").forEach((el) => {
+              el.style.transition = "none";
+              el.style.strokeDasharray = "";
+              el.style.strokeDashoffset = "";
             });
           }
           // Brief pause so user can see the reset
@@ -991,16 +429,16 @@
         }
 
         // Make sure SVG is loaded (it should be from render(), but guard anyway)
-        let svg = kanjiSvgCont.querySelector('svg');
+        let svg = kanjiSvgCont.querySelector("svg");
         if (!svg) {
           // SVG not yet loaded — fetch it now
           const ch = getDisplayKanji(DATA[idx]);
           if (!ch) return;
-          strokeBtn.classList.add('loading');
-          strokeBtn.textContent = '⋯ đang tải';
+          strokeBtn.classList.add("loading");
+          strokeBtn.textContent = "⋯ đang tải";
           const svgText = await fetchKanjiSvg(ch);
-          strokeBtn.classList.remove('loading');
-          setStrokeBtnLabel(' Thứ tự nét');
+          strokeBtn.classList.remove("loading");
+          setStrokeBtnLabel(" Thứ tự nét");
           if (!svgText) return;
           svg = buildStaticSvg(svgText);
           kanjiPlaceholder.remove();
@@ -1029,8 +467,8 @@
         posTotal.textContent = DATA.length;
         pageLabel.textContent = `Trang ${pageNumber} / ${pageTotal}`;
         const nextUrl = new URL(window.location.href);
-        nextUrl.searchParams.set('page', String(pageNumber));
-        window.history.replaceState({}, '', nextUrl);
+        nextUrl.searchParams.set("page", String(pageNumber));
+        window.history.replaceState({}, "", nextUrl);
         return DATA;
       }
 
@@ -1047,7 +485,7 @@
         miniKanji.textContent = item.kanji;
         hanViet.textContent = item.han_viet;
         meaningText.textContent = item.meaning;
-        indexMark.textContent = String(idx + 1).padStart(2, '0');
+        indexMark.textContent = String(idx + 1).padStart(2, "0");
         examplesList.innerHTML = item.examples
           .map(
             (ex) => `
@@ -1061,15 +499,15 @@
             <div class="example-meaning">${ex.meaning}</div>
           </div>
         </li>
-      `
+      `,
           )
-          .join('');
+          .join("");
         posNow.textContent = idx + 1;
         pageLabel.textContent = `Trang ${pageNumber} / ${pageTotal}`;
-        progressFill.style.width = ((idx + 1) / DATA.length) * 100 + '%';
+        progressFill.style.width = ((idx + 1) / DATA.length) * 100 + "%";
 
         // Front-face: show one kanji character as a placeholder while loading
-        kanjiSvgCont.innerHTML = `<div class="kanji-placeholder">${displayKanji || '字'}</div>`;
+        kanjiSvgCont.innerHTML = `<div class="kanji-placeholder">${displayKanji || "字"}</div>`;
 
         // Fetch and inject KanjiVG SVG for that single character
         if (!displayKanji) return;
@@ -1084,7 +522,7 @@
         if (getDisplayKanji(DATA[idx]) !== displayKanji) return;
 
         const svg = buildStaticSvg(svgText);
-        kanjiSvgCont.innerHTML = '';
+        kanjiSvgCont.innerHTML = "";
         kanjiSvgCont.appendChild(svg);
       }
 
@@ -1096,20 +534,20 @@
         if (!animating) return;
         clearAnimTimers();
         animating = false;
-        const svg = kanjiSvgCont.querySelector('svg');
+        const svg = kanjiSvgCont.querySelector("svg");
         if (svg) {
-          svg.querySelectorAll('.stroke-track').forEach((el) => el.remove());
-          svg.querySelectorAll('.stroke-static').forEach((el) => {
-            el.style.transition = 'none';
-            el.style.strokeDasharray = '';
-            el.style.strokeDashoffset = '';
+          svg.querySelectorAll(".stroke-track").forEach((el) => el.remove());
+          svg.querySelectorAll(".stroke-static").forEach((el) => {
+            el.style.transition = "none";
+            el.style.strokeDasharray = "";
+            el.style.strokeDashoffset = "";
           });
         }
       }
 
       function setFlipped(v) {
         flipped = v;
-        card.classList.toggle('flipped', flipped);
+        card.classList.toggle("flipped", flipped);
       }
 
       async function go(delta) {
@@ -1131,7 +569,7 @@
             setFlipped(false);
             setTimeout(render, 90);
           } catch (err) {
-            console.error('[kanji] Failed to load page data:', err);
+            console.error("[kanji] Failed to load page data:", err);
           }
           return;
         }
@@ -1143,7 +581,11 @@
 
       function jumpToCard(cardNo) {
         const targetCard = Number(cardNo);
-        if (!Number.isInteger(targetCard) || targetCard < 1 || targetCard > DATA.length) {
+        if (
+          !Number.isInteger(targetCard) ||
+          targetCard < 1 ||
+          targetCard > DATA.length
+        ) {
           return;
         }
         idx = targetCard - 1;
@@ -1153,7 +595,11 @@
 
       async function jumpToPage(pageNo) {
         const targetPage = Number(pageNo);
-        if (!Number.isInteger(targetPage) || targetPage < 1 || targetPage > pageTotal) {
+        if (
+          !Number.isInteger(targetPage) ||
+          targetPage < 1 ||
+          targetPage > pageTotal
+        ) {
           return;
         }
         try {
@@ -1162,7 +608,7 @@
           setFlipped(false);
           setTimeout(render, 90);
         } catch (err) {
-          console.error('[kanji] Failed to jump to page data:', err);
+          console.error("[kanji] Failed to jump to page data:", err);
         }
       }
 
@@ -1172,104 +618,106 @@
 
         if (requestedPage) {
           jumpToPage(requestedPage);
-          pageJumpInput.value = '';
+          pageJumpInput.value = "";
           return;
         }
 
         if (requestedCard) {
           jumpToCard(requestedCard);
-          cardJumpInput.value = '';
+          cardJumpInput.value = "";
         }
       }
 
       // ── Event listeners ───────────────────────────────────────────────
 
-      strokeBtn.addEventListener('click', (e) => {
+      strokeBtn.addEventListener("click", (e) => {
         e.stopPropagation();
         handleStrokeOrder();
       });
 
-      card.addEventListener('click', () => {
+      card.addEventListener("click", () => {
         abortAnimation();
         setFlipped(!flipped);
       });
 
-      document.getElementById('flipBtn').addEventListener('click', (e) => {
+      document.getElementById("flipBtn").addEventListener("click", (e) => {
         e.stopPropagation();
         abortAnimation();
         setFlipped(!flipped);
       });
-      document.getElementById('prevBtn').addEventListener('click', (e) => {
+      document.getElementById("prevBtn").addEventListener("click", (e) => {
         e.stopPropagation();
         go(-1);
       });
-      document.getElementById('nextBtn').addEventListener('click', (e) => {
+      document.getElementById("nextBtn").addEventListener("click", (e) => {
         e.stopPropagation();
         go(1);
       });
-      jumpBtn.addEventListener('click', (e) => {
+      jumpBtn.addEventListener("click", (e) => {
         e.stopPropagation();
         handleJump();
       });
-      cardJumpInput.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter') {
+      cardJumpInput.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
           e.preventDefault();
           handleJump();
         }
       });
-      pageJumpInput.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter') {
+      pageJumpInput.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
           e.preventDefault();
           handleJump();
         }
       });
 
-      document.addEventListener('keydown', (e) => {
-        if (e.code === 'Space' || e.code === 'Enter') {
+      document.addEventListener("keydown", (e) => {
+        if (e.code === "Space" || e.code === "Enter") {
           e.preventDefault();
           abortAnimation();
           setFlipped(!flipped);
         }
-        if (e.code === 'ArrowRight') go(1);
-        if (e.code === 'ArrowLeft') go(-1);
-        if (e.key === 's' || e.key === 'S') handleStrokeOrder();
+        if (e.code === "ArrowRight") go(1);
+        if (e.code === "ArrowLeft") go(-1);
+        if (e.key === "s" || e.key === "S") handleStrokeOrder();
       });
 
       // Swipe
       let touchStartX = null;
-      document.getElementById('scene').addEventListener(
-        'touchstart',
+      document.getElementById("scene").addEventListener(
+        "touchstart",
         (e) => {
           touchStartX = e.touches[0].clientX;
         },
-        { passive: true }
+        { passive: true },
       );
-      document.getElementById('scene').addEventListener(
-        'touchend',
+      document.getElementById("scene").addEventListener(
+        "touchend",
         (e) => {
           if (touchStartX === null) return;
           const dx = e.changedTouches[0].clientX - touchStartX;
           if (Math.abs(dx) > 50) go(dx < 0 ? 1 : -1);
           touchStartX = null;
         },
-        { passive: true }
+        { passive: true },
       );
 
       // ══════════════════════════════════════════════════════════════════
       //  THEME
       // ══════════════════════════════════════════════════════════════════
       const root = document.documentElement;
-      const iconSun = document.getElementById('iconSun');
-      const iconMoon = document.getElementById('iconMoon');
-      let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      const iconSun = document.getElementById("iconSun");
+      const iconMoon = document.getElementById("iconMoon");
+      let theme = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
 
       function applyTheme() {
-        root.setAttribute('data-theme', theme);
-        iconSun.style.display = theme === 'dark' ? 'block' : 'none';
-        iconMoon.style.display = theme === 'dark' ? 'none' : 'block';
+        root.setAttribute("data-theme", theme);
+        iconSun.style.display = theme === "dark" ? "block" : "none";
+        iconMoon.style.display = theme === "dark" ? "none" : "block";
       }
-      document.getElementById('themeToggle').addEventListener('click', () => {
-        theme = theme === 'dark' ? 'light' : 'dark';
+      document.getElementById("themeToggle").addEventListener("click", () => {
+        theme = theme === "dark" ? "light" : "dark";
         applyTheme();
       });
 
@@ -1282,9 +730,11 @@
 
         try {
           const urlParams = new URLSearchParams(window.location.search);
-          const requestedPage = Number(urlParams.get('page'));
+          const requestedPage = Number(urlParams.get("page"));
           const initialPage =
-            Number.isInteger(requestedPage) && requestedPage >= 1 && requestedPage <= pageTotal
+            Number.isInteger(requestedPage) &&
+            requestedPage >= 1 &&
+            requestedPage <= pageTotal
               ? requestedPage
               : 1;
           await loadPage(initialPage);
@@ -1293,7 +743,7 @@
              ⚠ Không tải được dữ liệu trang.<br>
              <span style="color:var(--muted);font-size:11px">${err.message}</span>
            </div>`;
-          console.error('[kanji] Failed to load page data:', err);
+          console.error("[kanji] Failed to load page data:", err);
           return;
         }
 

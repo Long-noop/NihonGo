@@ -1,12 +1,14 @@
+/* ── Design tokens ─────────────────────────────────────────────── */
 :root {
   --bg: #fafaf8;
   --fg: #16150f;
   --muted: #87837a;
   --card: #ffffff;
-  --card-back: #ffffff;
   --border: #e6e3da;
   --accent: #ae3427;
   --accent-fg: #fff8f3;
+  --stroke-color: #16150f; /* SVG foreground stroke – light */
+  --stroke-track: rgba(0, 0, 0, 0.1); /* ghost track – light           */
   --shadow:
     0 1px 2px rgba(20, 18, 10, 0.04), 0 12px 32px -16px rgba(20, 18, 10, 0.14);
   --radius: 18px;
@@ -17,14 +19,18 @@ html[data-theme="dark"] {
   --fg: #f2f0e9;
   --muted: #8f8b80;
   --card: #1a1a17;
-  --card-back: #1a1a17;
   --border: #2c2a24;
   --accent: #e2694f;
   --accent-fg: #181410;
+  --stroke-color: #f2f0e9; /* SVG foreground stroke – dark */
+  --stroke-track: rgba(255, 255, 255, 0.12);
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 20px 40px -20px rgba(0, 0, 0, 0.6);
 }
 
-* {
+/* ── Reset ─────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 html,
@@ -50,6 +56,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* ── Topbar ────────────────────────────────────────────────────── */
 .topbar {
   width: 100%;
   max-width: 460px;
@@ -97,6 +104,7 @@ body {
   height: 18px;
 }
 
+/* ── Stage & Scene ─────────────────────────────────────────────── */
 .stage {
   width: 100%;
   max-width: 460px;
@@ -105,15 +113,14 @@ body {
   align-items: center;
   flex: 1;
 }
-
 .scene {
   width: 100%;
-  aspect-ratio: 3 / 4;
-  max-height: 62vh;
+  height: min(560px, 66vh);
   perspective: 1600px;
   touch-action: pan-y;
 }
 
+/* ── Card 3-D flip ─────────────────────────────────────────────── */
 .card {
   position: relative;
   width: 100%;
@@ -143,13 +150,14 @@ body {
   transform: rotateY(180deg);
 }
 
-/* corner marks — nod to the printed grid/numbering of the source book */
+/* corner marks */
 .corner {
   position: absolute;
   width: 14px;
   height: 14px;
   border-color: var(--accent);
   opacity: 0.55;
+  pointer-events: none;
 }
 .corner.tl {
   top: 14px;
@@ -174,125 +182,153 @@ body {
   letter-spacing: 0.1em;
   color: var(--muted);
   font-variant-numeric: tabular-nums;
+  pointer-events: none;
+  z-index: 2;
 }
 
-.kanji-face {
-  align-items: center;
-  justify-content: center;
-  padding: 24px 24px 24px;
+/* ── Front face ────────────────────────────────────────────────── */
+.face.front {
+  padding: 20px 20px 16px;
 }
-.kanji-stage {
+
+/*
+  * kanji-wrapper — flex column, centred.
+  * flex:1 fills remaining vertical space.
+  */
+.kanji-wrapper {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  width: 100%;
+  min-height: 0;
 }
-.kanji-svg {
-  width: min(210px, 70vw);
-  aspect-ratio: 1;
+
+/*
+  * kanji-svg-container — the SVG lives here.
+  * Square, responsive. We let the SVG fill it completely.
+  *
+  * KanjiVG viewBox is 109×109, so any square container gives a perfect glyph.
+  */
+.kanji-svg-container {
+  width: clamp(120px, 42vw, 220px);
+  height: clamp(120px, 42vw, 220px);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--accent);
-  opacity: 0;
-  transform: scale(0.96);
-  transition:
-    opacity 0.25s ease,
-    transform 0.25s ease;
 }
-.kanji-svg.is-visible {
-  opacity: 0.95;
-  transform: none;
-}
-.kanji-svg.is-loading {
-  border: 1px dashed var(--border);
-  border-radius: 14px;
-}
-.kanji-svg .stroke-svg {
+
+/* The SVG element itself (injected dynamically) */
+.kanji-svg-container svg {
+  display: block;
   width: 100%;
   height: 100%;
+  overflow: visible;
 }
-.kanji-svg .stroke-svg path,
-.kanji-svg .stroke-svg line,
-.kanji-svg .stroke-svg polyline,
-.kanji-svg .stroke-svg polygon {
+
+/* Hide KanjiVG stroke-number text in ALL states */
+.kanji-svg-container text,
+.kanji-svg-container tspan {
+  display: none !important;
+}
+
+/*
+  * Stroke styles — used by JS when building the SVG DOM.
+  * Using CSS vars so they follow the theme automatically.
+  */
+.kanji-svg-container .stroke-static {
   fill: none;
-  stroke: currentColor;
-  stroke-width: 3.2;
+  stroke: var(--stroke-color);
   stroke-linecap: round;
   stroke-linejoin: round;
+  stroke-width: 3.5;
 }
-.stroke-fallback {
-  font-family: "Noto Serif JP", serif;
-  font-size: clamp(82px, 24vw, 120px);
-  line-height: 1;
-  color: var(--fg);
+.kanji-svg-container .stroke-track {
+  fill: none;
+  stroke: var(--stroke-track);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3.5;
 }
-.kanji-char {
+.kanji-svg-container .stroke-anim {
+  fill: none;
+  stroke: var(--stroke-color);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3.5;
+}
+
+/* Placeholder shown while SVG is loading */
+.kanji-placeholder {
   font-family: "Noto Serif JP", serif;
   font-weight: 700;
-  font-size: clamp(72px, 26vw, 148px);
+  font-size: clamp(80px, 26vw, 148px);
   line-height: 1;
-  color: var(--fg);
+  color: var(--border); /* muted, just a size hint */
+  user-select: none;
+}
+
+/* ── Stroke-order button ───────────────────────────────────────── */
+.front-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 2px;
+}
+
+.stroke-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 8px 18px;
+  border-radius: 999px;
+  cursor: pointer;
   transition:
-    opacity 0.25s ease,
-    transform 0.25s ease;
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.15s ease;
+  white-space: nowrap;
 }
-.kanji-char.is-ghost {
-  opacity: 0.16;
-  filter: blur(0.2px);
+.stroke-btn:hover {
+  background: var(--fg);
+  color: var(--bg);
+  border-color: var(--fg);
+  transform: translateY(-1px);
 }
-.kanji-char.is-hidden {
-  opacity: 0;
-  transform: scale(0.92);
+.stroke-btn:active {
+  transform: scale(0.94);
+}
+.stroke-btn.loading {
+  opacity: 0.55;
+  cursor: default;
   pointer-events: none;
 }
-.front-meta {
-  position: absolute;
-  bottom: 16px;
-  left: 0;
-  right: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 0 18px;
+.stroke-btn svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
 }
-.front-hint {
+
+.tap-hint {
+  text-align: center;
   font-size: 11px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--muted);
 }
-.replay-btn {
-  min-width: 78px;
-  height: 34px;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  background: var(--card);
-  color: var(--fg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  padding: 0 12px;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-.replay-btn:hover {
-  transform: translateY(-1px);
-}
-.replay-btn:active {
-  transform: scale(0.94);
-}
 
-.back {
+/* ── Back face ─────────────────────────────────────────────────── */
+.face.back {
   padding: 26px 24px 20px;
-  justify-content: flex-start;
 }
 .back-header {
   display: flex;
@@ -330,45 +366,96 @@ body {
   color: var(--muted);
   margin-bottom: 10px;
 }
+
+/* Scrollable vocab list */
 .examples {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
   overflow-y: auto;
   padding-right: 2px;
 }
 .examples::-webkit-scrollbar {
-  width: 4px;
+  width: 3px;
 }
 .examples::-webkit-scrollbar-thumb {
   background: var(--border);
   border-radius: 4px;
 }
 
+/* ── Vocab card ─────────────────────────────────────────────── */
 .example-item {
-  line-height: 1.4;
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  border-radius: 10px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.example-item:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 12%, transparent);
+}
+
+/* Left accent bar */
+.example-bar {
+  width: 3px;
+  flex-shrink: 0;
+  background: var(--accent);
+  opacity: 0.6;
+}
+
+/* Right content area */
+.example-body {
+  flex: 1;
+  padding: 9px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+/* Top row: word + reading pill */
+.example-top {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 .example-word {
   font-family: "Noto Serif JP", serif;
-  font-size: 17px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 600;
   color: var(--fg);
+  line-height: 1.2;
 }
 .example-hira {
   font-family: "Noto Sans JP", sans-serif;
-  font-size: 12.5px;
-  color: var(--muted);
-  margin-left: 8px;
-}
-.example-meaning {
-  font-size: 13px;
-  color: var(--muted);
-  margin-top: 1px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+  padding: 2px 7px;
+  border-radius: 999px;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
 }
 
+/* Bottom row: Vietnamese meaning */
+.example-meaning {
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+/* ── Navigation controls ───────────────────────────────────────── */
 .controls {
   width: 100%;
   display: flex;
@@ -409,11 +496,8 @@ body {
   width: 56px;
   height: 56px;
 }
-html[data-theme="dark"] .ctrl-btn.primary {
-  background: var(--fg);
-  color: var(--bg);
-}
 
+/* ── Progress ──────────────────────────────────────────────────── */
 .progress {
   margin-top: 16px;
   font-size: 12px;
@@ -424,7 +508,55 @@ html[data-theme="dark"] .ctrl-btn.primary {
 .progress b {
   color: var(--fg);
 }
-
+.page-label {
+  margin-top: 6px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.jump-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+  width: min(100%, 320px);
+}
+.jump-field {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 8px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--card);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+}
+.jump-field span {
+  font-size: 11px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.jump-field input {
+  width: 54px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--fg);
+  font-size: 13px;
+  text-align: center;
+}
+.jump-btn {
+  border: none;
+  border-radius: 999px;
+  background: var(--accent);
+  color: white;
+  padding: 7px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
 .progress-track {
   width: 100%;
   max-width: 200px;
@@ -440,27 +572,17 @@ html[data-theme="dark"] .ctrl-btn.primary {
   transition: width 0.3s ease;
 }
 
-@keyframes drawStroke {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
+/* ── Reduced motion ────────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   .card {
     transition: none;
   }
-  .kanji-svg .stroke-svg path,
-  .kanji-svg .stroke-svg line,
-  .kanji-svg .stroke-svg polyline,
-  .kanji-svg .stroke-svg polygon {
-    animation: none !important;
-    stroke-dashoffset: 0 !important;
-  }
 }
 
+/* ── Mobile ────────────────────────────────────────────────────── */
 @media (max-width: 380px) {
-  .kanji-char {
-    font-size: clamp(64px, 30vw, 110px);
+  .kanji-svg-container {
+    width: clamp(100px, 52vw, 160px);
+    height: clamp(100px, 52vw, 160px);
   }
 }
