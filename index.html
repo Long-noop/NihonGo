@@ -2,10 +2,7 @@
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, viewport-fit=cover"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>Kanji Flashcards</title>
     <meta
       name="description"
@@ -29,13 +26,11 @@
         --accent-fg: #fff8f3;
         --stroke-color: #16150f; /* SVG foreground stroke – light */
         --stroke-track: rgba(0, 0, 0, 0.1); /* ghost track – light           */
-        --shadow:
-          0 1px 2px rgba(20, 18, 10, 0.04),
-          0 12px 32px -16px rgba(20, 18, 10, 0.14);
+        --shadow: 0 1px 2px rgba(20, 18, 10, 0.04), 0 12px 32px -16px rgba(20, 18, 10, 0.14);
         --radius: 18px;
         --flip-duration: 620ms;
       }
-      html[data-theme="dark"] {
+      html[data-theme='dark'] {
         --bg: #121210;
         --fg: #f2f0e9;
         --muted: #8f8b80;
@@ -45,8 +40,7 @@
         --accent-fg: #181410;
         --stroke-color: #f2f0e9; /* SVG foreground stroke – dark */
         --stroke-track: rgba(255, 255, 255, 0.12);
-        --shadow:
-          0 1px 2px rgba(0, 0, 0, 0.3), 0 20px 40px -20px rgba(0, 0, 0, 0.6);
+        --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 20px 40px -20px rgba(0, 0, 0, 0.6);
       }
 
       /* ── Reset ─────────────────────────────────────────────────────── */
@@ -64,7 +58,7 @@
         background: var(--bg);
         color: var(--fg);
         font-family:
-          "Inter",
+          'Inter',
           -apple-system,
           sans-serif;
         display: flex;
@@ -149,8 +143,7 @@
         height: 100%;
         cursor: pointer;
         transform-style: preserve-3d;
-        transition: transform var(--flip-duration)
-          cubic-bezier(0.4, 0.1, 0.2, 1);
+        transition: transform var(--flip-duration) cubic-bezier(0.4, 0.1, 0.2, 1);
       }
       .card.flipped {
         transform: rotateY(180deg);
@@ -200,7 +193,7 @@
         top: 16px;
         right: 18px;
         writing-mode: vertical-rl;
-        font-family: "Noto Serif JP", serif;
+        font-family: 'Noto Serif JP', serif;
         font-size: 12px;
         letter-spacing: 0.1em;
         color: var(--muted);
@@ -283,7 +276,7 @@
 
       /* Placeholder shown while SVG is loading */
       .kanji-placeholder {
-        font-family: "Noto Serif JP", serif;
+        font-family: 'Noto Serif JP', serif;
         font-weight: 700;
         font-size: clamp(80px, 26vw, 148px);
         line-height: 1;
@@ -360,14 +353,14 @@
         margin-bottom: 4px;
       }
       .han-viet {
-        font-family: "Noto Serif JP", serif;
+        font-family: 'Noto Serif JP', serif;
         font-weight: 700;
         font-size: 22px;
         letter-spacing: 0.04em;
         color: var(--accent);
       }
       .back-kanji-mini {
-        font-family: "Noto Serif JP", serif;
+        font-family: 'Noto Serif JP', serif;
         color: var(--muted);
         font-size: 15px;
       }
@@ -453,14 +446,14 @@
         flex-wrap: wrap;
       }
       .example-word {
-        font-family: "Noto Serif JP", serif;
+        font-family: 'Noto Serif JP', serif;
         font-size: 18px;
         font-weight: 600;
         color: var(--fg);
         line-height: 1.2;
       }
       .example-hira {
-        font-family: "Noto Sans JP", sans-serif;
+        font-family: 'Noto Sans JP', sans-serif;
         font-size: 11px;
         font-weight: 500;
         color: var(--accent);
@@ -572,11 +565,7 @@
   <body>
     <div class="topbar">
       <div class="brand"><b>漢字</b> · Flashcards</div>
-      <button
-        class="theme-toggle"
-        id="themeToggle"
-        aria-label="Đổi giao diện sáng / tối"
-      >
+      <button class="theme-toggle" id="themeToggle" aria-label="Đổi giao diện sáng / tối">
         <svg
           id="iconSun"
           viewBox="0 0 24 24"
@@ -625,11 +614,7 @@
             </div>
 
             <div class="front-actions">
-              <button
-                class="stroke-btn"
-                id="strokeBtn"
-                aria-label="Xem thứ tự nét viết"
-              >
+              <button class="stroke-btn" id="strokeBtn" aria-label="Xem thứ tự nét viết">
                 <svg
                   viewBox="0 0 24 24"
                   fill="none"
@@ -639,9 +624,7 @@
                   stroke-linejoin="round"
                 >
                   <path d="M12 20h9" />
-                  <path
-                    d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"
-                  />
+                  <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
                 </svg>
                 Thứ tự nét
               </button>
@@ -708,9 +691,7 @@
         </button>
       </div>
 
-      <div class="progress">
-        <b id="posNow">1</b> / <span id="posTotal">6</span>
-      </div>
+      <div class="progress"><b id="posNow">1</b> / <span id="posTotal">6</span></div>
       <div class="page-label" id="pageLabel">Trang 1 / 27</div>
       <div class="progress-track">
         <div class="progress-fill" id="progressFill"></div>
@@ -732,23 +713,21 @@
       const svgCache = new Map(); // ch → raw SVG text (or null if not found)
 
       // ── DOM refs ──────────────────────────────────────────────────────
-      const card = document.getElementById("card");
-      const kanjiSvgCont = document.getElementById("kanjiSvgContainer");
-      const kanjiPlaceholder = document.getElementById("kanjiPlaceholder");
-      const miniKanji = document.getElementById("miniKanji");
-      const hanViet = document.getElementById("hanViet");
-      const meaningText = document.getElementById("meaningText");
-      const examplesList = document.getElementById("examplesList");
-      const indexMark = document.getElementById("indexMark");
-      const posNow = document.getElementById("posNow");
-      const posTotal = document.getElementById("posTotal");
-      const pageLabel = document.getElementById("pageLabel");
-      const progressFill = document.getElementById("progressFill");
-      const strokeBtn = document.getElementById("strokeBtn");
+      const card = document.getElementById('card');
+      const kanjiSvgCont = document.getElementById('kanjiSvgContainer');
+      const kanjiPlaceholder = document.getElementById('kanjiPlaceholder');
+      const miniKanji = document.getElementById('miniKanji');
+      const hanViet = document.getElementById('hanViet');
+      const meaningText = document.getElementById('meaningText');
+      const examplesList = document.getElementById('examplesList');
+      const indexMark = document.getElementById('indexMark');
+      const posNow = document.getElementById('posNow');
+      const posTotal = document.getElementById('posTotal');
+      const pageLabel = document.getElementById('pageLabel');
+      const progressFill = document.getElementById('progressFill');
+      const strokeBtn = document.getElementById('strokeBtn');
 
-      const reducedMotion = window.matchMedia(
-        "(prefers-reduced-motion: reduce)",
-      ).matches;
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
       // ══════════════════════════════════════════════════════════════════
       //  KANJIVG FETCH  (unchanged from NihonGo/kanji.html approach)
@@ -757,19 +736,21 @@
       function codepointHex(ch) {
         return Array.from(ch)
           .map((c) => c.codePointAt(0).toString(16).toLowerCase())
-          .join("-");
+          .join('-');
+      }
+
+      function getDisplayKanji(item) {
+        if (!item || typeof item.kanji !== 'string') return '';
+        return Array.from(item.kanji)[0] || '';
       }
 
       async function fetchKanjiSvg(ch) {
         if (svgCache.has(ch)) return svgCache.get(ch);
         const hex = codepointHex(ch);
-        const candidates = [
-          `./data/kanjivg/0${hex}.svg`,
-          `./data/kanjivg/${hex}.svg`,
-        ];
+        const candidates = [`./data/kanjivg/0${hex}.svg`, `./data/kanjivg/${hex}.svg`];
         for (const url of candidates) {
           try {
-            const res = await fetch(url, { cache: "force-cache" });
+            const res = await fetch(url, { cache: 'force-cache' });
             if (!res.ok) continue;
             const text = await res.text();
             svgCache.set(ch, text);
@@ -790,28 +771,25 @@
       // ══════════════════════════════════════════════════════════════════
 
       function buildStaticSvg(svgText) {
-        const doc = new DOMParser().parseFromString(svgText, "image/svg+xml");
+        const doc = new DOMParser().parseFromString(svgText, 'image/svg+xml');
         const orig = doc.documentElement;
 
         // Remove stroke-number text nodes entirely
-        orig.querySelectorAll("text, tspan").forEach((el) => el.remove());
+        orig.querySelectorAll('text, tspan').forEach((el) => el.remove());
 
-        const ns = "http://www.w3.org/2000/svg";
-        const svg = document.createElementNS(ns, "svg");
-        svg.setAttribute(
-          "viewBox",
-          orig.getAttribute("viewBox") || "0 0 109 109",
-        );
-        svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
+        const ns = 'http://www.w3.org/2000/svg';
+        const svg = document.createElementNS(ns, 'svg');
+        svg.setAttribute('viewBox', orig.getAttribute('viewBox') || '0 0 109 109');
+        svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
 
         // Copy all path elements, assigning the static class
-        const paths = [...orig.querySelectorAll("path")];
+        const paths = [...orig.querySelectorAll('path')];
         paths.forEach((p) => {
-          const d = p.getAttribute("d");
+          const d = p.getAttribute('d');
           if (!d) return;
-          const el = document.createElementNS(ns, "path");
-          el.setAttribute("d", d);
-          el.classList.add("stroke-static");
+          const el = document.createElementNS(ns, 'path');
+          el.setAttribute('d', d);
+          el.classList.add('stroke-static');
           svg.appendChild(el);
         });
 
@@ -835,18 +813,18 @@
       }
 
       function playAnimation(svg) {
-        const ns = "http://www.w3.org/2000/svg";
-        const paths = [...svg.querySelectorAll(".stroke-static")];
+        const ns = 'http://www.w3.org/2000/svg';
+        const paths = [...svg.querySelectorAll('.stroke-static')];
         if (!paths.length) return;
 
         // Remove any lingering track clones from a previous run
-        svg.querySelectorAll(".stroke-track").forEach((el) => el.remove());
+        svg.querySelectorAll('.stroke-track').forEach((el) => el.remove());
 
         // Insert ghost tracks behind each path
         paths.forEach((path) => {
-          const track = document.createElementNS(ns, "path");
-          track.setAttribute("d", path.getAttribute("d"));
-          track.classList.add("stroke-track");
+          const track = document.createElementNS(ns, 'path');
+          track.setAttribute('d', path.getAttribute('d'));
+          track.classList.add('stroke-track');
           svg.insertBefore(track, path);
         });
 
@@ -856,7 +834,7 @@
           try {
             len = el.getTotalLength();
           } catch {}
-          el.style.transition = "none";
+          el.style.transition = 'none';
           el.style.strokeDasharray = len;
           el.style.strokeDashoffset = len;
           void el.getBoundingClientRect(); // force reflow
@@ -865,7 +843,7 @@
         if (reducedMotion) {
           // Skip anim — just show everything immediately
           paths.forEach((el) => {
-            el.style.strokeDashoffset = "0";
+            el.style.strokeDashoffset = '0';
           });
           finishAnimation(svg, paths);
           return;
@@ -887,17 +865,14 @@
 
           const tid = setTimeout(() => {
             el.style.transition = `stroke-dashoffset ${dur}ms linear`;
-            el.style.strokeDashoffset = "0";
+            el.style.strokeDashoffset = '0';
           }, delay);
           animTimers.push(tid);
           cursor += dur + (i === 0 ? 0 : GAP);
         });
 
         // After all strokes complete, clean up
-        const finishId = setTimeout(
-          () => finishAnimation(svg, paths),
-          cursor + 500,
-        );
+        const finishId = setTimeout(() => finishAnimation(svg, paths), cursor + 500);
         animTimers.push(finishId);
       }
 
@@ -906,13 +881,13 @@
 
         // Restore paths to normal (no dasharray — fully visible, crisp)
         paths.forEach((el) => {
-          el.style.transition = "none";
-          el.style.strokeDasharray = "";
-          el.style.strokeDashoffset = "";
+          el.style.transition = 'none';
+          el.style.strokeDasharray = '';
+          el.style.strokeDashoffset = '';
         });
 
         // Remove ghost tracks
-        svg.querySelectorAll(".stroke-track").forEach((el) => el.remove());
+        svg.querySelectorAll('.stroke-track').forEach((el) => el.remove());
       }
 
       // ══════════════════════════════════════════════════════════════════
@@ -933,14 +908,14 @@
         if (animating) {
           clearAnimTimers();
           animating = false;
-          const svg = kanjiSvgCont.querySelector("svg");
+          const svg = kanjiSvgCont.querySelector('svg');
           if (svg) {
             // Clean up leftover anim state
-            svg.querySelectorAll(".stroke-track").forEach((el) => el.remove());
-            svg.querySelectorAll(".stroke-static").forEach((el) => {
-              el.style.transition = "none";
-              el.style.strokeDasharray = "";
-              el.style.strokeDashoffset = "";
+            svg.querySelectorAll('.stroke-track').forEach((el) => el.remove());
+            svg.querySelectorAll('.stroke-static').forEach((el) => {
+              el.style.transition = 'none';
+              el.style.strokeDasharray = '';
+              el.style.strokeDashoffset = '';
             });
           }
           // Brief pause so user can see the reset
@@ -948,15 +923,16 @@
         }
 
         // Make sure SVG is loaded (it should be from render(), but guard anyway)
-        let svg = kanjiSvgCont.querySelector("svg");
+        let svg = kanjiSvgCont.querySelector('svg');
         if (!svg) {
           // SVG not yet loaded — fetch it now
-          const ch = DATA[idx].kanji;
-          strokeBtn.classList.add("loading");
-          strokeBtn.textContent = "⋯ đang tải";
+          const ch = getDisplayKanji(DATA[idx]);
+          if (!ch) return;
+          strokeBtn.classList.add('loading');
+          strokeBtn.textContent = '⋯ đang tải';
           const svgText = await fetchKanjiSvg(ch);
-          strokeBtn.classList.remove("loading");
-          setStrokeBtnLabel(" Thứ tự nét");
+          strokeBtn.classList.remove('loading');
+          setStrokeBtnLabel(' Thứ tự nét');
           if (!svgText) return;
           svg = buildStaticSvg(svgText);
           kanjiPlaceholder.remove();
@@ -994,12 +970,13 @@
 
       async function render() {
         const item = DATA[idx];
+        const displayKanji = getDisplayKanji(item);
 
         // Back-face text content (sync, fast)
         miniKanji.textContent = item.kanji;
         hanViet.textContent = item.han_viet;
         meaningText.textContent = item.meaning;
-        indexMark.textContent = String(idx + 1).padStart(2, "0");
+        indexMark.textContent = String(idx + 1).padStart(2, '0');
         examplesList.innerHTML = item.examples
           .map(
             (ex) => `
@@ -1013,29 +990,30 @@
             <div class="example-meaning">${ex.meaning}</div>
           </div>
         </li>
-      `,
+      `
           )
-          .join("");
+          .join('');
         posNow.textContent = idx + 1;
         pageLabel.textContent = `Trang ${pageNumber} / ${pageTotal}`;
-        progressFill.style.width = ((idx + 1) / DATA.length) * 100 + "%";
+        progressFill.style.width = ((idx + 1) / DATA.length) * 100 + '%';
 
-        // Front-face: show placeholder while loading
-        kanjiSvgCont.innerHTML = `<div class="kanji-placeholder">${item.kanji}</div>`;
+        // Front-face: show one kanji character as a placeholder while loading
+        kanjiSvgCont.innerHTML = `<div class="kanji-placeholder">${displayKanji || '字'}</div>`;
 
-        // Fetch and inject KanjiVG SVG
-        const svgText = await fetchKanjiSvg(item.kanji);
+        // Fetch and inject KanjiVG SVG for that single character
+        if (!displayKanji) return;
+        const svgText = await fetchKanjiSvg(displayKanji);
         if (!svgText) {
-          // No KanjiVG data — leave the text placeholder
+          // No KanjiVG data — leave the single-character placeholder
           return;
         }
 
         // Only update if we're still on the same card
         // (user might have navigated away while awaiting)
-        if (DATA[idx].kanji !== item.kanji) return;
+        if (getDisplayKanji(DATA[idx]) !== displayKanji) return;
 
         const svg = buildStaticSvg(svgText);
-        kanjiSvgCont.innerHTML = "";
+        kanjiSvgCont.innerHTML = '';
         kanjiSvgCont.appendChild(svg);
       }
 
@@ -1047,20 +1025,20 @@
         if (!animating) return;
         clearAnimTimers();
         animating = false;
-        const svg = kanjiSvgCont.querySelector("svg");
+        const svg = kanjiSvgCont.querySelector('svg');
         if (svg) {
-          svg.querySelectorAll(".stroke-track").forEach((el) => el.remove());
-          svg.querySelectorAll(".stroke-static").forEach((el) => {
-            el.style.transition = "none";
-            el.style.strokeDasharray = "";
-            el.style.strokeDashoffset = "";
+          svg.querySelectorAll('.stroke-track').forEach((el) => el.remove());
+          svg.querySelectorAll('.stroke-static').forEach((el) => {
+            el.style.transition = 'none';
+            el.style.strokeDasharray = '';
+            el.style.strokeDashoffset = '';
           });
         }
       }
 
       function setFlipped(v) {
         flipped = v;
-        card.classList.toggle("flipped", flipped);
+        card.classList.toggle('flipped', flipped);
       }
 
       async function go(delta) {
@@ -1082,7 +1060,7 @@
             setFlipped(false);
             setTimeout(render, 90);
           } catch (err) {
-            console.error("[kanji] Failed to load page data:", err);
+            console.error('[kanji] Failed to load page data:', err);
           }
           return;
         }
@@ -1094,78 +1072,76 @@
 
       // ── Event listeners ───────────────────────────────────────────────
 
-      strokeBtn.addEventListener("click", (e) => {
+      strokeBtn.addEventListener('click', (e) => {
         e.stopPropagation();
         handleStrokeOrder();
       });
 
-      card.addEventListener("click", () => {
+      card.addEventListener('click', () => {
         abortAnimation();
         setFlipped(!flipped);
       });
 
-      document.getElementById("flipBtn").addEventListener("click", (e) => {
+      document.getElementById('flipBtn').addEventListener('click', (e) => {
         e.stopPropagation();
         abortAnimation();
         setFlipped(!flipped);
       });
-      document.getElementById("prevBtn").addEventListener("click", (e) => {
+      document.getElementById('prevBtn').addEventListener('click', (e) => {
         e.stopPropagation();
         go(-1);
       });
-      document.getElementById("nextBtn").addEventListener("click", (e) => {
+      document.getElementById('nextBtn').addEventListener('click', (e) => {
         e.stopPropagation();
         go(1);
       });
 
-      document.addEventListener("keydown", (e) => {
-        if (e.code === "Space" || e.code === "Enter") {
+      document.addEventListener('keydown', (e) => {
+        if (e.code === 'Space' || e.code === 'Enter') {
           e.preventDefault();
           abortAnimation();
           setFlipped(!flipped);
         }
-        if (e.code === "ArrowRight") go(1);
-        if (e.code === "ArrowLeft") go(-1);
-        if (e.key === "s" || e.key === "S") handleStrokeOrder();
+        if (e.code === 'ArrowRight') go(1);
+        if (e.code === 'ArrowLeft') go(-1);
+        if (e.key === 's' || e.key === 'S') handleStrokeOrder();
       });
 
       // Swipe
       let touchStartX = null;
-      document.getElementById("scene").addEventListener(
-        "touchstart",
+      document.getElementById('scene').addEventListener(
+        'touchstart',
         (e) => {
           touchStartX = e.touches[0].clientX;
         },
-        { passive: true },
+        { passive: true }
       );
-      document.getElementById("scene").addEventListener(
-        "touchend",
+      document.getElementById('scene').addEventListener(
+        'touchend',
         (e) => {
           if (touchStartX === null) return;
           const dx = e.changedTouches[0].clientX - touchStartX;
           if (Math.abs(dx) > 50) go(dx < 0 ? 1 : -1);
           touchStartX = null;
         },
-        { passive: true },
+        { passive: true }
       );
 
       // ══════════════════════════════════════════════════════════════════
       //  THEME
       // ══════════════════════════════════════════════════════════════════
       const root = document.documentElement;
-      const iconSun = document.getElementById("iconSun");
-      const iconMoon = document.getElementById("iconMoon");
-      let theme = window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light";
+      const iconSun = document.getElementById('iconSun');
+      const iconMoon = document.getElementById('iconMoon');
+      let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 
       function applyTheme() {
-        root.setAttribute("data-theme", theme);
-        iconSun.style.display = theme === "dark" ? "block" : "none";
-        iconMoon.style.display = theme === "dark" ? "none" : "block";
+        root.setAttribute('data-theme', theme);
+        iconSun.style.display = theme === 'dark' ? 'block' : 'none';
+        iconMoon.style.display = theme === 'dark' ? 'none' : 'block';
       }
-      document.getElementById("themeToggle").addEventListener("click", () => {
-        theme = theme === "dark" ? "light" : "dark";
+      document.getElementById('themeToggle').addEventListener('click', () => {
+        theme = theme === 'dark' ? 'light' : 'dark';
         applyTheme();
       });
 
@@ -1178,11 +1154,9 @@
 
         try {
           const urlParams = new URLSearchParams(window.location.search);
-          const requestedPage = Number(urlParams.get("page"));
+          const requestedPage = Number(urlParams.get('page'));
           const initialPage =
-            Number.isInteger(requestedPage) &&
-            requestedPage >= 1 &&
-            requestedPage <= pageTotal
+            Number.isInteger(requestedPage) && requestedPage >= 1 && requestedPage <= pageTotal
               ? requestedPage
               : 1;
           await loadPage(initialPage);
@@ -1191,7 +1165,7 @@
              ⚠ Không tải được dữ liệu trang.<br>
              <span style="color:var(--muted);font-size:11px">${err.message}</span>
            </div>`;
-          console.error("[kanji] Failed to load page data:", err);
+          console.error('[kanji] Failed to load page data:', err);
           return;
         }
 
