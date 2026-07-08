@@ -1,0 +1,105 @@
+/* @font-face definitions with local fallback + system fonts */
+/* These fonts will be loaded locally when available, or fallback to system fonts */
+
+/* Noto Serif JP */
+@font-face {
+  font-family: "Noto Serif JP";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src:
+    local("Noto Serif JP"),
+    url("./fonts/v15-rg-kR9Q9UFVG-xI5L5RivnA-Xg.woff2") format("woff2"),
+    url("./fonts/NotoSerifJP-Regular.woff2") format("woff2"),
+    url("./fonts/NotoSerifJP-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Noto Serif JP";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src:
+    local("Noto Serif JP"),
+    url("./fonts/v15-rg-kR9Q9UFVG-xI5L5RivnA-Xw.woff2") format("woff2"),
+    url("./fonts/NotoSerifJP-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Noto Serif JP";
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  src:
+    local("Noto Serif JP"),
+    url("./fonts/v15-rg-kR9Q9UFVG-xI5L5RivnA-Zw.woff2") format("woff2"),
+    url("./fonts/NotoSerifJP-Black.woff2") format("woff2");
+}
+
+/* Noto Sans JP */
+@font-face {
+  font-family: "Noto Sans JP";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src:
+    local("Noto Sans JP"),
+    url("./fonts/v52-_Xmo9KwMn-Kz-Y4DJGDq.0.woff2") format("woff2"),
+    url("./fonts/NotoSansJP-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Noto Sans JP";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src:
+    local("Noto Sans JP"),
+    url("./fonts/v52-_Xmo9KwMn-Kz-Y4D6GDq.0.woff2") format("woff2"),
+    url("./fonts/NotoSansJP-Medium.woff2") format("woff2");
+}
+
+/* Inter */
+@font-face {
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src:
+    local("Inter"),
+    url("./fonts/UcCO3FwrK3iLTeHAPUlsc3GT6pHPqEBVSZc.woff2") format("woff2"),
+    url("./fonts/Inter-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src:
+    local("Inter"),
+    url("./fonts/UcCO3FwrK3iLTeHAPUlsc3GT6pHPqEBgSZc.woff2") format("woff2"),
+    url("./fonts/Inter-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src:
+    local("Inter"),
+    url("./fonts/UcCO3FwrK3iLTeHAPUlsc3GT6pHPqEBUVZc.woff2") format("woff2"),
+    url("./fonts/Inter-SemiBold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src:
+    local("Inter"),
+    url("./fonts/UcCO3FwrK3iLTeHAPUlsc3GT6pHPqEBZVZc.woff2") format("woff2"),
+    url("./fonts/Inter-Bold.woff2") format("woff2");
+}
