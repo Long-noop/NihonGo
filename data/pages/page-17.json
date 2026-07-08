@@ -1,1672 +1,763 @@
 [
   {
-    "kanji": "一",
-    "han_viet": "NHẤT",
-    "meaning": "Một (Trang 17)",
-    "examples": [
-      {
-        "word": "一日",
-        "hiragana": "いちにchỉ",
-        "meaning": "Một ngày"
-      },
-      {
-        "word": "一番",
-        "hiragana": "いちばん",
-        "meaning": "Số một, tốt nhất"
-      },
-      {
-        "word": "一生懸命",
-        "hiragana": "いっしょうけんめい",
-        "meaning": "Hết sức, nỗ lực hết mình"
-      },
-      {
-        "word": "統一",
-        "hiragana": "とういつ",
-        "meaning": "Thống nhất"
-      }
-    ]
-  },
-  {
-    "kanji": "丁",
-    "han_viet": "ĐINH",
-    "meaning": "Can thứ tư (Trang 17)",
-    "examples": [
-      {
-        "word": "丁寧",
-        "hiragana": "ていねい",
-        "meaning": "Lịch sự, cẩn thận"
-      },
-      {
-        "word": "一丁目",
-        "hiragana": "いっちょうめ",
-        "meaning": "Khu phố số 1"
-      },
-      {
-        "word": "包丁",
-        "hiragana": "ほうちょう",
-        "meaning": "Dao làm bếp"
-      }
-    ]
-  },
-  {
-    "kanji": "七",
-    "han_viet": "THẤT",
-    "meaning": "Bảy (Trang 17)",
-    "examples": [
-      {
-        "word": "七月",
-        "hiragana": "しちがつ",
-        "meaning": "Tháng bảy"
-      },
-      {
-        "word": "七夕",
-        "hiragana": "たなばた",
-        "meaning": "Lễ Thất tịch (Tanabata)"
-      },
-      {
-        "word": "七五三",
-        "hiragana": "しちごさん",
-        "meaning": "Lễ Shichi-Go-San"
-      }
-    ]
-  },
-  {
-    "kanji": "丈",
-    "han_viet": "TRƯỢNG",
-    "meaning": "Chiều cao người (Trang 17)",
-    "examples": [
-      {
-        "word": "大丈夫",
-        "hiragana": "だいじょうぶ",
-        "meaning": "Không sao, ổn"
-      },
-      {
-        "word": "頑丈",
-        "hiragana": "がんじょう",
-        "meaning": "Chắc chắn, bền vững"
-      },
-      {
-        "word": "気丈",
-        "hiragana": "きじょう",
-        "meaning": "Cứng cỏi, nghị lực"
-      }
-    ]
-  },
-  {
-    "kanji": "三",
-    "han_viet": "TAM",
-    "meaning": "Ba (Trang 17)",
-    "examples": [
-      {
-        "word": "三月",
-        "hiragana": "さんがつ",
-        "meaning": "Tháng ba"
-      },
-      {
-        "word": "三角形",
-        "hiragana": "さんかっけい",
-        "meaning": "Hình tam giác"
-      },
-      {
-        "word": "三日",
-        "hiragana": "みっか",
-        "meaning": "Ba ngày, ngày mùng ba"
-      }
-    ]
-  },
-  {
-    "kanji": "上",
-    "han_viet": "THƯỢNG",
-    "meaning": "Trên (Trang 17)",
-    "examples": [
-      {
-        "word": "上手",
-        "hiragana": "じょうず",
-        "meaning": "Giỏi, khéo léo"
-      },
-      {
-        "word": "上司",
-        "hiragana": "じょうし",
-        "meaning": "Cấp trên, sếp"
-      },
-      {
-        "word": "以上",
-        "hiragana": "いじょう",
-        "meaning": "Trở lên, như trên"
-      }
-    ]
-  },
-  {
-    "kanji": "下",
-    "han_viet": "HẠ",
-    "meaning": "Dưới (Trang 17)",
-    "examples": [
-      {
-        "word": "下手",
-        "hiragana": "へた",
-        "meaning": "Vụng, kém"
-      },
-      {
-        "word": "地下",
-        "hiragana": "ちか",
-        "meaning": "Tầng hầm, dưới đất"
-      },
-      {
-        "word": "下着",
-        "hiragana": "したぎ",
-        "meaning": "Đồ lót"
-      }
-    ]
-  },
-  {
-    "kanji": "万",
-    "han_viet": "VẠN",
-    "meaning": "Mười nghìn (Trang 17)",
-    "examples": [
-      {
-        "word": "一万円",
-        "hiragana": "いちまんえん",
-        "meaning": "Một vạn yên"
-      },
-      {
-        "word": "万歳",
-        "hiragana": "ばんざい",
-        "meaning": "Vạn tuế, hoan hô"
-      },
-      {
-        "word": "万一",
-        "hiragana": "まんいち",
-        "meaning": "Nếu chẳng may, vạn nhất"
-      }
-    ]
-  },
-  {
-    "kanji": "与",
-    "han_viet": "DỰ",
-    "meaning": "Cho, cấp (Trang 17)",
-    "examples": [
-      {
-        "word": "与える",
-        "hiragana": "あたえる",
-        "meaning": "Ban tặng, gây ra"
-      },
-      {
-        "word": "与党",
-        "hiragana": "よとう",
-        "meaning": "Đảng cầm quyền"
-      },
-      {
-        "word": "関与",
-        "hiragana": "かんよ",
-        "meaning": "Tham gia, liên quan"
-      }
-    ]
-  },
-  {
-    "kanji": "不",
-    "han_viet": "BẤT",
-    "meaning": "Không (Trang 17)",
-    "examples": [
-      {
-        "word": "不安",
-        "hiragana": "ふ안",
-        "meaning": "Bất an, lo lắng"
-      },
-      {
-        "word": "不便",
-        "hiragana": "ふべん",
-        "meaning": "Bất tiện"
-      },
-      {
-        "word": "不足",
-        "hiragana": "ふそく",
-        "meaning": "Thiếu thốn, không đủ"
-      }
-    ]
-  },
-  {
-    "kanji": "且",
-    "han_viet": "THẢ",
-    "meaning": "Và (Trang 17)",
-    "examples": [
-      {
-        "word": "且つ",
-        "hiragana": "かつ",
-        "meaning": "Và, đồng thời"
-      },
-      {
-        "word": "且つ又",
-        "hiragana": "かつまた",
-        "meaning": "Vả lại, hơn nữa"
-      }
-    ]
-  },
-  {
-    "kanji": "世",
-    "han_viet": "THẾ",
-    "meaning": "Thế giới (Trang 17)",
-    "examples": [
-      {
-        "word": "世界",
-        "hiragana": "せかい",
-        "meaning": "Thế giới"
-      },
-      {
-        "word": "世話",
-        "hiragana": "せわ",
-        "meaning": "Chăm sóc, giúp đỡ"
-      },
-      {
-        "word": "世の中",
-        "hiragana": "よのなか",
-        "meaning": "Xã hội, thế gian"
-      }
-    ]
-  },
-  {
-    "kanji": "丘",
-    "han_viet": "KHÂU",
-    "meaning": "Đồi (Trang 17)",
-    "examples": [
-      {
-        "word": "丘",
-        "hiragana": "おか",
-        "meaning": "Quả đồi"
-      },
-      {
-        "word": "砂丘",
-        "hiragana": "さきゅう",
-        "meaning": "Cồn cát"
-      },
-      {
-        "word": "丘陵",
-        "hiragana": "きゅうryou",
-        "meaning": "Đồi núi, trung du"
-      }
-    ]
-  },
-  {
-    "kanji": "丙",
-    "han_viet": "BÍNH",
-    "meaning": "Can thứ ba (Trang 17)",
-    "examples": [
-      {
-        "word": "丙午",
-        "hiragana": "ひのえうま",
-        "meaning": "Năm Bính Ngọ"
-      },
-      {
-        "word": "甲乙丙",
-        "hiragana": "こうおつへい",
-        "meaning": "A, B, C (thứ tự xếp hạng từ cao đến thấp)"
-      }
-    ]
-  },
-  {
-    "kanji": "両",
-    "han_viet": "LƯỠNG",
-    "meaning": "Cả hai (Trang 17)",
-    "examples": [
-      {
-        "word": "両親",
-        "hiragana": "りょうしん",
-        "meaning": "Bố mẹ"
-      },
-      {
-        "word": "両方",
-        "hiragana": "りょうほう",
-        "meaning": "Cả hai phía"
-      },
-      {
-        "word": "両替",
-        "hiragana": "りょうがえ",
-        "meaning": "Đổi tiền"
-      }
-    ]
-  },
-  {
-    "kanji": "並",
-    "han_viet": "TỊNH",
-    "meaning": "Xếp, xếp hàng (Trang 17)",
-    "examples": [
-      {
-        "word": "並ぶ",
-        "hiragana": "ならぶ",
-        "meaning": "Xếp hàng, song song"
-      },
-      {
-        "word": "並み",
-        "hiragana": "なみ",
-        "meaning": "Bình thường, thông thường"
-      },
-      {
-        "word": "人並み",
-        "hiragana": "ひとなみ",
-        "meaning": "Như bao người khác"
-      }
-    ]
-  },
-  {
-    "kanji": "中",
-    "han_viet": "TRUNG",
-    "meaning": "Bên trong (Trang 17)",
-    "examples": [
-      {
-        "word": "中心",
-        "hiragana": "ちゅうしん",
-        "meaning": "Trung tâm"
-      },
-      {
-        "word": "中学",
-        "hiragana": "ちゅうがく",
-        "meaning": "Trường cấp hai"
-      },
-      {
-        "word": "一日中",
-        "hiragana": "いちにちじゅう",
-        "meaning": "Suốt cả ngày"
-      }
-    ]
-  },
-  {
-    "kanji": "串",
-    "han_viet": "XUYẾN",
-    "meaning": "Que xiên (Trang 17)",
-    "examples": [
-      {
-        "word": "串",
-        "hiragana": "くし",
-        "meaning": "Cái xiên, que xiên"
-      },
-      {
-        "word": "串焼き",
-        "hiragana": "くしやき",
-        "meaning": "Xiên nướng"
-      },
-      {
-        "word": "串カツ",
-        "hiragana": "くしかつ",
-        "meaning": "Thịt xiên tẩm bột chiên xù"
-      }
-    ]
-  },
-  {
-    "kanji": "丸",
-    "han_viet": "HOÀN",
-    "meaning": "Tròn (Trang 17)",
-    "examples": [
-      {
-        "word": "丸い",
-        "hiragana": "まるい",
-        "meaning": "Tròn"
-      },
-      {
-        "word": "丸ごと",
-        "hiragana": "まるごと",
-        "meaning": "Toàn bộ, nguyên vẹn"
-      },
-      {
-        "word": "弾丸",
-        "hiragana": "だんがん",
-        "meaning": "Viên đạn"
-      }
-    ]
-  },
-  {
-    "kanji": "丹",
-    "han_viet": "ĐAN",
-    "meaning": "Tiên đan (Trang 17)",
-    "examples": [
-      {
-        "word": "丹念",
-        "hiragana": "たんねん",
-        "meaning": "Cẩn thận, tỉ mỉ"
-      },
-      {
-        "word": "牡丹",
-        "hiragana": "ぼたん",
-        "meaning": "Hoa mẫu đơn"
-      },
-      {
-        "word": "丹精",
-        "hiragana": "たんせい",
-        "meaning": "Hết lòng, dốc lòng"
-      }
-    ]
-  },
-  {
-    "kanji": "主",
-    "han_viet": "CHỦ",
-    "meaning": "Chính yếu (Trang 17)",
-    "examples": [
-      {
-        "word": "主人",
-        "hiragana": "しゅじん",
-        "meaning": "Chồng, chủ tiệm"
-      },
-      {
-        "word": "主要",
-        "hiragana": "しゅよう",
-        "meaning": "Chủ yếu, chính"
-      },
-      {
-        "word": "主婦",
-        "hiragana": "しゅふ",
-        "meaning": "Nội trợ"
-      }
-    ]
-  },
-  {
-    "kanji": "丼",
-    "han_viet": "ĐẢM",
-    "meaning": "Cái tô (Trang 17)",
-    "examples": [
-      {
-        "word": "丼",
-        "hiragana": "どんぶり",
-        "meaning": "Cái tô, món cơm tô"
-      },
-      {
-        "word": "牛丼",
-        "hiragana": "ぎゅうどん",
-        "meaning": "Cơm thịt bò"
-      },
-      {
-        "word": "親子丼",
-        "hiragana": "おやこどん",
-        "meaning": "Cơm gà trứng"
-      }
-    ]
-  },
-  {
-    "kanji": "久",
-    "han_viet": "CỬU",
-    "meaning": "Lâu dài (Trang 17)",
-    "examples": [
-      {
-        "word": "久しぶり",
-        "hiragana": "ひさしぶり",
-        "meaning": "Lâu rồi không gặp"
-      },
-      {
-        "word": "永久",
-        "hiragana": "えいきゅう",
-        "meaning": "Vĩnh cửu"
-      },
-      {
-        "word": "耐久",
-        "hiragana": "たいきゅう",
-        "meaning": "Bền bỉ, chịu đựng"
-      }
-    ]
-  },
-  {
-    "kanji": "乏",
-    "han_viet": "PHẠP",
-    "meaning": "Nghèo, thiếu thốn (Trang 17)",
-    "examples": [
-      {
-        "word": "乏しい",
-        "hiragana": "とぼしい",
-        "meaning": "Thiếu thốn, nghèo nàn"
-      },
-      {
-        "word": "貧乏",
-        "hiragana": "びんぼう",
-        "meaning": "Nghèo khổ"
-      },
-      {
-        "word": "欠乏",
-        "hiragana": "けつぼう",
-        "meaning": "Thiếu hụt"
-      }
-    ]
-  },
-  {
-    "kanji": "乗",
-    "han_viet": "THỪA",
-    "meaning": "Lên xe (Trang 17)",
-    "examples": [
-      {
-        "word": "乗る",
-        "hiragana": "のる",
-        "meaning": "Lên xe, cưỡi"
-      },
-      {
-        "word": "乗車",
-        "hiragana": "じょうしゃ",
-        "meaning": "Lên xe"
-      },
-      {
-        "word": "乗客",
-        "hiragana": "じょうきゃく",
-        "meaning": "Hành khách"
-      }
-    ]
-  },
-  {
-    "kanji": "乙",
-    "han_viet": "ẤT",
-    "meaning": "Can thứ hai (Trang 17)",
-    "examples": [
-      {
-        "word": "乙女",
-        "hiragana": "おとめ",
-        "meaning": "Thiếu nữ"
-      },
-      {
-        "word": "甲乙",
-        "hiragana": "こうおつ",
-        "meaning": "Bên A và bên B, sự kẻ cả nhận định"
-      }
-    ]
-  },
-  {
-    "kanji": "九",
-    "han_viet": "CỬU",
-    "meaning": "Chín (Trang 17)",
-    "examples": [
-      {
-        "word": "九つ",
-        "hiragana": "ここのつ",
-        "meaning": "9 cái"
-      },
-      {
-        "word": "九月",
-        "hiragana": "くがつ",
-        "meaning": "Tháng chín"
-      },
-      {
-        "word": "九州",
-        "hiragana": "きゅうしゅう",
-        "meaning": "Vùng Kyushu"
-      }
-    ]
-  },
-  {
-    "kanji": "乞",
-    "han_viet": "KHẤT",
-    "meaning": "Hành khất (Trang 17)",
-    "examples": [
-      {
-        "word": "乞う",
-        "hiragana": "こう",
-        "meaning": "Xin, cầu xin"
-      },
-      {
-        "word": "乞食",
-        "hiragana": "こじき",
-        "meaning": "Ăn mày, khất thực"
-      }
-    ]
-  },
-  {
-    "kanji": "乾",
-    "han_viet": "CAN",
-    "meaning": "Làm khô (Trang 17)",
-    "examples": [
-      {
-        "word": "乾く",
-        "hiragana": "かわく",
-        "meaning": "Khô ráo"
-      },
-      {
-        "word": "乾燥",
-        "hiragana": "かんそう",
-        "meaning": "Hanh khô, sấy khô"
-      },
-      {
-        "word": "乾杯",
-        "hiragana": "かんぱい",
-        "meaning": "Cạn ly"
-      }
-    ]
-  },
-  {
-    "kanji": "乱",
-    "han_viet": "LOẠN",
-    "meaning": "Rối loạn (Trang 17)",
-    "examples": [
-      {
-        "word": "乱れる",
-        "hiragana": "みだれる",
-        "meaning": "Bị hỗn loạn, rối loạn"
-      },
-      {
-        "word": "混乱",
-        "hiragana": "こんらん",
-        "meaning": "Hỗn loạn"
-      },
-      {
-        "word": "反乱",
-        "hiragana": "はんらん",
-        "meaning": "Phản loạn, nổi loạn"
-      }
-    ]
-  },
-  {
-    "kanji": "乳",
-    "han_viet": "NHŨ",
-    "meaning": "Vú, sữa mẹ (Trang 17)",
-    "examples": [
-      {
-        "word": "牛乳",
-        "hiragana": "ぎゅうにゅう",
-        "meaning": "Sữa bò"
-      },
-      {
-        "word": "乳児",
-        "hiragana": "にゅうじ",
-        "meaning": "Trẻ sơ sinh"
-      },
-      {
-        "word": "母乳",
-        "hiragana": "",
-        "meaning": "Sữa mẹ"
-      }
-    ]
-  },
-  {
-    "kanji": "了",
-    "han_viet": "LIỄU",
-    "meaning": "Hoàn tất, hiểu (Trang 17)",
-    "examples": [
-      {
-        "word": "完了",
-        "hiragana": "かんりょう",
-        "meaning": "Hoàn thành, kết thúc"
-      },
-      {
-        "word": "終了",
-        "hiragana": "しゅうryou",
-        "meaning": "Kết thúc, chấm dứt"
-      },
-      {
-        "word": "了解",
-        "hiragana": "りょうかい",
-        "meaning": "Hiểu rõ, đồng ý"
-      }
-    ]
-  },
-  {
-    "kanji": "予",
-    "han_viet": "DỰ",
-    "meaning": "Dự định, liệu trước (Trang 17)",
-    "examples": [
-      {
-        "word": "予定",
-        "hiragana": "よてい",
-        "meaning": "Dự định"
-      },
-      {
-        "word": "予約",
-        "hiragana": "よやく",
-        "meaning": "Đặt trước, hẹn trước"
-      },
-      {
-        "word": "天気予報",
-        "hiragana": "てんきよほう",
-        "meaning": "Dự báo thời tiết"
-      }
-    ]
-  },
-  {
-    "kanji": "争",
-    "han_viet": "TRANH",
-    "meaning": "Giành nhau (Trang 17)",
-    "examples": [
-      {
-        "word": "争う",
-        "hiragana": "あらそう",
-        "meaning": "Tranh giành, cạnh tranh"
-      },
-      {
-        "word": "戦争",
-        "hiragana": "せんそう",
-        "meaning": "Chiến tranh"
-      },
-      {
-        "word": "競争",
-        "hiragana": "きょうsō",
-        "meaning": "Cạnh tranh, thi đua"
-      }
-    ]
-  },
-  {
-    "kanji": "事",
-    "han_viet": "SỰ",
-    "meaning": "Sự việc (Trang 17)",
-    "examples": [
-      {
-        "word": "仕事",
-        "hiragana": "しごと",
-        "meaning": "Công việc"
-      },
-      {
-        "word": "大事",
-        "hiragana": "だいじ",
-        "meaning": "Quan trọng, việc lớn"
-      },
-      {
-        "word": "食事",
-        "hiragana": "しょくじ",
-        "meaning": "Bữa ăn"
-      }
-    ]
-  },
-  {
-    "kanji": "二",
-    "han_viet": "NHI",
-    "meaning": "Hai (Trang 17)",
-    "examples": [
-      {
-        "word": "二つ",
-        "hiragana": "ふたつ",
-        "meaning": "2 cái"
-      },
-      {
-        "word": "二月",
-        "hiragana": "にがつ",
-        "meaning": "Tháng hai"
-      },
-      {
-        "word": "二十歳",
-        "hiragana": "はたち",
-        "meaning": "20 tuổi"
-      }
-    ]
-  },
-  {
-    "kanji": "互",
-    "han_viet": "HỖ",
-    "meaning": "Giúp lẫn nhau (Trang 17)",
-    "examples": [
-      {
-        "word": "お互いに",
-        "hiragana": "おたがいに",
-        "meaning": "Cùng nhau, lẫn nhau"
-      },
-      {
-        "word": "交互",
-        "hiragana": "こうご",
-        "meaning": "Xen kẽ, luân phiên"
-      }
-    ]
-  },
-  {
-    "kanji": "五",
-    "han_viet": "NGŨ",
-    "meaning": "Năm (Trang 17)",
-    "examples": [
-      {
-        "word": "五つ",
-        "hiragana": "いつつ",
-        "meaning": "5 cái"
-      },
-      {
-        "word": "五月",
-        "hiragana": "ごがつ",
-        "meaning": "Tháng năm"
-      },
-      {
-        "word": "五感",
-        "hiragana": "ごかん",
-        "meaning": "Năm giác quan"
-      }
-    ]
-  },
-  {
-    "kanji": "井",
-    "han_viet": "TỈNH",
-    "meaning": "Cái giếng (Trang 17)",
-    "examples": [
-      {
-        "word": "井戸",
-        "hiragana": "いど",
-        "meaning": "Cái giếng"
-      },
-      {
-        "word": "天井",
-        "hiragana": "てんじょう",
-        "meaning": "Trần nhà"
-      }
-    ]
-  },
-  {
-    "kanji": "亜",
-    "han_viet": "Á",
-    "meaning": "Châu Á (Trang 17)",
-    "examples": [
-      {
-        "word": "亜細亜",
-        "hiragana": "アジア",
-        "meaning": "Châu Á"
-      },
-      {
-        "word": "亜熱帯",
-        "hiragana": "あねったい",
-        "meaning": "Cận nhiệt đới"
-      }
-    ]
-  },
-  {
-    "kanji": "亡",
-    "han_viet": "VONG",
-    "meaning": "Chết, mất (Trang 17)",
-    "examples": [
-      {
-        "word": "死亡",
-        "hiragana": "しぼう",
-        "meaning": "Tử vong, chết"
-      },
-      {
-        "word": "亡くなる",
-        "hiragana": "なくなる",
-        "meaning": "Mất, qua đời"
-      },
-      {
-        "word": "亡命",
-        "hiragana": "ぼうめい",
-        "meaning": "Lưu vong, tị nạn"
-      }
-    ]
-  },
-  {
-    "kanji": "交",
-    "han_viet": "GIAO",
-    "meaning": "Qua lại, trộn lẫn (Trang 17)",
-    "examples": [
-      {
-        "word": "交通",
-        "hiragana": "こうつう",
-        "meaning": "Giao thông"
-      },
-      {
-        "word": "交番",
-        "hiragana": "こうばん",
-        "meaning": "Đồn cảnh sát, bốt gác"
-      },
-      {
-        "word": "交ぜる",
-        "hiragana": "まぜる",
-        "meaning": "Trộn lẫn"
-      }
-    ]
-  },
-  {
-    "kanji": "享",
-    "han_viet": "HƯỞNG",
-    "meaning": "Nhận được (Trang 17)",
-    "examples": [
-      {
-        "word": "享受",
-        "hiragana": "きょうじゅ",
-        "meaning": "Hưởng thụ, nhận được"
-      },
-      {
-        "word": "享年",
-        "hiragana": "きょうねん",
-        "meaning": "Hưởng thọ"
-      }
-    ]
-  },
-  {
-    "kanji": "京",
-    "han_viet": "KINH",
-    "meaning": "Kinh đô (Trang 17)",
-    "examples": [
-      {
-        "word": "東京",
-        "hiragana": "とうきょう",
-        "meaning": "Tokyo"
-      },
-      {
-        "word": "京都",
-        "hiragana": "きょうと",
-        "meaning": "Kyoto"
-      },
-      {
-        "word": "上京",
-        "hiragana": "じょうきょう",
-        "meaning": "Đi lên thủ đô"
-      }
-    ]
-  },
-  {
-    "kanji": "亭",
-    "han_viet": "ĐÌNH",
-    "meaning": "Nhà nhỏ (Trang 17)",
-    "examples": [
-      {
-        "word": "亭主",
-        "hiragana": "ていしゅ",
-        "meaning": "Người chồng, chủ nhà"
-      },
-      {
-        "word": "料亭",
-        "hiragana": "りょうてい",
-        "meaning": "Nhà hàng Nhật kiểu truyền thống"
-      }
-    ]
-  },
-  {
-    "kanji": "人",
-    "han_viet": "NHÂN",
-    "meaning": "Người (Trang 17)",
-    "examples": [
-      {
-        "word": "日本人",
-        "hiragana": "にほんじん",
-        "meaning": "Người Nhật"
-      },
-      {
-        "word": "一人",
-        "hiragana": "ひとり",
-        "meaning": "Một người"
-      },
-      {
-        "word": "人間",
-        "hiragana": "にんげん",
-        "meaning": "Con người"
-      }
-    ]
-  },
-  {
-    "kanji": "以",
-    "han_viet": "DĨ",
-    "meaning": "Lấy làm mốc, từ (Trang 17)",
-    "examples": [
-      {
-        "word": "以上",
-        "hiragana": "いじょう",
-        "meaning": "Trở lên"
-      },
-      {
-        "word": "以下",
-        "hiragana": "いか",
-        "meaning": "Trở xuống"
-      },
-      {
-        "word": "以内",
-        "hiragana": "いない",
-        "meaning": "Trong vòng"
-      }
-    ]
-  },
-  {
-    "kanji": "今",
-    "han_viet": "KIM",
-    "meaning": "Bây giờ (Trang 17)",
-    "examples": [
-      {
-        "word": "今日",
-        "hiragana": "きょう",
-        "meaning": "Hôm nay"
-      },
-      {
-        "word": "今月",
-        "hiragana": "こんげつ",
-        "meaning": "Tháng này"
-      },
-      {
-        "word": "今",
-        "hiragana": "いま",
-        "meaning": "Bây giờ"
-      }
-    ]
-  },
-  {
-    "kanji": "介",
-    "han_viet": "GIỚI",
-    "meaning": "Giới thiệu (Trang 17)",
-    "examples": [
-      {
-        "word": "紹介",
-        "hiragana": "しょうかい",
-        "meaning": "Giới thiệu"
-      },
-      {
-        "word": "介護",
-        "hiragana": "かいご",
-        "meaning": "Chăm sóc, điều dưỡng"
-      },
-      {
-        "word": "介入",
-        "hiragana": "かいにゅう",
-        "meaning": "Can thiệp"
-      }
-    ]
-  },
-  {
-    "kanji": "令",
-    "han_viet": "LỆNH",
-    "meaning": "Mệnh lệnh (Trang 17)",
-    "examples": [
-      {
-        "word": "命令",
-        "hiragana": "めいれい",
-        "meaning": "Mệnh lệnh"
-      },
-      {
-        "word": "号令",
-        "hiragana": "ごうれい",
-        "meaning": "Hiệu lệnh"
-      },
-      {
-        "word": "令和",
-        "hiragana": "れいわ",
-        "meaning": "Lệnh Hòa (Niên hiệu Reiwa)"
-      }
-    ]
-  },
-  {
-    "kanji": "会",
-    "han_viet": "HỘI",
-    "meaning": "Gặp, họp lại (Trang 17)",
-    "examples": [
-      {
-        "word": "会社",
-        "hiragana": "かいしゃ",
-        "meaning": "Công ty"
-      },
-      {
-        "word": "会う",
-        "hiragana": "あう",
-        "meaning": "Gặp gỡ"
-      },
-      {
-        "word": "会議",
-        "hiragana": "かいぎ",
-        "meaning": "Cuộc họp"
-      }
-    ]
-  },
-  {
-    "kanji": "企",
-    "han_viet": "XÍ",
-    "meaning": "Kế hoạch (Trang 17)",
-    "examples": [
-      {
-        "word": "企業",
-        "hiragana": "きぎょう",
-        "meaning": "Xí nghiệp, doanh nghiệp"
-      },
-      {
-        "word": "企画",
-        "hiragana": "きかく",
-        "meaning": "Kế hoạch, quy hoạch"
-      },
-      {
-        "word": "企てる",
-        "hiragana": "くわだてる",
-        "meaning": "Dự tính, lên kế hoạch"
-      }
-    ]
-  },
-  {
-    "kanji": "余",
-    "han_viet": "DƯ",
-    "meaning": "Dư thừa (Trang 17)",
-    "examples": [
-      {
-        "word": "余る",
-        "hiragana": "あまる",
-        "meaning": "Dư thừa"
-      },
-      {
-        "word": "余計",
-        "hiragana": "よけい",
-        "meaning": "Dư thừa, không cần thiết"
-      },
-      {
-        "word": "余裕",
-        "hiragana": "よゆう",
-        "meaning": "Phần dư, thảnh thơi"
-      }
-    ]
-  },
-  {
-    "kanji": "倉",
-    "han_viet": "THƯƠNG",
-    "meaning": "Kho hàng (Trang 17)",
-    "examples": [
-      {
-        "word": "倉庫",
-        "hiragana": "そうこ",
-        "meaning": "Nhà kho, thương kho"
-      },
-      {
-        "word": "倉",
-        "hiragana": "くら",
-        "meaning": "Cái kho"
-      }
-    ]
-  },
-  {
-    "kanji": "傘",
-    "han_viet": "TẢN",
-    "meaning": "Ô, dù (Trang 17)",
-    "examples": [
-      {
-        "word": "傘",
-        "hiragana": "かさ",
-        "meaning": "Cái ô, cái dù"
-      },
-      {
-        "word": "日傘",
-        "hiragana": "ひがさ",
-        "meaning": "Ô che nắng"
-      },
-      {
-        "word": "置き傘",
-        "hiragana": "おきがさ",
-        "meaning": "Ô để sẵn (ở trường học, công sở)"
-      }
-    ]
-  },
-  {
-    "kanji": "仁",
-    "han_viet": "NHÂN",
-    "meaning": "Nhân nghĩa (Trang 17)",
-    "examples": [
-      {
-        "word": "仁義",
-        "hiragana": "じんぎ",
-        "meaning": "Nhân nghĩa"
-      },
-      {
-        "word": "仁愛",
-        "hiragana": "じんあい",
-        "meaning": "Nhân ái"
-      }
-    ]
-  },
-  {
-    "kanji": "仏",
-    "han_viet": "PHẬT",
-    "meaning": "Phật giáo (Trang 17)",
-    "examples": [
-      {
-        "word": "仏教",
-        "hiragana": "ぶっきょう",
-        "meaning": "Phật giáo"
-      },
-      {
-        "word": "仏",
-        "hiragana": "ほとけ",
-        "meaning": "Đức Phật, người đã khuất"
-      },
-      {
-        "word": "大仏",
-        "hiragana": "だいぶつ",
-        "meaning": "Tượng Phật lớn"
-      }
-    ]
-  },
-  {
-    "kanji": "仕",
-    "han_viet": "SĨ",
-    "meaning": "Làm việc (Trang 17)",
-    "examples": [
-      {
-        "word": "仕事",
-        "hiragana": "しごと",
-        "meaning": "Công việc"
-      },
-      {
-        "word": "仕方",
-        "hiragana": "しかた",
-        "meaning": "Cách làm, phương pháp"
-      },
-      {
-        "word": "仕える",
-        "hiragana": "つかえる",
-        "meaning": "Phục vụ, phụng sự"
-      }
-    ]
-  },
-  {
-    "kanji": "他",
-    "han_viet": "THA",
-    "meaning": "Khác (Trang 17)",
-    "examples": [
-      {
-        "word": "他人",
-        "hiragana": "たにん",
-        "meaning": "Người khác, người lạ"
-      },
-      {
-        "word": "他",
-        "hiragana": "ほか",
-        "meaning": "Ngoài ra, cái khác"
-      },
-      {
-        "word": "その他",
-        "hiragana": "そのた",
-        "meaning": "Cái khác, vân vân"
-      }
-    ]
-  },
-  {
-    "kanji": "付",
-    "han_viet": "PHÓ",
-    "meaning": "Gắn vào (Trang 17)",
-    "examples": [
-      {
-        "word": "付ける",
-        "hiragana": "つける",
-        "meaning": "Đính vào, gắn vào"
-      },
-      {
-        "word": "受付",
-        "hiragana": "うけつけ",
-        "meaning": "Quầy lễ tân"
-      },
-      {
-        "word": "付近",
-        "hiragana": "ふきん",
-        "meaning": "Gần đây, vùng lân cận"
-      }
-    ]
-  },
-  {
-    "kanji": "代",
-    "han_viet": "ĐẠI",
-    "meaning": "Thay thế (Trang 17)",
-    "examples": [
-      {
-        "word": "代わる",
-        "hiragana": "かわる",
-        "meaning": "Thay thế, đại diện"
-      },
-      {
-        "word": "時代",
-        "hiragana": "じだい",
-        "meaning": "Thời đại"
-      },
-      {
-        "word": "代表",
-        "hiragana": "だいhyou",
-        "meaning": "Đại biểu"
-      }
-    ]
-  },
-  {
-    "kanji": "仙",
-    "han_viet": "TIÊN",
-    "meaning": "Ông (bà) tiên (Trang 17)",
-    "examples": [
-      {
-        "word": "仙人",
-        "hiragana": "せんにん",
-        "meaning": "Tiên nhân, người cõi tiên"
-      },
-      {
-        "word": "仙台",
-        "hiragana": "せんだい",
-        "meaning": "Thành phố Sendai"
-      }
-    ]
-  },
-  {
-    "kanji": "伎",
-    "han_viet": "KỸ",
-    "meaning": "Ca kỹ (Trang 17)",
-    "examples": [
-      {
-        "word": "歌舞伎",
-        "hiragana": "かぶき",
-        "meaning": "Kịch Kabuki truyền thống"
-      }
-    ]
-  },
-  {
-    "kanji": "仰",
-    "han_viet": "NGƯỠNG",
-    "meaning": "Tín ngưỡng (Trang 17)",
-    "examples": [
-      {
-        "word": "信仰",
-        "hiragana": "しんこう",
-        "meaning": "Tín ngưỡng, đức tin"
-      },
-      {
-        "word": "仰ぐ",
-        "hiragana": "あおぐ",
-        "meaning": "Nhìn lên, tôn kính"
-      },
-      {
-        "word": "仰天",
-        "hiragana": "ぎょうてん",
-        "meaning": "Thất kinh, ngạc nhiên tột độ"
-      }
-    ]
-  },
-  {
-    "kanji": "仲",
-    "han_viet": "TRỌNG",
-    "meaning": "Tình bạn (Trang 17)",
-    "examples": [
-      {
-        "word": "仲間",
-        "hiragana": "なかま",
-        "meaning": "Bạn bè, đồng nghiệp"
-      },
-      {
-        "word": "仲良し",
-        "hiragana": "なかよし",
-        "meaning": "Thân thiết, quan hệ tốt"
-      },
-      {
-        "word": "仲介",
-        "hiragana": "ちゅうかい",
-        "meaning": "Môi giới, trung gian"
-      }
-    ]
-  },
-  {
-    "kanji": "件",
-    "han_viet": "KIỆN",
-    "meaning": "Vụ việc (Trang 17)",
-    "examples": [
-      {
-        "word": "事件",
-        "hiragana": "じけん",
-        "meaning": "Sự kiện, vụ án"
-      },
-      {
-        "word": "条件",
-        "hiragana": "じょうけん",
-        "meaning": "Điều kiện"
-      },
-      {
-        "word": "用件",
-        "hiragana": "ようけん",
-        "meaning": "Công việc, việc bận"
-      }
-    ]
-  },
-  {
-    "kanji": "任",
-    "han_viet": "NHIỆM",
-    "meaning": "Nhiệm vụ (Trang 17)",
-    "examples": [
-      {
-        "word": "責任",
-        "hiragana": "せきにん",
-        "meaning": "Trách nhiệm"
-      },
-      {
-        "word": "任せる",
-        "hiragana": "まかせる",
-        "meaning": "Giao phó, phó mặc"
-      },
-      {
-        "word": "担任",
-        "hiragana": "たんにん",
-        "meaning": "Chủ nhiệm"
-      }
-    ]
-  },
-  {
-    "kanji": "伏",
-    "han_viet": "PHỤC",
-    "meaning": "Úp xuống (Trang 17)",
-    "examples": [
-      {
-        "word": "伏せる",
-        "hiragana": "ふせる",
-        "meaning": "Lật úp, giấu diếm, mai phục"
-      },
-      {
-        "word": "起伏",
-        "hiragana": "きふく",
-        "meaning": "Nhấp nhô, thăng trầm"
-      },
-      {
-        "word": "降伏",
-        "hiragana": "こうふく",
-        "meaning": "Đầu hàng"
-      }
-    ]
-  },
-  {
-    "kanji": "伐",
-    "han_viet": "PHẠT",
-    "meaning": "Đánh, chinh phạt (Trang 17)",
-    "examples": [
-      {
-        "word": "伐採",
-        "hiragana": "ばっさい",
-        "meaning": "Chặt phá rừng, khai thác gỗ"
-      },
-      {
-        "word": "征伐",
-        "hiragana": "せいばつ",
-        "meaning": "Chinh phạt"
-      }
-    ]
-  },
-  {
-    "kanji": "仮",
-    "han_viet": "GIẢ",
-    "meaning": "Giả định (Trang 17)",
-    "examples": [
-      {
-        "word": "仮定",
-        "hiragana": "かてい",
-        "meaning": "Giả định"
-      },
-      {
-        "word": "仮名",
-        "hiragana": "かな",
-        "meaning": "Chữ kana (Bình giả danh/Phiến giả danh)"
-      },
-      {
-        "word": "仮面",
-        "hiragana": "かめん",
-        "meaning": "Mặt nạ"
-      }
-    ]
-  },
-  {
-    "kanji": "伝",
-    "han_viet": "TRUYỀN",
-    "meaning": "Truyền đạt (Trang 17)",
-    "examples": [
-      {
-        "word": "伝える",
-        "hiragana": "つ伝える",
-        "meaning": "Truyền đạt, nhắn lại"
-      },
-      {
-        "word": "伝統",
-        "hiragana": "でんとう",
-        "meaning": "Truyền thống"
-      },
-      {
-        "word": "伝言",
-        "hiragana": "でんごん",
-        "meaning": "Lời nhắn"
-      }
-    ]
-  },
-  {
-    "kanji": "休",
-    "han_viet": "HƯU",
-    "meaning": "Nghỉ (Trang 17)",
-    "examples": [
-      {
-        "word": "休む",
-        "hiragana": "やすむ",
-        "meaning": "Nghỉ ngơi, vắng mặt"
-      },
-      {
-        "word": "休日",
-        "hiragana": "きゅうじつ",
-        "meaning": "Ngày nghỉ"
-      },
-      {
-        "word": "休憩",
-        "hiragana": "きゅうけい",
-        "meaning": "Nghỉ giải lao"
-      }
-    ]
-  },
-  {
-    "kanji": "体",
-    "han_viet": "THỂ",
-    "meaning": "Thân thể (Trang 17)",
-    "examples": [
-      {
-        "word": "体",
-        "hiragana": "からだ",
-        "meaning": "Cơ thể, thân thể"
-      },
-      {
-        "word": "体重",
-        "hiragana": "たいじゅう",
-        "meaning": "Cân nặng"
-      },
-      {
-        "word": "体験",
-        "hiragana": "たいけん",
-        "meaning": "Trải nghiệm"
-      }
-    ]
-  },
-  {
-    "kanji": "伯",
-    "han_viet": "BÁ",
-    "meaning": "Bác (Trang 17)",
-    "examples": [
-      {
-        "word": "伯父",
-        "hiragana": "おじ",
-        "meaning": "Bác trai"
-      },
-      {
-        "word": "伯母",
-        "hiragana": "おば",
-        "meaning": "Bác gái"
-      },
-      {
-        "word": "伯爵",
-        "hiragana": "はくしゃく",
-        "meaning": "Bá tước"
-      }
-    ]
-  },
-  {
-    "kanji": "伴",
+    "kanji": "畔",
     "han_viet": "BẠN",
-    "meaning": "Đi cùng (Trang 17)",
+    "meaning": "bờ ruộng",
     "examples": [
-      {
-        "word": "伴う",
-        "hiragana": "ともなう",
-        "meaning": "Đi kèm, kéo theo, đi cùng"
-      },
-      {
-        "word": "同伴",
-        "hiragana": "どうはん",
-        "meaning": "Đồng hành, đi cùng"
-      }
+      { "word": "湖畔", "hiragana": "こはん", "meaning": "Bờ hồ" },
+      { "word": "畔", "hiragana": "あぜ", "meaning": "Bờ ruộng, lối đi nhỏ giữa các thửa ruộng" }
     ]
   },
   {
-    "kanji": "伸",
-    "han_viet": "THÂN",
-    "meaning": "Duỗi ra (Trang 17)",
+    "kanji": "略",
+    "han_viet": "LƯỢC",
+    "meaning": "tóm lược",
     "examples": [
-      {
-        "word": "伸びる",
-        "hiragana": "のびる",
-        "meaning": "Dài ra, lớn lên, phát triển"
-      },
-      {
-        "word": "伸ばす",
-        "hiragana": "のばす",
-        "meaning": "Kéo dài, duỗi ra"
-      },
-      {
-        "word": "伸縮",
-        "hiragana": "しんしゅく",
-        "meaning": "Co giãn"
-      }
+      { "word": "省略", "hiragana": "しょうりゃく", "meaning": "Lược bớt, viết tắt" },
+      { "word": "略す", "hiragana": "りゃくす", "meaning": "Lược bỏ, tóm tắt" },
+      { "word": "戦略", "hiragana": "せんりゃく", "meaning": "Chiến lược" }
     ]
   },
   {
-    "kanji": "伺",
-    "han_viet": "TỨ",
-    "meaning": "Thăm hỏi (Trang 17)",
+    "kanji": "畝",
+    "han_viet": "MẪU",
+    "meaning": "100 mét vuông",
     "examples": [
-      {
-        "word": "伺う",
-        "hiragana": "うかがう",
-        "meaning": "Hỏi, thăm hỏi, nghe (khiêm nhường ngữ)"
-      }
+      { "word": "畝", "hiragana": "うね", "meaning": "Luống đất, giồng cây" },
+      { "word": "畝歩", "hiragana": "sebu", "meaning": "Đơn vị đo diện tích đất cổ của Nhật" }
     ]
   },
   {
-    "kanji": "似",
-    "han_viet": "TỰ",
-    "meaning": "Giống nhau (Trang 17)",
+    "kanji": "畿",
+    "han_viet": "KỲ",
+    "meaning": "chốn kinh kỳ",
     "examples": [
-      {
-        "word": "似る",
-        "hiragana": "にる",
-        "meaning": "Giống, tương tự"
-      },
-      {
-        "word": "似合う",
-        "hiragana": "にあう",
-        "meaning": "Hợp, vừa vặn"
-      },
-      {
-        "word": "類似",
-        "hiragana": "るいじ",
-        "meaning": "Tương tự"
-      }
+      { "word": "近畿地方", "hiragana": "kin-kichi-hou", "meaning": "Vùng Kinki (vùng quanh kinh đô cổ Kyoto, bao gồm Osaka, Nara...)" }
     ]
   },
   {
-    "kanji": "但",
-    "han_viet": "ĐẢN",
-    "meaning": "Tuy nhiên, nhưng (Trang 17)",
+    "kanji": "疎",
+    "han_viet": "SƠ",
+    "meaning": "xa lạ, thưa thớt",
     "examples": [
-      {
-        "word": "但し",
-        "hiragana": "ただし",
-        "meaning": "Tuy nhiên, nhưng mà"
-      },
-      {
-        "word": "But và chỉ viết",
-        "hiragana": "ただしがき",
-        "meaning": "Điều khoản ghi thêm, ghi chú bổ sung"
-      }
+      { "word": "過疎", "hiragana": "kaso", "meaning": "Sự suy giảm dân số quá mức, thưa thớt dân cư" },
+      { "word": "疎通", "hiragana": "そつう", "meaning": "Sự thông suốt, hiểu nhau (ví dụ: 意思疎通)" },
+      { "word": "疎か", "hiragana": "おろそか", "meaning": "Lơ là, sao nhãng" }
     ]
   },
   {
-    "kanji": "位",
-    "han_viet": "VỊ",
-    "meaning": "Vị trí (Trang 17)",
+    "kanji": "疑",
+    "han_viet": "NGHI",
+    "meaning": "nghi ngờ",
     "examples": [
-      {
-        "word": "位置",
-        "hiragana": "いち",
-        "meaning": "Vị trí"
-      },
-      {
-        "word": "第一位",
-        "hiragana": "だいいちい",
-        "meaning": "Vị trí thứ nhất"
-      },
-      {
-        "word": "単位",
-        "hiragana": "たんい",
-        "meaning": "Đơn vị"
-      }
+      { "word": "疑う", "hiragana": "うた가う", "meaning": "Nghi ngờ" },
+      { "word": "疑問", "hiragana": "ぎもん", "meaning": "Nghi vấn, thắc mắc" },
+      { "word": "容疑者", "hiragana": "ようぎしゃ", "meaning": "Nghi phạm, kẻ tình nghi" }
+    ]
+  },
+  {
+    "kanji": "疫",
+    "han_viet": "DỊCH",
+    "meaning": "dịch bệnh",
+    "examples": [
+      { "word": "免疫", "hiragana": "めんえき", "meaning": "Miễn dịch" },
+      { "word": "防疫", "hiragana": "ぼうえき", "meaning": "Phòng dịch" },
+      { "word": "疫病", "hiragana": "えきびょう / やくびょう", "meaning": "Dịch bệnh" }
+    ]
+  },
+  {
+    "kanji": "疲",
+    "han_viet": "BÌ",
+    "meaning": "mệt mỏi",
+    "examples": [
+      { "word": "疲れる", "hiragana": "つかれる", "meaning": "Mệt mỏi" },
+      { "word": "疲労", "hiragana": "ひろう", "meaning": "Mệt nhọc, lao lực" }
+    ]
+  },
+  {
+    "kanji": "疾",
+    "han_viet": "TẬT",
+    "meaning": "đau ốm",
+    "examples": [
+      { "word": "疾患", "hiragana": "しっかん", "meaning": "Bệnh tật, căn bệnh" },
+      { "word": "疾走", "hiragana": "しっそう", "meaning": "Lao nhanh, phóng như bay" }
+    ]
+  },
+  {
+    "kanji": "病",
+    "han_viet": "BỆNH",
+    "meaning": "bệnh",
+    "examples": [
+      { "word": "病気", "hiragana": "びょうき", "meaning": "Bệnh tật, ốm" },
+      { "word": "病院", "hiragana": "びょういん", "meaning": "Bệnh viện" },
+      { "word": "病む", "hiragana": "やむ", "meaning": "Bị ốm, đau yếu" }
+    ]
+  },
+  {
+    "kanji": "症",
+    "han_viet": "CHỨNG",
+    "meaning": "triệu chứng",
+    "examples": [
+      { "word": "症状", "hiragana": "しょうじょう", "meaning": "Triệu chứng bệnh" },
+      { "word": "重症", "hiragana": "じゅうしょう", "meaning": "Bệnh nặng, chứng bệnh nghiêm trọng" },
+      { "word": "後遺症", "hiragana": "こういしょう", "meaning": "Di chứng" }
+    ]
+  },
+  {
+    "kanji": "痕",
+    "han_viet": "NGÂN",
+    "meaning": "vết, dấu",
+    "examples": [
+      { "word": "傷痕", "hiragana": "きずあと / しょうこん", "meaning": "Vết sẹo, vết thương cũ" },
+      { "word": "足痕", "hiragana": "あしあと", "meaning": "Dấu chân (chữ 痕 ít dùng độc lập hơn chữ 跡)" }
+    ]
+  },
+  {
+    "kanji": "痩",
+    "han_viet": "SẦU",
+    "meaning": "gầy",
+    "examples": [
+      { "word": "痩せる", "hiragana": "やせる", "meaning": "Gầy đi, sụt cân" },
+      { "word": "痩躯", "hiragana": "そうく", "meaning": "Thân hình gầy gò" }
+    ]
+  },
+  {
+    "kanji": "痘",
+    "han_viet": "ĐẬU",
+    "meaning": "bệnh đậu mùa",
+    "examples": [
+      { "word": "天然痘", "hiragana": "てんねんとう", "meaning": "Bệnh đậu mùa" },
+      { "word": "種痘", "hiragana": "しゅとう", "meaning": "Chủng ngừa đậu mùa" }
+    ]
+  },
+  {
+    "kanji": "痛",
+    "han_viet": "THỐNG",
+    "meaning": "đau đớn",
+    "examples": [
+      { "word": "痛い", "hiragana": "いたい", "meaning": "Đau, nhức" },
+      { "word": "痛む", "hiragana": "いたむ", "meaning": "Đau đớn (về thể xác hoặc tinh thần)" },
+      { "word": "頭痛", "hiragana": "ずつう", "meaning": "Đau đầu" }
+    ]
+  },
+  {
+    "kanji": "痢",
+    "han_viet": "LỴ",
+    "meaning": "bệnh tá lỵ",
+    "examples": [
+      { "word": "下痢", "hiragana": "げり", "meaning": "Tiêu chảy, tào tháo đuổi" },
+      { "word": "赤痢", "hiragana": "せきり", "meaning": "Bệnh lỵ trực trùng" }
+    ]
+  },
+  {
+    "kanji": "痴",
+    "han_viet": "SI",
+    "meaning": "ngu đần",
+    "examples": [
+      { "word": "痴漢", "hiragana": "ちかん", "meaning": "Kẻ biến thái, kẻ quấy rối tình dục trên tàu xe" },
+      { "word": "認知症", "hiragana": "にんちしょう", "meaning": "Chứng mất trí nhớ tuổi già (trước đây gọi là 痴呆症 - si ngốc chứng)" }
+    ]
+  },
+  {
+    "kanji": "瘍",
+    "han_viet": "DƯƠNG",
+    "meaning": "khối u",
+    "examples": [
+      { "word": "潰瘍", "hiragana": "かいよう", "meaning": "Vết loét (ví dụ: 胃潰瘍 - Loét dạ dày)" }
+    ]
+  },
+  {
+    "kanji": "療",
+    "han_viet": "LIỆU",
+    "meaning": "điều trị",
+    "examples": [
+      { "word": "治療", "hiragana": "ちりょう", "meaning": "Trị liệu, điều trị" },
+      { "word": "医療", "hiragana": "いりょう", "meaning": "Y tế, chữa trị" },
+      { "word": "療養", "hiragana": "りょうよう", "meaning": "Điều dưỡng, dưỡng bệnh" }
+    ]
+  },
+  {
+    "kanji": "癖",
+    "han_viet": "PHÍCH",
+    "meaning": "tật xấu",
+    "examples": [
+      { "word": "癖", "hiragana": "くせ", "meaning": "Thói quen, tật xấu" },
+      { "word": "口癖", "hiragana": "くちぐせ", "meaning": "Câu cửa miệng" },
+      { "word": "耳癖", "hiragana": "みみぐせ", "meaning": "Thói quen hay nghe ngóng (hoặc các từ phái sinh mang nghĩa thói tật)" }
+    ]
+  },
+  {
+    "kanji": "癒",
+    "han_viet": "DŨ",
+    "meaning": "hết bệnh",
+    "examples": [
+      { "word": "癒す", "hiragana": "いやす", "meaning": "Chữa lành, xoa dịu" },
+      { "word": "治癒", "hiragana": "ちゆ", "meaning": "Trị dũ, chữa khỏi bệnh, điều trị dứt điểm" },
+      { "word": "癒着", "hiragana": "ゆちゃく", "meaning": "Dính liền, thông đồng, dính chặt vào nhau" }
+    ]
+  },
+  {
+    "kanji": "発",
+    "han_viet": "PHÁT",
+    "meaning": "xuất phát",
+    "examples": [
+      { "word": "出発", "hiragana": "しゅっぱつ", "meaning": "Xuất phát, khởi hành" },
+      { "word": "発表", "hiragana": "はっぴょう", "meaning": "Phát biểu, công bố" },
+      { "word": "発見", "hiragana": "はっけん", "meaning": "Phát hiện, tìm ra" }
+    ]
+  },
+  {
+    "kanji": "登",
+    "han_viet": "ĐĂNG",
+    "meaning": "leo lên",
+    "examples": [
+      { "word": "登る", "hiragana": "のぼる", "meaning": "Leo, trèo (núi, cầu thang)" },
+      { "word": "登山", "hiragana": "とざん", "meaning": "Leo núi" },
+      { "word": "登録", "hiragana": "とうろく", "meaning": "Đăng ký" }
+    ]
+  },
+  {
+    "kanji": "白",
+    "han_viet": "BẠCH",
+    "meaning": "trắng",
+    "examples": [
+      { "word": "白い", "hiragana": "しろい", "meaning": "Trắng (tính từ)" },
+      { "word": "面白い", "hiragana": "おもしろい", "meaning": "Thú vị, hay ho" },
+      { "word": "告白", "hiragana": "こくはく", "meaning": "Tỏ tình, bộc bạch, thú nhận" }
+    ]
+  },
+  {
+    "kanji": "百",
+    "han_viet": "BÁCH",
+    "meaning": "một trăm",
+    "examples": [
+      { "word": "百", "hiragana": "ひゃく", "meaning": "Một trăm" },
+      { "word": "百科事典", "hiragana": "ひゃっかじてん", "meaning": "Bách khoa toàn thư" },
+      { "word": "八百屋", "hiragana": "やおや", "meaning": "Cửa hàng rau quả" }
+    ]
+  },
+  {
+    "kanji": "皆",
+    "han_viet": "GIAI",
+    "meaning": "tất cả, mọi người",
+    "examples": [
+      { "word": "皆さん", "hiragana": "みなさん", "meaning": "Mọi người (kính ngữ)" },
+      { "word": "皆", "hiragana": "みな / みんな", "meaning": "Tất cả, mọi người" },
+      { "word": "皆勤賞", "hiragana": "かいきんしょう", "meaning": "Giải thưởng chuyên cần (đi học/đi làm đầy đủ)" }
+    ]
+  },
+  {
+    "kanji": "的",
+    "han_viet": "ĐÍCH",
+    "meaning": "mục đích",
+    "examples": [
+      { "word": "目的", "hiragana": "もくてき", "meaning": "Mục đích" },
+      { "word": "적", "hiragana": "まと", "meaning": "Cái đích, bia bắn" },
+      { "word": "積極的", "hiragana": "せっきょくてき", "meaning": "Một cách tích cực" }
+    ]
+  },
+  {
+    "kanji": "皇",
+    "han_viet": "HOÀNG",
+    "meaning": "vua",
+    "examples": [
+      { "word": "天皇", "hiragana": "てんのう", "meaning": "Thiên hoàng (Nhật Bản)" },
+      { "word": "皇居", "hiragana": "ko-kyo", "meaning": "Hoàng cung" },
+      { "word": "皇帝", "hiragana": "ko-tei", "meaning": "Hoàng đế" }
+    ]
+  },
+  {
+    "kanji": "皮",
+    "han_viet": "BÌ",
+    "meaning": "vỏ, da thú",
+    "examples": [
+      { "word": "皮", "hiragana": "かわ", "meaning": "Da, vỏ (trái cây), lớp da ngoài" },
+      { "word": "皮膚", "hiragana": "ひふ", "meaning": "Da (giải phẫu học, y học)" },
+      { "word": "皮肉", "hiragana": "ひにく", "meaning": "Mỉa mai, châm biếm" }
+    ]
+  },
+  {
+    "kanji": "皿",
+    "han_viet": "MÃNH",
+    "meaning": "cái đĩa",
+    "examples": [
+      { "word": "皿", "hiragana": "さら", "meaning": "Cái đĩa" },
+      { "word": "灰皿", "hiragana": "はいざら", "meaning": "Gạt tàn thuốc lá" },
+      { "word": "大皿", "hiragana": "おおざら", "meaning": "Đĩa lớn" }
+    ]
+  },
+  {
+    "kanji": "盆",
+    "han_viet": "BỒN",
+    "meaning": "cái khay",
+    "examples": [
+      { "word": "お盆", "hiragana": "おぼん", "meaning": "Cái khay; Lễ văn hóa Obon (Lễ Vu Lan của Nhật)" },
+      { "word": "盆地", "hiragana": "ぼんち", "meaning": "Địa hình bồn địa, thung lũng lòng chảo" },
+      { "word": "盆栽", "hiragana": "ぼんさい", "meaning": "Cây cảnh nghệ thuật Bonsai" }
+    ]
+  },
+  {
+    "kanji": "益",
+    "han_viet": "ÍCH",
+    "meaning": "lợi ích",
+    "examples": [
+      { "word": "利益", "hiragana": "りえき", "meaning": "Lợi ích, lợi nhuận" },
+      { "word": "有益", "hiragana": "ゆうえき", "meaning": "Có ích, hữu ích" },
+      { "word": "公益", "hiragana": "こうえき", "meaning": "Lợi ích công cộng" }
+    ]
+  },
+  {
+    "kanji": "盛",
+    "han_viet": "THÌNH",
+    "meaning": "phồn thịnh",
+    "examples": [
+      { "word": "盛ん", "hiragana": "さかん", "meaning": "Thịnh hành, phát triển mạnh mẽ" },
+      { "word": "盛り上がる", "hiragana": "もりあがる", "meaning": "Tăng lên, sôi nổi lên, hào hứng lên" },
+      { "word": "盛大", "hiragana": "せいだい", "meaning": "Hùng vĩ, hoành tráng, thịnh đại" }
+    ]
+  },
+  {
+    "kanji": "盗",
+    "han_viet": "ĐẠO",
+    "meaning": "ăn cắp",
+    "examples": [
+      { "word": "盗む", "hiragana": "ぬすむ", "meaning": "Ăn cắp, trộm" },
+      { "word": "強盗", "hiragana": "ごうとう", "meaning": "Tên cướp, vụ cướp" },
+      { "word": "盗難", "hiragana": "とうなん", "meaning": "Vụ trộm, vụ mất cắp" }
+    ]
+  },
+  {
+    "kanji": "盟",
+    "han_viet": "MINH",
+    "meaning": "đồng minh",
+    "examples": [
+      { "word": "同盟", "hiragana": "どうめい", "meaning": "Đồng minh" },
+      { "word": "加盟", "hiragana": "かめい", "meaning": "Gia nhập, tham gia vào khối/liên minh" }
+    ]
+  },
+  {
+    "kanji": "監",
+    "han_viet": "GIÁM",
+    "meaning": "giám sát, coi sóc",
+    "examples": [
+      { "word": "監督", "hiragana": "かんとく", "meaning": "Đạo diễn (phim), huấn luyện viên (thể thao), giám đốc" },
+      { "word": "監視", "hiragana": "かんし", "meaning": "Giám sát, quản thúc" }
+    ]
+  },
+  {
+    "kanji": "盤",
+    "han_viet": "BẢN",
+    "meaning": "nền tảng",
+    "examples": [
+      { "word": "基盤", "hiragana": "きばん", "meaning": "Cơ bàn, nền móng, nền tảng cơ sở" },
+      { "word": "地盤", "hiragana": "じばん", "meaning": "Địa bàn, nền đất, phạm vi thế lực" },
+      { "word": "鍵盤", "hiragana": "けんばん", "meaning": "Bàn phím (đàn piano, nhạc cụ)" }
+    ]
+  },
+  {
+    "kanji": "目",
+    "han_viet": "MỤC",
+    "meaning": "mắt",
+    "examples": [
+      { "word": "目", "hiragana": "め", "meaning": "Con mắt" },
+      { "word": "目的", "hiragana": "もくてき", "meaning": "Mục đích" },
+      { "word": "注目", "hiragana": "ちゅうもく", "meaning": "Chú mục, chú ý, để mắt đến" }
+    ]
+  },
+  {
+    "kanji": "直",
+    "han_viet": "TRỰC",
+    "meaning": "sửa chữa",
+    "examples": [
+      { "word": "直す", "hiragana": "なおす", "meaning": "Sửa chữa, đính chính (tha động từ)" },
+      { "word": "直線", "hiragana": "ちょくせん", "meaning": "Đường thẳng" },
+      { "word": "直接", "hiragana": "直接", "meaning": "Trực tiếp" }
+    ]
+  },
+  {
+    "kanji": "県",
+    "han_viet": "HUYỆN",
+    "meaning": "tỉnh",
+    "examples": [
+      { "word": "県", "hiragana": "けん", "meaning": "Tỉnh (đơn vị hành chính của Nhật, ví dụ: 埼玉県)" },
+      { "word": "県庁", "hiragana": "けんちょう", "meaning": "Ủy ban hành chính tỉnh, tòa nhà cơ quan tỉnh" }
+    ]
+  },
+  {
+    "kanji": "真",
+    "han_viet": "CHÂN",
+    "meaning": "chân thật",
+    "examples": [
+      { "word": "写真", "hiragana": "しゃしん", "meaning": "Hình ảnh, bức ảnh" },
+      { "word": "真実", "hiragana": "しんじつ", "meaning": "Sự thật, chân thực" },
+      { "word": "真ん trung", "hiragana": "まんなか", "meaning": "Chính giữa (真ん中)" }
+    ]
+  },
+  {
+    "kanji": "盲",
+    "han_viet": "MANH",
+    "meaning": "mù",
+    "examples": [
+      { "word": "盲目", "hiragana": "もうもく", "meaning": "Mù quáng" },
+      { "word": "盲導犬", "hiragana": "mou-dou-ken", "meaning": "Chó dẫn đường cho người khiếm thị" }
+    ]
+  },
+  {
+    "kanji": "省",
+    "han_viet": "TỈNH",
+    "meaning": "xem xét",
+    "examples": [
+      { "word": "反省", "hiragana": "はんせい", "meaning": "Phản tỉnh, tự kiểm điểm, xem xét lại bản thân" },
+      { "word": "帰省", "hiragana": "きせい", "meaning": "Về quê hương, về quê thăm nhà" },
+      { "word": "〜省", "hiragana": "しょう", "meaning": "Bộ (đơn vị hành chính như Bộ Giáo dục 文部科学省)" }
+    ]
+  },
+  {
+    "kanji": "督",
+    "han_viet": "ĐỐC",
+    "meaning": "chỉ đạo, cai quản",
+    "examples": [
+      { "word": "監督", "hiragana": "かんとく", "meaning": "Đạo diễn, huấn luyện viên, giám sát" },
+      { "word": "督促", "hiragana": "とくそく", "meaning": "Đốc thúc, thúc giục" }
+    ]
+  },
+  {
+    "kanji": "盾",
+    "han_viet": "THUẪN",
+    "meaning": "mâu thuẫn",
+    "examples": [
+      { "word": "矛盾", "hiragana": "むじゅん", "meaning": "Mâu thuẫn" },
+      { "word": "盾", "hiragana": "たて", "meaning": "Cái khiên, tấm mộc" }
+    ]
+  },
+  {
+    "kanji": "看",
+    "han_viet": "KHÁN",
+    "meaning": "xem, đối đãi",
+    "examples": [
+      { "word": "看板", "hiragana": "かんばん", "meaning": "Biển hiệu, bảng quảng cáo" },
+      { "word": "看護師", "hiragana": "かんごし", "meaning": "Y tá, điều dưỡng viên" }
+    ]
+  },
+  {
+    "kanji": "眉",
+    "han_viet": "MY",
+    "meaning": "lông mày",
+    "examples": [
+      { "word": "眉毛", "hiragana": "まゆげ", "meaning": "Lông mày" },
+      { "word": "眉", "hiragana": "まゆ", "meaning": "Chân mày" }
+    ]
+  },
+  {
+    "kanji": "相",
+    "han_viet": "TƯƠNG, TƯỚNG",
+    "meaning": "thủ tướng",
+    "examples": [
+      { "word": "首相", "hiragana": "しゅしょう", "meaning": "Thủ tướng" },
+      { "word": "相手", "hiragana": "あいて", "meaning": "Đối phương, đối tác, người đối diện" },
+      { "word": "相談", "hiragana": "そうだん", "meaning": "Thảo luận, trao đổi, bàn bạc" }
+    ]
+  },
+  {
+    "kanji": "眠",
+    "han_viet": "MIÊN",
+    "meaning": "buồn ngủ",
+    "examples": [
+      { "word": "眠い", "hiragana": "ねむい", "meaning": "Buồn ngủ" },
+      { "word": "眠る", "hiragana": "ねむる", "meaning": "Ngủ" },
+      { "word": "睡眠", "hiragana": "すいみん", "meaning": "Giấc ngủ" }
+    ]
+  },
+  {
+    "kanji": "眼",
+    "han_viet": "NHÃN",
+    "meaning": "con mắt",
+    "examples": [
+      { "word": "眼科", "hiragana": "がんか", "meaning": "Khoa mắt" },
+      { "word": "眼鏡", "hiragana": "めがね / がんきょう", "meaning": "Kính mắt" },
+      { "word": "主眼", "hiragana": "しゅがん", "meaning": "Điểm chính, mục đích chính" }
+    ]
+  },
+  {
+    "kanji": "眺",
+    "han_viet": "THIẾU",
+    "meaning": "nhìn xa (ngắm)",
+    "examples": [
+      { "word": "眺める", "hiragana": "ながめる", "meaning": "Nhìn, ngắm, quan sát từ xa" },
+      { "word": "眺望", "hiragana": "ちょうぼう", "meaning": "Tầm nhìn, tầm cảnh sắc ngắm nhìn" }
+    ]
+  },
+  {
+    "kanji": "睦",
+    "han_viet": "MỤC",
+    "meaning": "thân thiện",
+    "examples": [
+      { "word": "和睦", "hiragana": "わぼく", "meaning": "Hòa giải, hòa bình, hòa thuận" },
+      { "word": "親睦", "hiragana": "しんぼく", "meaning": "Thân mộc, sự thân thiết, giao hữu" }
+    ]
+  },
+  {
+    "kanji": "睡",
+    "han_viet": "THỤY",
+    "meaning": "giấc ngủ",
+    "examples": [
+      { "word": "睡眠", "hiragana": "すいみん", "meaning": "Giấc ngủ" },
+      { "word": "熟睡", "hiragana": "じゅくすい", "meaning": "Ngủ say, ngủ ngon giấc" }
+    ]
+  },
+  {
+    "kanji": "瞳",
+    "han_viet": "ĐỒNG",
+    "meaning": "con ngươi",
+    "examples": [
+      { "word": "瞳", "hiragana": "ひとみ", "meaning": "Ánh mắt, con ngươi, tròng mắt" }
+    ]
+  },
+  {
+    "kanji": "瞭",
+    "han_viet": "LIỆU",
+    "meaning": "rõ ràng",
+    "examples": [
+      { "word": "明瞭", "hiragana": "めいりょう", "meaning": "Rõ ràng, sáng sủa, dễ hiểu" },
+      { "word": "一目瞭然", "hiragana": "いちもくりょうぜん", "meaning": "Nhìn một cái là hiểu ngay, rõ như ban ngày" }
+    ]
+  },
+  {
+    "kanji": "瞬",
+    "han_viet": "THUẤN",
+    "meaning": "một thoáng",
+    "examples": [
+      { "word": "瞬間", "hiragana": "しゅんかん", "meaning": "Chốc lát, khoảnh khắc, trong nháy mắt" },
+      { "word": "瞬き", "hiragana": "まばたき", "meaning": "Nháy mắt, chớp mắt" }
+    ]
+  },
+  {
+    "kanji": "矛",
+    "han_viet": "MÂU",
+    "meaning": "mâu thuẫn",
+    "examples": [
+      { "word": "矛盾", "hiragana": "むじゅん", "meaning": "Mâu thuẫn" },
+      { "word": "矛", "hiragana": "ほこ", "meaning": "Cái mác, cây giáo cổ" }
+    ]
+  },
+  {
+    "kanji": "矢",
+    "han_viet": "THỊ",
+    "meaning": "cây tên",
+    "examples": [
+      { "word": "矢", "hiragana": "や", "meaning": "Mũi tên" },
+      { "word": "矢印", "hiragana": "やじるし", "meaning": "Ký hiệu mũi tên, dấu mũi tên chỉ đường" }
+    ]
+  },
+  {
+    "kanji": "知",
+    "han_viet": "TRI",
+    "meaning": "biết, tri thức",
+    "examples": [
+      { "word": "知る", "hiragana": "しる", "meaning": "Biết" },
+      { "word": "知人", "hiragana": "ちじん", "meaning": "Người quen" },
+      { "word": "知識", "hiragana": "ちしき", "meaning": "Tri thức, kiến thức" }
+    ]
+  },
+  {
+    "kanji": "短",
+    "han_viet": "ĐOẢN",
+    "meaning": "ngắn",
+    "examples": [
+      { "word": "短い", "hiragana": "みじかい", "meaning": "Ngắn" },
+      { "word": "短所", "hiragana": "たんしょ", "meaning": "Đoản xứ, khuyết điểm, điểm yếu" },
+      { "word": "短縮", "hiragana": "たんしゅく", "meaning": "Rút ngắn, co ngắn lại" }
+    ]
+  },
+  {
+    "kanji": "矯",
+    "han_viet": "KIỀU",
+    "meaning": "sửa cho ngay",
+    "examples": [
+      { "word": "矯正", "hiragana": "きょうせい", "meaning": "Kiều chính, uốn nắn, sửa cho đúng (ví dụ: 歯列矯正 - Niềng răng)" },
+      { "word": "矯める", "hiragana": "tameru", "meaning": "Uốn thẳng, sửa chữa tính xấu" }
+    ]
+  },
+  {
+    "kanji": "石",
+    "han_viet": "THẠCH",
+    "meaning": "viên đá",
+    "examples": [
+      { "word": "石", "hiragana": "いし", "meaning": "Hòn đá, viên đá" },
+      { "word": "石油", "hiragana": "せきゆ", "meaning": "Dầu mỏ, dầu hỏa" },
+      { "word": "化石", "hiragana": "かせき", "meaning": "Hóa thạch" }
+    ]
+  },
+  {
+    "kanji": "碁",
+    "han_viet": "KỲ",
+    "meaning": "cờ vây",
+    "examples": [
+      { "word": "囲碁", "hiragana": "いご", "meaning": "Cờ vây" },
+      { "word": "碁盤", "hiragana": "ごばん", "meaning": "Bàn cờ vây" }
+    ]
+  },
+  {
+    "kanji": "磨",
+    "han_viet": "MA",
+    "meaning": "chà, đánh bóng",
+    "examples": [
+      { "word": "磨く", "hiragana": "みがく", "meaning": "Chà, mài, đánh bóng (răng, giày...)" },
+      { "word": "研磨", "hiragana": "けんma", "meaning": "Nghiên ma, mài giũa, rèn luyện kỹ năng" }
+    ]
+  },
+  {
+    "kanji": "砂",
+    "han_viet": "SA",
+    "meaning": "cát",
+    "examples": [
+      { "word": "砂", "hiragana": "すな", "meaning": "Hạt cát" },
+      { "word": "砂糖", "hiragana": "さとう", "meaning": "Đường ăn" },
+      { "word": "砂漠", "hiragana": "さばく", "meaning": "Sa mạc" }
+    ]
+  },
+  {
+    "kanji": "研",
+    "han_viet": "NGHIÊN",
+    "meaning": "nghiên cứu, tìm tòi",
+    "examples": [
+      { "word": "研究", "hiragana": "けんきゅう", "meaning": "Nghiên cứu" },
+      { "word": "研修", "hiragana": "けんしゅう", "meaning": "Nghiên tu, đào tạo, thực tập" },
+      { "word": "研ぐ", "hiragana": "とぐ", "meaning": "Mài (dao), vo (gạo)" }
+    ]
+  },
+  {
+    "kanji": "砕",
+    "han_viet": "TOÁI",
+    "meaning": "bẻ vụn",
+    "examples": [
+      { "word": "砕く", "hiragana": "くだく", "meaning": "Đập tan, phá vỡ, làm vụn ra" },
+      { "word": "砕ける", "hiragana": "くだける", "meaning": "Bị vỡ vụn, suồng sã/thân mật (văn phong)" },
+      { "word": "粉砕", "hiragana": "ふんさい", "meaning": "Tán nhuyễn, đập tan hoang" }
+    ]
+  },
+  {
+    "kanji": "砲",
+    "han_viet": "PHÁO",
+    "meaning": "súng, súng lớn",
+    "examples": [
+      { "word": "大砲", "hiragana": "たいほう", "meaning": "Khẩu đại bác, súng thần công" },
+      { "word": "鉄砲", "hiragana": "てっぽう", "meaning": "Khẩu súng lục, súng hỏa mai cổ" }
+    ]
+  },
+  {
+    "kanji": "破",
+    "han_viet": "PHÁ",
+    "meaning": "xé",
+    "examples": [
+      { "word": "破る", "hiragana": "やぶる", "meaning": "Xé rách, làm rách, phá vỡ (kỷ lục/lời hứa)" },
+      { "word": "破壊", "hiragana": "はかい", "meaning": "Phá hoại, hủy hoại" },
+      { "word": "破産", "hiragana": "はさん", "meaning": "Phá sản" }
+    ]
+  },
+  {
+    "kanji": "硝",
+    "han_viet": "TIÊU",
+    "meaning": "muối diêm",
+    "examples": [
+      { "word": "硝酸", "hiragana": "しょうさん", "meaning": "Axit nitric ($HNO_3$)" },
+      { "word": "硝子", "hiragana": "ガラス / しょうし", "meaning": "Thủy tinh, kính (từ cổ thường viết bằng Kanji này)" }
+    ]
+  },
+  {
+    "kanji": "硫",
+    "han_viet": "LƯU",
+    "meaning": "lưu huỳnh",
+    "examples": [
+      { "word": "硫酸", "hiragana": "りゅうさん", "meaning": "Axit sulfuric ($H_2SO_4$)" },
+      { "word": "硫黄", "hiragana": "いおう / りゅうおう", "meaning": "Lưu huỳnh" }
+    ]
+  },
+  {
+    "kanji": "硬",
+    "han_viet": "NGẠNH",
+    "meaning": "cứng, ương ngạnh",
+    "examples": [
+      { "word": "硬い", "hiragana": "かたい", "meaning": "Cứng rắn (vật lý), khô khan (văn phong)" },
+      { "word": "硬貨", "hiragana": "こうか", "meaning": "Tiền xu, tiền kim loại" },
+      { "word": "強硬", "hiragana": "きょうこう", "meaning": "Cương quyết, cứng rắn, mạnh mẽ" }
+    ]
+  },
+  {
+    "kanji": "碑",
+    "han_viet": "BỊ",
+    "meaning": "bia đá",
+    "examples": [
+      { "word": "石碑", "hiragana": "せきひ", "meaning": "Bia đá" },
+      { "word": "記念碑", "hiragana": "きねんひ", "meaning": "Bia kỷ niệm, đài tưởng niệm" }
+    ]
+  },
+  {
+    "kanji": "磁",
+    "han_viet": "TỪ",
+    "meaning": "nam châm",
+    "examples": [
+      { "word": "磁石", "hiragana": "じしゃく", "meaning": "Nam châm, la bàn" },
+      { "word": "磁 khí", "hiragana": "じき", "meaning": "Từ tính, từ trường (磁気)" },
+      { "word": "磁器", "hiragana": "じき", "meaning": "Đồ gốm sứ" }
+    ]
+  },
+  {
+    "kanji": "確",
+    "han_viet": "XÁC",
+    "meaning": "xác nhận",
+    "examples": [
+      { "word": "確かめる", "hiragana": "たしかめる", "meaning": "Xác nhận, kiểm tra lại" },
+      { "word": "確実", "hiragana": "かくじつ", "meaning": "Chính xác, chắc chắn" },
+      { "word": "正確", "hiragana": "せいかく", "meaning": "Chính xác, đúng đắn" }
+    ]
+  },
+  {
+    "kanji": "礁",
+    "han_viet": "TIỀU",
+    "meaning": "đá ngầm",
+    "examples": [
+      { "word": "暗礁", "hiragana": "あんしょう", "meaning": "Đá ngầm (đoạn nguy hiểm dưới nước hoặc khó khăn tiềm ẩn)" },
+      { "word": "サンゴ礁", "hiragana": "さんごしょう", "meaning": "Rạn san hô" }
+    ]
+  },
+  {
+    "kanji": "礎",
+    "han_viet": "SỞ",
+    "meaning": "cơ sở, nền",
+    "examples": [
+      { "word": "基礎", "hiragana": "きそ", "meaning": "Căn bản, cơ sở, nền tảng" },
+      { "word": "礎石", "hiragana": "そせき", "meaning": "Đá lót nền móng, đá tảng xây nhà" }
+    ]
+  },
+  {
+    "kanji": "示",
+    "han_viet": "THỊ",
+    "meaning": "chỉ thị",
+    "examples": [
+      { "word": "示す", "hiragana": "しめす", "meaning": "Biểu thị, chỉ ra, cho xem" },
+      { "word": "指示", "hiragana": "しじ", "meaning": "Chỉ thị, hướng dẫn, ra lệnh" },
+      { "word": "表示", "hiragana": "ひょうじ", "meaning": "Hiển thị, nhãn mác" }
+    ]
+  },
+  {
+    "kanji": "票",
+    "han_viet": "PHIÊU",
+    "meaning": "lá phiếu",
+    "examples": [
+      { "word": "投票", "hiragana": "とうhyou", "meaning": "Bỏ phiếu, bầu chọn" },
+      { "word": "伝票", "hiragana": "でんぴょう", "meaning": "Hóa đơn, phiếu thu chi" },
+      { "word": "目標票", "hiragana": "ひょう", "meaning": "Lá phiếu, bảng biểu (thường gọi chung là 票)" }
+    ]
+  },
+  {
+    "kanji": "祭",
+    "han_viet": "TẾ",
+    "meaning": "lễ hội",
+    "examples": [
+      { "word": "祭り", "hiragana": "まつり", "meaning": "Lễ hội" },
+      { "word": "文化祭", "hiragana": "ぶんかさい", "meaning": "Lễ hội văn hóa trường học" },
+      { "word": "祭日", "hiragana": "さいじつ", "meaning": "Ngày lễ, ngày hội cúng tế" }
     ]
   }
 ]

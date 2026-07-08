@@ -4,8 +4,16 @@
     "han_viet": "ĐẨU",
     "meaning": "Sao Bắc Đẩu",
     "examples": [
-      { "word": "北斗七星", "hiragana": "ほくとしちせい", "meaning": "Chòm sao Bắc Đẩu" },
-      { "word": "奮闘", "hiragana": "ふんとう", "meaning": "Phấn đấu, đấu tranh" }
+      {
+        "word": "北斗七星",
+        "hiragana": "ほくとしちせい",
+        "meaning": "Chòm sao Bắc Đẩu"
+      },
+      {
+        "word": "奮闘",
+        "hiragana": "ふんとう",
+        "meaning": "Phấn đấu, đấu tranh"
+      }
     ]
   },
   {
@@ -14,8 +22,16 @@
     "meaning": "Nguyên liệu",
     "examples": [
       { "word": "料理", "hiragana": "りょうり", "meaning": "Món ăn, nấu ăn" },
-      { "word": "料金", "hiragana": "りょうきん", "meaning": "Chi phí, tiền thù lao" },
-      { "word": "材料", "hiragana": "ざいりょう", "meaning": "Vật liệu, nguyên liệu" }
+      {
+        "word": "料金",
+        "hiragana": "りょうきん",
+        "meaning": "Chi phí, tiền thù lao"
+      },
+      {
+        "word": "材料",
+        "hiragana": "ざいりょう",
+        "meaning": "Vật liệu, nguyên liệu"
+      }
     ]
   },
   {
@@ -32,7 +48,11 @@
     "han_viet": "CÂN",
     "meaning": "1 cân ta (16 lạng)",
     "examples": [
-      { "word": "食パン1斤", "hiragana": "しょくパンいっきん", "meaning": "Một ổ bánh mì gối (đơn vị đếm bánh mì tại Nhật)" }
+      {
+        "word": "食パン1斤",
+        "hiragana": "しょくパンいっきん",
+        "meaning": "Một ổ bánh mì gối (đơn vị đếm bánh mì tại Nhật)"
+      }
     ]
   },
   {
@@ -40,8 +60,16 @@
     "han_viet": "XÍCH",
     "meaning": "Đánh đuổi",
     "examples": [
-      { "word": "排斥", "hiragana": "はいせき", "meaning": "Bài xích, tẩy chay" },
-      { "word": "斥候", "hiragana": "せっこう", "meaning": "Trinh sát, do thám" }
+      {
+        "word": "排斥",
+        "hiragana": "はいせき",
+        "meaning": "Bài xích, tẩy chay"
+      },
+      {
+        "word": "斥候",
+        "hiragana": "せっこう",
+        "meaning": "Trinh sát, do thám"
+      }
     ]
   },
   {
@@ -50,7 +78,11 @@
     "meaning": "Chém",
     "examples": [
       { "word": "斬る", "hiragana": "きる", "meaning": "Chém, chém đầu" },
-      { "word": "斬新", "hiragana": "ざんしん", "meaning": "Tính mới mẻ, độc đáo, mang tính bước ngoặt" }
+      {
+        "word": "斬新",
+        "hiragana": "ざんしん",
+        "meaning": "Tính mới mẻ, độc đáo, mang tính bước ngoặt"
+      }
     ]
   },
   {
@@ -59,8 +91,16 @@
     "meaning": "Từ chối, chặt đứt",
     "examples": [
       { "word": "断る", "hiragana": "ことわる", "meaning": "Từ chối" },
-      { "word": "決断", "hiragana": "けつだん", "meaning": "Quyết đoán, quyết định" },
-      { "word": "断水", "hiragana": "だんすい", "meaning": "Cúp nước, mất nước" }
+      {
+        "word": "決断",
+        "hiragana": "けつだん",
+        "meaning": "Quyết đoán, quyết định"
+      },
+      {
+        "word": "断水",
+        "hiragana": "だんすい",
+        "meaning": "Cúp nước, mất nước"
+      }
     ]
   },
   {
@@ -78,9 +118,17 @@
     "han_viet": "PHƯƠNG",
     "meaning": "Phía, cách",
     "examples": [
-      { "word": "方法", "hiragana": "ほうほう", "meaning": "Phương pháp, cách thức" },
+      {
+        "word": "方法",
+        "hiragana": "ほうほう",
+        "meaning": "Phương pháp, cách thức"
+      },
       { "word": "方向", "hiragana": "ほうこう", "meaning": "Phương hướng" },
-      { "word": "あの方", "hiragana": "あのかた", "meaning": "Vị kia, người kia (lịch sự)" }
+      {
+        "word": "あの方",
+        "hiragana": "あのかた",
+        "meaning": "Vị kia, người kia (lịch sự)"
+      }
     ]
   },
   {
@@ -88,8 +136,16 @@
     "han_viet": "THI",
     "meaning": "Thi hành",
     "examples": [
-      { "word": "実施", "hiragana": "じっし", "meaning": "Thực thi, thực hiện" },
-      { "word": "施設", "hiragana": "しせつ", "meaning": "Cơ sở vật chất, thiết bị" }
+      {
+        "word": "実施",
+        "hiragana": "じっし",
+        "meaning": "Thực thi, thực hiện"
+      },
+      {
+        "word": "施設",
+        "hiragana": "しせつ",
+        "meaning": "Cơ sở vật chất, thiết bị"
+      }
     ]
   },
   {
@@ -97,9 +153,17 @@
     "han_viet": "LỮ",
     "meaning": "Du lịch",
     "examples": [
-      { "word": "旅", "hiragana": "たび", "meaning": "Chuyến đi, cuộc hành trình" },
+      {
+        "word": "旅",
+        "hiragana": "たび",
+        "meaning": "Chuyến đi, cuộc hành trình"
+      },
       { "word": "旅行", "hiragana": "りょこう", "meaning": "Du lịch" },
-      { "word": "旅館", "hiragana": "りょかん", "meaning": "Lữ quán, nhà trọ kiểu Nhật" }
+      {
+        "word": "旅館",
+        "hiragana": "りょかん",
+        "meaning": "Lữ quán, nhà trọ kiểu Nhật"
+      }
     ]
   },
   {
@@ -107,7 +171,11 @@
     "han_viet": "TOÀN",
     "meaning": "Đi vòng tròn",
     "examples": [
-      { "word": "旋回", "hiragana": "せんかい", "meaning": "Sự xoay vòng, lượn vòng" },
+      {
+        "word": "旋回",
+        "hiragana": "せんかい",
+        "meaning": "Sự xoay vòng, lượn vòng"
+      },
       { "word": "旋律", "hiragana": "せんりつ", "meaning": "Giai điệu" }
     ]
   },
@@ -145,7 +213,11 @@
     "meaning": "Ngày, mặt trời",
     "examples": [
       { "word": "日", "hiragana": "ひ / か", "meaning": "Ngày, mặt trời" },
-      { "word": "日本", "hiragana": "にほん / にっぽん", "meaning": "Nhật Bản" },
+      {
+        "word": "日本",
+        "hiragana": "にほん / にっぽん",
+        "meaning": "Nhật Bản"
+      },
       { "word": "日記", "hiragana": "にっき", "meaning": "Nhật ký" }
     ]
   },
@@ -155,7 +227,11 @@
     "meaning": "Cũ",
     "examples": [
       { "word": "旧館", "hiragana": "きゅうかん", "meaning": "Tòa nhà cũ" },
-      { "word": "復旧", "hiragana": "ふっきゅう", "meaning": "Phục hồi (hệ thống, đường sá...)" }
+      {
+        "word": "復旧",
+        "hiragana": "ふっきゅう",
+        "meaning": "Phục hồi (hệ thống, đường sá...)"
+      }
     ]
   },
   {
@@ -163,8 +239,16 @@
     "han_viet": "ĐÁN",
     "meaning": "Nguyên đán",
     "examples": [
-      { "word": "元旦", "hiragana": "がんたん", "meaning": "Sáng mùng một Tết" },
-      { "word": "旦na", "hiragana": "だんな", "meaning": "Ông xã, chồng (旦那)" }
+      {
+        "word": "元旦",
+        "hiragana": "がんたん",
+        "meaning": "Sáng mùng một Tết"
+      },
+      {
+        "word": "旦na",
+        "hiragana": "だんな",
+        "meaning": "Ông xã, chồng (旦那)"
+      }
     ]
   },
   {
@@ -190,8 +274,16 @@
     "han_viet": "THĂNG",
     "meaning": "Thăng tiến",
     "examples": [
-      { "word": "昇進", "hiragana": "しょうしん", "meaning": "Thăng tiến, thăng chức" },
-      { "word": "上昇", "hiragana": "じょうしょう", "meaning": "Tăng cao, lên cao" }
+      {
+        "word": "昇進",
+        "hiragana": "しょうしん",
+        "meaning": "Thăng tiến, thăng chức"
+      },
+      {
+        "word": "上昇",
+        "hiragana": "じょうしょう",
+        "meaning": "Tăng cao, lên cao"
+      }
     ]
   },
   {
@@ -200,8 +292,16 @@
     "meaning": "Dễ, mậu dịch",
     "examples": [
       { "word": "容易", "hiragana": "ようい", "meaning": "Dễ dàng, đơn giản" },
-      { "word": "貿易", "hiragana": "ぼうえき", "meaning": "Mậu dịch, ngoại thương" },
-      { "word": "優しい", "hiragana": "やさしい", "meaning": "Dễ (từ gốc dịch sang chữ 易)" }
+      {
+        "word": "貿易",
+        "hiragana": "ぼうえき",
+        "meaning": "Mậu dịch, ngoại thương"
+      },
+      {
+        "word": "優しい",
+        "hiragana": "やさしい",
+        "meaning": "Dễ (từ gốc dịch sang chữ 易)"
+      }
     ]
   },
   {
@@ -209,8 +309,16 @@
     "han_viet": "THỊ",
     "meaning": "Đúng, phải",
     "examples": [
-      { "word": "是非", "hiragana": "ぜひ", "meaning": "Nhất định, từ mọi giá; đúng sai" },
-      { "word": "是正", "hiragana": "ぜせい", "meaning": "Sửa cho đúng, điều chỉnh" }
+      {
+        "word": "是非",
+        "hiragana": "ぜひ",
+        "meaning": "Nhất định, từ mọi giá; đúng sai"
+      },
+      {
+        "word": "是正",
+        "hiragana": "ぜせい",
+        "meaning": "Sửa cho đúng, điều chỉnh"
+      }
     ]
   },
   {
@@ -228,9 +336,17 @@
     "han_viet": "CẢNH",
     "meaning": "Cảnh sắc",
     "examples": [
-      { "word": "景色", "hiragana": "けしき", "meaning": "Phong cảnh, cảnh sắc" },
+      {
+        "word": "景色",
+        "hiragana": "けしき",
+        "meaning": "Phong cảnh, cảnh sắc"
+      },
       { "word": "景気", "hiragana": "けいき", "meaning": "Tình hình kinh tế" },
-      { "word": "背景", "hiragana": "はいけい", "meaning": "Bối cảnh, phông nền" }
+      {
+        "word": "背景",
+        "hiragana": "はいけい",
+        "meaning": "Bối cảnh, phông nền"
+      }
     ]
   },
   {
@@ -248,7 +364,11 @@
     "meaning": "Thủy tinh",
     "examples": [
       { "word": "結晶", "hiragana": "けっしょう", "meaning": "Kết tinh" },
-      { "word": "液晶", "hiragana": "えきしょう", "meaning": "Tinh thể lỏng (màn hình LCD)" }
+      {
+        "word": "液晶",
+        "hiragana": "えきしょう",
+        "meaning": "Tinh thể lỏng (màn hình LCD)"
+      }
     ]
   },
   {
@@ -257,7 +377,11 @@
     "meaning": "Bạo lực",
     "examples": [
       { "word": "暴力", "hiragana": "ぼうりょく", "meaning": "Bạo lực" },
-      { "word": "暴れる", "hiragana": "あばれる", "meaning": "Nổi khùng, làm loạn" },
+      {
+        "word": "暴れる",
+        "hiragana": "あばれる",
+        "meaning": "Nổi khùng, làm loạn"
+      },
       { "word": "暴露", "hiragana": "ばくろ", "meaning": "Vạch trần, phơi bày" }
     ]
   },
@@ -275,9 +399,21 @@
     "han_viet": "TUẦN",
     "meaning": "10 ngày",
     "examples": [
-      { "word": "上旬", "hiragana": "じょうじゅん", "meaning": "Thượng tuần (10 ngày đầu tháng)" },
-      { "word": "中旬", "hiragana": "ちゅうじゅん", "meaning": "Trung tuần (10 ngày giữa tháng)" },
-      { "word": "下旬", "hiragana": "げじゅん", "meaning": "Hạ tuần (10 ngày cuối tháng)" }
+      {
+        "word": "上旬",
+        "hiragana": "じょうじゅん",
+        "meaning": "Thượng tuần (10 ngày đầu tháng)"
+      },
+      {
+        "word": "中旬",
+        "hiragana": "ちゅうじゅん",
+        "meaning": "Trung tuần (10 ngày giữa tháng)"
+      },
+      {
+        "word": "下旬",
+        "hiragana": "げじゅん",
+        "meaning": "Hạ tuần (10 ngày cuối tháng)"
+      }
     ]
   },
   {
@@ -296,8 +432,16 @@
     "meaning": "Tôn chỉ, chân lý",
     "examples": [
       { "word": "要旨", "hiragana": "ようし", "meaning": "Tóm tắt, ý chính" },
-      { "word": "本旨", "hiragana": "ほんし", "meaning": "Ý định chủ đạo, tôn chỉ" },
-      { "word": "旨い", "hiragana": "うまい", "meaning": "Ngon, khéo léo (nghĩa mở rộng)" }
+      {
+        "word": "本旨",
+        "hiragana": "ほんし",
+        "meaning": "Ý định chủ đạo, tôn chỉ"
+      },
+      {
+        "word": "旨い",
+        "hiragana": "うまい",
+        "meaning": "Ngon, khéo léo (nghĩa mở rộng)"
+      }
     ]
   },
   {
@@ -306,7 +450,11 @@
     "meaning": "Xưa cũ",
     "examples": [
       { "word": "昔", "hiragana": "むかし", "meaning": "Ngày xưa" },
-      { "word": "昔話", "hiragana": "むかしばなし", "meaning": "Truyện cổ tích" }
+      {
+        "word": "昔話",
+        "hiragana": "むかしばなし",
+        "meaning": "Truyện cổ tích"
+      }
     ]
   },
   {
@@ -323,7 +471,11 @@
     "han_viet": "PHỔ",
     "meaning": "Phổ biến",
     "examples": [
-      { "word": "普通", "hiragana": "ふつう", "meaning": "Thông thường, bình thường" },
+      {
+        "word": "普通",
+        "hiragana": "ふつう",
+        "meaning": "Thông thường, bình thường"
+      },
       { "word": "普及", "hiragana": "ふきゅう", "meaning": "Phổ cập, phổ biến" }
     ]
   },
@@ -332,9 +484,17 @@
     "han_viet": "MỘ",
     "meaning": "Trời tối",
     "examples": [
-      { "word": "暮れる", "hiragana": "くれる", "meaning": "Lặn (mặt trời), hết (năm, ngày)" },
+      {
+        "word": "暮れる",
+        "hiragana": "くれる",
+        "meaning": "Lặn (mặt trời), hết (năm, ngày)"
+      },
       { "word": "暮らす", "hiragana": "くらす", "meaning": "Sinh sống" },
-      { "word": "一人暮らし", "hiragana": "ひとりぐらし", "meaning": "Sống một mình" }
+      {
+        "word": "一人暮らし",
+        "hiragana": "ひとりぐらし",
+        "meaning": "Sống một mình"
+      }
     ]
   },
   {
@@ -343,8 +503,16 @@
     "meaning": "Dương lịch, âm lịch",
     "examples": [
       { "word": "暦", "hiragana": "こよみ", "meaning": "Lịch, quyển lịch" },
-      { "word": "西暦", "hiragana": "せいれき", "meaning": "Tây lịch (Dương lịch)" },
-      { "word": "履歴書", "hiragana": "りれきしょ", "meaning": "Sơ yếu lý lịch" }
+      {
+        "word": "西暦",
+        "hiragana": "せいれき",
+        "meaning": "Tây lịch (Dương lịch)"
+      },
+      {
+        "word": "履歴書",
+        "hiragana": "りれきしょ",
+        "meaning": "Sơ yếu lý lịch"
+      }
     ]
   },
   {
@@ -352,8 +520,16 @@
     "han_viet": "TẠM",
     "meaning": "Tạm thời",
     "examples": [
-      { "word": "暫定", "hiragana": "ざんてi", "meaning": "Tạm định, tạm thời" },
-      { "word": "暫く", "hiragana": "しばらく", "meaning": "Một chốc, một lát, đã lâu không gặp" }
+      {
+        "word": "暫定",
+        "hiragana": "ざんてi",
+        "meaning": "Tạm định, tạm thời"
+      },
+      {
+        "word": "暫く",
+        "hiragana": "しばらく",
+        "meaning": "Một chốc, một lát, đã lâu không gặp"
+      }
     ]
   },
   {
@@ -361,9 +537,21 @@
     "han_viet": "MINH",
     "meaning": "Sáng sủa",
     "examples": [
-      { "word": "明るい", "hiragana": "あかるい", "meaning": "Sáng sủa, tươi vui" },
-      { "word": "明日", "hiragana": "あした / みょうにち", "meaning": "Ngày mai" },
-      { "word": "説明", "hiragana": "せつめい", "meaning": "Thuyết minh, giải thích" }
+      {
+        "word": "明るい",
+        "hiragana": "あかるい",
+        "meaning": "Sáng sủa, tươi vui"
+      },
+      {
+        "word": "明日",
+        "hiragana": "あした / みょうにち",
+        "meaning": "Ngày mai"
+      },
+      {
+        "word": "説明",
+        "hiragana": "せつめい",
+        "meaning": "Thuyết minh, giải thích"
+      }
     ]
   },
   {
@@ -371,7 +559,11 @@
     "han_viet": "VƯỢNG",
     "meaning": "Thịnh vượng",
     "examples": [
-      { "word": "旺盛", "hiragana": "おうせい", "meaning": "Thịnh vượng, dồi dào, phấn chấn (ví dụ: 食欲旺盛 - thèm ăn dồi dào)" }
+      {
+        "word": "旺盛",
+        "hiragana": "おうせい",
+        "meaning": "Thịnh vượng, dồi dào, phấn chấn (ví dụ: 食欲旺盛 - thèm ăn dồi dào)"
+      }
     ]
   },
   {
@@ -379,7 +571,11 @@
     "han_viet": "MUỘI",
     "meaning": "Mê muội",
     "examples": [
-      { "word": "曖昧", "hiragana": "あいまい", "meaning": "Mơ hồ, mập mờ, không rõ ràng" },
+      {
+        "word": "曖昧",
+        "hiragana": "あいまい",
+        "meaning": "Mơ hồ, mập mờ, không rõ ràng"
+      },
       { "word": "愚昧", "hiragana": "ぐまい", "meaning": "Ngu muội, dốt nát" }
     ]
   },
@@ -389,7 +585,11 @@
     "meaning": "Phản chiếu",
     "examples": [
       { "word": "映画", "hiragana": "えいが", "meaning": "Phim ảnh" },
-      { "word": "映る", "hiragana": "うつる", "meaning": "Phản chiếu, soi bóng" },
+      {
+        "word": "映る",
+        "hiragana": "うつる",
+        "meaning": "Phản chiếu, soi bóng"
+      },
       { "word": "反映", "hiragana": "はんえい", "meaning": "Phản ánh" }
     ]
   },
@@ -400,7 +600,11 @@
     "examples": [
       { "word": "昨日", "hiragana": "きのう / さくじつ", "meaning": "Hôm qua" },
       { "word": "昨年", "hiragana": "さくねん", "meaning": "Năm ngoái" },
-      { "word": "一昨日", "hiragana": "おととい / いっさくじつ", "meaning": "Hôm kia" }
+      {
+        "word": "一昨日",
+        "hiragana": "おととい / いっさくじつ",
+        "meaning": "Hôm kia"
+      }
     ]
   },
   {
@@ -408,7 +612,11 @@
     "han_viet": "CHIÊU",
     "meaning": "Thời chiêu hòa",
     "examples": [
-      { "word": "昭和", "hiragana": "しょうわ", "meaning": "Thời kỳ Showa (Chiêu Hòa)" }
+      {
+        "word": "昭和",
+        "hiragana": "しょうわ",
+        "meaning": "Thời kỳ Showa (Chiêu Hòa)"
+      }
     ]
   },
   {
@@ -417,7 +625,11 @@
     "meaning": "Thời gian",
     "examples": [
       { "word": "時", "hiragana": "とき", "meaning": "Khi, thời điểm" },
-      { "word": "時間", "hiragana": "じかん", "meaning": "Thời gian, tiếng đồng hồ" },
+      {
+        "word": "時間",
+        "hiragana": "じかん",
+        "meaning": "Thời gian, tiếng đồng hồ"
+      },
       { "word": "時計", "hiragana": "とけい", "meaning": "Đồng hồ" }
     ]
   },
@@ -436,8 +648,16 @@
     "han_viet": "TÌNH",
     "meaning": "Trời nắng",
     "examples": [
-      { "word": "晴れる", "hiragana": "晴れる / はれる", "meaning": "Nắng, quang đãng (thời tiết)" },
-      { "word": "晴天", "hiragana": "せいてん", "meaning": "Trời quang đãng, thời tiết đẹp" },
+      {
+        "word": "晴れる",
+        "hiragana": "晴れる / はれる",
+        "meaning": "Nắng, quang đãng (thời tiết)"
+      },
+      {
+        "word": "晴天",
+        "hiragana": "せいてん",
+        "meaning": "Trời quang đãng, thời tiết đẹp"
+      },
       { "word": "素晴らしい", "hiragana": "すばらしい", "meaning": "Tuyệt vời" }
     ]
   },
@@ -446,7 +666,11 @@
     "han_viet": "HIỂU",
     "meaning": "Sáng sớm",
     "examples": [
-      { "word": "暁", "hiragana": "あかつき", "meaning": "Bình minh, khi thành công (nghĩa bóng)" },
+      {
+        "word": "暁",
+        "hiragana": "あかつき",
+        "meaning": "Bình minh, khi thành công (nghĩa bóng)"
+      },
       { "word": "今暁", "hiragana": "こんぎょう", "meaning": "Sáng sớm nay" }
     ]
   },
@@ -456,7 +680,11 @@
     "meaning": "Nhàn rỗi",
     "examples": [
       { "word": "暇", "hiragana": "ひま", "meaning": "Rảnh rỗi" },
-      { "word": "休暇", "hiragana": "きゅうか", "meaning": "Kỳ nghỉ, ngày nghỉ phép" }
+      {
+        "word": "休暇",
+        "hiragana": "きゅうか",
+        "meaning": "Kỳ nghỉ, ngày nghỉ phép"
+      }
     ]
   },
   {
@@ -464,7 +692,11 @@
     "han_viet": "NOÃN",
     "meaning": "Trời ấm áp",
     "examples": [
-      { "word": "暖かい", "hiragana": "あたたかい", "meaning": "Ấm áp (thời tiết)" },
+      {
+        "word": "暖かい",
+        "hiragana": "あたたかい",
+        "meaning": "Ấm áp (thời tiết)"
+      },
       { "word": "暖房", "hiragana": "だんぼう", "meaning": "Hệ thống sưởi ấm" },
       { "word": "温暖", "hiragana": "おんだん", "meaning": "Ấm áp, ôn hòa" }
     ]
@@ -484,7 +716,11 @@
     "han_viet": "ÁI",
     "meaning": "Không rõ",
     "examples": [
-      { "word": "曖昧", "hiragana": "あいまい", "meaning": "Mơ hồ, mập mờ, không rõ ràng" }
+      {
+        "word": "曖昧",
+        "hiragana": "あいまい",
+        "meaning": "Mơ hồ, mập mờ, không rõ ràng"
+      }
     ]
   },
   {
@@ -502,7 +738,11 @@
     "meaning": "Bản nhạc, uốn cong",
     "examples": [
       { "word": "曲", "hiragana": "きょく", "meaning": "Bài hát, bản nhạc" },
-      { "word": "曲がる", "hiragana": "まがる", "meaning": "Rẽ, uốn cong, quanh co" },
+      {
+        "word": "曲がる",
+        "hiragana": "まがる",
+        "meaning": "Rẽ, uốn cong, quanh co"
+      },
       { "word": "曲線", "hiragana": "きょくせん", "meaning": "Đường cong" }
     ]
   },
@@ -511,8 +751,16 @@
     "han_viet": "CANH",
     "meaning": "Đổi mới",
     "examples": [
-      { "word": "変更", "hiragana": "へんこう", "meaning": "Biến đổi, thay đổi" },
-      { "word": "更新", "hiragana": "こうしん", "meaning": "Cập nhật, gia hạn" },
+      {
+        "word": "変更",
+        "hiragana": "へんこう",
+        "meaning": "Biến đổi, thay đổi"
+      },
+      {
+        "word": "更新",
+        "hiragana": "こうしん",
+        "meaning": "Cập nhật, gia hạn"
+      },
       { "word": "夜更かし", "hiragana": "よふかし", "meaning": "Thức khuya" }
     ]
   },
@@ -540,8 +788,16 @@
     "han_viet": "TÀO",
     "meaning": "Bầy, bọn",
     "examples": [
-      { "word": "法曹", "hiragana": "ほうそう", "meaning": "Giới luật sư, tòa án, tư pháp" },
-      { "word": "曹長", "hiragana": "そうちょう", "meaning": "Thượng sĩ (quân đội)" }
+      {
+        "word": "法曹",
+        "hiragana": "ほうそう",
+        "meaning": "Giới luật sư, tòa án, tư pháp"
+      },
+      {
+        "word": "曹長",
+        "hiragana": "そうちょう",
+        "meaning": "Thượng sĩ (quân đội)"
+      }
     ]
   },
   {
@@ -550,7 +806,11 @@
     "meaning": "Từng trải",
     "examples": [
       { "word": "曽祖父", "hiragana": "そうそふ", "meaning": "Cụ ông, ông cố" },
-      { "word": "未曽有", "hiragana": "みぞう", "meaning": "Chưa từng có từ trước đến nay" }
+      {
+        "word": "未曽有",
+        "hiragana": "みぞう",
+        "meaning": "Chưa từng có từ trước đến nay"
+      }
     ]
   },
   {
@@ -558,8 +818,16 @@
     "han_viet": "THẾ",
     "meaning": "Thay thế",
     "examples": [
-      { "word": "替える", "hiragana": "かえる", "meaning": "Thay đổi, thay thế" },
-      { "word": "着替え", "hiragana": "きがえ", "meaning": "Quần áo thay thế, thay quần áo" },
+      {
+        "word": "替える",
+        "hiragana": "かえる",
+        "meaning": "Thay đổi, thay thế"
+      },
+      {
+        "word": "着替え",
+        "hiragana": "きがえ",
+        "meaning": "Quần áo thay thế, thay quần áo"
+      },
       { "word": "両替", "hiragana": "りょうがえ", "meaning": "Đổi tiền" }
     ]
   },
@@ -569,7 +837,11 @@
     "meaning": "Cao nhất",
     "examples": [
       { "word": "最初", "hiragana": "さいしょ", "meaning": "Đầu tiên" },
-      { "word": " vi cao nhất", "hiragana": "さいこう", "meaning": "Cao nhất, tuyệt vời (最高)" },
+      {
+        "word": " vi cao nhất",
+        "hiragana": "さいこう",
+        "meaning": "Cao nhất, tuyệt vời (最高)"
+      },
       { "word": "最近", "hiragana": "さいきん", "meaning": "Gần đây" }
     ]
   },
@@ -589,7 +861,11 @@
     "meaning": "Trang phục",
     "examples": [
       { "word": "服", "hiragana": "ふく", "meaning": "Quần áo, trang phục" },
-      { "word": "下着", "hiragana": "したぎ", "meaning": "Quần áo lót (chữ 着 đi kèm ngữ cảnh phục)" },
+      {
+        "word": "下着",
+        "hiragana": "したぎ",
+        "meaning": "Quần áo lót (chữ 着 đi kèm ngữ cảnh phục)"
+      },
       { "word": "服従", "hiragana": "ふくじゅう", "meaning": "Phục tùng" }
     ]
   },
@@ -598,7 +874,11 @@
     "han_viet": "TRẪM",
     "meaning": "Ta (vua xưng)",
     "examples": [
-      { "word": "朕", "hiragana": "ちん", "meaning": "Trẫm (cách xưng hô của hoàng đế Nhật Bản ngày xưa)" }
+      {
+        "word": "朕",
+        "hiragana": "ちん",
+        "meaning": "Trẫm (cách xưng hô của hoàng đế Nhật Bản ngày xưa)"
+      }
     ]
   },
   {
@@ -607,7 +887,11 @@
     "meaning": "Có",
     "examples": [
       { "word": "有名", "hiragana": "ゆうめい", "meaning": "Nổi tiếng" },
-      { "word": "有料", "hiragana": "ゆうりょう", "meaning": "Có phí, tốn tiền" },
+      {
+        "word": "有料",
+        "hiragana": "ゆうりょう",
+        "meaning": "Có phí, tốn tiền"
+      },
       { "word": "有る", "hiragana": "ある", "meaning": "Có (tồn tại sở hữu)" }
     ]
   },
@@ -616,8 +900,16 @@
     "han_viet": "LÃNG",
     "meaning": "Rõ, sáng, vui",
     "examples": [
-      { "word": "朗らか", "hiragana": "ほがらか", "meaning": "Vui vẻ, tươi vui, sáng sủa" },
-      { "word": "朗読", "hiragana": "ろうどく", "meaning": "Ngâm thơ, đọc diễn cảm công khai" }
+      {
+        "word": "朗らか",
+        "hiragana": "ほがらか",
+        "meaning": "Vui vẻ, tươi vui, sáng sủa"
+      },
+      {
+        "word": "朗読",
+        "hiragana": "ろうどく",
+        "meaning": "Ngâm thơ, đọc diễn cảm công khai"
+      }
     ]
   },
   {
@@ -635,7 +927,11 @@
     "han_viet": "KỲ",
     "meaning": "Kỳ hạn",
     "examples": [
-      { "word": "期間", "hiragana": "きかん", "meaning": "Kì hạn, thời gian kì" },
+      {
+        "word": "期間",
+        "hiragana": "きかん",
+        "meaning": "Kì hạn, thời gian kì"
+      },
       { "word": "期待", "hiragana": "きたい", "meaning": "Kỳ vọng, mong đợi" },
       { "word": "定期", "hiragana": "ていき", "meaning": "Định kỳ" }
     ]
@@ -645,9 +941,17 @@
     "han_viet": "VỌNG",
     "meaning": "Hy vọng",
     "examples": [
-      { "word": "望む", "hiragana": "のぞむ", "meaning": "Trông mong, hy vọng, nguyện vọng" },
+      {
+        "word": "望む",
+        "hiragana": "のぞむ",
+        "meaning": "Trông mong, hy vọng, nguyện vọng"
+      },
       { "word": "希望", "hiragana": "きぼう", "meaning": "Hy vọng" },
-      { "word": "志望", "hiragana": "しぼう", "meaning": "Nguyện vọng, ước muốn" }
+      {
+        "word": "志望",
+        "hiragana": "しぼう",
+        "meaning": "Nguyện vọng, ước muốn"
+      }
     ]
   },
   {
@@ -657,7 +961,11 @@
     "examples": [
       { "word": "木", "hiragana": "き", "meaning": "Cây, gỗ" },
       { "word": "木曜日", "hiragana": "もくようび", "meaning": "Thứ năm" },
-      { "word": "大木", "hiragana": "たいぼく", "meaning": "Cây cổ thụ, cây lớn" }
+      {
+        "word": "大木",
+        "hiragana": "たいぼく",
+        "meaning": "Cây cổ thụ, cây lớn"
+      }
     ]
   },
   {
@@ -666,7 +974,11 @@
     "meaning": "Sách",
     "examples": [
       { "word": "本", "hiragana": "ほん", "meaning": "Sách; gốc, rễ" },
-      { "word": "本当に", "hiragana": "ほんとうに", "meaning": "Thực sự, quả thật" },
+      {
+        "word": "本当に",
+        "hiragana": "ほんとうに",
+        "meaning": "Thực sự, quả thật"
+      },
       { "word": "日本語", "hiragana": "にほんご", "meaning": "Tiếng Nhật" }
     ]
   },
@@ -677,7 +989,11 @@
     "examples": [
       { "word": "未来", "hiragana": "みらい", "meaning": "Tương lai" },
       { "word": "未満", "hiragana": "みまん", "meaning": "Chưa đầy, ít hơn" },
-      { "word": "未定", "hiragana": "みてい", "meaning": "Chưa định, chưa quyết" }
+      {
+        "word": "未定",
+        "hiragana": "みてい",
+        "meaning": "Chưa định, chưa quyết"
+      }
     ]
   },
   {
@@ -716,7 +1032,11 @@
     "examples": [
       { "word": "約束", "hiragana": "やくそく", "meaning": "Lời hứa, ước hẹn" },
       { "word": "花束", "hiragana": "はなたば", "meaning": "Bó hoa" },
-      { "word": "結束", "hiragana": "けっそく", "meaning": "Đoàn kết, trói buộc" }
+      {
+        "word": "結束",
+        "hiragana": "けっそく",
+        "meaning": "Đoàn kết, trói buộc"
+      }
     ]
   },
   {
@@ -734,9 +1054,17 @@
     "han_viet": "QUẢ",
     "meaning": "Kết quả",
     "examples": [
-      { "word": "果物", "hiragana": "くだもの", "meaning": "Trái cây, hoa quả" },
+      {
+        "word": "果物",
+        "hiragana": "くだもの",
+        "meaning": "Trái cây, hoa quả"
+      },
       { "word": "結果", "hiragana": "けっか", "meaning": "Kết quả" },
-      { "word": "果たす", "hiragana": "はたす", "meaning": "Hoàn thành, đạt được" }
+      {
+        "word": "果たす",
+        "hiragana": "はたす",
+        "meaning": "Hoàn thành, đạt được"
+      }
     ]
   },
   {
@@ -744,9 +1072,17 @@
     "han_viet": "TRA",
     "meaning": "Điều tra",
     "examples": [
-      { "word": "調査", "hiragana": "ちょうさ", "meaning": "Điều tra, khảo sát" },
+      {
+        "word": "調査",
+        "hiragana": "ちょうさ",
+        "meaning": "Điều tra, khảo sát"
+      },
       { "word": "検査", "hiragana": "けんさ", "meaning": "Kiểm tra" },
-      { "word": "審査", "hiragana": "しんさ", "meaning": "Thẩm định, xét duyệt" }
+      {
+        "word": "審査",
+        "hiragana": "しんさ",
+        "meaning": "Thẩm định, xét duyệt"
+      }
     ]
   },
   {

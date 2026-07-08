@@ -4,8 +4,16 @@
     "han_viet": "QUÁT",
     "meaning": "Tổng quát",
     "examples": [
-      { "word": "総括", "hiragana": "そうかつ", "meaning": "Tổng quát, tổng luận" },
-      { "word": "一括", "hiragana": "いっかつ", "meaning": "Gộp lại, một loạt, cùng một lúc" },
+      {
+        "word": "総括",
+        "hiragana": "そうかつ",
+        "meaning": "Tổng quát, tổng luận"
+      },
+      {
+        "word": "一括",
+        "hiragana": "いっかつ",
+        "meaning": "Gộp lại, một loạt, cùng một lúc"
+      },
       { "word": "括弧", "hiragana": "かっこ", "meaning": "Dấu ngoặc đơn" }
     ]
   },
@@ -23,7 +31,11 @@
     "meaning": "Nhặt, thu thập",
     "examples": [
       { "word": "拾う", "hiragana": "ひろう", "meaning": "Nhặt, lượm" },
-      { "word": "収拾", "hiragana": "しゅうしゅう", "meaning": "Thu dọn, dàn xếp, dẹp yên (tình hình)" }
+      {
+        "word": "収拾",
+        "hiragana": "しゅうしゅう",
+        "meaning": "Thu dọn, dàn xếp, dẹp yên (tình hình)"
+      }
     ]
   },
   {
@@ -31,9 +43,21 @@
     "han_viet": "TRÌ",
     "meaning": "Duy trì, cầm nắm",
     "examples": [
-      { "word": "持つ", "hiragana": "まつ", "meaning": "Cầm, nắm, mang theo, có" },
-      { "word": "持参する", "hiragana": "じさんする", "meaning": "Mang theo, đem theo" },
-      { "word": "維持する", "hiragana": "いじする", "meaning": "Duy trì, bảo trì" }
+      {
+        "word": "持つ",
+        "hiragana": "まつ",
+        "meaning": "Cầm, nắm, mang theo, có"
+      },
+      {
+        "word": "持参する",
+        "hiragana": "じさんする",
+        "meaning": "Mang theo, đem theo"
+      },
+      {
+        "word": "維持する",
+        "hiragana": "いじする",
+        "meaning": "Duy trì, bảo trì"
+      }
     ]
   },
   {
@@ -51,7 +75,11 @@
     "han_viet": "HIỆP",
     "meaning": "Kẹp, kẹp vào giữa",
     "examples": [
-      { "word": "挟む", "hiragana": "はさむ", "meaning": "Kẹp vào giữa, xen vào" },
+      {
+        "word": "挟む",
+        "hiragana": "はさむ",
+        "meaning": "Kẹp vào giữa, xen vào"
+      },
       { "word": "挟まる", "hiragana": "はさまる", "meaning": "Bị kẹt vào giữa" }
     ]
   },
@@ -60,8 +88,16 @@
     "han_viet": "THIÊU",
     "meaning": "Thử thách, khiêu khích",
     "examples": [
-      { "word": "挑む", "hiragana": "いどむ", "meaning": "Thử sức, thách thức" },
-      { "word": "挑戦する", "hiragana": "ちょうせんする", "meaning": "Thử thách, thách thức" }
+      {
+        "word": "挑む",
+        "hiragana": "いどむ",
+        "meaning": "Thử sức, thách thức"
+      },
+      {
+        "word": "挑戦する",
+        "hiragana": "ちょうせんする",
+        "meaning": "Thử thách, thách thức"
+      }
     ]
   },
   {
@@ -78,7 +114,11 @@
     "meaning": "Lau chùi",
     "examples": [
       { "word": "拭く", "hiragana": "ふく", "meaning": "Lau, chùi, quét dọn" },
-      { "word": "拭う", "hiragana": "ぬぐう", "meaning": "Lau ráo, xóa bỏ (mồ hôi, vết nhơ)" }
+      {
+        "word": "拭う",
+        "hiragana": "ぬぐう",
+        "meaning": "Lau ráo, xóa bỏ (mồ hôi, vết nhơ)"
+      }
     ]
   },
   {
@@ -87,7 +127,11 @@
     "meaning": "Cắm (cài) vào",
     "examples": [
       { "word": "挿す", "hiragana": "さす", "meaning": "Cắm (hoa), đính vào" },
-      { "word": "挿入する", "hiragana": "そうにゅうする", "meaning": "Chèn vào, lồng vào, đút vào" },
+      {
+        "word": "挿入する",
+        "hiragana": "そうにゅうする",
+        "meaning": "Chèn vào, lồng vào, đút vào"
+      },
       { "word": "挿絵", "hiragana": "さしえ", "meaning": "Tranh minh họa" }
     ]
   },
@@ -104,8 +148,16 @@
     "han_viet": "TỎA",
     "meaning": "Đổ vỡ, nản lòng, bong gân",
     "examples": [
-      { "word": "挫折する", "hiragana": "ざせつする", "meaning": "Nản lòng, bỏ cuộc giữa chừng" },
-      { "word": "挫傷", "hiragana": "ざしょう", "meaning": "Trật khớp, bong gân" }
+      {
+        "word": "挫折する",
+        "hiragana": "ざせつする",
+        "meaning": "Nản lòng, bỏ cuộc giữa chừng"
+      },
+      {
+        "word": "挫傷",
+        "hiragana": "ざしょう",
+        "meaning": "Trật khớp, bong gân"
+      }
     ]
   },
   {
@@ -113,7 +165,11 @@
     "han_viet": "TRÓC",
     "meaning": "Nắm bắt, tóm lấy",
     "examples": [
-      { "word": "捉える", "hiragana": "とらえる", "meaning": "Nắm bắt (ý nghĩa), chộp lấy, chiếm được" }
+      {
+        "word": "捉える",
+        "hiragana": "とらえる",
+        "meaning": "Nắm bắt (ý nghĩa), chộp lấy, chiếm được"
+      }
     ]
   },
   {
@@ -121,9 +177,21 @@
     "han_viet": "CHẤN",
     "meaning": "Vẫy, lúc lắc, chấn hưng",
     "examples": [
-      { "word": "振る", "hiragana": "ふる", "meaning": "Vẫy (tay), lắc, đá/bỏ (người yêu)" },
-      { "word": "振り返る", "hiragana": "ふりかえる", "meaning": "Ngoảnh lại, nhìn lại quá khứ" },
-      { "word": "振動する", "hiragana": "しんどうする", "meaning": "Chấn động, rung động" }
+      {
+        "word": "振る",
+        "hiragana": "ふる",
+        "meaning": "Vẫy (tay), lắc, đá/bỏ (người yêu)"
+      },
+      {
+        "word": "振り返る",
+        "hiragana": "ふりかえる",
+        "meaning": "Ngoảnh lại, nhìn lại quá khứ"
+      },
+      {
+        "word": "振動する",
+        "hiragana": "しんどうする",
+        "meaning": "Chấn động, rung động"
+      }
     ]
   },
   {
@@ -131,9 +199,21 @@
     "han_viet": "BỔ",
     "meaning": "Bắt, nắm bắt",
     "examples": [
-      { "word": "捕まえる", "hiragana": "つかまえる", "meaning": "Bắt, tóm (tội phạm, cá)" },
-      { "word": "捕らえる", "hiragana": "とらえる", "meaning": "Bắt giữ, bắt quả tang" },
-      { "word": "捕獲する", "hiragana": "ほかくする", "meaning": "Bắt giữ, săn bắt (động vật)" }
+      {
+        "word": "捕まえる",
+        "hiragana": "つかまえる",
+        "meaning": "Bắt, tóm (tội phạm, cá)"
+      },
+      {
+        "word": "捕らえる",
+        "hiragana": "とらえる",
+        "meaning": "Bắt giữ, bắt quả tang"
+      },
+      {
+        "word": "捕獲する",
+        "hiragana": "ほかくする",
+        "meaning": "Bắt giữ, săn bắt (động vật)"
+      }
     ]
   },
   {
@@ -141,8 +221,16 @@
     "han_viet": "SƯU",
     "meaning": "Tìm kiếm",
     "examples": [
-      { "word": "捜す", "hiragana": "さがす", "meaning": "Tìm kiếm (đồ vật bị mất, người mất tích)" },
-      { "word": "捜査する", "hiragana": "そうさする", "meaning": "Điều tra, tìm kiếm (phá án)" }
+      {
+        "word": "捜す",
+        "hiragana": "さがす",
+        "meaning": "Tìm kiếm (đồ vật bị mất, người mất tích)"
+      },
+      {
+        "word": "捜査する",
+        "hiragana": "そうさする",
+        "meaning": "Điều tra, tìm kiếm (phá án)"
+      }
     ]
   },
   {
@@ -151,7 +239,11 @@
     "meaning": "Vứt bỏ",
     "examples": [
       { "word": "捨てる", "hiragana": "すてる", "meaning": "Vứt bỏ, ném đi" },
-      { "word": "四捨五入する", "hiragana": "ししゃごにゅうする", "meaning": "Làm tròn số (lấy 5 hệ số)" }
+      {
+        "word": "四捨五入する",
+        "hiragana": "ししゃごにゅうする",
+        "meaning": "Làm tròn số (lấy 5 hệ số)"
+      }
     ]
   },
   {
@@ -159,9 +251,17 @@
     "han_viet": "TẢO",
     "meaning": "Quét dọn",
     "examples": [
-      { "word": "掃除する", "hiragana": "そうじする", "meaning": "Quét dọn, vệ sinh" },
+      {
+        "word": "掃除する",
+        "hiragana": "そうじする",
+        "meaning": "Quét dọn, vệ sinh"
+      },
       { "word": "掃く", "hiragana": "はく", "meaning": "Quét (nhà, sân)" },
-      { "word": "一掃する", "hiragana": "いっそうする", "meaning": "Quét sạch, loại bỏ hoàn toàn" }
+      {
+        "word": "一掃する",
+        "hiragana": "いっそうする",
+        "meaning": "Quét sạch, loại bỏ hoàn toàn"
+      }
     ]
   },
   {
@@ -169,9 +269,21 @@
     "han_viet": "THỤ",
     "meaning": "Truyền thụ, ban cho",
     "examples": [
-      { "word": "授業", "hiragana": "じゅぎょう", "meaning": "Giờ học, buổi học" },
-      { "word": "教授", "hiragana": "きょうじゅ", "meaning": "Giáo sư; Giảng dạy" },
-      { "word": "授かる", "hiragana": "さずかる", "meaning": "Được ban cho, nhận được" }
+      {
+        "word": "授業",
+        "hiragana": "じゅぎょう",
+        "meaning": "Giờ học, buổi học"
+      },
+      {
+        "word": "教授",
+        "hiragana": "きょうじゅ",
+        "meaning": "Giáo sư; Giảng dạy"
+      },
+      {
+        "word": "授かる",
+        "hiragana": "さずかる",
+        "meaning": "Được ban cho, nhận được"
+      }
     ]
   },
   {
@@ -179,8 +291,16 @@
     "han_viet": "BÀI",
     "meaning": "Bài trừ, loại bỏ, bài tiết",
     "examples": [
-      { "word": "排除する", "hiragana": "はいじょする", "meaning": "Bài trừ, loại bỏ" },
-      { "word": "排水", "hiragana": "はいすい", "meaning": "Thoát nước, nước thải" },
+      {
+        "word": "排除する",
+        "hiragana": "はいじょする",
+        "meaning": "Bài trừ, loại bỏ"
+      },
+      {
+        "word": "排水",
+        "hiragana": "はいすい",
+        "meaning": "Thoát nước, nước thải"
+      },
       { "word": "排気", "hiragana": "はいき", "meaning": "Khí thải, thông hơi" }
     ]
   },
@@ -190,8 +310,16 @@
     "meaning": "Khai quật, đào",
     "examples": [
       { "word": "掘る", "hiragana": "ほる", "meaning": "Đào (đất, hố)" },
-      { "word": "発掘する", "hiragana": "はっくつする", "meaning": "Phát khích, khai quật (cổ vật), tìm ra (tài năng)" },
-      { "word": "掘削する", "hiragana": "くっさくする", "meaning": "Đào bới, khoan mỏ" }
+      {
+        "word": "発掘する",
+        "hiragana": "はっくつする",
+        "meaning": "Phát khích, khai quật (cổ vật), tìm ra (tài năng)"
+      },
+      {
+        "word": "掘削する",
+        "hiragana": "くっさくする",
+        "meaning": "Đào bới, khoan mỏ"
+      }
     ]
   },
   {
@@ -199,8 +327,16 @@
     "han_viet": "QUẢI",
     "meaning": "Treo, tốn (thời gian, tiền bạc)",
     "examples": [
-      { "word": "掛ける", "hiragana": "かける", "meaning": "Treo lên, dành (thời gian), nhân (toán học)" },
-      { "word": "掛かる", "hiragana": "かかる", "meaning": "Tốn, mất (thời gian, tiền bạc), bị treo" },
+      {
+        "word": "掛ける",
+        "hiragana": "かける",
+        "meaning": "Treo lên, dành (thời gian), nhân (toán học)"
+      },
+      {
+        "word": "掛かる",
+        "hiragana": "かかる",
+        "meaning": "Tốn, mất (thời gian, tiền bạc), bị treo"
+      },
       { "word": "掛け算", "hiragana": "かけざん", "meaning": "Phép nhân" }
     ]
   },
@@ -209,8 +345,16 @@
     "han_viet": "THÁI",
     "meaning": "Hái, thu thập, tuyển dụng",
     "examples": [
-      { "word": "採る", "hiragana": "とる", "meaning": "Hái (quả), chấp nhận, tuyển dụng" },
-      { "word": "採用する", "hiragana": "さいようする", "meaning": "Tuyển dụng, áp dụng" },
+      {
+        "word": "採る",
+        "hiragana": "とる",
+        "meaning": "Hái (quả), chấp nhận, tuyển dụng"
+      },
+      {
+        "word": "採用する",
+        "hiragana": "さいようする",
+        "meaning": "Tuyển dụng, áp dụng"
+      },
       { "word": "採点する", "hiragana": "さいてんする", "meaning": "Chấm điểm" }
     ]
   },
@@ -219,8 +363,16 @@
     "han_viet": "THÁM",
     "meaning": "Thám hiểm, tìm kiếm",
     "examples": [
-      { "word": "探す", "hiragana": "さがす", "meaning": "Tìm kiếm (thứ mình mong muốn như việc làm, nhà ở)" },
-      { "word": "探る", "hiragana": "さぐる", "meaning": "Sờ soạng, thăm dò, khám phá" },
+      {
+        "word": "探す",
+        "hiragana": "さがす",
+        "meaning": "Tìm kiếm (thứ mình mong muốn như việc làm, nhà ở)"
+      },
+      {
+        "word": "探る",
+        "hiragana": "さぐる",
+        "meaning": "Sờ soạng, thăm dò, khám phá"
+      },
       { "word": "探偵", "hiragana": "たんてい", "meaning": "Thám tử" }
     ]
   },
@@ -229,7 +381,11 @@
     "han_viet": "TIẾP",
     "meaning": "Tiếp xúc, nối, trực tiếp",
     "examples": [
-      { "word": "接する", "hiragana": "せっする", "meaning": "Tiếp xúc, giao tiếp, kề bên" },
+      {
+        "word": "接する",
+        "hiragana": "せっする",
+        "meaning": "Tiếp xúc, giao tiếp, kề bên"
+      },
       { "word": "直接", "hiragana": "ちょくせつ", "meaning": "Trực tiếp" },
       { "word": "面接する", "hiragana": "めんせつする", "meaning": "Phỏng vấn" }
     ]
@@ -239,9 +395,17 @@
     "han_viet": "KHỐNG",
     "meaning": "Hạn chế, khấu trừ, ghi chép",
     "examples": [
-      { "word": "控える", "hiragana": "ひかえる", "meaning": "Chờ đợi, kiềm chế, ghi lại (để nhớ)" },
+      {
+        "word": "控える",
+        "hiragana": "ひかえる",
+        "meaning": "Chờ đợi, kiềm chế, ghi lại (để nhớ)"
+      },
       { "word": "控え室", "hiragana": "ひかえしつ", "meaning": "Phòng chờ" },
-      { "word": "控除する", "hiragana": "こうじょする", "meaning": "Khấu trừ (thuế...)" }
+      {
+        "word": "控除する",
+        "hiragana": "こうじょする",
+        "meaning": "Khấu trừ (thuế...)"
+      }
     ]
   },
   {
@@ -249,9 +413,21 @@
     "han_viet": "SUY",
     "meaning": "Suy đoán, tiến cử",
     "examples": [
-      { "word": "推測する", "hiragana": "すいそくする", "meaning": "Suy đoán, phỏng đoán" },
-      { "word": "推薦する", "hiragana": "すいせんする", "meaning": "Tiến cử, giới thiệu" },
-      { "word": "推進する", "hiragana": "すいしんする", "meaning": "Thúc đẩy, đẩy mạnh (tiến độ)" }
+      {
+        "word": "推測する",
+        "hiragana": "すいそくする",
+        "meaning": "Suy đoán, phỏng đoán"
+      },
+      {
+        "word": "推薦する",
+        "hiragana": "すいせんする",
+        "meaning": "Tiến cử, giới thiệu"
+      },
+      {
+        "word": "推進する",
+        "hiragana": "すいしんする",
+        "meaning": "Thúc đẩy, đẩy mạnh (tiến độ)"
+      }
     ]
   },
   {
@@ -267,8 +443,16 @@
     "han_viet": "MIÊU",
     "meaning": "Miêu tả, vẽ",
     "examples": [
-      { "word": "描く", "hiragana": "えがく / かく", "meaning": "Vẽ, miêu tả, tưởng tượng" },
-      { "word": "描写する", "hiragana": "びょうしゃする", "meaning": "Miêu tả, khắc họa" }
+      {
+        "word": "描く",
+        "hiragana": "えがく / かく",
+        "meaning": "Vẽ, miêu tả, tưởng tượng"
+      },
+      {
+        "word": "描写する",
+        "hiragana": "びょうしゃする",
+        "meaning": "Miêu tả, khắc họa"
+      }
     ]
   },
   {
@@ -276,8 +460,16 @@
     "han_viet": "YẾT",
     "meaning": "Giơ cao, dựng cờ, đăng tải",
     "examples": [
-      { "word": "掲げる", "hiragana": "かかげる", "meaning": "Treo lên, nêu cao (lý tưởng), đăng lên" },
-      { "word": "掲示板", "hiragana": "けいじばん", "meaning": "Bảng thông báo" / "Bảng tin" }
+      {
+        "word": "掲げる",
+        "hiragana": "かかげる",
+        "meaning": "Treo lên, nêu cao (lý tưởng), đăng lên"
+      },
+      {
+        "word": "掲示板",
+        "hiragana": "けいじばん",
+        "meaning": "Bảng thông báo / Bảng tin"
+      }
     ]
   },
   {
@@ -285,8 +477,16 @@
     "han_viet": "CƯ / CỨ",
     "meaning": "Đặt, lắp đặt",
     "examples": [
-      { "word": "据える", "hiragana": "すえる", "meaning": "Đặt, bổ nhiệm, định vị" },
-      { "word": "据え置く", "hiragana": "すえおく", "meaning": "Giữ nguyên (giá cả, chức vụ), để im" }
+      {
+        "word": "据える",
+        "hiragana": "すえる",
+        "meaning": "Đặt, bổ nhiệm, định vị"
+      },
+      {
+        "word": "据え置く",
+        "hiragana": "すえおく",
+        "meaning": "Giữ nguyên (giá cả, chức vụ), để im"
+      }
     ]
   },
   {
@@ -294,8 +494,16 @@
     "han_viet": "THIỆP",
     "meaning": "Tiến triển",
     "examples": [
-      { "word": "捗る", "hiragana": "はかどる", "meaning": "Tiến triển thuận lợi, hiệu quả" },
-      { "word": "進捗", "hiragana": "しんちょく", "meaning": "Tiến độ, sự tiến triển" }
+      {
+        "word": "捗る",
+        "hiragana": "はかどる",
+        "meaning": "Tiến triển thuận lợi, hiệu quả"
+      },
+      {
+        "word": "進捗",
+        "hiragana": "しんちょく",
+        "meaning": "Tiến độ, sự tiến triển"
+      }
     ]
   },
   {
@@ -303,8 +511,16 @@
     "han_viet": "NIẾP",
     "meaning": "Vặn, xoắn",
     "examples": [
-      { "word": "捻る", "hiragana": "ひねる", "meaning": "Vặn (vòi nước), xoắn, đánh đố (suy nghĩ)" },
-      { "word": "捻出する", "hiragana": "ねんしゅつする", "meaning": "Xoay xở (thời gian, tiền bạc)" }
+      {
+        "word": "捻る",
+        "hiragana": "ひねる",
+        "meaning": "Vặn (vòi nước), xoắn, đánh đố (suy nghĩ)"
+      },
+      {
+        "word": "捻出する",
+        "hiragana": "ねんしゅつする",
+        "meaning": "Xoay xở (thời gian, tiền bạc)"
+      }
     ]
   },
   {
@@ -312,8 +528,16 @@
     "han_viet": "ĐÁP",
     "meaning": "Cưỡi, đi (xe, máy bay)",
     "examples": [
-      { "word": "搭乗する", "hiragana": "とうじょうする", "meaning": "Lên máy bay, lên tàu" },
-      { "word": "搭載する", "hiragana": "とうさいする", "meaning": "Trang bị, tích hợp (tính năng), chở (hàng)" }
+      {
+        "word": "搭乗する",
+        "hiragana": "とうじょうする",
+        "meaning": "Lên máy bay, lên tàu"
+      },
+      {
+        "word": "搭載する",
+        "hiragana": "とうさいする",
+        "meaning": "Trang bị, tích hợp (tính năng), chở (hàng)"
+      }
     ]
   },
   {
@@ -321,9 +545,21 @@
     "han_viet": "ĐỀ",
     "meaning": "Trình lên, đề xuất, cầm theo",
     "examples": [
-      { "word": "提案する", "hiragana": "ていあんする", "meaning": "Đề án, đề xuất" },
-      { "word": "提供する", "hiragana": "ていきょうする", "meaning": "Cung cấp, tài trợ" },
-      { "word": "提出する", "hiragana": "ていしゅつする", "meaning": "Nộp (bài, tài liệu)" }
+      {
+        "word": "提案する",
+        "hiragana": "ていあんする",
+        "meaning": "Đề án, đề xuất"
+      },
+      {
+        "word": "提供する",
+        "hiragana": "ていきょうする",
+        "meaning": "Cung cấp, tài trợ"
+      },
+      {
+        "word": "提出する",
+        "hiragana": "ていしゅつする",
+        "meaning": "Nộp (bài, tài liệu)"
+      }
     ]
   },
   {
@@ -331,8 +567,16 @@
     "han_viet": "DƯƠNG",
     "meaning": "Chiên, giương cao",
     "examples": [
-      { "word": "揚げる", "hiragana": "あげる", "meaning": "Chiên (ngập dầu), treo (cờ), thả (diều)" },
-      { "word": "意気揚々と", "hiragana": "いきようようと", "meaning": "Hớn hở, tràn đầy tự tin" }
+      {
+        "word": "揚げる",
+        "hiragana": "あげる",
+        "meaning": "Chiên (ngập dầu), treo (cờ), thả (diều)"
+      },
+      {
+        "word": "意気揚々と",
+        "hiragana": "いきようようと",
+        "meaning": "Hớn hở, tràn đầy tự tin"
+      }
     ]
   },
   {
@@ -342,7 +586,11 @@
     "examples": [
       { "word": "換える", "hiragana": "かえる", "meaning": "Đổi, hoán đổi" },
       { "word": "交換する", "hiragana": "こうかんする", "meaning": "Trao đổi" },
-      { "word": "乗り換える", "hiragana": "のりかえる", "meaning": "Đổi tàu, đổi xe, chuyển đổi phương pháp" }
+      {
+        "word": "乗り換える",
+        "hiragana": "のりかえる",
+        "meaning": "Đổi tàu, đổi xe, chuyển đổi phương pháp"
+      }
     ]
   },
   {
@@ -350,9 +598,17 @@
     "han_viet": "ÁC",
     "meaning": "Nắm, bắt",
     "examples": [
-      { "word": "握る", "hiragana": "にぎる", "meaning": "Nắm (tay, cơm, cuống tay lái), nắm giữ (quyền lực)" },
+      {
+        "word": "握る",
+        "hiragana": "にぎる",
+        "meaning": "Nắm (tay, cơm, cuống tay lái), nắm giữ (quyền lực)"
+      },
       { "word": "握手する", "hiragana": "あくしゅする", "meaning": "Bắt tay" },
-      { "word": "把握する", "hiragana": "はあくする", "meaning": "Nắm bắt rõ (tình hình, ý nghĩa)" }
+      {
+        "word": "把握する",
+        "hiragana": "はあくする",
+        "meaning": "Nắm bắt rõ (tình hình, ý nghĩa)"
+      }
     ]
   },
   {
@@ -360,8 +616,16 @@
     "han_viet": "HUY",
     "meaning": "Chỉ huy, phát huy",
     "examples": [
-      { "word": "指揮する", "hiragana": "しきする", "meaning": "Chỉ huy, điều khiển (nhạc trưởng, quân đội)" },
-      { "word": "発揮する", "hiragana": "はっきする", "meaning": "Phát huy (năng lực)" }
+      {
+        "word": "指揮する",
+        "hiragana": "しきする",
+        "meaning": "Chỉ huy, điều khiển (nhạc trưởng, quân đội)"
+      },
+      {
+        "word": "発揮する",
+        "hiragana": "はっきする",
+        "meaning": "Phát huy (năng lực)"
+      }
     ]
   },
   {
@@ -369,9 +633,21 @@
     "han_viet": "VIỆN",
     "meaning": "Viện trợ, giúp đỡ",
     "examples": [
-      { "word": "援助する", "hiragana": "えんじょする", "meaning": "Viện trợ, giúp đỡ (tài chính)" },
-      { "word": "応援する", "hiragana": "おうえんする", "meaning": "Cổ vũ, ủng hộ" },
-      { "word": "支援する", "hiragana": "しえんする", "meaning": "Hỗ trợ, giúp đỡ" }
+      {
+        "word": "援助する",
+        "hiragana": "えんじょする",
+        "meaning": "Viện trợ, giúp đỡ (tài chính)"
+      },
+      {
+        "word": "応援する",
+        "hiragana": "おうえんする",
+        "meaning": "Cổ vũ, ủng hộ"
+      },
+      {
+        "word": "支援する",
+        "hiragana": "しえんする",
+        "meaning": "Hỗ trợ, giúp đỡ"
+      }
     ]
   },
   {
@@ -379,9 +655,21 @@
     "han_viet": "DAO",
     "meaning": "Dao động, lúc lắc, bấp bênh",
     "examples": [
-      { "word": "揺れる", "hiragana": "ゆれる", "meaning": "Dao động, lung lay, bấp bênh" },
-      { "word": "揺り動かす", "hiragana": "ゆりうごかす", "meaning": "Lay động, làm lung lay (lòng người)" },
-      { "word": "動揺する", "hiragana": "どうようする", "meaning": "Dao động, mất bình tĩnh, hoang mang" }
+      {
+        "word": "揺れる",
+        "hiragana": "ゆれる",
+        "meaning": "Dao động, lung lay, bấp bênh"
+      },
+      {
+        "word": "揺り動かす",
+        "hiragana": "ゆりうごかす",
+        "meaning": "Lay động, làm lung lay (lòng người)"
+      },
+      {
+        "word": "動揺する",
+        "hiragana": "どうようする",
+        "meaning": "Dao động, mất bình tĩnh, hoang mang"
+      }
     ]
   },
   {
@@ -389,9 +677,21 @@
     "han_viet": "TỔN",
     "meaning": "Tổn hại, thua lỗ",
     "examples": [
-      { "word": "損なう", "hiragana": "そこなう", "meaning": "Làm tổn hại, gây thiệt hại" },
-      { "word": "損失", "hiragana": "そんしつ", "meaning": "Tổn thất, thiệt hại" },
-      { "word": "損害", "hiragana": "そんがい", "meaning": "Tổn hại, thiệt hại" }
+      {
+        "word": "損なう",
+        "hiragana": "そこなう",
+        "meaning": "Làm tổn hại, gây thiệt hại"
+      },
+      {
+        "word": "損失",
+        "hiragana": "そんしつ",
+        "meaning": "Tổn thất, thiệt hại"
+      },
+      {
+        "word": "損害",
+        "hiragana": "そんがい",
+        "meaning": "Tổn hại, thiệt hại"
+      }
     ]
   },
   {
@@ -399,8 +699,16 @@
     "han_viet": "BAN",
     "meaning": "Chuyên chở, vận chuyển",
     "examples": [
-      { "word": "搬送する", "hiragana": "はんそうする", "meaning": "Vận chuyển, chuyên chở (bệnh nhân, hàng hóa)" },
-      { "word": "搬入する", "hiragana": "はんにゅうする", "meaning": "Chở vào, mang vào trong" }
+      {
+        "word": "搬送する",
+        "hiragana": "はんそうする",
+        "meaning": "Vận chuyển, chuyên chở (bệnh nhân, hàng hóa)"
+      },
+      {
+        "word": "搬入する",
+        "hiragana": "はんにゅうする",
+        "meaning": "Chở vào, mang vào trong"
+      }
     ]
   },
   {
@@ -408,9 +716,21 @@
     "han_viet": "HUỀ",
     "meaning": "Dìu dắt, mang theo, liên kết",
     "examples": [
-      { "word": "携わる", "hiragana": "たずさわる", "meaning": "Tham gia vào, làm việc có liên quan" },
-      { "word": "携帯電話", "hiragana": "けいたいでんわ", "meaning": "Điện thoại di động" },
-      { "word": "連携する", "hiragana": "れんけいする", "meaning": "Liên kết, hợp tác" }
+      {
+        "word": "携わる",
+        "hiragana": "たずさわる",
+        "meaning": "Tham gia vào, làm việc có liên quan"
+      },
+      {
+        "word": "携帯電話",
+        "hiragana": "けいたいでんわ",
+        "meaning": "Điện thoại di động"
+      },
+      {
+        "word": "連携する",
+        "hiragana": "れんけいする",
+        "meaning": "Liên kết, hợp tác"
+      }
     ]
   },
   {
@@ -418,7 +738,11 @@
     "han_viet": "TRÁ",
     "meaning": "Ép, vắt, bóc lột",
     "examples": [
-      { "word": "搾る", "hiragana": "しぼる", "meaning": "Vắt (sữa), ép (dầu)" },
+      {
+        "word": "搾る",
+        "hiragana": "しぼる",
+        "meaning": "Vắt (sữa), ép (dầu)"
+      },
       { "word": "搾取する", "hiragana": "さくしゅする", "meaning": "Bóc lột" }
     ]
   },
@@ -427,8 +751,16 @@
     "han_viet": "NHIẾP",
     "meaning": "Thâu vào, hấp thụ, nhiếp chính",
     "examples": [
-      { "word": "摂取する", "hiragana": "せっしゅする", "meaning": "Hấp thụ, truyền vào, ăn uống bổ sung" },
-      { "word": "摂生する", "hiragana": "せっせいする", "meaning": "Bảo dưỡng sức khỏe, lành mạnh" }
+      {
+        "word": "摂取する",
+        "hiragana": "せっしゅする",
+        "meaning": "Hấp thụ, truyền vào, ăn uống bổ sung"
+      },
+      {
+        "word": "摂生する",
+        "hiragana": "せっせいする",
+        "meaning": "Bảo dưỡng sức khỏe, lành mạnh"
+      }
     ]
   },
   {
@@ -436,9 +768,21 @@
     "han_viet": "TRÍCH",
     "meaning": "Ngắt, hái, trích xuất",
     "examples": [
-      { "word": "摘む", "hiragana": "つむ", "meaning": "Hái (hoa), ngắt (búp trà)" },
-      { "word": "指摘する", "hiragana": "してきする", "meaning": "Chỉ ra, trích dẫn điểm sai" },
-      { "word": "摘出する", "hiragana": "てきしゅつする", "meaning": "Cắt bỏ (khối u), rút ra" }
+      {
+        "word": "摘む",
+        "hiragana": "つむ",
+        "meaning": "Hái (hoa), ngắt (búp trà)"
+      },
+      {
+        "word": "指摘する",
+        "hiragana": "してきする",
+        "meaning": "Chỉ ra, trích dẫn điểm sai"
+      },
+      {
+        "word": "摘出する",
+        "hiragana": "てきしゅつする",
+        "meaning": "Cắt bỏ (khối u), rút ra"
+      }
     ]
   },
   {
@@ -446,9 +790,21 @@
     "han_viet": "TRIỆT",
     "meaning": "Triệt bỏ, dỡ bỏ, thu hồi",
     "examples": [
-      { "word": "撤回する", "hiragana": "てっかいする", "meaning": "Thu hồi, rút lại (lời nói, phương án)" },
-      { "word": "撤去する", "hiragana": "てっきょする", "meaning": "Dỡ bỏ, thu dọn, gỡ bỏ (xe cộ, chướng ngại vật)" },
-      { "word": "撤退する", "hiragana": "てったいする", "meaning": "Rút lui (quân đội, thị trường kinh doanh)" }
+      {
+        "word": "撤回する",
+        "hiragana": "てっかいする",
+        "meaning": "Thu hồi, rút lại (lời nói, phương án)"
+      },
+      {
+        "word": "撤去する",
+        "hiragana": "てっきょする",
+        "meaning": "Dỡ bỏ, thu dọn, gỡ bỏ (xe cộ, chướng ngại vật)"
+      },
+      {
+        "word": "撤退する",
+        "hiragana": "てったいする",
+        "meaning": "Rút lui (quân đội, thị trường kinh doanh)"
+      }
     ]
   },
   {
@@ -456,8 +812,16 @@
     "han_viet": "TOÁT",
     "meaning": "Chụp hình, quay phim",
     "examples": [
-      { "word": "撮る", "hiragana": "とる", "meaning": "Chụp (ảnh), quay (phim)" },
-      { "word": "撮影する", "hiragana": "さつえいする", "meaning": "Quay phim, chụp ảnh (chuyên nghiệp)" }
+      {
+        "word": "撮る",
+        "hiragana": "とる",
+        "meaning": "Chụp (ảnh), quay (phim)"
+      },
+      {
+        "word": "撮影する",
+        "hiragana": "さつえいする",
+        "meaning": "Quay phim, chụp ảnh (chuyên nghiệp)"
+      }
     ]
   },
   {
@@ -465,8 +829,16 @@
     "han_viet": "PHÁC",
     "meaning": "Đánh, đập",
     "examples": [
-      { "word": "打撲", "hiragana": "だぼく", "meaning": "Vết bầm tím, vết thương do va đập" },
-      { "word": "撲滅する", "hiragana": "ぼくめつする", "meaning": "Triệt tiêu, tiêu diệt tận gốc (tội phạm, dịch bệnh)" }
+      {
+        "word": "打撲",
+        "hiragana": "だぼく",
+        "meaning": "Vết bầm tím, vết thương do va đập"
+      },
+      {
+        "word": "撲滅する",
+        "hiragana": "ぼくめつする",
+        "meaning": "Triệt tiêu, tiêu diệt tận gốc (tội phạm, dịch bệnh)"
+      }
     ]
   },
   {
@@ -474,8 +846,16 @@
     "han_viet": "ỦNG",
     "meaning": "Ủng hộ, ôm giữ, bảo vệ",
     "examples": [
-      { "word": "擁護する", "hiragana": "ようごする", "meaning": "Ủng hộ, bảo vệ (quyền lợi)" },
-      { "word": "抱擁する", "hiragana": "ほうようする", "meaning": "Om ấp, ôm chặt" }
+      {
+        "word": "擁護する",
+        "hiragana": "ようごする",
+        "meaning": "Ủng hộ, bảo vệ (quyền lợi)"
+      },
+      {
+        "word": "抱擁する",
+        "hiragana": "ほうようする",
+        "meaning": "Om ấp, ôm chặt"
+      }
     ]
   },
   {
@@ -483,8 +863,16 @@
     "han_viet": "THAO",
     "meaning": "Thao tác, vận hành, giữ gìn",
     "examples": [
-      { "word": "操る", "hiragana": "あやつる", "meaning": "Điều khiển, thao túng, thành thạo (ngôn ngữ)" },
-      { "word": "操作する", "hiragana": "そうさする", "meaning": "Thao tác, điều khiển (máy móc)" },
+      {
+        "word": "操る",
+        "hiragana": "あやつる",
+        "meaning": "Điều khiển, thao túng, thành thạo (ngôn ngữ)"
+      },
+      {
+        "word": "操作する",
+        "hiragana": "そうさする",
+        "meaning": "Thao tác, điều khiển (máy móc)"
+      },
       { "word": "体操", "hiragana": "たいそう", "meaning": "Thể dục" }
     ]
   },
@@ -493,9 +881,21 @@
     "han_viet": "SÁT",
     "meaning": "Chà, dụi, ma sát",
     "examples": [
-      { "word": "擦る", "hiragana": "する", "meaning": "Cọ xát, chà xát, quẹt (diêm)" },
-      { "word": "擦れる", "hiragana": "すれる", "meaning": "Mòn, sứt mẻ, cọ xát vào nhau" },
-      { "word": "摩擦", "hiragana": "まさつ", "meaning": "Ma sát, xích mích, mâu thuẫn" }
+      {
+        "word": "擦る",
+        "hiragana": "する",
+        "meaning": "Cọ xát, chà xát, quẹt (diêm)"
+      },
+      {
+        "word": "擦れる",
+        "hiragana": "すれる",
+        "meaning": "Mòn, sứt mẻ, cọ xát vào nhau"
+      },
+      {
+        "word": "摩擦",
+        "hiragana": "まさつ",
+        "meaning": "Ma sát, xích mích, mâu thuẫn"
+      }
     ]
   },
   {
@@ -503,8 +903,16 @@
     "han_viet": "NGHỊ",
     "meaning": "Phỏng theo, mô phỏng",
     "examples": [
-      { "word": "擬態", "hiragana": "ぎたい", "meaning": "Sự ngụy trang, mô phỏng sinh học" },
-      { "word": "擬音語", "hiragana": "ぎおんご", "meaning": "Từ mô phỏng âm thanh (từ tượng thanh)" }
+      {
+        "word": "擬態",
+        "hiragana": "ぎたい",
+        "meaning": "Sự ngụy trang, mô phỏng sinh học"
+      },
+      {
+        "word": "擬音語",
+        "hiragana": "ぎおんご",
+        "meaning": "Từ mô phỏng âm thanh (từ tượng thanh)"
+      }
     ]
   },
   {
@@ -512,9 +920,17 @@
     "han_viet": "CỬ",
     "meaning": "Cử hành, giơ lên, liệt kê",
     "examples": [
-      { "word": "挙げる", "hiragana": "あげる", "meaning": "Giơ (tay) lên, nêu ra (ví dụ), tổ chức (đám cưới)" },
+      {
+        "word": "挙げる",
+        "hiragana": "あげる",
+        "meaning": "Giơ (tay) lên, nêu ra (ví dụ), tổ chức (đám cưới)"
+      },
       { "word": "選挙", "hiragana": "せんきょ", "meaning": "Bầu cử" },
-      { "word": "一挙に", "hiragana": "いっきょに", "meaning": "Một phát, một mạch, cùng một lúc" }
+      {
+        "word": "一挙に",
+        "hiragana": "いっきょに",
+        "meaning": "Một phát, một mạch, cùng một lúc"
+      }
     ]
   },
   {
@@ -523,7 +939,11 @@
     "meaning": "Nắm đấm",
     "examples": [
       { "word": "拳", "hiragana": "こぶし", "meaning": "Nắm đấm" },
-      { "word": "拳銃", "hiragana": "けんじゅう", "meaning": "Súng lục, súng ngắn" }
+      {
+        "word": "拳銃",
+        "hiragana": "けんじゅう",
+        "meaning": "Súng lục, súng ngắn"
+      }
     ]
   },
   {
@@ -531,8 +951,16 @@
     "han_viet": "CHƯỞNG",
     "meaning": "Lòng bàn tay, nắm giữ",
     "examples": [
-      { "word": "手のひら / 掌", "hiragana": "てのひら", "meaning": "Lòng bàn tay" },
-      { "word": "掌る", "hiragana": "つかさどる", "meaning": "Cầm trịch, cai quản, nắm giữ chức vụ" }
+      {
+        "word": "手のひら / 掌",
+        "hiragana": "てのひら",
+        "meaning": "Lòng bàn tay"
+      },
+      {
+        "word": "掌る",
+        "hiragana": "つかさどる",
+        "meaning": "Cầm trịch, cai quản, nắm giữ chức vụ"
+      }
     ]
   },
   {
@@ -541,7 +969,11 @@
     "meaning": "Cọ sát, ma sát",
     "examples": [
       { "word": "摩擦", "hiragana": "まさつ", "meaning": "Ma sát, mâu thuẫn" },
-      { "word": "摩滅する", "hiragana": "まめつする", "meaning": "Mài mòn, bị mòn đi" }
+      {
+        "word": "摩滅する",
+        "hiragana": "まめつする",
+        "meaning": "Mài mòn, bị mòn đi"
+      }
     ]
   },
   {
@@ -549,8 +981,16 @@
     "han_viet": "CHÍ",
     "meaning": "Chăm chỉ, thành thật",
     "examples": [
-      { "word": "摯実な", "hiragana": "しじつな", "meaning": "Thành thật, chân thành" },
-      { "word": "真摯な", "hiragana": "しんしな", "meaning": "Chân thành, nghiêm túc" }
+      {
+        "word": "摯実な",
+        "hiragana": "しじつな",
+        "meaning": "Thành thật, chân thành"
+      },
+      {
+        "word": "真摯な",
+        "hiragana": "しんしな",
+        "meaning": "Chân thành, nghiêm túc"
+      }
     ]
   },
   {
@@ -559,8 +999,16 @@
     "meaning": "Công kích, đánh",
     "examples": [
       { "word": "撃つ", "hiragana": "うつ", "meaning": "Bắn (súng)" },
-      { "word": "攻撃する", "hiragana": "こうげきする", "meaning": "Công kích, tấn công" },
-      { "word": "目撃する", "hiragana": "もくげきする", "meaning": "Chứng kiến, nhìn thấy tận mắt" }
+      {
+        "word": "攻撃する",
+        "hiragana": "こうげきする",
+        "meaning": "Công kích, tấn công"
+      },
+      {
+        "word": "目撃する",
+        "hiragana": "もくげきする",
+        "meaning": "Chứng kiến, nhìn thấy tận mắt"
+      }
     ]
   },
   {
@@ -568,9 +1016,21 @@
     "han_viet": "THỪA",
     "meaning": "Thừa nhận, đồng ý",
     "examples": [
-      { "word": "承る", "hiragana": "うけたまわる", "meaning": "Tiếp nhận, nghe, biết (Khiêm nhường ngữ)" },
-      { "word": "承知する", "hiragana": "しょうちする", "meaning": "Đồng ý, biết rõ, hiểu rõ" },
-      { "word": "承認する", "hiragana": "しょうにんする", "meaning": "Thừa nhận, phê duyệt, thông qua" }
+      {
+        "word": "承る",
+        "hiragana": "うけたまわる",
+        "meaning": "Tiếp nhận, nghe, biết (Khiêm nhường ngữ)"
+      },
+      {
+        "word": "承知する",
+        "hiragana": "しょうちする",
+        "meaning": "Đồng ý, biết rõ, hiểu rõ"
+      },
+      {
+        "word": "承認する",
+        "hiragana": "しょうにんする",
+        "meaning": "Thừa nhận, phê duyệt, thông qua"
+      }
     ]
   },
   {
@@ -578,9 +1038,21 @@
     "han_viet": "CHI",
     "meaning": "Chi nhánh, chống đỡ, chi trả",
     "examples": [
-      { "word": "支える", "hiragana": "ささえる", "meaning": "Nâng đỡ, chống đỡ, hỗ trợ" },
-      { "word": "支払う", "hiragana": "しはらう", "meaning": "Chi trả, thanh toán" },
-      { "word": "支店", "hiragana": "してん", "meaning": "Chi nhánh (cửa hàng, công ty)" }
+      {
+        "word": "支える",
+        "hiragana": "ささえる",
+        "meaning": "Nâng đỡ, chống đỡ, hỗ trợ"
+      },
+      {
+        "word": "支払う",
+        "hiragana": "しはらう",
+        "meaning": "Chi trả, thanh toán"
+      },
+      {
+        "word": "支店",
+        "hiragana": "してん",
+        "meaning": "Chi nhánh (cửa hàng, công ty)"
+      }
     ]
   },
   {
@@ -588,9 +1060,21 @@
     "han_viet": "CÔNG",
     "meaning": "Tấn công, công kích",
     "examples": [
-      { "word": "攻める", "hiragana": "せめる", "meaning": "Tấn công, công kích" },
-      { "word": "攻撃する", "hiragana": "こうげきする", "meaning": "Tấn công, công kích" },
-      { "word": "専攻する", "hiragana": "せんこうする", "meaning": "Chuyên môn, chuyên ngành học" }
+      {
+        "word": "攻める",
+        "hiragana": "せめる",
+        "meaning": "Tấn công, công kích"
+      },
+      {
+        "word": "攻撃する",
+        "hiragana": "こうげきする",
+        "meaning": "Tấn công, công kích"
+      },
+      {
+        "word": "専攻する",
+        "hiragana": "せんこうする",
+        "meaning": "Chuyên môn, chuyên ngành học"
+      }
     ]
   },
   {
@@ -598,9 +1082,21 @@
     "han_viet": "CẢI",
     "meaning": "Đổi mới, cải chính",
     "examples": [
-      { "word": "改める", "hiragana": "あらためる", "meaning": "Sửa đổi, cải tiến, kiểm tra lại" },
-      { "word": "改善する", "hiragana": "かいぜんする", "meaning": "Cải thiện, tiến bộ" },
-      { "word": "改札口", "hiragana": "かいさつぐち", "meaning": "Cổng soát vé" }
+      {
+        "word": "改める",
+        "hiragana": "あらためる",
+        "meaning": "Sửa đổi, cải tiến, kiểm tra lại"
+      },
+      {
+        "word": "改善する",
+        "hiragana": "かいぜんする",
+        "meaning": "Cải thiện, tiến bộ"
+      },
+      {
+        "word": "改札口",
+        "hiragana": "かいさつぐち",
+        "meaning": "Cổng soát vé"
+      }
     ]
   },
   {
@@ -608,9 +1104,21 @@
     "han_viet": "PHÓNG",
     "meaning": "Thả tự do, phóng thích",
     "examples": [
-      { "word": "放す", "hiragana": "はなす", "meaning": "Thả đi, phóng thích, buông tay" },
-      { "word": "放送する", "hiragana": "ほうそうする", "meaning": "Phát sóng, truyền hình" },
-      { "word": "開放する", "hiragana": "かいほうする", "meaning": "Mở cửa tự do, giải phóng" }
+      {
+        "word": "放す",
+        "hiragana": "はなす",
+        "meaning": "Thả đi, phóng thích, buông tay"
+      },
+      {
+        "word": "放送する",
+        "hiragana": "ほうそうする",
+        "meaning": "Phát sóng, truyền hình"
+      },
+      {
+        "word": "開放する",
+        "hiragana": "かいほうする",
+        "meaning": "Mở cửa tự do, giải phóng"
+      }
     ]
   },
   {
@@ -629,8 +1137,16 @@
     "meaning": "Sự cố, lý do, người đã khuất",
     "examples": [
       { "word": "事故", "hiragana": "じこ", "meaning": "Tai nạn, sự cố" },
-      { "word": "故障する", "hiragana": "こしょうする", "meaning": "Hỏng hóc, trục trặc" },
-      { "word": "故郷", "hiragana": "こきょう / ふるさと", "meaning": "Quê hương" }
+      {
+        "word": "故障する",
+        "hiragana": "こしょうする",
+        "meaning": "Hỏng hóc, trục trặc"
+      },
+      {
+        "word": "故郷",
+        "hiragana": "こきょう / ふるさと",
+        "meaning": "Quê hương"
+      }
     ]
   },
   {
@@ -638,9 +1154,21 @@
     "han_viet": "MẪN",
     "meaning": "Sáng suốt, mẫn cảm, nhanh nhẹn",
     "examples": [
-      { "word": "敏感な", "hiragana": "びんかんな", "meaning": "Mẫn cảm, nhạy cảm" },
-      { "word": "敏速な", "hiragana": "びんそくな", "meaning": "Nhanh chóng, mau lẹ" },
-      { "word": "機敏な", "hiragana": "きびんな", "meaning": "Nhanh nhẹn, linh hoạt" }
+      {
+        "word": "敏感な",
+        "hiragana": "びんかんな",
+        "meaning": "Mẫn cảm, nhạy cảm"
+      },
+      {
+        "word": "敏速な",
+        "hiragana": "びんそくな",
+        "meaning": "Nhanh chóng, mau lẹ"
+      },
+      {
+        "word": "機敏な",
+        "hiragana": "きびんな",
+        "meaning": "Nhanh nhẹn, linh hoạt"
+      }
     ]
   },
   {
@@ -648,9 +1176,17 @@
     "han_viet": "GIÁO",
     "meaning": "Giáo dục, dạy bảo",
     "examples": [
-      { "word": "教える", "hiragana": "おしえる", "meaning": "Dạy, chỉ bảo, cho biết" },
+      {
+        "word": "教える",
+        "hiragana": "おしえる",
+        "meaning": "Dạy, chỉ bảo, cho biết"
+      },
       { "word": "教室", "hiragana": "きょうしつ", "meaning": "Lớp học" },
-      { "word": "キリスト教", "hiragana": "キリストきょう", "meaning": "Cơ Đốc giáo / Đạo Thiên Chúa" }
+      {
+        "word": "キリスト教",
+        "hiragana": "キリストきょう",
+        "meaning": "Cơ Đốc giáo / Đạo Thiên Chúa"
+      }
     ]
   },
   {
@@ -659,8 +1195,16 @@
     "meaning": "Cứu giúp, cứu trợ",
     "examples": [
       { "word": "救う", "hiragana": "すくう", "meaning": "Cứu giúp, cứu vớt" },
-      { "word": "救急車", "hiragana": "きゅうきゅうしゃ", "meaning": "Xe cứu thương" },
-      { "word": "救助する", "hiragana": "きゅうじょする", "meaning": "Cứu trợ, cứu hộ" }
+      {
+        "word": "救急車",
+        "hiragana": "きゅうきゅうしゃ",
+        "meaning": "Xe cứu thương"
+      },
+      {
+        "word": "救助する",
+        "hiragana": "きゅうじょする",
+        "meaning": "Cứu trợ, cứu hộ"
+      }
     ]
   },
   {
@@ -668,7 +1212,11 @@
     "han_viet": "BẠI",
     "meaning": "Thất bại, thua",
     "examples": [
-      { "word": "敗れる", "hiragana": "やぶれる", "meaning": "Thua trận, thất bại" },
+      {
+        "word": "敗れる",
+        "hiragana": "やぶれる",
+        "meaning": "Thua trận, thất bại"
+      },
       { "word": "失敗する", "hiragana": "しっぱいする", "meaning": "Thất bại" },
       { "word": "勝敗", "hiragana": "しょうはい", "meaning": "Thắng bại" }
     ]
@@ -678,9 +1226,17 @@
     "han_viet": "CẢM",
     "meaning": "Dũng cảm, dám làm",
     "examples": [
-      { "word": "敢えて", "hiragana": "あえて", "meaning": "Dám, mạo muội, mất công làm" },
+      {
+        "word": "敢えて",
+        "hiragana": "あえて",
+        "meaning": "Dám, mạo muội, mất công làm"
+      },
       { "word": "勇敢な", "hiragana": "ゆうかんな", "meaning": "Dũng cảm" },
-      { "word": "果敢な", "hiragana": "かかんな", "meaning": "Quả cảm, kiên quyết" }
+      {
+        "word": "果敢な",
+        "hiragana": "かかんな",
+        "meaning": "Quả cảm, kiên quyết"
+      }
     ]
   },
   {
@@ -688,8 +1244,16 @@
     "han_viet": "TÁN",
     "meaning": "Giải tán, tán loạn, rơi rụng",
     "examples": [
-      { "word": "散る", "hiragana": "ちる", "meaning": "Rơi rụng (hoa héo), giải tán" },
-      { "word": "散らかる", "hiragana": "ちらかる", "meaning": "Bừa bộn, lung tung" },
+      {
+        "word": "散る",
+        "hiragana": "ちる",
+        "meaning": "Rơi rụng (hoa héo), giải tán"
+      },
+      {
+        "word": "散らかる",
+        "hiragana": "ちらかる",
+        "meaning": "Bừa bộn, lung tung"
+      },
       { "word": "散歩する", "hiragana": "さんぽする", "meaning": "Đi dạo" }
     ]
   },
@@ -698,9 +1262,17 @@
     "han_viet": "KÍNH",
     "meaning": "Tôn kính",
     "examples": [
-      { "word": "敬う", "hiragana": "うやまう", "meaning": "Kính trọng, tôn kính" },
+      {
+        "word": "敬う",
+        "hiragana": "うやまう",
+        "meaning": "Kính trọng, tôn kính"
+      },
       { "word": "敬語", "hiragana": "けいご", "meaning": "Kính ngữ" },
-      { "word": "尊敬する", "hiragana": "そんけいする", "meaning": "Tôn trọng, kính trọng" }
+      {
+        "word": "尊敬する",
+        "hiragana": "そんけいする",
+        "meaning": "Tôn trọng, kính trọng"
+      }
     ]
   },
   {
@@ -719,7 +1291,11 @@
     "meaning": "Kẻ thù, đối thủ",
     "examples": [
       { "word": "敵", "hiragana": "てき", "meaning": "Kẻ thù, đối thủ" },
-      { "word": "敵対する", "hiragana": "てきたいする", "meaning": "Đối đầu, thù địch" },
+      {
+        "word": "敵対する",
+        "hiragana": "てきたいする",
+        "meaning": "Đối đầu, thù địch"
+      },
       { "word": "無敵の", "hiragana": "むてきの", "meaning": "Vô địch" }
     ]
   },
@@ -728,9 +1304,21 @@
     "han_viet": "PHU",
     "meaning": "Trải, lát",
     "examples": [
-      { "word": "敷く", "hiragana": "しく", "meaning": "Trải (chiếu, nệm), lắp đặt (đường ray)" },
-      { "word": "敷地", "hiragana": "しきち", "meaning": "Khu đất, mặt bằng nền" },
-      { "word": "敷金", "hiragana": "しききん", "meaning": "Tiền đặt cọc thuê nhà" }
+      {
+        "word": "敷く",
+        "hiragana": "しく",
+        "meaning": "Trải (chiếu, nệm), lắp đặt (đường ray)"
+      },
+      {
+        "word": "敷地",
+        "hiragana": "しきち",
+        "meaning": "Khu đất, mặt bằng nền"
+      },
+      {
+        "word": "敷金",
+        "hiragana": "しききん",
+        "meaning": "Tiền đặt cọc thuê nhà"
+      }
     ]
   },
   {
@@ -738,9 +1326,21 @@
     "han_viet": "CHỈNH",
     "meaning": "Điều chỉnh, chỉnh đốn",
     "examples": [
-      { "word": "整える", "hiragana": "ととのえる", "meaning": "Thu xếp, chuẩn bị sẵn sàng, chỉnh đốn" },
-      { "word": "整理する", "hiragana": "せいりする", "meaning": "Sắp xếp, vứt bỏ đồ thừa, chỉnh lý" },
-      { "word": "調整する", "hiragana": "ちょうせいする", "meaning": "Điều chỉnh (lịch trình, máy móc)" }
+      {
+        "word": "整える",
+        "hiragana": "ととのえる",
+        "meaning": "Thu xếp, chuẩn bị sẵn sàng, chỉnh đốn"
+      },
+      {
+        "word": "整理する",
+        "hiragana": "せいりする",
+        "meaning": "Sắp xếp, vứt bỏ đồ thừa, chỉnh lý"
+      },
+      {
+        "word": "調整する",
+        "hiragana": "ちょうせいする",
+        "meaning": "Điều chỉnh (lịch trình, máy móc)"
+      }
     ]
   },
   {
@@ -748,8 +1348,16 @@
     "han_viet": "VĂN",
     "meaning": "Văn tự, câu văn, văn hóa",
     "examples": [
-      { "word": "文字", "hiragana": "もじ / もんじ", "meaning": "Chữ cái, văn tự" },
-      { "word": "文章", "hiragana": "ぶんしょう", "meaning": "Đoạn văn, bài văn" },
+      {
+        "word": "文字",
+        "hiragana": "もじ / もんじ",
+        "meaning": "Chữ cái, văn tự"
+      },
+      {
+        "word": "文章",
+        "hiragana": "ぶんしょう",
+        "meaning": "Đoạn văn, bài văn"
+      },
       { "word": "文化", "hiragana": "ぶんか", "meaning": "Văn hóa" }
     ]
   },
@@ -758,8 +1366,16 @@
     "han_viet": "BAN",
     "meaning": "Hoa văn, vết đốm",
     "examples": [
-      { "word": "斑点", "hiragana": "はんてん", "meaning": "Vết đốm, nốt tàn nhang" },
-      { "word": "斑", "hiragana": "まだら / むら", "meaning": "Lốm đốm, loang lổ, không đều" }
+      {
+        "word": "斑点",
+        "hiragana": "はんてん",
+        "meaning": "Vết đốm, nốt tàn nhang"
+      },
+      {
+        "word": "斑",
+        "hiragana": "まだら / むら",
+        "meaning": "Lốm đốm, loang lổ, không đều"
+      }
     ]
   }
 ]
