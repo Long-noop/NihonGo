@@ -261,14 +261,13 @@ body {
   stroke-width: 3.5;
 }
 
-/* Placeholder shown while SVG is loading */
+/* Placeholder is intentionally hidden so KanjiVG is the only visible glyph */
 .kanji-placeholder {
-  font-family: "Noto Serif JP", serif;
-  font-weight: 700;
-  font-size: clamp(80px, 26vw, 148px);
-  line-height: 1;
-  color: var(--border); /* muted, just a size hint */
-  user-select: none;
+  display: none;
+}
+
+.kanji-svg-container.is-loading {
+  opacity: 0.9;
 }
 
 /* ── Stroke-order button ───────────────────────────────────────── */

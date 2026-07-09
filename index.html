@@ -74,8 +74,11 @@
                 This IS the kanji display — no text element beneath it.
               -->
               <div class="kanji-svg-container" id="kanjiSvgContainer">
-                <!-- loading placeholder -->
-                <div class="kanji-placeholder" id="kanjiPlaceholder">字</div>
+                <div
+                  class="kanji-placeholder"
+                  id="kanjiPlaceholder"
+                  aria-hidden="true"
+                ></div>
               </div>
             </div>
 
@@ -459,6 +462,16 @@
       //  Loads one of the page JSON files instead of kanji-sample.json.
       // ══════════════════════════════════════════════════════════════════
 
+      async function preloadPageSvgs(pageData = DATA) {
+        if (!Array.isArray(pageData) || !pageData.length) return;
+        const chars = pageData
+          .map(getDisplayKanji)
+          .filter(Boolean)
+          .slice(0, 96);
+
+        await Promise.allSettled(chars.map((ch) => fetchKanjiSvg(ch)));
+      }
+
       async function loadPage(pageNo) {
         const safePage = Math.min(Math.max(1, pageNo), pageTotal);
         const url = `./data/pages/page-${safePage}.json`;
@@ -474,6 +487,7 @@
         const nextUrl = new URL(window.location.href);
         nextUrl.searchParams.set("page", String(pageNumber));
         window.history.replaceState({}, "", nextUrl);
+        void preloadPageSvgs(DATA);
         return DATA;
       }
 
@@ -511,14 +525,21 @@
         pageLabel.textContent = `Trang ${pageNumber} / ${pageTotal}`;
         progressFill.style.width = ((idx + 1) / DATA.length) * 100 + "%";
 
-        // Front-face: show one kanji character as a placeholder while loading
-        kanjiSvgCont.innerHTML = `<div class="kanji-placeholder">${displayKanji || "字"}</div>`;
+        // Front-face: avoid any visible text placeholder; render KanjiVG directly.
+        if (kanjiPlaceholder) {
+          kanjiPlaceholder.style.display = "none";
+        }
+        kanjiSvgCont.classList.add("is-loading");
+        kanjiSvgCont.innerHTML = "";
 
-        // Fetch and inject KanjiVG SVG for that single character
-        if (!displayKanji) return;
+        if (!displayKanji) {
+          kanjiSvgCont.classList.remove("is-loading");
+          return;
+        }
+
         const svgText = await fetchKanjiSvg(displayKanji);
         if (!svgText) {
-          // No KanjiVG data — leave the single-character placeholder
+          kanjiSvgCont.classList.remove("is-loading");
           return;
         }
 
@@ -529,6 +550,7 @@
         const svg = buildStaticSvg(svgText);
         kanjiSvgCont.innerHTML = "";
         kanjiSvgCont.appendChild(svg);
+        kanjiSvgCont.classList.remove("is-loading");
       }
 
       // ══════════════════════════════════════════════════════════════════
