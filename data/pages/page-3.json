@@ -149,14 +149,19 @@
     ]
   },
   {
-    "kanji": "兀",
+    "kanji": "冗",
     "han_viet": "NHŨNG",
-    "meaning": "Lộn xộn",
+    "meaning": "lộn xộn",
     "examples": [
       {
-        "word": "兀々",
-        "hiragana": "こつこつ",
-        "meaning": "Cần cù, chăm chỉ, lọc cọc"
+        "word": "冗談",
+        "hiragana": "じょうだん",
+        "meaning": "Nhũng đàm, lời nói đùa, chuyện cười"
+      },
+      {
+        "word": "冗長な",
+        "hiragana": "じょうちょうな",
+        "meaning": "Nhũng trường, dài dòng, rườm rà, dư thừa từ ngữ"
       }
     ]
   },
