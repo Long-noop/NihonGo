@@ -343,7 +343,7 @@
     "meaning": "Giá trị",
     "examples": [
       { "word": "値段", "hiragana": "ねだん", "meaning": "Giá cả, giá tiền" },
-      { "word": "価値", "hiragana": "かchi", "meaning": "Giá trị" },
+      { "word": "価値", "hiragana": "かち", "meaning": "Giá trị" },
       { "word": "数値", "hiragana": "すうち", "meaning": "Giá trị bằng số" }
     ]
   },
@@ -420,7 +420,7 @@
     "han_viet": "NGUY",
     "meaning": "Giả mạo",
     "examples": [
-      { "word": "偽物", "hiragana": "niseもの", "meaning": "Hàng giả, đồ giả" },
+      { "word": "偽物", "hiragana": "にせもの", "meaning": "Hàng giả, đồ giả" },
       { "word": "偽造", "hiragana": "ぎぞう", "meaning": "Ngụy tạo, làm giả" },
       { "word": "偽る", "hiragana": "いつわる", "meaning": "Lừa dối, giả vờ" }
     ]

@@ -4,7 +4,7 @@
     "han_viet": "NHẤT",
     "meaning": "Một",
     "examples": [
-      { "word": "一日", "hiragana": "いちにchỉ", "meaning": "Một ngày" },
+      { "word": "一日", "hiragana": "いちにち", "meaning": "Một ngày" },
       { "word": "一番", "hiragana": "いちばん", "meaning": "Số một, tốt nhất" },
       { "word": "一生懸命", "hiragana": "いっしょうけんめい", "meaning": "Hết sức, nỗ lực hết mình" },
       { "word": "統一", "hiragana": "とういつ", "meaning": "Thống nhất" }
@@ -95,7 +95,7 @@
     "han_viet": "BẤT",
     "meaning": "Không",
     "examples": [
-      { "word": "不安", "hiragana": "ふ안", "meaning": "Bất an, lo lắng" },
+      { "word": "不安", "hiragana": "ふあん", "meaning": "Bất an, lo lắng" },
       { "word": "不便", "hiragana": "ふべん", "meaning": "Bất tiện" },
       { "word": "不足", "hiragana": "ふそく", "meaning": "Thiếu thốn, không đủ" }
     ]
@@ -126,7 +126,7 @@
     "examples": [
       { "word": "丘", "hiragana": "おか", "meaning": "Quả đồi" },
       { "word": "砂丘", "hiragana": "さきゅう", "meaning": "Cồn cát" },
-      { "word": "丘陵", "hiragana": "きゅうryou", "meaning": "Đồi núi, trung du" }
+      { "word": "丘陵", "hiragana": "きゅうりょう", "meaning": "Đồi núi, trung du" }
     ]
   },
   {
@@ -303,7 +303,7 @@
     "examples": [
       { "word": "牛乳", "hiragana": "ぎゅうにゅう", "meaning": "Sữa bò" },
       { "word": "乳児", "hiragana": "にゅうじ", "meaning": "Trẻ sơ sinh" },
-      { "word": "母乳", "ぼにゅう": "ほうちょう", "meaning": "Sữa mẹ" }
+      { "word": "母乳", "hiragana": "ぼにゅう", "meaning": "Sữa mẹ" }
     ]
   },
   {
@@ -312,7 +312,7 @@
     "meaning": "Hoàn tất, hiểu",
     "examples": [
       { "word": "完了", "hiragana": "かんりょう", "meaning": "Hoàn thành, kết thúc" },
-      { "word": "終了", "hiragana": "しゅうryou", "meaning": "Kết thúc, chấm dứt" },
+      { "word": "終了", "hiragana": "しゅうりょう", "meaning": "Kết thúc, chấm dứt" },
       { "word": "了解", "hiragana": "りょうかい", "meaning": "Hiểu rõ, đồng ý" }
     ]
   },
@@ -333,7 +333,7 @@
     "examples": [
       { "word": "争う", "hiragana": "あらそう", "meaning": "Tranh giành, cạnh tranh" },
       { "word": "戦争", "hiragana": "せんそう", "meaning": "Chiến tranh" },
-      { "word": "競争", "hiragana": "きょうsō", "meaning": "Cạnh tranh, thi đua" }
+      { "word": "競争", "hiragana": "きょうそう", "meaning": "Cạnh tranh, thi đua" }
     ]
   },
   {
@@ -596,7 +596,7 @@
     "examples": [
       { "word": "代わる", "hiragana": "かわる", "meaning": "Thay thế, đại diện" },
       { "word": "時代", "hiragana": "じだい", "meaning": "Thời đại" },
-      { "word": "代表", "hiragana": "だいhyou", "meaning": "Đại biểu" }
+      { "word": "代表", "hiragana": "だいひょう", "meaning": "Đại biểu" }
     ]
   },
   {
@@ -690,7 +690,7 @@
     "han_viet": "TRUYỀN",
     "meaning": "Truyền đạt",
     "examples": [
-      { "word": "伝える", "hiragana": "つ伝える", "meaning": "Truyền đạt, nhắn lại" },
+      { "word": "伝える", "hiragana": "つたえる", "meaning": "Truyền đạt, nhắn lại" },
       { "word": "伝統", "hiragana": "でんとう", "meaning": "Truyền thống" },
       { "word": "伝言", "hiragana": "でんごん", "meaning": "Lời nhắn" }
     ]
@@ -768,7 +768,7 @@
     "meaning": "Tuy nhiên, nhưng",
     "examples": [
       { "word": "但し", "hiragana": "ただし", "meaning": "Tuy nhiên, nhưng mà" },
-      { "word": "But và chỉ viết", "hiragana": "ただしがき", "meaning": "Điều khoản ghi thêm, ghi chú bổ sung" }
+      { "word": "但し書き", "hiragana": "ただしがき", "meaning": "Điều khoản ghi thêm, ghi chú bổ sung" }
     ]
   },
   {

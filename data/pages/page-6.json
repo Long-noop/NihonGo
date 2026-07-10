@@ -211,7 +211,7 @@
     "examples": [
       { "word": "売る", "hiragana": "うる", "meaning": "Bán" },
       { "word": "売店", "hiragana": "ばいてん", "meaning": "Cửa hàng bán lẻ, quầy bán hàng" },
-      { "word": "発売", "hiragana": "hatsúbai", "meaning": "Phát hành, bán ra thị trường" }
+      { "word": "発売", "hiragana": "はつばい", "meaning": "Phát hành, bán ra thị trường" }
     ]
   },
   {
@@ -250,7 +250,7 @@
     "meaning": "Bên ngoài",
     "examples": [
       { "word": "外", "hiragana": "そと", "meaning": "Phía bên ngoài" },
-      { "word": "外国", "hiragana": "がいこk", "meaning": "Nước ngoài" },
+      { "word": "外国", "hiragana": "がいこく", "meaning": "Nước ngoài" },
       { "word": "外科", "hiragana": "げか", "meaning": "Khoa ngoại (y học)" }
     ]
   },

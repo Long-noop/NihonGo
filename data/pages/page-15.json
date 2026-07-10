@@ -164,7 +164,7 @@
     "meaning": "Bờ bến, giới hạn",
     "examples": [
       { "word": "生涯", "hiragana": "しょうがい", "meaning": "Sinh nhai, cả cuộc đời" },
-      { "word": "天涯孤独", "hiragana": "てんがいこđộc", "meaning": "Cô độc một mình trên đời" }
+      { "word": "天涯孤独", "hiragana": "てんがいこどく", "meaning": "Cô độc một mình trên đời" }
     ]
   },
   {
@@ -297,7 +297,7 @@
     "meaning": "Ẩm ướt, độ ẩm",
     "examples": [
       { "word": "湿る", "hiragana": "しめる", "meaning": "Ẩm ướt, bị ẩm" },
-      { "word": "湿度", "hiragana": "しつdo", "meaning": "Độ ẩm" },
+      { "word": "湿度", "hiragana": "しつど", "meaning": "Độ ẩm" },
       { "word": "湿気", "hiragana": "しっき / しつき", "meaning": "Hơi ẩm, sự ẩm thấp" }
     ]
   },
@@ -366,7 +366,7 @@
     "han_viet": "TRỆ",
     "meaning": "Trì trệ, ứ đọng, đình trệ",
     "examples": [
-      { "word": "滞る", "hiragana": "toどこおる", "meaning": "Trì trệ, ứ đọng, chậm trễ (thanh toán)" },
+      { "word": "滞る", "hiragana": "とどこおる", "meaning": "Trì trệ, ứ đọng, chậm trễ (thanh toán)" },
       { "word": "滞在する", "hiragana": "たいざいする", "meaning": "Lưu trú, trú ngụ lại ngắn ngày" },
       { "word": "渋滞する", "hiragana": "じゅうたいする", "meaning": "Kẹt xe, tắc nghẽn giao thông" }
     ]
@@ -559,7 +559,7 @@
     "han_viet": "TÍCH",
     "meaning": "Đầm nước mặn, bãi bồi ven biển",
     "examples": [
-      { "word": "新潟県", "hiragana": "niigata-ken", "meaning": "Tỉnh Niigata" },
+      { "word": "新潟県", "hiragana": "にいがたけん", "meaning": "Tỉnh Niigata" },
       { "word": "干潟", "hiragana": "ひがた", "meaning": "Bãi đất bồi khi thủy triều rút" }
     ]
   },
@@ -600,7 +600,7 @@
     "examples": [
       { "word": "濃い", "hiragana": "こい", "meaning": "Đậm, đặc, sẫm (màu sắc, hương vị)" },
       { "word": "濃厚な", "hiragana": "のうこうな", "meaning": "Đậm đà, nồng nàn, đậm đặc" },
-      { "word": "nong do", "hiragana": "のうdo", "meaning": "Nồng độ" }
+      { "word": "濃度", "hiragana": "のうど", "meaning": "Nồng độ" }
     ]
   },
   {
@@ -625,8 +625,8 @@
     "han_viet": "LẠI",
     "meaning": "Nước cạn, ghềnh thác, dòng chảy nông",
     "examples": [
-      { "word": "瀬戸物", "hiragana": "se to mo no", "meaning": "Đồ gốm sứ" },
-      { "word": "瀬戸際", "hiragana": "せto giwa", "meaning": "Thời điểm quyết định, bờ vực sinh tử" }
+      { "word": "瀬戸物", "hiragana": "せともの", "meaning": "Đồ gốm sứ" },
+      { "word": "瀬戸際", "hiragana": "せとぎわ", "meaning": "Thời điểm quyết định, bờ vực sinh tử" }
     ]
   },
   {
@@ -743,7 +743,7 @@
     "han_viet": "NHIÊN",
     "meaning": "Nhiên liệu, đốt cháy",
     "examples": [
-      { "word": "燃える", "hiragana": "moえる", "meaning": "Cháy, bùng cháy (nghĩa đen + bóng)" },
+      { "word": "燃える", "hiragana": "もえる", "meaning": "Cháy, bùng cháy (nghĩa đen + bóng)" },
       { "word": "燃やす", "hiragana": "もやす", "meaning": "Đốt cháy, thiêu cháy" },
       { "word": "燃料", "hiragana": "ねんりょう", "meaning": "Nhiên liệu" }
     ]

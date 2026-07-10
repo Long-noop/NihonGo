@@ -193,7 +193,7 @@
     "meaning": "mẹ",
     "examples": [
       { "word": "母", "hiragana": "はは", "meaning": "Mẹ (của mình)" },
-      { "word": "母親", "hiragana": "Percentageははおや", "meaning": "Mẹ (nói chung)" },
+      { "word": "母親", "hiragana": "ははおや", "meaning": "Mẹ (nói chung)" },
       { "word": "母国", "hiragana": "ぼこく", "meaning": "Mẫu quốc, đất nước mẹ đẻ" }
     ]
   },
@@ -563,7 +563,7 @@
     "han_viet": "BÍ",
     "meaning": "bài tiết",
     "examples": [
-      { "word": "分泌", "hiragana": "ぶんぴつ / Bunぴ", "meaning": "Phân bí, sự bài tiết, tiết ra" },
+      { "word": "分泌", "hiragana": "ぶんぴつ / ぶんぴ", "meaning": "Phân bí, sự bài tiết, tiết ra" },
       { "word": "泌尿器科", "hiragana": "ひにょうきか", "meaning": "Khoa tiết niệu" }
     ]
   },

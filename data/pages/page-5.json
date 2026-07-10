@@ -160,7 +160,7 @@
     "meaning": "Lời nguyền",
     "examples": [
       { "word": "呪う", "hiragana": "のろう", "meaning": "Nguyền rủa" },
-      { "word": "呪い", "hiragana": "noroi", "meaning": "Lời nguyền" },
+      { "word": "呪い", "hiragana": "のろい", "meaning": "Lời nguyền" },
       { "word": "呪文", "hiragana": "じゅもん", "meaning": "Thần chú" }
     ]
   },
@@ -396,7 +396,7 @@
     "examples": [
       { "word": "地図", "hiragana": "ちず", "meaning": "Bản đồ" },
       { "word": "図書館", "hiragana": "としょかん", "meaning": "Thư viện" },
-      { "word": "図る", "hiragana": "hakarù", "meaning": "Lập kế hoạch, mưu toan" }
+      { "word": "図る", "hiragana": "はかる", "meaning": "Lập kế hoạch, mưu toan" }
     ]
   },
   {

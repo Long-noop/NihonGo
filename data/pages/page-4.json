@@ -612,7 +612,7 @@
     "han_viet": "THƯƠNG",
     "meaning": "Buôn bán",
     "examples": [
-      { "word": "商品", "hiragana": "しょうhin", "meaning": "Hàng hóa, thương phẩm" },
+      { "word": "商品", "hiragana": "しょうひん", "meaning": "Hàng hóa, thương phẩm" },
       { "word": "商業", "hiragana": "しょうぎょう", "meaning": "Thương nghiệp, thương mại" },
       { "word": "商売", "hiragana": "しょうばい", "meaning": "Kinh doanh, buôn bán" }
     ]

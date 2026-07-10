@@ -63,7 +63,7 @@
     "meaning": "Không có, hư vô",
     "examples": [
       { "word": "無い", "hiragana": "ない", "meaning": "Không có" },
-      { "word": "無料", "hiragana": "むryou", "meaning": "Miễn phí" },
+      { "word": "無料", "hiragana": "むりょう", "meaning": "Miễn phí" },
       {
         "word": "無理な",
         "hiragana": "むりな",
@@ -280,7 +280,7 @@
         "hiragana": "かたづける",
         "meaning": "Dọn dẹp, sắp xếp"
       },
-      { "word": "破片", "hiragana": "haへん", "meaning": "Mảnh vỡ, mảnh vụn" }
+      { "word": "破片", "hiragana": "はへん", "meaning": "Mảnh vỡ, mảnh vụn" }
     ]
   },
   {
@@ -478,7 +478,7 @@
       },
       {
         "word": "狂気",
-        "hiragana": "きょうki",
+        "hiragana": "きょうき",
         "meaning": "Sự điên cuồng, mất trí"
       },
       {
@@ -724,7 +724,7 @@
       { "word": "珍しい", "hiragana": "めずらしい", "meaning": "Hiếm, lạ lẫm" },
       {
         "word": "珍味",
-        "hiragana": "chỉnmi",
+        "hiragana": "ちんみ",
         "meaning": "Đồ ăn hiếm, cao lương mỹ vị độc lạ"
       }
     ]
@@ -854,7 +854,7 @@
     "examples": [
       {
         "word": "完璧な",
-        "hiragana": "かんぺきna",
+        "hiragana": "かんぺきな",
         "meaning": "Hoàn hảo, thập toàn thập mỹ"
       }
     ]

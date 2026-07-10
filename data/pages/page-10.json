@@ -233,7 +233,7 @@
     "examples": [
       { "word": "自慢する", "hiragana": "じまんする", "meaning": "Tự mãn, khoe khoang" },
       { "word": "我慢する", "hiragana": "がまんする", "meaning": "Chịu đựng, nhẫn nhịn" },
-      { "word": "怠慢な", "hiragana": "たいmaんな", "meaning": "Lơ là, cẩu thả, thiếu trách nhiệm" }
+      { "word": "怠慢な", "hiragana": "たいまんな", "meaning": "Lơ là, cẩu thả, thiếu trách nhiệm" }
     ]
   },
   {
@@ -560,7 +560,7 @@
     "meaning": "Bẻ, gấp giấy, cơ hội",
     "examples": [
       { "word": "折る", "hiragana": "おる", "meaning": "Bẻ gãy, gấp (giấy)" },
-      { "word": "折り紙", "hiragana": "origami", "meaning": "Nghệ thuật gấp giấy Nhật Bản" },
+      { "word": "折り紙", "hiragana": "おりがみ", "meaning": "Nghệ thuật gấp giấy Nhật Bản" },
       { "word": "挫折する", "hiragana": "ざせつする", "meaning": "Nản lòng, bỏ cuộc, gục ngã" }
     ]
   },

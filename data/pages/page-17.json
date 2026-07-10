@@ -24,7 +24,7 @@
     "meaning": "100 mét vuông",
     "examples": [
       { "word": "畝", "hiragana": "うね", "meaning": "Luống đất, giồng cây" },
-      { "word": "畝歩", "hiragana": "sebu", "meaning": "Đơn vị đo diện tích đất cổ của Nhật" }
+      { "word": "畝歩", "hiragana": "せぶ", "meaning": "Đơn vị đo diện tích đất cổ của Nhật" }
     ]
   },
   {
@@ -32,7 +32,7 @@
     "han_viet": "KỲ",
     "meaning": "chốn kinh kỳ",
     "examples": [
-      { "word": "近畿地方", "hiragana": "kin-kichi-hou", "meaning": "Vùng Kinki (vùng quanh kinh đô cổ Kyoto, bao gồm Osaka, Nara...)" }
+      { "word": "近畿地方", "hiragana": "きんきちほう", "meaning": "Vùng Kinki (vùng quanh kinh đô cổ Kyoto, bao gồm Osaka, Nara...)" }
     ]
   },
   {
@@ -40,7 +40,7 @@
     "han_viet": "SƠ",
     "meaning": "xa lạ, thưa thớt",
     "examples": [
-      { "word": "過疎", "hiragana": "kaso", "meaning": "Sự suy giảm dân số quá mức, thưa thớt dân cư" },
+      { "word": "過疎", "hiragana": "かそ", "meaning": "Sự suy giảm dân số quá mức, thưa thớt dân cư" },
       { "word": "疎通", "hiragana": "そつう", "meaning": "Sự thông suốt, hiểu nhau (ví dụ: 意思疎通)" },
       { "word": "疎か", "hiragana": "おろそか", "meaning": "Lơ là, sao nhãng" }
     ]
@@ -262,8 +262,8 @@
     "meaning": "vua",
     "examples": [
       { "word": "天皇", "hiragana": "てんのう", "meaning": "Thiên hoàng (Nhật Bản)" },
-      { "word": "皇居", "hiragana": "ko-kyo", "meaning": "Hoàng cung" },
-      { "word": "皇帝", "hiragana": "ko-tei", "meaning": "Hoàng đế" }
+      { "word": "皇居", "hiragana": "こうきょ", "meaning": "Hoàng cung" },
+      { "word": "皇帝", "hiragana": "こうてい", "meaning": "Hoàng đế" }
     ]
   },
   {
@@ -399,7 +399,7 @@
     "meaning": "mù",
     "examples": [
       { "word": "盲目", "hiragana": "もうもく", "meaning": "Mù quáng" },
-      { "word": "盲導犬", "hiragana": "mou-dou-ken", "meaning": "Chó dẫn đường cho người khiếm thị" }
+      { "word": "盲導犬", "hiragana": "もうどうけん", "meaning": "Chó dẫn đường cho người khiếm thị" }
     ]
   },
   {
@@ -575,7 +575,7 @@
     "meaning": "sửa cho ngay",
     "examples": [
       { "word": "矯正", "hiragana": "きょうせい", "meaning": "Kiều chính, uốn nắn, sửa cho đúng (ví dụ: 歯列矯正 - Niềng răng)" },
-      { "word": "矯める", "hiragana": "tameru", "meaning": "Uốn thẳng, sửa chữa tính xấu" }
+      { "word": "矯める", "hiragana": "ためる", "meaning": "Uốn thẳng, sửa chữa tính xấu" }
     ]
   },
   {
@@ -603,7 +603,7 @@
     "meaning": "chà, đánh bóng",
     "examples": [
       { "word": "磨く", "hiragana": "みがく", "meaning": "Chà, mài, đánh bóng (răng, giày...)" },
-      { "word": "研磨", "hiragana": "けんma", "meaning": "Nghiên ma, mài giũa, rèn luyện kỹ năng" }
+      { "word": "研磨", "hiragana": "けんま", "meaning": "Nghiên ma, mài giũa, rèn luyện kỹ năng" }
     ]
   },
   {
@@ -745,7 +745,7 @@
     "han_viet": "PHIÊU",
     "meaning": "lá phiếu",
     "examples": [
-      { "word": "投票", "hiragana": "とうhyou", "meaning": "Bỏ phiếu, bầu chọn" },
+      { "word": "投票", "hiragana": "とうひょう", "meaning": "Bỏ phiếu, bầu chọn" },
       { "word": "伝票", "hiragana": "でんぴょう", "meaning": "Hóa đơn, phiếu thu chi" },
       { "word": "目標票", "hiragana": "ひょう", "meaning": "Lá phiếu, bảng biểu (thường gọi chung là 票)" }
     ]

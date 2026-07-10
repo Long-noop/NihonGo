@@ -274,7 +274,7 @@
     "examples": [
       { "word": "難しい", "hiragana": "むずかしい", "meaning": "Khó, phức tạp" },
       { "word": "困難な", "hiragana": "こんなんな", "meaning": "Khó khăn, gian khổ" },
-      { "word": "避難する", "hiragana": "ひnanする", "meaning": "Tị nạn, sơ tán" },
+      { "word": "避難する", "hiragana": "ひなんする", "meaning": "Tị nạn, sơ tán" },
       { "word": "有り難い", "hiragana": "ありがたい", "meaning": "Biết ơn, hạnh phúc, đáng trân quý" }
     ]
   },
@@ -751,7 +751,7 @@
     "han_viet": "DƯỠNG",
     "meaning": "Nuôi dưỡng, chăm sóc, thu hoạch kiến thức",
     "examples": [
-      { "word": "養う", "hiragana": "や養う / やstateう", "meaning": "Nuôi nấng, nuôi dưỡng (gia đình) / Rèn luyện, bồi dưỡng (thể lực, năng lực)" },
+      { "word": "養う", "hiragana": "やしなう", "meaning": "Nuôi nấng, nuôi dưỡng (gia đình) / Rèn luyện, bồi dưỡng (thể lực, năng lực)" },
       { "word": "養育する", "hiragana": "よういくする", "meaning": "Nuôi dưỡng, giáo dục trẻ nhỏ" },
       { "word": "栄養", "hiragana": "えいよう", "meaning": "Dinh dưỡng" }
     ]

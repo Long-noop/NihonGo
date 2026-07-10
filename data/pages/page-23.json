@@ -39,7 +39,7 @@
     "han_viet": "TƯ, TỶ",
     "meaning": "hỏi ý",
     "examples": [
-      { "word": "諮る", "hiragana": "hakarut", "meaning": "Hỏi ý kiến, tham khảo, hỏi ý chuyên gia" },
+      { "word": "諮る", "hiragana": "はかる", "meaning": "Hỏi ý kiến, tham khảo, hỏi ý chuyên gia" },
       { "word": "諮môn", "hiragana": "しもん", "meaning": "Tư vấn, chất vấn, hỏi ý kiến cơ quan chức năng" }
     ]
   },
@@ -604,7 +604,7 @@
     "han_viet": "TẨU",
     "meaning": "chạy",
     "examples": [
-      { "word": "走る", "hiragana": "hasiru", "meaning": "Chạy" },
+      { "word": "走る", "hiragana": "はしる", "meaning": "Chạy" },
       { "word": "走行", "hiragana": "そうこう", "meaning": "Tẩu hành, (xe) lăn bánh, chạy trên đường" }
     ]
   },
