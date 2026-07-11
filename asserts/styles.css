@@ -67,6 +67,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 6px 2px 22px;
+  position: relative;
 }
 .brand {
   font-size: 13px;
@@ -79,8 +80,23 @@ body {
   color: var(--fg);
   font-weight: 700;
 }
+.brand .brand-sub {
+  display: none;
+}
+@media (min-width: 445px) {
+  .brand .brand-sub {
+    display: inline;
+  }
+}
 
-.theme-toggle {
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ── Circle icon button (shared design) ────────────────────────── */
+.icon-btn {
   width: 38px;
   height: 38px;
   border-radius: 50%;
@@ -91,20 +107,29 @@ body {
   justify-content: center;
   cursor: pointer;
   color: var(--fg);
+  position: relative;
+  padding: 0;
   transition:
-    transform 0.25s ease,
-    background 0.3s ease,
-    border-color 0.3s ease;
+    transform 0.15s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
 }
-.theme-toggle:hover {
+.icon-btn:hover {
   transform: translateY(-1px);
+  background: var(--fg);
+  color: var(--bg);
+  border-color: var(--fg);
 }
-.theme-toggle:active {
+.icon-btn:active {
   transform: scale(0.94);
 }
-.theme-toggle svg {
+.icon-btn svg {
   width: 18px;
   height: 18px;
+}
+.theme-toggle {
+  /* inherits .icon-btn styles */
 }
 
 /* ── Stage & Scene ─────────────────────────────────────────────── */
@@ -588,39 +613,75 @@ body {
     height: clamp(100px, 52vw, 160px);
   }
 }
-/* ── Search bar ─────────────────────────────────────────────── */
+/* ── Search bar (expandable) ────────────────────────────────── */
 .search-wrap {
-  position: relative;
-  flex: 1;
-  min-width: 0;
-  max-width: 260px;
+  position: absolute;
+  top: 6px;
+  left: 2px;
+  right: 2px;
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition:
+    opacity 0.22s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.search-wrap.is-open {
+  pointer-events: auto;
+  opacity: 1;
+  transform: translateY(0);
+}
+.search-inner {
+  display: flex;
+  align-items: center;
+  background: var(--card);
+  border: 1.5px solid var(--accent);
+  border-radius: 999px;
+  padding: 0 8px 0 16px;
+  box-shadow: var(--shadow);
 }
 #searchInput {
-  width: 100%;
-  padding: 6px 10px 6px 30px;
-  border: 1.5px solid var(--border, #d1d5db);
-  border-radius: 20px;
-  background: var(--card-bg, #fff);
-  color: var(--text, #111);
-  font-size: 13px;
+  flex: 1;
+  border: none;
   outline: none;
-  transition: border-color 0.15s;
-  box-sizing: border-box;
+  background: transparent;
+  color: var(--fg);
+  font-size: 14px;
+  padding: 8px 0;
+  min-width: 0;
 }
-#searchInput:focus {
-  border-color: var(--accent, #ae3427);
+.search-close-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.2s, color 0.2s;
+}
+.search-close-btn:hover {
+  background: color-mix(in srgb, var(--fg) 8%, transparent);
+  color: var(--fg);
+}
+.search-close-btn svg {
+  width: 18px;
+  height: 18px;
 }
 .search-dropdown {
   position: absolute;
-  top: calc(100% + 4px);
+  top: calc(100% + 6px);
   left: 0;
   right: 0;
   max-height: 340px;
   overflow-y: auto;
-  background: var(--card-bg, #fff);
-  border: 1.5px solid var(--border, #d1d5db);
-  border-radius: 10px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  background: var(--card);
+  border: 1.5px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
   z-index: 200;
 }
 .search-dropdown[hidden] {
@@ -695,51 +756,18 @@ body {
   color: var(--muted, #6b7280);
 }
 
-/* ── Review button (topbar) ────────────────────────────────────── */
-.review-btn {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  padding: 6px 12px;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  background: var(--card);
-  color: var(--fg);
-  font-family: inherit;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  cursor: pointer;
-  white-space: nowrap;
-  transition:
-    background 0.2s ease,
-    color 0.2s ease,
-    border-color 0.2s ease,
-    transform 0.15s ease;
-}
-.review-btn:hover {
-  background: var(--fg);
-  color: var(--bg);
-  border-color: var(--fg);
-  transform: translateY(-1px);
-}
-.review-btn:active {
-  transform: scale(0.94);
-}
-
 /* Badge số due-count */
 .review-badge {
   position: absolute;
-  top: -5px;
-  right: -5px;
+  top: -4px;
+  right: -4px;
   min-width: 17px;
   height: 17px;
   padding: 0 4px;
   border-radius: 999px;
   background: var(--accent);
   color: #fff;
-  font-size: 10px;
+  font-size: 9.5px;
   font-weight: 700;
   line-height: 17px;
   text-align: center;
