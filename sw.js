@@ -8,7 +8,7 @@
  * - KanjiVG SVGs: Network-first with cache fallback
  */
 
-const STATIC_CACHE = "nihongo-static-v4";
+const STATIC_CACHE = "nihongo-static-v5";
 const DATA_CACHE = "nihongo-data-v1";
 const KANJIVG_CACHE = "nihongo-kanjivg-v1";
 

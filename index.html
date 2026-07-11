@@ -60,7 +60,7 @@
         </button>
 
         <!-- Review button -->
-        <button class="icon-btn" id="reviewBtn" aria-label="Chế độ ôn tập">
+        <button class="icon-btn" id="reviewBtn" aria-label="Chế độ ôn tập" style="display: none;">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <rect x="3" y="3" width="14" height="14" rx="2" ry="2"></rect>
             <path d="M7 21h10a2 2 0 0 0 2-2V7"></path>
@@ -1049,18 +1049,14 @@
         }
         searchDropdown.innerHTML = results
           .map((item, k) => {
-            const status = getSrsStatus(item.id);
-            const chipLabel = SRS_LABELS[status] || "Mới";
-            const chipCls = status;
-            return `
-            <div class="search-item" data-k="${k}">
-              <span class="si-kanji">${item.kanji}</span>
-              <div class="si-body">
-                <div class="si-top">${item.han_viet}</div>
-                <div class="si-meaning">${item.meaning}</div>
-              </div>
-              <span class="si-chip ${chipCls}">${chipLabel}</span>
-            </div>`;
+             return `
+             <div class="search-item" data-k="${k}">
+               <span class="si-kanji">${item.kanji}</span>
+               <div class="si-body">
+                 <div class="si-top">${item.han_viet}</div>
+                 <div class="si-meaning">${item.meaning}</div>
+               </div>
+             </div>`;
           })
           .join("");
 
