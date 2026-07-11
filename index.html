@@ -31,17 +31,6 @@
 
       <!-- ── Search ───────────────────────────────────────────────── -->
       <div class="search-wrap" id="searchWrap">
-        <svg
-          class="search-icon"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-        >
-          <circle cx="11" cy="11" r="7" />
-          <path d="M21 21l-4.35-4.35" />
-        </svg>
         <input
           id="searchInput"
           type="search"
@@ -51,6 +40,13 @@
         />
         <div class="search-dropdown" id="searchDropdown" hidden></div>
       </div>
+
+      <!-- ── Review button ──────────────────────────────────────────── -->
+      <button
+        class="review-btn"
+        id="reviewBtn"
+        aria-label="Chế độ ôn tập"
+      >On tap<span class="review-badge" id="reviewBadge" hidden>0</span></button>
 
       <button
         class="theme-toggle"
@@ -191,6 +187,48 @@
         </button>
       </div>
 
+      <!-- ── Review controls (hidden by default) ──────────────────── -->
+      <div class="review-controls" id="reviewControls" hidden>
+        <!-- Hàng nút lật thẻ (hiển thị khi chưa lật) -->
+        <div class="review-flip-row" id="reviewFlipRow">
+          <button class="review-flip-btn" id="reviewFlipBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 2.1l4 4-4 4"/>
+              <path d="M3 12.9V11a4 4 0 0 1 4-4h14"/>
+              <path d="M7 21.9l-4-4 4-4"/>
+              <path d="M21 11.1V13a4 4 0 0 1-4 4H3"/>
+            </svg>
+            Lat the
+          </button>
+        </div>
+        <!-- Hàng 4 nút chấm điểm (hiển thị sau khi lật) -->
+        <div class="review-grade-row" id="reviewGradeRow" hidden>
+          <button class="grade-btn again" id="gradeAgain" data-grade="0">
+            Quen<small>Again</small>
+          </button>
+          <button class="grade-btn hard" id="gradeHard" data-grade="1">
+            Kho<small>Hard</small>
+          </button>
+          <button class="grade-btn good" id="gradeGood" data-grade="2">
+            Tot<small>Good</small>
+          </button>
+          <button class="grade-btn easy" id="gradeEasy" data-grade="3">
+            De<small>Easy</small>
+          </button>
+        </div>
+        <!-- Tiến trình ôn tập -->
+        <div class="review-progress" id="reviewProgress"></div>
+      </div>
+
+      <!-- ── Review complete screen ────────────────────────────────── -->
+      <div class="review-complete" id="reviewComplete" hidden>
+        <div class="review-complete-icon">&#x2713;</div>
+        <div class="review-complete-title">Hoan thanh on tap hom nay!</div>
+        <div class="review-complete-sub" id="reviewCompleteStats">Ban da on xong tat ca cac the.</div>
+        <button class="review-back-btn" id="reviewBackBtn">Quay lai duyet</button>
+      </div>
+
       <div class="progress">
         <b id="posNow">1</b> / <span id="posTotal">6</span>
       </div>
@@ -224,6 +262,7 @@
     </div>
 
     <script src="search.js"></script>
+    <script src="srs.js"></script>
     <script>
       // ══════════════════════════════════════════════════════════════════
       //  STATE  (DATA được load động từ kanji-sample.json)
@@ -236,6 +275,12 @@
       let flipped = false;
       let animating = false;
       let animTimers = [];
+
+      // ── SRS / review state ────────────────────────────────────────────
+      let appMode = 'browse';   // 'browse' | 'review'
+      let reviewQueue = [];     // mảng item cần ôn hôm nay
+      let reviewPos = 0;        // vị trí hiện tại trong queue
+      let reviewTotal = 0;      // tổng thẻ khi bắt đầu phiên
 
       const svgCache = new Map(); // ch → raw SVG text (or null if not found)
 
@@ -260,6 +305,20 @@
       const reducedMotion = window.matchMedia(
         "(prefers-reduced-motion: reduce)",
       ).matches;
+
+      // ── Review DOM refs ───────────────────────────────────────────────
+      const reviewControls   = document.getElementById("reviewControls");
+      const reviewFlipRow    = document.getElementById("reviewFlipRow");
+      const reviewGradeRow   = document.getElementById("reviewGradeRow");
+      const reviewProgress   = document.getElementById("reviewProgress");
+      const reviewComplete   = document.getElementById("reviewComplete");
+      const reviewCompleteStats = document.getElementById("reviewCompleteStats");
+      const reviewBadge      = document.getElementById("reviewBadge");
+      const browseControls   = document.querySelector(".controls");
+      const jumpControls     = document.querySelector(".jump-controls");
+      const progressEl       = document.querySelector(".progress");
+      const pageProgressTrack= document.querySelector(".progress-track");
+      const pageLabelEl      = document.getElementById("pageLabel");
 
       // ══════════════════════════════════════════════════════════════════
       //  KANJIVG FETCH  (unchanged from NihonGo/kanji.html approach)
@@ -724,16 +783,180 @@
         }
       });
 
+      // ══════════════════════════════════════════════════════════════════
+      //  KEYBOARD
+      // ══════════════════════════════════════════════════════════════════
+
       document.addEventListener("keydown", (e) => {
         if (e.code === "Space" || e.code === "Enter") {
           e.preventDefault();
           abortAnimation();
-          setFlipped(!flipped);
+          if (appMode === 'review') {
+            // Space/Enter lật thẻ trong review mode
+            if (!flipped) {
+              setFlipped(true);
+              showReviewGradeButtons();
+            }
+          } else {
+            setFlipped(!flipped);
+          }
         }
-        if (e.code === "ArrowRight") go(1);
-        if (e.code === "ArrowLeft") go(-1);
+        if (appMode === 'browse') {
+          if (e.code === "ArrowRight") go(1);
+          if (e.code === "ArrowLeft") go(-1);
+        } else if (appMode === 'review' && flipped) {
+          // Phím 1/2/3/4 → chấm điểm
+          if (e.key === '1') submitGrade(0);
+          if (e.key === '2') submitGrade(1);
+          if (e.key === '3') submitGrade(2);
+          if (e.key === '4') submitGrade(3);
+        }
         if (e.key === "s" || e.key === "S") handleStrokeOrder();
       });
+
+      // ══════════════════════════════════════════════════════════════════
+      //  REVIEW MODE
+      // ══════════════════════════════════════════════════════════════════
+
+      /** Cập nhật badge số thẻ due trên nút Ôn tập */
+      function updateReviewBadge() {
+        if (!window.KanjiSRS || !INDEX.length) return;
+        const state = KanjiSRS.loadState();
+        const count = KanjiSRS.getDueCount(INDEX, state);
+        if (count > 0) {
+          reviewBadge.textContent = count > 99 ? '99+' : String(count);
+          reviewBadge.removeAttribute('hidden');
+        } else {
+          reviewBadge.setAttribute('hidden', '');
+        }
+      }
+
+      /** Hiện/ẩn 4 nút chấm điểm khi thẻ đã lật */
+      function showReviewGradeButtons() {
+        reviewFlipRow.setAttribute('hidden', '');
+        reviewGradeRow.removeAttribute('hidden');
+      }
+
+      /** Reset về trạng thái "chưa lật" trong review */
+      function resetReviewFlipState() {
+        reviewFlipRow.removeAttribute('hidden');
+        reviewGradeRow.setAttribute('hidden', '');
+      }
+
+      /** Cập nhật dòng tiến trình */
+      function updateReviewProgress() {
+        reviewProgress.innerHTML = `Tien trinh: <b>${reviewPos}</b> / <b>${reviewTotal}</b> the`;
+      }
+
+      /** Load thẻ ở vị trí reviewPos trong reviewQueue */
+      async function loadReviewCard() {
+        if (reviewPos >= reviewQueue.length) {
+          // Hết queue
+          showReviewComplete();
+          return;
+        }
+        const item = reviewQueue[reviewPos];
+        // Cần đổi trang nếu thẻ thuộc trang khác
+        if (item.page !== pageNumber) {
+          try {
+            await loadPage(item.page);
+          } catch (err) {
+            console.error('[kanji] Review loadPage failed:', err);
+          }
+        }
+        // Đặt idx đến đúng vị trí thẻ trong trang
+        idx = item.i;
+        setFlipped(false);
+        resetReviewFlipState();
+        updateReviewProgress();
+        setTimeout(render, 90);
+      }
+
+      /** Vào chế độ ôn tập */
+      async function enterReviewMode() {
+        if (!window.KanjiSRS || !INDEX.length) {
+          showEmptyNotice();
+          return;
+        }
+        const state = KanjiSRS.loadState();
+        const count = KanjiSRS.getDueCount(INDEX, state);
+        if (count === 0) {
+          showEmptyNotice();
+          return;
+        }
+        reviewQueue = KanjiSRS.buildQueue(INDEX, state);
+        reviewPos   = 0;
+        reviewTotal = reviewQueue.length;
+        appMode     = 'review';
+
+        // Ẩn browse UI, hiện review UI
+        browseControls.style.display = 'none';
+        jumpControls.style.display   = 'none';
+        progressEl.style.display     = 'none';
+        pageProgressTrack.style.display = 'none';
+        pageLabelEl.style.display    = 'none';
+        reviewControls.removeAttribute('hidden');
+        reviewComplete.setAttribute('hidden', '');
+
+        await loadReviewCard();
+      }
+
+      /** Thoát khỏi chế độ ôn tập, quay về browse */
+      function exitReviewMode() {
+        appMode = 'browse';
+
+        // Ẩn review UI, hiện browse UI
+        reviewControls.setAttribute('hidden', '');
+        reviewComplete.setAttribute('hidden', '');
+        browseControls.style.display = '';
+        jumpControls.style.display   = '';
+        progressEl.style.display     = '';
+        pageProgressTrack.style.display = '';
+        pageLabelEl.style.display    = '';
+
+        // Cập nhật badge
+        updateReviewBadge();
+      }
+
+      /** Hiện màn hoàn thành ôn tập */
+      function showReviewComplete() {
+        reviewControls.setAttribute('hidden', '');
+        reviewComplete.removeAttribute('hidden');
+        reviewCompleteStats.textContent =
+          `Ban da on xong ${reviewTotal} the trong phien nay.`;
+        // Cập nhật badge (có thể còn thẻ learning quay lại)
+        updateReviewBadge();
+      }
+
+      /** Chấm điểm thẻ hiện tại và chuyển sang thẻ tiếp */
+      function submitGrade(grade) {
+        if (!window.KanjiSRS) return;
+        const item = reviewQueue[reviewPos];
+        if (!item) return;
+
+        const state   = KanjiSRS.loadState();
+        const oldCard = KanjiSRS.getCard(state, item.id);
+        const newCard = KanjiSRS.reviewCard(oldCard, grade);
+        state[item.id] = newCard;
+        KanjiSRS.saveState(state);
+
+        reviewPos++;
+        loadReviewCard();
+      }
+
+      /** Thông báo nhẹ "Chưa có thẻ nào cần ôn" */
+      function showEmptyNotice() {
+        // Xóa notice cũ nếu có
+        const old = document.querySelector('.review-empty-notice');
+        if (old) old.remove();
+
+        const notice = document.createElement('div');
+        notice.className = 'review-empty-notice';
+        notice.textContent = 'Chua co the nao can on hom nay.';
+        // Chèn vào dưới .stage
+        document.querySelector('.stage').appendChild(notice);
+        setTimeout(() => notice.remove(), 3000);
+      }
 
       // Swipe
       let touchStartX = null;
@@ -761,9 +984,9 @@
       const root = document.documentElement;
       const iconSun = document.getElementById("iconSun");
       const iconMoon = document.getElementById("iconMoon");
-      let theme = window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light";
+      // Ưu tiên giá trị đã lưu trong localStorage, fallback về prefers-color-scheme
+      let theme = localStorage.getItem("nihongo_theme_v1") ||
+        (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
 
       function applyTheme() {
         root.setAttribute("data-theme", theme);
@@ -772,6 +995,7 @@
       }
       document.getElementById("themeToggle").addEventListener("click", () => {
         theme = theme === "dark" ? "light" : "dark";
+        localStorage.setItem("nihongo_theme_v1", theme);
         applyTheme();
       });
 
@@ -786,6 +1010,8 @@
           INDEX = await res.json();
           if (window.KanjiSearch) KanjiSearch.init(INDEX);
           wireSearch();
+          // Cập nhật badge due-count sau khi index đã load
+          updateReviewBadge();
         } catch (err) {
           console.warn("[kanji] Could not load search index:", err.message);
         }
@@ -798,18 +1024,11 @@
       const searchInput = document.getElementById("searchInput");
       const searchDropdown = document.getElementById("searchDropdown");
 
-      /** Read SRS status from localStorage if nihongo_srs_v1 exists */
+      /** Read SRS status — delegates to KanjiSRS.getCard() */
       function getSrsStatus(cardId) {
-        try {
-          const raw = localStorage.getItem("nihongo_srs_v1");
-          if (!raw) return "new";
-          const state = JSON.parse(raw);
-          const cs = state[cardId];
-          if (!cs) return "new";
-          return cs.status || "new"; // 'new' | 'learning' | 'review'
-        } catch {
-          return "new";
-        }
+        if (!window.KanjiSRS) return "new";
+        const state = KanjiSRS.loadState();
+        return KanjiSRS.getCard(state, cardId).status;
       }
 
       const SRS_LABELS = { new: "Mới", learning: "Đang học", review: "Cần ôn" };
@@ -936,6 +1155,35 @@
 
         render();
       }
+
+      // ── Review event listeners ─────────────────────────────────────────
+
+      document.getElementById("reviewBtn").addEventListener("click", (e) => {
+        e.stopPropagation();
+        if (appMode === 'review') return; // đã ở review mode
+        enterReviewMode();
+      });
+
+      document.getElementById("reviewFlipBtn").addEventListener("click", (e) => {
+        e.stopPropagation();
+        abortAnimation();
+        setFlipped(true);
+        showReviewGradeButtons();
+      });
+
+      // Event delegation cho 4 nút chấm điểm
+      document.getElementById("reviewGradeRow").addEventListener("click", (e) => {
+        const btn = e.target.closest(".grade-btn");
+        if (!btn) return;
+        e.stopPropagation();
+        const grade = Number(btn.dataset.grade);
+        submitGrade(grade);
+      });
+
+      document.getElementById("reviewBackBtn").addEventListener("click", (e) => {
+        e.stopPropagation();
+        exitReviewMode();
+      });
 
       applyTheme();
       init();

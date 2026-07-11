@@ -610,16 +610,6 @@ body {
 #searchInput:focus {
   border-color: var(--accent, #ae3427);
 }
-.search-icon {
-  position: absolute;
-  left: 9px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 14px;
-  height: 14px;
-  pointer-events: none;
-  opacity: 0.45;
-}
 .search-dropdown {
   position: absolute;
   top: calc(100% + 4px);
@@ -703,4 +693,324 @@ body {
   text-align: center;
   font-size: 12px;
   color: var(--muted, #6b7280);
+}
+
+/* ── Review button (topbar) ────────────────────────────────────── */
+.review-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--fg);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.15s ease;
+}
+.review-btn:hover {
+  background: var(--fg);
+  color: var(--bg);
+  border-color: var(--fg);
+  transform: translateY(-1px);
+}
+.review-btn:active {
+  transform: scale(0.94);
+}
+
+/* Badge số due-count */
+.review-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  min-width: 17px;
+  height: 17px;
+  padding: 0 4px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 17px;
+  text-align: center;
+  pointer-events: none;
+  box-shadow: 0 0 0 2px var(--bg);
+  transition: transform 0.2s ease;
+}
+.review-badge[hidden] {
+  display: none;
+}
+
+/* ── Review controls (4 grade buttons) ────────────────────────── */
+.review-controls {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+}
+.review-controls[hidden] {
+  display: none;
+}
+
+/* Hàng nút lật thẻ (khi chưa lật) */
+.review-flip-row {
+  display: flex;
+  justify-content: center;
+}
+
+/* Hàng 4 nút chấm điểm (khi đã lật) */
+.review-grade-row {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.review-grade-row[hidden] {
+  display: none;
+}
+
+/* Nút lật thẻ trong chế độ ôn tập */
+.review-flip-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid var(--border);
+  background: var(--fg);
+  color: var(--bg);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px 28px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.15s ease;
+}
+.review-flip-btn:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+.review-flip-btn:active {
+  transform: scale(0.94);
+}
+.review-flip-btn svg {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+
+/* Nút chấm điểm chung */
+.grade-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 8px 14px;
+  border-radius: 12px;
+  border: 1.5px solid transparent;
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  min-width: 62px;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    opacity 0.15s ease;
+  letter-spacing: 0.03em;
+}
+.grade-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.grade-btn:active {
+  transform: scale(0.93);
+  box-shadow: none;
+}
+.grade-btn small {
+  font-size: 10px;
+  font-weight: 500;
+  opacity: 0.75;
+  letter-spacing: 0;
+}
+
+/* Quên — đỏ (dùng --accent đã là đỏ) */
+.grade-btn.again {
+  background: color-mix(in srgb, var(--accent) 15%, transparent);
+  color: var(--accent);
+  border-color: color-mix(in srgb, var(--accent) 35%, transparent);
+}
+.grade-btn.again:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+/* Khó — cam */
+.grade-btn.hard {
+  background: color-mix(in srgb, #d97706 12%, transparent);
+  color: #d97706;
+  border-color: color-mix(in srgb, #d97706 30%, transparent);
+}
+html[data-theme="dark"] .grade-btn.hard {
+  color: #f59e0b;
+  background: color-mix(in srgb, #f59e0b 12%, transparent);
+  border-color: color-mix(in srgb, #f59e0b 30%, transparent);
+}
+.grade-btn.hard:hover {
+  background: #d97706;
+  color: #fff;
+  border-color: #d97706;
+}
+html[data-theme="dark"] .grade-btn.hard:hover {
+  background: #f59e0b;
+  border-color: #f59e0b;
+}
+
+/* Tốt — xanh lá */
+.grade-btn.good {
+  background: color-mix(in srgb, #059669 12%, transparent);
+  color: #059669;
+  border-color: color-mix(in srgb, #059669 30%, transparent);
+}
+html[data-theme="dark"] .grade-btn.good {
+  color: #34d399;
+  background: color-mix(in srgb, #34d399 12%, transparent);
+  border-color: color-mix(in srgb, #34d399 30%, transparent);
+}
+.grade-btn.good:hover {
+  background: #059669;
+  color: #fff;
+  border-color: #059669;
+}
+html[data-theme="dark"] .grade-btn.good:hover {
+  background: #34d399;
+  color: #121210;
+  border-color: #34d399;
+}
+
+/* Dễ — xanh dương */
+.grade-btn.easy {
+  background: color-mix(in srgb, #2563eb 12%, transparent);
+  color: #2563eb;
+  border-color: color-mix(in srgb, #2563eb 30%, transparent);
+}
+html[data-theme="dark"] .grade-btn.easy {
+  color: #60a5fa;
+  background: color-mix(in srgb, #60a5fa 12%, transparent);
+  border-color: color-mix(in srgb, #60a5fa 30%, transparent);
+}
+.grade-btn.easy:hover {
+  background: #2563eb;
+  color: #fff;
+  border-color: #2563eb;
+}
+html[data-theme="dark"] .grade-btn.easy:hover {
+  background: #60a5fa;
+  color: #121210;
+  border-color: #60a5fa;
+}
+
+/* Progress row trong review */
+.review-progress {
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+}
+.review-progress b {
+  color: var(--fg);
+}
+
+/* ── Review complete screen ────────────────────────────────────── */
+.review-complete {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 32px 16px;
+  text-align: center;
+}
+.review-complete[hidden] {
+  display: none;
+}
+.review-complete-icon {
+  font-size: 48px;
+  line-height: 1;
+}
+.review-complete-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--fg);
+  letter-spacing: 0.02em;
+}
+.review-complete-sub {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+  max-width: 240px;
+}
+.review-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 24px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--fg);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.15s ease;
+}
+.review-back-btn:hover {
+  background: var(--fg);
+  color: var(--bg);
+  transform: translateY(-1px);
+}
+.review-back-btn:active {
+  transform: scale(0.94);
+}
+
+/* Thông báo nhẹ "chưa có thẻ nào cần ôn" */
+.review-empty-notice {
+  margin-top: 12px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
+  color: var(--accent);
+  font-size: 12.5px;
+  text-align: center;
+  animation: fadeNotice 0.25s ease;
+}
+@keyframes fadeNotice {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
