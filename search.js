@@ -64,21 +64,37 @@
     const q = normalise(text);
     if (!q) return [];
 
-    const results = [];
+    const hanVietMatches = [];
+    const otherMatches = [];
+
     for (let k = 0; k < _index.length; k++) {
       const n = _normed[k];
-      if (
-        n.kanji.includes(q)    ||
-        n.han_viet.includes(q) ||
-        n.meaning.includes(q)
-      ) {
-        results.push(_index[k]);
-        if (results.length >= limit) break;
+      const card = _index[k];
+
+      if (n.han_viet.includes(q)) {
+        hanVietMatches.push({ card, len: n.han_viet.length });
+      } else if (n.kanji.includes(q)) {
+        otherMatches.push({ card, len: n.kanji.length });
+      } else if (n.meaning.includes(q)) {
+        otherMatches.push({ card, len: n.meaning.length });
       }
     }
-    return results;
+
+    hanVietMatches.sort((a, b) => a.len - b.len);
+    otherMatches.sort((a, b) => a.len - b.len);
+
+    const sortedHanViet = hanVietMatches.map(x => x.card);
+    const sortedOther = otherMatches.map(x => x.card);
+
+    return sortedHanViet.concat(sortedOther).slice(0, limit);
   }
 
   // ── Export ────────────────────────────────────────────────────────
-  window.KanjiSearch = { init, query };
+  const _api = { init, query };
+  if (typeof window !== 'undefined') {
+    window.KanjiSearch = _api;
+  }
+  if (typeof module !== 'undefined') {
+    module.exports = _api;
+  }
 })();
