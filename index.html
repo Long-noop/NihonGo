@@ -582,7 +582,21 @@
       //  Loads and displays the KanjiVG SVG as the primary kanji glyph.
       // ══════════════════════════════════════════════════════════════════
 
+      function saveLastPosition() {
+        if (appMode !== 'browse') return; // không lưu vị trí khi đang ở chế độ Ôn tập
+        try {
+          localStorage.setItem('nihongo_last_position_v1', JSON.stringify({
+            page: pageNumber,
+            idx: idx,
+            savedAt: Date.now(),
+          }));
+        } catch (err) {
+          console.warn('[kanji] Không thể lưu vị trí:', err.message);
+        }
+      }
+
       async function render() {
+        saveLastPosition();
         const item = DATA[idx];
         const displayKanji = getDisplayKanji(item);
 
@@ -1148,12 +1162,30 @@
 
         const urlParams = new URLSearchParams(window.location.search);
         const requestedPage = Number(urlParams.get("page"));
-        const initialPage =
-          Number.isInteger(requestedPage) &&
-          requestedPage >= 1 &&
-          requestedPage <= pageTotal
-            ? requestedPage
-            : 1;
+        
+        let initialPage = 1;
+        let savedIdx = 0;
+        let restoredFromStorage = false;
+
+        if (Number.isInteger(requestedPage) && requestedPage >= 1 && requestedPage <= pageTotal) {
+          initialPage = requestedPage;
+        } else {
+          try {
+            const raw = localStorage.getItem('nihongo_last_position_v1');
+            if (raw) {
+              const pos = JSON.parse(raw);
+              if (pos && Number.isInteger(pos.page) && pos.page >= 1 && pos.page <= pageTotal) {
+                initialPage = pos.page;
+                if (Number.isInteger(pos.idx)) {
+                  savedIdx = pos.idx;
+                  restoredFromStorage = true;
+                }
+              }
+            }
+          } catch (e) {
+            console.warn('[kanji] Không thể khôi phục vị trí:', e.message);
+          }
+        }
 
         // Load first page and search index in parallel
         const [pageResult] = await Promise.allSettled([
@@ -1168,6 +1200,10 @@
            </div>`;
           console.error("[kanji] Failed to load page data:", pageResult.reason);
           return;
+        }
+
+        if (restoredFromStorage && Array.isArray(DATA) && DATA.length > 0) {
+          idx = Math.min(Math.max(0, savedIdx), DATA.length - 1);
         }
 
         render();
