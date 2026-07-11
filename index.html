@@ -199,22 +199,22 @@
               <path d="M7 21.9l-4-4 4-4"/>
               <path d="M21 11.1V13a4 4 0 0 1-4 4H3"/>
             </svg>
-            Lat the
+            Lật thẻ
           </button>
         </div>
         <!-- Hàng 4 nút chấm điểm (hiển thị sau khi lật) -->
         <div class="review-grade-row" id="reviewGradeRow" hidden>
           <button class="grade-btn again" id="gradeAgain" data-grade="0">
-            Quen<small>Again</small>
+            Quên<small>Again</small>
           </button>
           <button class="grade-btn hard" id="gradeHard" data-grade="1">
-            Kho<small>Hard</small>
+            Khó<small>Hard</small>
           </button>
           <button class="grade-btn good" id="gradeGood" data-grade="2">
-            Tot<small>Good</small>
+            Tốt<small>Good</small>
           </button>
           <button class="grade-btn easy" id="gradeEasy" data-grade="3">
-            De<small>Easy</small>
+            Dễ<small>Easy</small>
           </button>
         </div>
         <!-- Tiến trình ôn tập -->
@@ -224,9 +224,9 @@
       <!-- ── Review complete screen ────────────────────────────────── -->
       <div class="review-complete" id="reviewComplete" hidden>
         <div class="review-complete-icon">&#x2713;</div>
-        <div class="review-complete-title">Hoan thanh on tap hom nay!</div>
-        <div class="review-complete-sub" id="reviewCompleteStats">Ban da on xong tat ca cac the.</div>
-        <button class="review-back-btn" id="reviewBackBtn">Quay lai duyet</button>
+        <div class="review-complete-title">Hoàn thành ôn tập hôm nay!</div>
+        <div class="review-complete-sub" id="reviewCompleteStats">Bạn đã ôn xong tất cả các thẻ.</div>
+        <button class="review-back-btn" id="reviewBackBtn">Quay lại duyệt</button>
       </div>
 
       <div class="progress">
@@ -750,6 +750,13 @@
 
       card.addEventListener("click", () => {
         abortAnimation();
+        if (appMode === 'review') {
+          if (!flipped) {
+            setFlipped(true);
+            showReviewGradeButtons();
+          }
+          return;
+        }
         setFlipped(!flipped);
       });
 
@@ -822,7 +829,7 @@
       function updateReviewBadge() {
         if (!window.KanjiSRS || !INDEX.length) return;
         const state = KanjiSRS.loadState();
-        const count = KanjiSRS.getDueCount(INDEX, state);
+        const count = KanjiSRS.getLearnableCount(INDEX, state);
         if (count > 0) {
           reviewBadge.textContent = count > 99 ? '99+' : String(count);
           reviewBadge.removeAttribute('hidden');
@@ -845,7 +852,7 @@
 
       /** Cập nhật dòng tiến trình */
       function updateReviewProgress() {
-        reviewProgress.innerHTML = `Tien trinh: <b>${reviewPos}</b> / <b>${reviewTotal}</b> the`;
+        reviewProgress.innerHTML = `Tiến trình: <b>${reviewPos}</b> / <b>${reviewTotal}</b> thẻ`;
       }
 
       /** Load thẻ ở vị trí reviewPos trong reviewQueue */
@@ -879,12 +886,12 @@
           return;
         }
         const state = KanjiSRS.loadState();
-        const count = KanjiSRS.getDueCount(INDEX, state);
-        if (count === 0) {
+        const tempQueue = KanjiSRS.buildQueue(INDEX, state);
+        if (tempQueue.length === 0) {
           showEmptyNotice();
           return;
         }
-        reviewQueue = KanjiSRS.buildQueue(INDEX, state);
+        reviewQueue = tempQueue;
         reviewPos   = 0;
         reviewTotal = reviewQueue.length;
         appMode     = 'review';
@@ -923,7 +930,7 @@
         reviewControls.setAttribute('hidden', '');
         reviewComplete.removeAttribute('hidden');
         reviewCompleteStats.textContent =
-          `Ban da on xong ${reviewTotal} the trong phien nay.`;
+          `Bạn đã ôn xong ${reviewTotal} thẻ trong phiên này.`;
         // Cập nhật badge (có thể còn thẻ learning quay lại)
         updateReviewBadge();
       }
@@ -952,7 +959,7 @@
 
         const notice = document.createElement('div');
         notice.className = 'review-empty-notice';
-        notice.textContent = 'Chua co the nao can on hom nay.';
+        notice.textContent = 'Chưa có thẻ nào cần ôn hôm nay.';
         // Chèn vào dưới .stage
         document.querySelector('.stage').appendChild(notice);
         setTimeout(() => notice.remove(), 3000);

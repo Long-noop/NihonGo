@@ -122,9 +122,9 @@
 
       // Còn bước learning chưa qua hết?
       if (cs.reps < LEARNING_STEPS.length - 1) {
-        cs.reps++;
         cs.status = 'learning';
         cs.due    = now + LEARNING_STEPS[cs.reps];   // bước tiếp theo
+        cs.reps++;
         return cs;
       }
 
@@ -236,6 +236,14 @@
     return count;
   }
 
+  /**
+   * getLearnableCount(index, state, opts)
+   * Trả về tổng số thẻ có thể ôn/học ngay bây giờ (due + newLimit thẻ mới).
+   */
+  function getLearnableCount(index, state, opts) {
+    return buildQueue(index, state, opts).length;
+  }
+
   // ── Export ────────────────────────────────────────────────────────
   const _api = {
     loadState,
@@ -244,6 +252,7 @@
     reviewCard,
     buildQueue,
     getDueCount,
+    getLearnableCount,
   };
 
   // Browser: attach to window
