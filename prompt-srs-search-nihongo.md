@@ -5,6 +5,7 @@
 Đây là repo `NihonGo` — web app flashcard học Hán tự (kanji) cho người Việt học tiếng Nhật, tại `github.com/Long-noop/NihonGo`. App hiện tại là 1 trang tĩnh (`index.html`), không có backend, không có build step, chạy trực tiếp qua `file://` hoặc static hosting, có PWA offline qua `sw.js`.
 
 Cấu trúc hiện có:
+
 ```
 index.html                 # toàn bộ UI + logic JS inline (~800 dòng)
 data/kanji-sample.json     # dữ liệu mẫu cũ, không dùng để load runtime
@@ -15,6 +16,7 @@ sw.js, manifest.json       # PWA
 ```
 
 Mỗi phần tử trong `page-N.json` có dạng:
+
 ```json
 {
   "kanji": "一",
@@ -44,19 +46,8 @@ Thêm 2 tính năng vào app hiện có, **không phá vỡ chế độ duyệt 
 Viết script Node (`build-index.js`, chạy bằng `node build-index.js`, không cần thêm dependency ngoài Node core) gộp toàn bộ `data/pages/page-*.json` thành `data/index.json` — bản rút gọn (không kèm `examples`) dùng cho cả search lẫn tính "thẻ nào due":
 
 - Mỗi phần tử: `{ id, kanji, han_viet, meaning, page, i }` trong đó `i` là vị trí (0-based) của thẻ đó trong file `page-N.json` tương ứng.
-- `id` mặc định = ký tự `kanji`. Nếu trùng (đã biết có 2 ca: `治`, `労`), tự động đổi thành `${kanji}-${page}` và in cảnh báo ra console để dev biết.
-- Script phải log ra tổng số thẻ đã gộp và danh sách các ID bị đổi do trùng.
+- `id` mặc định = ký tự `kanji`.
 - `index.json` sẽ được `fetch` 1 lần lúc `init()` của app, giữ toàn bộ trong bộ nhớ — không cần lazy load vì kích thước nhỏ (~150KB).
-
-### B. Module SRS (`srs.js`, hoặc gộp vào `<script>` trong `index.html` nếu bạn muốn giữ 1 file — nhưng ưu tiên tách file riêng cho dễ maintain)
-
-- Thuật toán: SM-2 rút gọn, có **learning steps** trước khi vào chu kỳ dài, để tránh thẻ mới học nhảy thẳng lên khoảng cách vài ngày.
-- State lưu trong `localStorage` key `nihongo_srs_v1`, dạng object map `{ [id]: CardState }`.
-- `CardState`: `{ ef, interval, reps, lapses, due, status }` — `status` ∈ `new | learning | review`, `due` là timestamp ms.
-- Hàm `reviewCard(cardState, grade)` với `grade` ∈ `0 (Again) | 1 (Hard) | 2 (Good) | 3 (Easy)`, trả về state mới, immutable (không mutate input).
-- Learning steps gợi ý: 10 phút → 1 ngày → tốt nghiệp sang `review` với interval khởi điểm 1 ngày (hoặc 4 ngày nếu bấm Easy ngay từ đầu).
-- Hàm `buildQueue(index, srsState, { newLimit })` trả về mảng thẻ cần ôn hôm nay: gồm thẻ `due <= now` (sắp theo due tăng dần) trộn xen kẽ với thẻ mới (giới hạn `newLimit`, mặc định 20/ngày) — cứ khoảng 4 thẻ review thì chen 1 thẻ mới.
-- Toàn bộ logic SRS phải là pure function, dễ test độc lập (không phụ thuộc DOM).
 
 ### C. Module Search (`search.js` hoặc gộp tương tự)
 
@@ -93,8 +84,6 @@ Viết script Node (`build-index.js`, chạy bằng `node build-index.js`, khôn
 
 1. `build-index.js` — script tạo `data/index.json`, chạy thử và xác nhận log ra đúng ~2134 thẻ, cảnh báo 2 ca trùng.
 2. `data/index.json` — file đã generate.
-3. `srs.js` — module SRS như mô tả ở mục B, kèm vài dòng comment giải thích learning steps.
-4. `search.js` — module search như mô tả ở mục C.
-5. Sửa `index.html` — thêm thanh search, nút Ôn tập, 4 nút đánh giá, wiring gọi các module trên.
-6. Sửa `sw.js` — thêm các file mới vào danh sách cache.
-7. Tóm tắt ngắn gọn các thay đổi + hướng dẫn test thủ công (ví dụ: cách kiểm tra 1 thẻ sau khi bấm "Tốt" 3 lần liên tiếp thì `due` tăng đúng theo cấp số nhân của `ef`).
+3. `search.js` — module search như mô tả ở mục C.
+4. Sửa `index.html` — thêm thanh search, nút Ôn tập, 4 nút đánh giá, wiring gọi các module trên.
+5. Sửa `sw.js` — thêm các file mới vào danh sách cache.

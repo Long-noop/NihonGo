@@ -22,11 +22,36 @@
     <link rel="manifest" href="manifest.json" />
 
     <link rel="stylesheet" href="asserts/styles.css" />
+
     <link rel="icon" href="asserts/samurai.png" type="image/png" />
   </head>
   <body>
     <div class="topbar">
       <div class="brand"><b>漢字</b> · Flashcards</div>
+
+      <!-- ── Search ───────────────────────────────────────────────── -->
+      <div class="search-wrap" id="searchWrap">
+        <svg
+          class="search-icon"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+        >
+          <circle cx="11" cy="11" r="7" />
+          <path d="M21 21l-4.35-4.35" />
+        </svg>
+        <input
+          id="searchInput"
+          type="search"
+          placeholder="Tìm kanji, âm HV…"
+          autocomplete="off"
+          aria-label="Tìm kiếm kanji"
+        />
+        <div class="search-dropdown" id="searchDropdown" hidden></div>
+      </div>
+
       <button
         class="theme-toggle"
         id="themeToggle"
@@ -198,11 +223,13 @@
       </div>
     </div>
 
+    <script src="search.js"></script>
     <script>
       // ══════════════════════════════════════════════════════════════════
       //  STATE  (DATA được load động từ kanji-sample.json)
       // ══════════════════════════════════════════════════════════════════
       let DATA = [];
+      let INDEX = []; // full search index from data/index.json
       let idx = 0;
       let pageNumber = 1;
       let pageTotal = 27;
@@ -749,28 +776,161 @@
       });
 
       // ══════════════════════════════════════════════════════════════════
+      //  INDEX LOADER
+      // ══════════════════════════════════════════════════════════════════
+
+      async function loadIndex() {
+        try {
+          const res = await fetch("./data/index.json");
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          INDEX = await res.json();
+          if (window.KanjiSearch) KanjiSearch.init(INDEX);
+          wireSearch();
+        } catch (err) {
+          console.warn("[kanji] Could not load search index:", err.message);
+        }
+      }
+
+      // ══════════════════════════════════════════════════════════════════
+      //  SEARCH UI
+      // ══════════════════════════════════════════════════════════════════
+
+      const searchInput = document.getElementById("searchInput");
+      const searchDropdown = document.getElementById("searchDropdown");
+
+      /** Read SRS status from localStorage if nihongo_srs_v1 exists */
+      function getSrsStatus(cardId) {
+        try {
+          const raw = localStorage.getItem("nihongo_srs_v1");
+          if (!raw) return "new";
+          const state = JSON.parse(raw);
+          const cs = state[cardId];
+          if (!cs) return "new";
+          return cs.status || "new"; // 'new' | 'learning' | 'review'
+        } catch {
+          return "new";
+        }
+      }
+
+      const SRS_LABELS = { new: "Mới", learning: "Đang học", review: "Cần ôn" };
+
+      function renderDropdown(results) {
+        if (!results.length) {
+          searchDropdown.innerHTML =
+            '<div class="search-empty">Không tìm thấy kết quả</div>';
+          searchDropdown.removeAttribute("hidden");
+          return;
+        }
+        searchDropdown.innerHTML = results
+          .map((item, k) => {
+            const status = getSrsStatus(item.id);
+            const chipLabel = SRS_LABELS[status] || "Mới";
+            const chipCls = status;
+            return `
+            <div class="search-item" data-k="${k}">
+              <span class="si-kanji">${item.kanji}</span>
+              <div class="si-body">
+                <div class="si-top">${item.han_viet}</div>
+                <div class="si-meaning">${item.meaning}</div>
+              </div>
+              <span class="si-chip ${chipCls}">${chipLabel}</span>
+            </div>`;
+          })
+          .join("");
+
+        // Click handler — jump to card
+        searchDropdown.querySelectorAll(".search-item").forEach((el, k) => {
+          el.addEventListener("click", () => {
+            const item = results[k];
+            closeSearch();
+            // Navigate to the correct page then jump to the card index
+            if (item.page === pageNumber) {
+              jumpToCard(item.i + 1);
+            } else {
+              loadPage(item.page)
+                .then(() => {
+                  idx = item.i;
+                  setFlipped(false);
+                  setTimeout(render, 90);
+                })
+                .catch((err) =>
+                  console.error("[kanji] Search jump failed:", err),
+                );
+            }
+          });
+        });
+
+        searchDropdown.removeAttribute("hidden");
+      }
+
+      function closeSearch() {
+        searchDropdown.setAttribute("hidden", "");
+        searchInput.value = "";
+      }
+
+      function wireSearch() {
+        let debounceTimer = null;
+
+        searchInput.addEventListener("input", () => {
+          clearTimeout(debounceTimer);
+          debounceTimer = setTimeout(() => {
+            const q = searchInput.value.trim();
+            if (!q) {
+              searchDropdown.setAttribute("hidden", "");
+              return;
+            }
+            if (!window.KanjiSearch) return;
+            const results = KanjiSearch.query(q, 50);
+            renderDropdown(results);
+          }, 150);
+        });
+
+        // Close dropdown on Escape
+        searchInput.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") closeSearch();
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener("click", (e) => {
+          if (!document.getElementById("searchWrap").contains(e.target)) {
+            searchDropdown.setAttribute("hidden", "");
+          }
+        });
+
+        // Prevent Space/Enter card-flip shortcut when typing in search
+        searchInput.addEventListener("keydown", (e) => {
+          if (e.code === "Space" || e.code === "Enter") e.stopPropagation();
+        });
+      }
+
+      // ══════════════════════════════════════════════════════════════════
       //  BOOT — fetch JSON, then start app
       // ══════════════════════════════════════════════════════════════════
       async function init() {
         // Show loading hint inside the kanji area
         kanjiSvgCont.innerHTML = `<div class="kanji-placeholder" style="font-size:14px;color:var(--muted)">読み込み中…</div>`;
 
-        try {
-          const urlParams = new URLSearchParams(window.location.search);
-          const requestedPage = Number(urlParams.get("page"));
-          const initialPage =
-            Number.isInteger(requestedPage) &&
-            requestedPage >= 1 &&
-            requestedPage <= pageTotal
-              ? requestedPage
-              : 1;
-          await loadPage(initialPage);
-        } catch (err) {
+        const urlParams = new URLSearchParams(window.location.search);
+        const requestedPage = Number(urlParams.get("page"));
+        const initialPage =
+          Number.isInteger(requestedPage) &&
+          requestedPage >= 1 &&
+          requestedPage <= pageTotal
+            ? requestedPage
+            : 1;
+
+        // Load first page and search index in parallel
+        const [pageResult] = await Promise.allSettled([
+          loadPage(initialPage),
+          loadIndex(),
+        ]);
+
+        if (pageResult.status === "rejected") {
           kanjiSvgCont.innerHTML = `<div style="font-size:13px;color:var(--accent);text-align:center;padding:8px">
              ⚠ Không tải được dữ liệu trang.<br>
-             <span style="color:var(--muted);font-size:11px">${err.message}</span>
+             <span style="color:var(--muted);font-size:11px">${pageResult.reason?.message}</span>
            </div>`;
-          console.error("[kanji] Failed to load page data:", err);
+          console.error("[kanji] Failed to load page data:", pageResult.reason);
           return;
         }
 

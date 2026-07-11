@@ -8,7 +8,7 @@
  * - KanjiVG SVGs: Network-first with cache fallback
  */
 
-const STATIC_CACHE = "nihongo-static-v1";
+const STATIC_CACHE = "nihongo-static-v2";
 const DATA_CACHE = "nihongo-data-v1";
 const KANJIVG_CACHE = "nihongo-kanjivg-v1";
 
@@ -20,6 +20,7 @@ const STATIC_ASSETS = [
   "./asserts/fonts.css",
   "./asserts/samurai.png",
   "./manifest.json",
+  "./search.js",
   // Font files (will attempt to cache, but won't fail if not available)
   "./asserts/fonts/v15-rg-kR9Q9UFVG-xI5L5RivnA-Xg.woff2",
   "./asserts/fonts/v15-rg-kR9Q9UFVG-xI5L5RivnA-Xw.woff2",
@@ -35,6 +36,7 @@ const STATIC_ASSETS = [
 // Data pages to precache
 const DATA_ASSETS = [
   "./data/kanji-sample.json",
+  "./data/index.json",
   "./data/pages/page-1.json",
   "./data/pages/page-2.json",
   "./data/pages/page-3.json",
