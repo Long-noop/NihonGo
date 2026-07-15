@@ -1,43 +1,36 @@
 // ══════════════════════════════════════════════════════════════════
 //  search.js  —  Kanji full-text search module
 //
-//  Public API (attached to window.KanjiSearch):
-//    init(indexData)         — load the index array from data/index.json
-//    query(text, limit=50)   — return matching cards
+//  Public API (window.KanjiSearch):
+//    init(indexData)       — load data/index.json array
+//    query(text, limit=50) — return matching cards
 //
-//  Each card in index: { id, kanji, han_viet, meaning, page, i }
-//  query() returns the same shape, filtered + limited.
+//  Priority tiers (lower = better rank):
+//    0 — exact lowercase match in han_viet  (diacritics preserved)
+//    1 — normalised match in han_viet       (diacritics stripped)
+//    2 — exact lowercase match in meaning
+//    3 — normalised match in kanji / meaning
+//  Examples: "tang"→TANG(0)>TĂNG(1)  |  "nhất"→NHẤT(0)>NHAT(1)
+//  Within same tier, shorter field length ranks first.
 // ══════════════════════════════════════════════════════════════════
 
 (function () {
   'use strict';
 
-  // ── Internal state ────────────────────────────────────────────────
-  let _index    = [];   // raw index array
-  let _normed   = [];   // parallel array of normalised strings for fast match
+  let _index  = [];
+  let _normed = [];
 
-  // ── Helpers ───────────────────────────────────────────────────────
-
-  /**
-   * Normalise a string for comparison:
-   *   - NFD decompose → strip combining diacritics (covers Vietnamese, etc.)
-   *   - lowercase
-   * This allows searching "nhat" and matching "NHẤT".
-   */
+  // Strip diacritics + lowercase
   function normalise(str) {
     if (!str) return '';
-    return str
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '')  // strip combining marks
-      .toLowerCase();
+    return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
   }
 
-  // ── Public API ────────────────────────────────────────────────────
+  // Lowercase only (keep diacritics)
+  function lc(str) {
+    return str ? str.toLowerCase() : '';
+  }
 
-  /**
-   * init(indexData)
-   * Must be called once with the parsed data/index.json array before query().
-   */
   function init(indexData) {
     if (!Array.isArray(indexData)) {
       console.error('[KanjiSearch] init() expects an array');
@@ -52,49 +45,46 @@
     console.log('[KanjiSearch] Index loaded:', _index.length, 'cards');
   }
 
-  /**
-   * query(text, limit = 50)
-   * Returns up to `limit` cards whose kanji / han_viet / meaning
-   * contain the query string (diacritic-insensitive, case-insensitive).
-   * Returns [] for empty queries.
-   */
   function query(text, limit) {
     limit = (typeof limit === 'number') ? limit : 50;
 
-    const q = normalise(text);
-    if (!q) return [];
+    const qNorm  = normalise(text);
+    const qExact = lc(text);
 
-    const hanVietMatches = [];
-    const otherMatches = [];
+    if (!qNorm) return [];
+
+    const results = [];
 
     for (let k = 0; k < _index.length; k++) {
-      const n = _normed[k];
+      const n    = _normed[k];
       const card = _index[k];
 
-      if (n.han_viet.includes(q)) {
-        hanVietMatches.push({ card, len: n.han_viet.length });
-      } else if (n.kanji.includes(q)) {
-        otherMatches.push({ card, len: n.kanji.length });
-      } else if (n.meaning.includes(q)) {
-        otherMatches.push({ card, len: n.meaning.length });
+      const hvExact = lc(card.han_viet);
+      const mExact  = lc(card.meaning);
+
+      let tier = -1;
+      let len  = 0;
+
+      if (hvExact.includes(qExact)) {
+        tier = 0; len = hvExact.length;
+      } else if (n.han_viet.includes(qNorm)) {
+        tier = 1; len = n.han_viet.length;
+      } else if (mExact.includes(qExact)) {
+        tier = 2; len = mExact.length;
+      } else if (n.kanji.includes(qNorm)) {
+        tier = 3; len = n.kanji.length;
+      } else if (n.meaning.includes(qNorm)) {
+        tier = 3; len = n.meaning.length;
       }
+
+      if (tier >= 0) results.push({ card, tier, len });
     }
 
-    hanVietMatches.sort((a, b) => a.len - b.len);
-    otherMatches.sort((a, b) => a.len - b.len);
-
-    const sortedHanViet = hanVietMatches.map(x => x.card);
-    const sortedOther = otherMatches.map(x => x.card);
-
-    return sortedHanViet.concat(sortedOther).slice(0, limit);
+    results.sort((a, b) => a.tier - b.tier || a.len - b.len);
+    return results.map(x => x.card).slice(0, limit);
   }
 
-  // ── Export ────────────────────────────────────────────────────────
   const _api = { init, query };
-  if (typeof window !== 'undefined') {
-    window.KanjiSearch = _api;
-  }
-  if (typeof module !== 'undefined') {
-    module.exports = _api;
-  }
+  if (typeof window !== 'undefined') window.KanjiSearch = _api;
+  if (typeof module !== 'undefined') module.exports = _api;
 })();
