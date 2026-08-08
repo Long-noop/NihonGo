@@ -348,19 +348,20 @@
       const DECKS = {
         default: {
           id: "default",
-          name: "Kanji N3 / 2136 Hán tự (Mặc định)",
+          name: "Kanji 2136 - Dân chơi đồ cổ",
           pageTotal: 27,
           pagePath: (p) => `./data/pages/page-${p}.json`,
           indexPath: "./data/index.json",
           storageKey: "nihongo_last_position_v1",
+          type: "json",
         },
         kanji2k: {
           id: "kanji2k",
-          name: "Kanji N5-N1 Âm/Huấn",
+          name: "Kanji 2k2 - Chuẩn Cơm Mẹ Nấu",
           pageTotal: 28,
-          pagePath: (p) => `./data/kanji2k-pages/page-${p}.json`,
-          indexPath: "./data/kanji2k-index.json",
+          pagePath: (p) => `./data/kanji2k/漢字(音・訓) trang ${p} - Table 1.csv`,
           storageKey: "nihongo_last_position_kanji2k_v1",
+          type: "csv",
         },
       };
 
@@ -663,15 +664,52 @@
         await Promise.allSettled(chars.map((ch) => fetchKanjiSvg(ch)));
       }
 
+      let defaultKanjiMap = new Map();
+
+      async function ensureDefaultKanjiMap() {
+        if (defaultKanjiMap.size > 0) return;
+        try {
+          const res = await fetch("./data/index.json");
+          if (res.ok) {
+            const list = await res.json();
+            list.forEach((item) => {
+              if (item.kanji) defaultKanjiMap.set(item.kanji, item);
+            });
+          }
+        } catch (err) {
+          console.warn("[kanji] Could not load default kanji index map:", err);
+        }
+      }
+
       async function loadPage(pageNo) {
         const safePage = Math.min(Math.max(1, pageNo), pageTotal);
         const deckConfig = DECKS[currentDeck] || DECKS.default;
-        const url = deckConfig.pagePath(safePage);
-        const res = await fetch(url);
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
-        const pageData = await res.json();
-        DATA = Array.isArray(pageData) ? pageData : [];
+        if (deckConfig.type === "csv") {
+          await ensureDefaultKanjiMap();
+          const csvUrl = deckConfig.pagePath(safePage);
+          const res = await fetch(encodeURI(csvUrl));
+          if (!res.ok) throw new Error(`Không tải được file CSV trang ${safePage}`);
+          const csvText = await res.text();
+          const csvEntries = window.KanjiCsvParser
+            ? KanjiCsvParser.parseKanjiCsv(csvText, safePage)
+            : [];
+          const mergedCards = csvEntries.map((csvEntry) => {
+            const existing = defaultKanjiMap.get(csvEntry.kanji) || null;
+            return window.KanjiMerge
+              ? KanjiMerge.mergeKanjiEntry(existing, csvEntry)
+              : csvEntry;
+          });
+          DATA = mergedCards;
+        } else {
+          const url = deckConfig.pagePath(safePage);
+          const res = await fetch(url);
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+          const pageData = await res.json();
+          DATA = Array.isArray(pageData) ? pageData : [];
+        }
+
         pageNumber = safePage;
         idx = 0;
         posTotal.textContent = DATA.length;
@@ -1162,9 +1200,53 @@
       async function loadIndex() {
         try {
           const deckConfig = DECKS[currentDeck] || DECKS.default;
-          const res = await fetch(deckConfig.indexPath);
-          if (!res.ok) throw new Error(`HTTP ${res.status}`);
-          INDEX = await res.json();
+          if (deckConfig.type === "csv") {
+            await ensureDefaultKanjiMap();
+            const index = [];
+            const fetchPromises = [];
+
+            for (let p = 1; p <= deckConfig.pageTotal; p++) {
+              const url = deckConfig.pagePath(p);
+              fetchPromises.push(
+                fetch(encodeURI(url))
+                  .then((res) => (res.ok ? res.text() : null))
+                  .then((text) => (text ? { page: p, text } : null))
+                  .catch(() => null),
+              );
+            }
+
+            const results = await Promise.all(fetchPromises);
+            results.forEach((item) => {
+              if (!item) return;
+              const { page, text } = item;
+              const csvEntries = window.KanjiCsvParser
+                ? KanjiCsvParser.parseKanjiCsv(text, page)
+                : [];
+              csvEntries.forEach((csvEntry, i) => {
+                const existing = defaultKanjiMap.get(csvEntry.kanji) || null;
+                const merged = window.KanjiMerge
+                  ? KanjiMerge.mergeKanjiEntry(existing, csvEntry)
+                  : csvEntry;
+                index.push({
+                  id: merged.kanji || `kanji2k-p${page}-${i}`,
+                  kanji: merged.kanji || "",
+                  han_viet: merged.han_viet || "",
+                  meaning: merged.meaning || "",
+                  on_yomi: merged.on_yomi || [],
+                  jlpt_level: merged.jlpt_level || null,
+                  page: page,
+                  i: i,
+                });
+              });
+            });
+
+            INDEX = index;
+          } else {
+            const res = await fetch(deckConfig.indexPath);
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            INDEX = await res.json();
+          }
+
           if (window.KanjiSearch) KanjiSearch.init(INDEX);
           wireSearch();
           // Cập nhật badge due-count sau khi index đã load
