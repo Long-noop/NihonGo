@@ -1,0 +1,3196 @@
+[
+  {
+    "kanji": "伺",
+    "han_viet": "TỨ",
+    "meaning": "Thăm hỏi",
+    "examples": [
+      {
+        "word": "伺う",
+        "hiragana": "うかがう",
+        "meaning": "Hỏi, thăm hỏi, nghe (khiêm nhường ngữ)"
+      },
+      {
+        "word": "伺候",
+        "hiragana": "しこう",
+        "meaning": "hầu hạ, phục dịch",
+        "type": "on"
+      },
+      {
+        "word": "奉伺",
+        "hiragana": "ほうし",
+        "meaning": "hỏi thăm sức khỏe",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "し"
+    ],
+    "jlpt_level": "N4"
+  },
+  {
+    "kanji": "伸",
+    "han_viet": "THÂN",
+    "meaning": "Duỗi ra",
+    "examples": [
+      {
+        "word": "伸びる",
+        "hiragana": "のびる",
+        "meaning": "Dài ra, lớn lên, phát triển"
+      },
+      {
+        "word": "伸ばす",
+        "hiragana": "のばす",
+        "meaning": "Kéo dài, duỗi ra"
+      },
+      {
+        "word": "伸縮",
+        "hiragana": "しんしゅく",
+        "meaning": "Co giãn"
+      },
+      {
+        "word": "（を）伸ばす",
+        "hiragana": "（を）のばす",
+        "meaning": "duỗi ra",
+        "type": "kun"
+      },
+      {
+        "word": "（が）伸びる",
+        "hiragana": "（が）のびる",
+        "meaning": "mở rộng , lan ra",
+        "type": "kun"
+      },
+      {
+        "word": "追伸",
+        "hiragana": "ついしん",
+        "meaning": "tái bút",
+        "type": "on"
+      },
+      {
+        "word": "急伸",
+        "hiragana": "きゅうしん",
+        "meaning": "tăng vọt (cổ phiếu)",
+        "type": "on"
+      },
+      {
+        "word": "続伸",
+        "hiragana": "ぞくしん",
+        "meaning": "liên tục lên",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "しん"
+    ],
+    "jlpt_level": "N3"
+  },
+  {
+    "kanji": "伴",
+    "han_viet": "BẠN",
+    "meaning": "Đi cùng",
+    "examples": [
+      {
+        "word": "伴う",
+        "hiragana": "ともなう",
+        "meaning": "Đi kèm, kéo theo, đi cùng"
+      },
+      {
+        "word": "同伴",
+        "hiragana": "どうはん",
+        "meaning": "Đồng hành, đi cùng"
+      },
+      {
+        "word": "伴侶",
+        "hiragana": "はんりょ",
+        "meaning": "bầu bạn",
+        "type": "on"
+      },
+      {
+        "word": "伴奏",
+        "hiragana": "ばんそう",
+        "meaning": "đệm nhạc",
+        "type": "on"
+      },
+      {
+        "word": "伴食",
+        "hiragana": "ばんしょく",
+        "meaning": "ăn cùng khách",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "はん",
+      "ばん"
+    ],
+    "jlpt_level": "N3"
+  },
+  {
+    "kanji": "佐",
+    "han_viet": "TÁ",
+    "meaning": "Phụ tá",
+    "examples": [
+      {
+        "word": "佐藤",
+        "hiragana": "さとう",
+        "meaning": "Họ Satou (họ phổ biến ở Nhật)"
+      },
+      {
+        "word": "佐官",
+        "hiragana": "さかん",
+        "meaning": "Sĩ quan cấp tá"
+      },
+      {
+        "word": "左官",
+        "hiragana": "さかん",
+        "meaning": "thợ hồ",
+        "type": "on"
+      },
+      {
+        "word": "補佐",
+        "hiragana": "ほさ",
+        "meaning": "trợ lý",
+        "type": "on"
+      },
+      {
+        "word": "少佐",
+        "hiragana": "しょうさ",
+        "meaning": "thiếu tá",
+        "type": "on"
+      },
+      {
+        "word": "中佐",
+        "hiragana": "ちゅうさ",
+        "meaning": "trung tá",
+        "type": "on"
+      },
+      {
+        "word": "大佐",
+        "hiragana": "たいさ",
+        "meaning": "đại tá",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "さ"
+    ],
+    "jlpt_level": "N2"
+  },
+  {
+    "kanji": "但",
+    "han_viet": "ĐẢN",
+    "meaning": "Tuy nhiên, nhưng",
+    "examples": [
+      {
+        "word": "但し",
+        "hiragana": "ただし",
+        "meaning": "Tuy nhiên, nhưng mà"
+      },
+      {
+        "word": "但し書き",
+        "hiragana": "ただしがき",
+        "meaning": "Điều khoản ghi thêm, ghi chú bổ sung"
+      }
+    ],
+    "jlpt_level": "N2"
+  },
+  {
+    "kanji": "伯",
+    "han_viet": "BÁ",
+    "meaning": "Bác",
+    "examples": [
+      {
+        "word": "伯父",
+        "hiragana": "おじ",
+        "meaning": "Bác trai"
+      },
+      {
+        "word": "伯母",
+        "hiragana": "おば",
+        "meaning": "Bác gái"
+      },
+      {
+        "word": "伯爵",
+        "hiragana": "はくしゃく",
+        "meaning": "Bá tước"
+      },
+      {
+        "word": "伯仲",
+        "hiragana": "はくちゅう",
+        "meaning": "sự ngang bằng",
+        "type": "on"
+      },
+      {
+        "word": "画伯",
+        "hiragana": "がはく",
+        "meaning": "họa sĩ",
+        "type": "on"
+      },
+      {
+        "word": "*伯母",
+        "hiragana": "おば",
+        "meaning": "dì",
+        "type": "on"
+      },
+      {
+        "word": "*伯父",
+        "hiragana": "おじ",
+        "meaning": "chú",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "はく"
+    ],
+    "jlpt_level": "N2"
+  },
+  {
+    "kanji": "使",
+    "han_viet": "SỬ",
+    "meaning": "Sử dụng, dùng",
+    "examples": [
+      {
+        "word": "使う",
+        "hiragana": "つかう",
+        "meaning": "Dùng, sử dụng"
+      },
+      {
+        "word": "大使館",
+        "hiragana": "たいしかん",
+        "meaning": "Đại sứ quán"
+      },
+      {
+        "word": "使用",
+        "hiragana": "しよう",
+        "meaning": "Sử dụng"
+      },
+      {
+        "word": "（を）使う",
+        "hiragana": "（を）つかう",
+        "meaning": "sử dụng",
+        "type": "kun"
+      },
+      {
+        "word": "使命",
+        "hiragana": "しめい",
+        "meaning": "sứ mệnh",
+        "type": "on"
+      },
+      {
+        "word": "天使",
+        "hiragana": "てんし",
+        "meaning": "thiên sứ",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "し"
+    ],
+    "jlpt_level": "N5"
+  },
+  {
+    "kanji": "例",
+    "han_viet": "LỆ",
+    "meaning": "Luật lệ",
+    "examples": [
+      {
+        "word": "例えば",
+        "hiragana": "たとえば",
+        "meaning": "Ví dụ như"
+      },
+      {
+        "word": "例外",
+        "hiragana": "れいがい",
+        "meaning": "Ngoại lệ"
+      },
+      {
+        "word": "例文",
+        "hiragana": "れいぶん",
+        "meaning": "Câu ví dụ"
+      },
+      {
+        "word": "例える",
+        "hiragana": "たとえる",
+        "meaning": "liệt kê",
+        "type": "kun"
+      },
+      {
+        "word": "比例",
+        "hiragana": "ひれい",
+        "meaning": "so sánh",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "れい"
+    ],
+    "jlpt_level": "N4"
+  },
+  {
+    "kanji": "価",
+    "han_viet": "GIÁ",
+    "meaning": "Giá trị",
+    "examples": [
+      {
+        "word": "物価",
+        "hiragana": "ぶっか",
+        "meaning": "Giá cả, vật giá"
+      },
+      {
+        "word": "価値",
+        "hiragana": "かち",
+        "meaning": "Giá trị"
+      },
+      {
+        "word": "価格",
+        "hiragana": "かかく",
+        "meaning": "Giá tiền, giá cả"
+      },
+      {
+        "word": "価",
+        "hiragana": "あたい",
+        "meaning": "giá trị",
+        "type": "kun"
+      },
+      {
+        "word": "評価",
+        "hiragana": "ひょうか",
+        "meaning": "đánh giá",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "か"
+    ],
+    "jlpt_level": "N5"
+  },
+  {
+    "kanji": "供",
+    "han_viet": "CUNG",
+    "meaning": "Cung cấp",
+    "examples": [
+      {
+        "word": "子供",
+        "hiragana": "こども",
+        "meaning": "Trẻ em, con cái"
+      },
+      {
+        "word": "提供",
+        "hiragana": "ていきょう",
+        "meaning": "Cung cấp, tài trợ"
+      },
+      {
+        "word": "供える",
+        "hiragana": "そなえる",
+        "meaning": "Phúng viếng, dâng cúng"
+      },
+      {
+        "word": "供",
+        "hiragana": "とも",
+        "meaning": "cùng với",
+        "type": "kun"
+      },
+      {
+        "word": "供給",
+        "hiragana": "きょうきゅう",
+        "meaning": "cung cấp",
+        "type": "on"
+      },
+      {
+        "word": "供養",
+        "hiragana": "くよう",
+        "meaning": "lễ truy điệu",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "きょう",
+      "く"
+    ],
+    "jlpt_level": "N5"
+  },
+  {
+    "kanji": "依",
+    "han_viet": "Y",
+    "meaning": "Dựa vào",
+    "examples": [
+      {
+        "word": "依頼",
+        "hiragana": "いらい",
+        "meaning": "Nhờ vả, yêu cầu"
+      },
+      {
+        "word": "依存",
+        "hiragana": "いぞん",
+        "meaning": "Phụ thuộc, lệ thuộc"
+      },
+      {
+        "word": "依然",
+        "hiragana": "いぜん",
+        "meaning": "Vẫn như cũ, vẫn thế"
+      },
+      {
+        "word": "依願",
+        "hiragana": "いがん",
+        "meaning": "thỉnh cầu",
+        "type": "on"
+      },
+      {
+        "word": "帰依",
+        "hiragana": "きえ",
+        "meaning": "quy y",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "い",
+      "え"
+    ],
+    "jlpt_level": "N3"
+  },
+  {
+    "kanji": "佳",
+    "han_viet": "GIAI",
+    "meaning": "Tốt đẹp",
+    "examples": [
+      {
+        "word": "佳作",
+        "hiragana": "かさく",
+        "meaning": "Tác phẩm xuất sắc, giai tác"
+      },
+      {
+        "word": "佳人",
+        "hiragana": "かじん",
+        "meaning": "Giai nhân, người đẹp"
+      },
+      {
+        "word": "佳句",
+        "hiragana": "かく",
+        "meaning": "đoạn văn hay",
+        "type": "on"
+      },
+      {
+        "word": "佳日",
+        "hiragana": "かじつ",
+        "meaning": "ngày tốt, ngày lành",
+        "type": "on"
+      },
+      {
+        "word": "佳境",
+        "hiragana": "かきょう",
+        "meaning": "cao trào",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "か"
+    ],
+    "jlpt_level": "N2"
+  },
+  {
+    "kanji": "侍",
+    "han_viet": "THỊ",
+    "meaning": "Võ sĩ đạo",
+    "examples": [
+      {
+        "word": "侍",
+        "hiragana": "さむらい",
+        "meaning": "Samurai, võ sĩ cổ đại Nhật Bản"
+      },
+      {
+        "word": "侍従",
+        "hiragana": "じじゅう",
+        "meaning": "Thị tùng"
+      },
+      {
+        "word": "侍医",
+        "hiragana": "じい",
+        "meaning": "thầy thuốc",
+        "type": "on"
+      },
+      {
+        "word": "侍女",
+        "hiragana": "じじょ",
+        "meaning": "người hầu (nữ)",
+        "type": "on"
+      },
+      {
+        "word": "内侍",
+        "hiragana": "ないし",
+        "meaning": "nữ tỳ (trong cung)",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "じ",
+      "し"
+    ],
+    "jlpt_level": "N2"
+  },
+  {
+    "kanji": "侮",
+    "han_viet": "VỤ",
+    "meaning": "Khinh rẻ",
+    "examples": [
+      {
+        "word": "侮る",
+        "hiragana": "あなどる",
+        "meaning": "Khinh bỉ, coi thường"
+      },
+      {
+        "word": "侮辱",
+        "hiragana": "ぶじょく",
+        "meaning": "Sỉ nhục, lăng mạ"
+      },
+      {
+        "word": "侮言",
+        "hiragana": "ぶげん",
+        "meaning": "từ ngữ lăng mạ",
+        "type": "on"
+      },
+      {
+        "word": "侮蔑",
+        "hiragana": "ぶべつ",
+        "meaning": "sự coi thường",
+        "type": "on"
+      },
+      {
+        "word": "軽侮",
+        "hiragana": "けいぶ",
+        "meaning": "sự coi thường",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "ぶ"
+    ],
+    "jlpt_level": "N2"
+  },
+  {
+    "kanji": "併",
+    "han_viet": "TÍNH",
+    "meaning": "Sáp nhập",
+    "examples": [
+      {
+        "word": "併せる",
+        "hiragana": "あわせる",
+        "meaning": "Hợp lại, kết hợp"
+      },
+      {
+        "word": "合併",
+        "hiragana": "がっぺい",
+        "meaning": "Sáp nhập, hợp nhất"
+      },
+      {
+        "word": "併記",
+        "hiragana": "へいき",
+        "meaning": "Ghi kèm theo, viết song song"
+      },
+      {
+        "word": "併用",
+        "hiragana": "へいよう",
+        "meaning": "sử dụng đồng thời",
+        "type": "on"
+      },
+      {
+        "word": "併合",
+        "hiragana": "へいごう",
+        "meaning": "sự hòa nhập",
+        "type": "on"
+      },
+      {
+        "word": "併設",
+        "hiragana": "へいせつ",
+        "meaning": "sự thành lập",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "へい"
+    ],
+    "jlpt_level": "N2"
+  },
+  {
+    "kanji": "係",
+    "han_viet": "HỆ",
+    "meaning": "Quan hệ",
+    "examples": [
+      {
+        "word": "係",
+        "hiragana": "かかり",
+        "meaning": "Người phụ trách, quản lý"
+      },
+      {
+        "word": "関係",
+        "hiragana": "かんけい",
+        "meaning": "Quan hệ"
+      },
+      {
+        "word": "係長",
+        "hiragana": "かかりちょう",
+        "meaning": "Trưởng nhóm, quản lý ca"
+      },
+      {
+        "word": "係る",
+        "hiragana": "かかる",
+        "meaning": "liên quan",
+        "type": "kun"
+      },
+      {
+        "word": "係り",
+        "hiragana": "かかり",
+        "meaning": "quan hệ",
+        "type": "kun"
+      },
+      {
+        "word": "係争",
+        "hiragana": "けいそう",
+        "meaning": "sự tranh cãi",
+        "type": "on"
+      },
+      {
+        "word": "連係",
+        "hiragana": "れんけい",
+        "meaning": "liên hệ",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "けい"
+    ],
+    "jlpt_level": "N4"
+  },
+  {
+    "kanji": "信",
+    "han_viet": "TÍN",
+    "meaning": "Tin tưởng",
+    "examples": [
+      {
+        "word": "信用",
+        "hiragana": "しんよう",
+        "meaning": "Tin tưởng, tín dụng"
+      },
+      {
+        "word": "信じる",
+        "hiragana": "しんじる",
+        "meaning": "Tin vào, sùng bái"
+      },
+      {
+        "word": "自信",
+        "hiragana": "じしん",
+        "meaning": "Tự tin"
+      },
+      {
+        "word": "信頼",
+        "hiragana": "しんらい",
+        "meaning": "tin cậy",
+        "type": "on"
+      },
+      {
+        "word": "通信",
+        "hiragana": "つうしん",
+        "meaning": "sự truyền tin",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "しん"
+    ],
+    "jlpt_level": "N5"
+  },
+  {
+    "kanji": "便",
+    "han_viet": "TIỆN",
+    "meaning": "Tiện lợi",
+    "examples": [
+      {
+        "word": "便利",
+        "hiragana": "べんり",
+        "meaning": "Tiện lợi"
+      },
+      {
+        "word": "郵便局",
+        "hiragana": "ゆうびんきょく",
+        "meaning": "Bưu điện"
+      },
+      {
+        "word": "航空便",
+        "hiragana": "こうくうびん",
+        "meaning": "Thư máy bay, đường hàng không"
+      },
+      {
+        "word": "便り",
+        "hiragana": "たより",
+        "meaning": "tin tức (thư)",
+        "type": "kun"
+      },
+      {
+        "word": "便秘",
+        "hiragana": "べんぴ",
+        "meaning": "táo bón",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "べん",
+      "びん"
+    ],
+    "jlpt_level": "N5"
+  },
+  {
+    "kanji": "保",
+    "han_viet": "BẢO",
+    "meaning": "Bảo đảm",
+    "examples": [
+      {
+        "word": "保存",
+        "hiragana": "ほぞん",
+        "meaning": "Bảo tồn, lưu trữ"
+      },
+      {
+        "word": "保健",
+        "hiragana": "ほけん",
+        "meaning": "Bảo hiểm, y tế, bảo vệ sức khỏe"
+      },
+      {
+        "word": "保つ",
+        "hiragana": "たもつ",
+        "meaning": "Giữ, duy trì"
+      },
+      {
+        "word": "保険",
+        "hiragana": "ほけん",
+        "meaning": "bảo hiểm",
+        "type": "on"
+      },
+      {
+        "word": "保守",
+        "hiragana": "ほしゅ",
+        "meaning": "bảo thủ",
+        "type": "on"
+      },
+      {
+        "word": "保証",
+        "hiragana": "ほしょう",
+        "meaning": "bảo đảm",
+        "type": "on"
+      },
+      {
+        "word": "保護",
+        "hiragana": "ほご",
+        "meaning": "bảo hộ",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "ほ"
+    ],
+    "jlpt_level": "N3"
+  },
+  {
+    "kanji": "侵",
+    "han_viet": "XÂM",
+    "meaning": "Xâm lấn",
+    "examples": [
+      {
+        "word": "侵入",
+        "hiragana": "しんにゅう",
+        "meaning": "Xâm nhập"
+      },
+      {
+        "word": "侵略",
+        "hiragana": "しんりゃく",
+        "meaning": "Xâm lược"
+      },
+      {
+        "word": "侵す",
+        "hiragana": "おかす",
+        "meaning": "Xâm phạm, vi phạm"
+      },
+      {
+        "word": "侵犯",
+        "hiragana": "しんぱん",
+        "meaning": "xâm phạm",
+        "type": "on"
+      },
+      {
+        "word": "侵害",
+        "hiragana": "しんがい",
+        "meaning": "xâm hại",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "しん"
+    ],
+    "jlpt_level": "N2"
+  },
+  {
+    "kanji": "俗",
+    "han_viet": "TỤC",
+    "meaning": "Phong tục",
+    "examples": [
+      {
+        "word": "世俗",
+        "hiragana": "せぞく",
+        "meaning": "Trần tục, đời thường"
+      },
+      {
+        "word": "風俗",
+        "hiragana": "ふうぞく",
+        "meaning": "Thuần phong mỹ tục, phong tục tập quán"
+      },
+      {
+        "word": "通俗",
+        "hiragana": "つうぞく",
+        "meaning": "Thông tục, phổ thông"
+      },
+      {
+        "word": "俗語",
+        "hiragana": "ぞくご",
+        "meaning": "tiếng lóng",
+        "type": "on"
+      },
+      {
+        "word": "習俗",
+        "hiragana": "しゅうぞく",
+        "meaning": "phong tục",
+        "type": "on"
+      },
+      {
+        "word": "民俗",
+        "hiragana": "みんぞく",
+        "meaning": "chủng tộc",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "ぞく"
+    ],
+    "jlpt_level": "N2"
+  },
+  {
+    "kanji": "促",
+    "han_viet": "XÚC",
+    "meaning": "Thúc giục",
+    "examples": [
+      {
+        "word": "促す",
+        "hiragana": "うながす",
+        "meaning": "Thúc giục, khuyến khích, đẩy mạnh"
+      },
+      {
+        "word": "促進",
+        "hiragana": "そくしん",
+        "meaning": "Thúc đẩy, xúc tiến"
+      },
+      {
+        "word": "促成",
+        "hiragana": "そくせい",
+        "meaning": "thúc đẩy phát triển",
+        "type": "on"
+      },
+      {
+        "word": "販促",
+        "hiragana": "はんそく",
+        "meaning": "khuyến mãi",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "そく"
+    ],
+    "jlpt_level": "N2"
+  },
+  {
+    "kanji": "侯",
+    "han_viet": "HẦU",
+    "meaning": "Tước hầu",
+    "examples": [
+      {
+        "word": "侯爵",
+        "hiragana": "こうしゃく",
+        "meaning": "Hầu tước"
+      },
+      {
+        "word": "諸侯",
+        "hiragana": "しょこう",
+        "meaning": "Các chư hầu"
+      },
+      {
+        "word": "侯国",
+        "hiragana": "こうこく",
+        "meaning": "lãnh địa hoàng tộc",
+        "type": "on"
+      },
+      {
+        "word": "王侯",
+        "hiragana": "おうこう",
+        "meaning": "vương hầu",
+        "type": "on"
+      },
+      {
+        "word": "藩侯",
+        "hiragana": "はんこう",
+        "meaning": "phiên hầu",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "こう"
+    ],
+    "jlpt_level": "N2"
+  },
+  {
+    "kanji": "俊",
+    "han_viet": "TUẤN",
+    "meaning": "Tài trí",
+    "examples": [
+      {
+        "word": "俊才",
+        "hiragana": "しゅんさい",
+        "meaning": "Tài năng xuất chúng, tuấn tài"
+      },
+      {
+        "word": "俊敏",
+        "hiragana": "しゅんびん",
+        "meaning": "Nhanh trí, nhạy bén"
+      },
+      {
+        "word": "俊足",
+        "hiragana": "しゅんそく",
+        "meaning": "người tài giỏi",
+        "type": "on"
+      },
+      {
+        "word": "俊傑",
+        "hiragana": "しゅんけつ",
+        "meaning": "anh hùng",
+        "type": "on"
+      },
+      {
+        "word": "俊秀",
+        "hiragana": "しゅんしゅう",
+        "meaning": "tuấn tú",
+        "type": "on"
+      },
+      {
+        "word": "英俊",
+        "hiragana": "えいしゅん",
+        "meaning": "tài năng",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "しゅん"
+    ],
+    "jlpt_level": "N2"
+  },
+  {
+    "kanji": "侶",
+    "han_viet": "LỮ",
+    "meaning": "Tăng lữ",
+    "examples": [
+      {
+        "word": "僧侶",
+        "hiragana": "そうりょ",
+        "meaning": "Tăng lữ, nhà sư"
+      },
+      {
+        "word": "伴侶",
+        "hiragana": "はんりょ",
+        "meaning": "Bạn đời, bạn đồng hành"
+      }
+    ],
+    "on_yomi": [
+      "りょ"
+    ],
+    "jlpt_level": "N2"
+  },
+  {
+    "kanji": "倍",
+    "han_viet": "BỘI",
+    "meaning": "Gấp mấy lần",
+    "examples": [
+      {
+        "word": "倍",
+        "hiragana": "ばい",
+        "meaning": "Gấp đôi, gấp nhiều lần"
+      },
+      {
+        "word": "二倍",
+        "hiragana": "にばい",
+        "meaning": "Gấp hai lần"
+      },
+      {
+        "word": "倍率",
+        "hiragana": "ばいりつ",
+        "meaning": "Tỷ lệ chọi, độ phóng đại"
+      },
+      {
+        "word": "倍増",
+        "hiragana": "ばいぞう",
+        "meaning": "sự tăng gấp đôi",
+        "type": "on"
+      },
+      {
+        "word": "倍額",
+        "hiragana": "ばいがく",
+        "meaning": "số lượng gấp đôi",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "ばい"
+    ],
+    "jlpt_level": "N3"
+  },
+  {
+    "kanji": "候",
+    "han_viet": "HẬU",
+    "meaning": "Khí hậu, thời tiết",
+    "examples": [
+      {
+        "word": "気候",
+        "hiragana": "きこう",
+        "meaning": "Khí hậu"
+      },
+      {
+        "word": "天候",
+        "hiragana": "てんこう",
+        "meaning": "Thời tiết"
+      },
+      {
+        "word": "候補",
+        "hiragana": "こうほ",
+        "meaning": "Ứng cử viên"
+      },
+      {
+        "word": "候",
+        "hiragana": "そうろう",
+        "meaning": "khí hậu",
+        "type": "kun"
+      },
+      {
+        "word": "時候",
+        "hiragana": "じこう",
+        "meaning": "dày dạn",
+        "type": "on"
+      },
+      {
+        "word": "症候",
+        "hiragana": "しょうこう",
+        "meaning": "triệu chứng",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "こう"
+    ],
+    "jlpt_level": "N4"
+  },
+  {
+    "kanji": "借",
+    "han_viet": "TÁ",
+    "meaning": "Mượn, vay",
+    "examples": [
+      {
+        "word": "借りる",
+        "hiragana": "かりる",
+        "meaning": "Mượn, vay"
+      },
+      {
+        "word": "借金",
+        "hiragana": "しゃっきん",
+        "meaning": "Tiền nợ, khoản vay"
+      },
+      {
+        "word": "借家",
+        "hiragana": "しゃくや",
+        "meaning": "Nhà thuê"
+      },
+      {
+        "word": "借用",
+        "hiragana": "しゃくよう",
+        "meaning": "vay tiền",
+        "type": "on"
+      },
+      {
+        "word": "拝借",
+        "hiragana": "はいしゃく",
+        "meaning": "mượn",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "しゃく"
+    ],
+    "jlpt_level": "N5"
+  },
+  {
+    "kanji": "倉",
+    "han_viet": "THƯƠNG",
+    "meaning": "Kho hàng",
+    "examples": [
+      {
+        "word": "倉庫",
+        "hiragana": "そうこ",
+        "meaning": "Nhà kho, thương kho"
+      },
+      {
+        "word": "倉",
+        "hiragana": "くら",
+        "meaning": "Cái kho"
+      },
+      {
+        "word": "船倉",
+        "hiragana": "せんそう",
+        "meaning": "hàng chuyển\nbằng thuyền",
+        "type": "on"
+      },
+      {
+        "word": "穀倉",
+        "hiragana": "こくそう",
+        "meaning": "kho ngũ cốc",
+        "type": "on"
+      },
+      {
+        "word": "営倉",
+        "hiragana": "えいそう",
+        "meaning": "nhà giam",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "そう"
+    ],
+    "jlpt_level": "N3"
+  },
+  {
+    "kanji": "個",
+    "han_viet": "CÁ",
+    "meaning": "Cá nhân",
+    "examples": [
+      {
+        "word": "個人",
+        "hiragana": "こじん",
+        "meaning": "Cá nhân"
+      },
+      {
+        "word": "一個",
+        "hiragana": "いっこ",
+        "meaning": "Một cái, một quả (đơn vị đếm vật nhỏ)"
+      },
+      {
+        "word": "個性",
+        "hiragana": "こせい",
+        "meaning": "Cá tính"
+      },
+      {
+        "word": "個別",
+        "hiragana": "こべつ",
+        "meaning": "cá biệt",
+        "type": "on"
+      },
+      {
+        "word": "個体",
+        "hiragana": "こたい",
+        "meaning": "cá thể",
+        "type": "on"
+      },
+      {
+        "word": "個条",
+        "hiragana": "かじょう",
+        "meaning": "tiết mục",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "こ",
+      "か"
+    ],
+    "jlpt_level": "N3"
+  },
+  {
+    "kanji": "修",
+    "han_viet": "TU",
+    "meaning": "Sửa chữa",
+    "examples": [
+      {
+        "word": "修理",
+        "hiragana": "しゅうり",
+        "meaning": "Sửa chữa (máy móc, thiết bị)"
+      },
+      {
+        "word": "修了",
+        "hiragana": "しゅうりょう",
+        "meaning": "Hoàn thành khóa học"
+      },
+      {
+        "word": "研修",
+        "hiragana": "けんしゅう",
+        "meaning": "Tu nghiệp, thực tập"
+      },
+      {
+        "word": "修める",
+        "hiragana": "おさめる",
+        "meaning": "ôn lại",
+        "type": "kun"
+      },
+      {
+        "word": "修まる",
+        "hiragana": "おさまる",
+        "meaning": "tự sửa chữa",
+        "type": "kun"
+      },
+      {
+        "word": "修行",
+        "hiragana": "しゅぎょう",
+        "meaning": "tu nghiệp",
+        "type": "on"
+      },
+      {
+        "word": "修業",
+        "hiragana": "しゅぎょう",
+        "meaning": "tu nghiệp",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "しゅう",
+      "しゅ"
+    ],
+    "jlpt_level": "N4"
+  },
+  {
+    "kanji": "俵",
+    "han_viet": "BIỂU",
+    "meaning": "Cái bao",
+    "examples": [
+      {
+        "word": "俵",
+        "hiragana": "たわら",
+        "meaning": "Bao rơm (để đựng gạo, nông sản)"
+      },
+      {
+        "word": "米俵",
+        "hiragana": "こめだわら",
+        "meaning": "Bao gạo bằng rơm"
+      },
+      {
+        "word": "土俵",
+        "hiragana": "どひょう",
+        "meaning": "đấu trường",
+        "type": "on"
+      },
+      {
+        "word": "一俵",
+        "hiragana": "いっぴょう",
+        "meaning": "đầy bao",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "ひょう"
+    ],
+    "jlpt_level": "N2"
+  },
+  {
+    "kanji": "値",
+    "han_viet": "TRỊ",
+    "meaning": "Giá trị",
+    "examples": [
+      {
+        "word": "値段",
+        "hiragana": "ねだん",
+        "meaning": "Giá cả, giá tiền"
+      },
+      {
+        "word": "価値",
+        "hiragana": "かち",
+        "meaning": "Giá trị"
+      },
+      {
+        "word": "数値",
+        "hiragana": "すうち",
+        "meaning": "Giá trị bằng số"
+      },
+      {
+        "word": "値下げ",
+        "hiragana": "ねさげ",
+        "meaning": "sự bớt giá",
+        "type": "kun"
+      },
+      {
+        "word": "値上げ",
+        "hiragana": "ねあげ",
+        "meaning": "giá tăng",
+        "type": "kun"
+      },
+      {
+        "word": "値",
+        "hiragana": "あたい",
+        "meaning": "giá trị",
+        "type": "kun"
+      }
+    ],
+    "on_yomi": [
+      "ち"
+    ],
+    "jlpt_level": "N4"
+  },
+  {
+    "kanji": "俳",
+    "han_viet": "BÀI",
+    "meaning": "Nghệ sĩ",
+    "examples": [
+      {
+        "word": "俳優",
+        "hiragana": "はいゆう",
+        "meaning": "Diễn viên"
+      },
+      {
+        "word": "俳句",
+        "hiragana": "はいく",
+        "meaning": "Thơ Haiku của Nhật"
+      },
+      {
+        "word": "俳人",
+        "hiragana": "はいじん",
+        "meaning": "nhà thơ",
+        "type": "on"
+      },
+      {
+        "word": "俳諧",
+        "hiragana": "はいかい",
+        "meaning": "thơ hài",
+        "type": "on"
+      },
+      {
+        "word": "俳壇",
+        "hiragana": "はいだん",
+        "meaning": "thế giới người làm thơ",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "はい"
+    ],
+    "jlpt_level": "N3"
+  },
+  {
+    "kanji": "倒",
+    "han_viet": "ĐẢO",
+    "meaning": "Ngã đổ",
+    "examples": [
+      {
+        "word": "倒れる",
+        "hiragana": "たおれる",
+        "meaning": "Bị ngã, đổ, sập"
+      },
+      {
+        "word": "倒産",
+        "hiragana": "とうさん",
+        "meaning": "Phá sản"
+      },
+      {
+        "word": "圧倒",
+        "hiragana": "あっとう",
+        "meaning": "Áp đảo"
+      },
+      {
+        "word": "倒す",
+        "hiragana": "たおす",
+        "meaning": "làm ngã đổ",
+        "type": "kun"
+      },
+      {
+        "word": "面倒",
+        "hiragana": "めんどう",
+        "meaning": "phiền phức",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "とう"
+    ],
+    "jlpt_level": "N4"
+  },
+  {
+    "kanji": "倹",
+    "han_viet": "KIỆM",
+    "meaning": "Tiết kiệm",
+    "examples": [
+      {
+        "word": "倹約",
+        "hiragana": "けんやく",
+        "meaning": "Tiết kiệm, co kéo"
+      },
+      {
+        "word": "勤倹",
+        "hiragana": "きんけん",
+        "meaning": "cần kiệm",
+        "type": "on"
+      },
+      {
+        "word": "節倹",
+        "hiragana": "せっけん",
+        "meaning": "tiết kiệm",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "けん"
+    ],
+    "jlpt_level": "N2"
+  },
+  {
+    "kanji": "倣",
+    "han_viet": "PHỎNG",
+    "meaning": "Bắt chước",
+    "examples": [
+      {
+        "word": "倣う",
+        "hiragana": "ナラウ",
+        "meaning": "Mô phỏng, phỏng theo, bắt chước"
+      },
+      {
+        "word": "模倣",
+        "hiragana": "もほう",
+        "meaning": "Mô phỏng, bắt chước"
+      },
+      {
+        "word": "倣う",
+        "hiragana": "ならう",
+        "meaning": "mô phỏng",
+        "type": "kun"
+      }
+    ],
+    "on_yomi": [
+      "ほう"
+    ],
+    "jlpt_level": "N2"
+  },
+  {
+    "kanji": "俸",
+    "han_viet": "BỔNG",
+    "meaning": "Lương bổng",
+    "examples": [
+      {
+        "word": "俸給",
+        "hiragana": "ほうきゅう",
+        "meaning": "Tiền lương, bổng lộc"
+      },
+      {
+        "word": "基本俸",
+        "hiragana": "きほんほう",
+        "meaning": "Lương cơ bản"
+      },
+      {
+        "word": "号俸",
+        "hiragana": "ごうほう",
+        "meaning": "bậc lương",
+        "type": "on"
+      },
+      {
+        "word": "増俸",
+        "hiragana": "ぞうほう",
+        "meaning": "tăng lương",
+        "type": "on"
+      },
+      {
+        "word": "年俸",
+        "hiragana": "ねんぽう",
+        "meaning": "lương hàng năm",
+        "type": "on"
+      },
+      {
+        "word": "減俸",
+        "hiragana": "げんぽう",
+        "meaning": "giảm lương",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "ほう"
+    ],
+    "jlpt_level": "N2"
+  },
+  {
+    "kanji": "倫",
+    "han_viet": "LUÂN",
+    "meaning": "Đạo lý",
+    "examples": [
+      {
+        "word": "倫理",
+        "hiragana": "りんり",
+        "meaning": "Luân lý, đạo đức"
+      },
+      {
+        "word": "不倫",
+        "hiragana": "ふりん",
+        "meaning": "Ngoại tình, bất luân"
+      },
+      {
+        "word": "比倫",
+        "hiragana": "ひりん",
+        "meaning": "phù hợp",
+        "type": "on"
+      },
+      {
+        "word": "人倫",
+        "hiragana": "じんりん",
+        "meaning": "đạo lý làm người",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "りん"
+    ],
+    "jlpt_level": "N2"
+  },
+  {
+    "kanji": "俺",
+    "han_viet": "YÊM",
+    "meaning": "Tôi",
+    "examples": [
+      {
+        "word": "俺",
+        "hiragana": "おれ",
+        "meaning": "Tao, tôi (cách xưng hô suồng sã của nam giới)"
+      },
+      {
+        "word": "俺達",
+        "hiragana": "おれたち",
+        "meaning": "Chúng tao, chúng tớ"
+      }
+    ],
+    "jlpt_level": "N2"
+  },
+  {
+    "kanji": "健",
+    "han_viet": "KIỆN",
+    "meaning": "Khỏe mạnh",
+    "examples": [
+      {
+        "word": "健康",
+        "hiragana": "けんこう",
+        "meaning": "Sức khỏe, khỏe mạnh"
+      },
+      {
+        "word": "健全",
+        "hiragana": "けんぜん",
+        "meaning": "Lành mạnh, kiện toàn"
+      },
+      {
+        "word": "保健",
+        "hiragana": "ほけん",
+        "meaning": "Bảo vệ sức khỏe, y tế"
+      },
+      {
+        "word": "健やか",
+        "hiragana": "すこやか",
+        "meaning": "khỏe mạnh",
+        "type": "kun"
+      },
+      {
+        "word": "健在",
+        "hiragana": "けんざい",
+        "meaning": "tình trạng sức khỏe tốt",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "けん"
+    ],
+    "jlpt_level": "N4"
+  },
+  {
+    "kanji": "側",
+    "han_viet": "TRẮC",
+    "meaning": "Phía, bên",
+    "examples": [
+      {
+        "word": "側",
+        "hiragana": "かわ / そば",
+        "meaning": "Phía, bên cạnh"
+      },
+      {
+        "word": "右側",
+        "hiragana": "みぎがわ",
+        "meaning": "Phía bên phải"
+      },
+      {
+        "word": "側面",
+        "hiragana": "そくめん",
+        "meaning": "Mặt bên, khía cạnh"
+      },
+      {
+        "word": "側",
+        "hiragana": "かわ",
+        "meaning": "phía, bên",
+        "type": "kun"
+      },
+      {
+        "word": "両側",
+        "hiragana": "りょうがわ",
+        "meaning": "cả hai bên",
+        "type": "kun"
+      },
+      {
+        "word": "側壁",
+        "hiragana": "そくへき",
+        "meaning": "đứng bên tường",
+        "type": "on"
+      },
+      {
+        "word": "側近",
+        "hiragana": "そっきん",
+        "meaning": "trả tiền mặt",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "そく"
+    ],
+    "jlpt_level": "N4"
+  },
+  {
+    "kanji": "停",
+    "han_viet": "ĐÌNH",
+    "meaning": "Ngừng, lưu lại",
+    "examples": [
+      {
+        "word": "停止",
+        "hiragana": "ていし",
+        "meaning": "Đình chỉ, dừng lại"
+      },
+      {
+        "word": "停留所",
+        "hiragana": "ていりゅうじょ",
+        "meaning": "Trạm dừng xe buýt"
+      },
+      {
+        "word": "停電",
+        "hiragana": "ていでん",
+        "meaning": "Mất điện, cúp điện"
+      },
+      {
+        "word": "停める",
+        "hiragana": "とめる",
+        "meaning": "dừng",
+        "type": "kun"
+      },
+      {
+        "word": "停まる",
+        "hiragana": "とまる",
+        "meaning": "dừng",
+        "type": "kun"
+      }
+    ],
+    "on_yomi": [
+      "てい"
+    ],
+    "jlpt_level": "N4"
+  },
+  {
+    "kanji": "偶",
+    "han_viet": "NGẪU",
+    "meaning": "Ngẫu nhiên",
+    "examples": [
+      {
+        "word": "偶然",
+        "hiragana": "ぐうぜん",
+        "meaning": "Ngẫu nhiên, tình cờ"
+      },
+      {
+        "word": "偶数",
+        "hiragana": "ぐうすう",
+        "meaning": "Số chẵn"
+      },
+      {
+        "word": "配偶者",
+        "hiragana": "はいぐうしゃ",
+        "meaning": "Người phối ngẫu, vợ/chồng"
+      },
+      {
+        "word": "偶発",
+        "hiragana": "ぐうはつ",
+        "meaning": "bất ngờ",
+        "type": "on"
+      },
+      {
+        "word": "偶像",
+        "hiragana": "ぐうぞう",
+        "meaning": "thần tượng",
+        "type": "on"
+      },
+      {
+        "word": "配偶",
+        "hiragana": "はいぐう",
+        "meaning": "sự kết hợp",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "ぐう"
+    ],
+    "jlpt_level": "N3"
+  },
+  {
+    "kanji": "偽",
+    "han_viet": "NGUY",
+    "meaning": "Giả mạo",
+    "examples": [
+      {
+        "word": "偽物",
+        "hiragana": "にせもの",
+        "meaning": "Hàng giả, đồ giả"
+      },
+      {
+        "word": "偽造",
+        "hiragana": "ぎぞう",
+        "meaning": "Ngụy tạo, làm giả"
+      },
+      {
+        "word": "偽る",
+        "hiragana": "いつわる",
+        "meaning": "Lừa dối, giả vờ"
+      },
+      {
+        "word": "偽装",
+        "hiragana": "ぎそう",
+        "meaning": "ngụy trang",
+        "type": "on"
+      },
+      {
+        "word": "真偽",
+        "hiragana": "しんぎ",
+        "meaning": "đúng và sai",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "ぎ"
+    ],
+    "jlpt_level": "N2"
+  },
+  {
+    "kanji": "偵",
+    "han_viet": "TRINH",
+    "meaning": "Trinh thám",
+    "examples": [
+      {
+        "word": "探偵",
+        "hiragana": "たんてい",
+        "meaning": "Thám tử"
+      },
+      {
+        "word": "偵察",
+        "hiragana": "ていさつ",
+        "meaning": "Trinh sát"
+      },
+      {
+        "word": "内偵",
+        "hiragana": "ないてい",
+        "meaning": "việc điều tra bí mật",
+        "type": "on"
+      },
+      {
+        "word": "密偵",
+        "hiragana": "みってい",
+        "meaning": "mật thám",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "てい"
+    ],
+    "jlpt_level": "N2"
+  },
+  {
+    "kanji": "偏",
+    "han_viet": "THIÊN",
+    "meaning": "Thiên lệch",
+    "examples": [
+      {
+        "word": "偏る",
+        "hiragana": "かたよる",
+        "meaning": "Lệch lạc, nghiêng về một phía, mất cân bằng"
+      },
+      {
+        "word": "偏見",
+        "hiragana": "へんけん",
+        "meaning": "Thành kiến, cái nhìn thiên lệch"
+      },
+      {
+        "word": "偏食",
+        "hiragana": "へんしょく",
+        "meaning": "Ăn uống lệch lạc, kén ăn"
+      },
+      {
+        "word": "偏向",
+        "hiragana": "へんこう",
+        "meaning": "xu hướng",
+        "type": "on"
+      },
+      {
+        "word": "偏差値",
+        "hiragana": "へんさち",
+        "meaning": "độ lệch",
+        "type": "on"
+      },
+      {
+        "word": "偏西風",
+        "hiragana": "へんせいふう",
+        "meaning": "gió tây",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "へん"
+    ],
+    "jlpt_level": "N2"
+  },
+  {
+    "kanji": "備",
+    "han_viet": "BỊ",
+    "meaning": "Chuẩn bị",
+    "examples": [
+      {
+        "word": "準備",
+        "hiragana": "じゅんび",
+        "meaning": "Chuẩn bị"
+      },
+      {
+        "word": "設備",
+        "hiragana": "せつび",
+        "meaning": "Thiết bị, trang thiết bị"
+      },
+      {
+        "word": "備える",
+        "hiragana": "そなえる",
+        "meaning": "Trang bị, đề phòng"
+      },
+      {
+        "word": "備わる",
+        "hiragana": "そなわる",
+        "meaning": "có lắp đặt",
+        "type": "kun"
+      },
+      {
+        "word": "整備",
+        "hiragana": "せいび",
+        "meaning": "điều chỉnh",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "び"
+    ],
+    "jlpt_level": "N4"
+  },
+  {
+    "kanji": "偉",
+    "han_viet": "VĨ",
+    "meaning": "Vĩ đại",
+    "examples": [
+      {
+        "word": "偉い",
+        "hiragana": "えらい",
+        "meaning": "Vĩ đại, giỏi giang, chức vụ cao"
+      },
+      {
+        "word": "偉 đại",
+        "hiragana": "いだい",
+        "meaning": "Vĩ đại, to lớn"
+      },
+      {
+        "word": "偉 nhân",
+        "hiragana": "いじん",
+        "meaning": "Vĩ nhân"
+      },
+      {
+        "word": "偉大",
+        "hiragana": "いだい",
+        "meaning": "vĩ đại",
+        "type": "on"
+      },
+      {
+        "word": "偉人",
+        "hiragana": "いじん",
+        "meaning": "viĩ nhân",
+        "type": "on"
+      },
+      {
+        "word": "偉業",
+        "hiragana": "いぎょう",
+        "meaning": "công việc vĩ đại",
+        "type": "on"
+      },
+      {
+        "word": "偉容",
+        "hiragana": "いよう",
+        "meaning": "uy nghi",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "い"
+    ],
+    "jlpt_level": "N3"
+  },
+  {
+    "kanji": "傍",
+    "han_viet": "BÀNG",
+    "meaning": "Bên cạnh",
+    "examples": [
+      {
+        "word": "傍ら",
+        "hiragana": "かたわら",
+        "meaning": "Bên cạnh, sát nách"
+      },
+      {
+        "word": "傍聴",
+        "hiragana": "ぼうちょう",
+        "meaning": "Dự thính, nghe lén"
+      },
+      {
+        "word": "傍",
+        "hiragana": "そば",
+        "meaning": "bên cạnh",
+        "type": "kun"
+      },
+      {
+        "word": "傍観",
+        "hiragana": "ぼうかん",
+        "meaning": "thờ ơ",
+        "type": "on"
+      },
+      {
+        "word": "路傍",
+        "hiragana": "ろぼう",
+        "meaning": "lề đường",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "ぼう"
+    ],
+    "jlpt_level": "N2"
+  },
+  {
+    "kanji": "傘",
+    "han_viet": "TẢN",
+    "meaning": "Ô, dù",
+    "examples": [
+      {
+        "word": "傘",
+        "hiragana": "かさ",
+        "meaning": "Cái ô, cái dù"
+      },
+      {
+        "word": "日傘",
+        "hiragana": "ひがさ",
+        "meaning": "Ô che nắng"
+      },
+      {
+        "word": "置き傘",
+        "hiragana": "おきがさ",
+        "meaning": "Ô để sẵn (ở trường học, công sở)"
+      },
+      {
+        "word": "傘下",
+        "hiragana": "さんか",
+        "meaning": "nép bóng, dưới ô",
+        "type": "on"
+      },
+      {
+        "word": "落下傘",
+        "hiragana": "らっかさん",
+        "meaning": "nhảy dù",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "さん"
+    ],
+    "jlpt_level": "N3"
+  },
+  {
+    "kanji": "働",
+    "han_viet": "ĐỘNG",
+    "meaning": "Làm việc",
+    "examples": [
+      {
+        "word": "働く",
+        "hiragana": "はたらく",
+        "meaning": "Làm việc, lao động"
+      },
+      {
+        "word": "労働",
+        "hiragana": "ろうどう",
+        "meaning": "Lao động"
+      },
+      {
+        "word": "共働き",
+        "hiragana": "ともばたらき",
+        "meaning": "Cùng đi làm kiếm sống (vợ chồng)"
+      },
+      {
+        "word": "稼働",
+        "hiragana": "かどう",
+        "meaning": "vận hành",
+        "type": "on"
+      },
+      {
+        "word": "実働",
+        "hiragana": "じつどう",
+        "meaning": "thực tế làm việc",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "どう"
+    ],
+    "jlpt_level": "N5"
+  },
+  {
+    "kanji": "傷",
+    "han_viet": "THƯƠNG",
+    "meaning": "Vết thương",
+    "examples": [
+      {
+        "word": "傷",
+        "hiragana": "きず",
+        "meaning": "Vết thương, vết xước"
+      },
+      {
+        "word": "傷つく",
+        "hiragana": "きずつく",
+        "meaning": "Bị thương, tổn thương (tình cảm)"
+      },
+      {
+        "word": "重傷",
+        "hiragana": "じゅうしょう",
+        "meaning": "Vết thương nặng, trọng thương"
+      },
+      {
+        "word": "傷む",
+        "hiragana": "いたむ",
+        "meaning": "bị thương",
+        "type": "kun"
+      },
+      {
+        "word": "傷める",
+        "hiragana": "いためる",
+        "meaning": "gây thương tích",
+        "type": "kun"
+      },
+      {
+        "word": "負傷",
+        "hiragana": "ふしょう",
+        "meaning": "việc bị thương",
+        "type": "on"
+      },
+      {
+        "word": "損傷",
+        "hiragana": "そんしょう",
+        "meaning": "tổn thương",
+        "type": "on"
+      },
+      {
+        "word": "死傷",
+        "hiragana": "ししょう",
+        "meaning": "thương vong",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "しょう"
+    ],
+    "jlpt_level": "N4"
+  },
+  {
+    "kanji": "傾",
+    "han_viet": "KHUYNH",
+    "meaning": "Khuynh hướng",
+    "examples": [
+      {
+        "word": "傾く",
+        "hiragana": "かたむく",
+        "meaning": "Nghiêng về, hướng về"
+      },
+      {
+        "word": "傾向",
+        "hiragana": "けいこう",
+        "meaning": "Khuynh hướng, xu hướng"
+      },
+      {
+        "word": "傾聴",
+        "hiragana": "けいちょう",
+        "meaning": "Lắng nghe chăm chú"
+      },
+      {
+        "word": "傾ける",
+        "hiragana": "かたむける",
+        "meaning": "khuynh hướng",
+        "type": "kun"
+      },
+      {
+        "word": "傾斜",
+        "hiragana": "けいしゃ",
+        "meaning": "dốc nghiêng",
+        "type": "on"
+      },
+      {
+        "word": "傾倒",
+        "hiragana": "けいとう",
+        "meaning": "cống hiến",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "けい"
+    ],
+    "jlpt_level": "N3"
+  },
+  {
+    "kanji": "僧",
+    "han_viet": "TĂNG",
+    "meaning": "Tăng ni",
+    "examples": [
+      {
+        "word": "僧侶",
+        "hiragana": "そうりょ",
+        "meaning": "Tăng lữ, nhà sư"
+      },
+      {
+        "word": "小僧",
+        "hiragana": "こぞう",
+        "meaning": "Chú tiểu, thằng nhóc"
+      },
+      {
+        "word": "僧院",
+        "hiragana": "そういん",
+        "meaning": "chùa",
+        "type": "on"
+      },
+      {
+        "word": "禅僧",
+        "hiragana": "ぜんそう",
+        "meaning": "sư theo phái thiền",
+        "type": "on"
+      },
+      {
+        "word": "高僧",
+        "hiragana": "こうそう",
+        "meaning": "cao tăng",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "そう"
+    ],
+    "jlpt_level": "N2"
+  },
+  {
+    "kanji": "催",
+    "han_viet": "THÔI",
+    "meaning": "Hối thúc",
+    "examples": [
+      {
+        "word": "開催",
+        "hiragana": "かいさい",
+        "meaning": "Tổ chức, đăng cai"
+      },
+      {
+        "word": "催し",
+        "hiragana": "催し",
+        "meaning": "Sự kiện, hội chợ"
+      },
+      {
+        "word": "催促",
+        "hiragana": "さいそく",
+        "meaning": "Thúc giục, giục giã"
+      },
+      {
+        "word": "催す",
+        "hiragana": "もよおす",
+        "meaning": "thôi thúc",
+        "type": "kun"
+      },
+      {
+        "word": "主催",
+        "hiragana": "しゅさい",
+        "meaning": "chủ tọa, đăng cai",
+        "type": "on"
+      },
+      {
+        "word": "共催",
+        "hiragana": "きょうさい",
+        "meaning": "đồng tổ chức",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "さい"
+    ],
+    "jlpt_level": "N2"
+  },
+  {
+    "kanji": "債",
+    "han_viet": "TRÁI",
+    "meaning": "Công trái, nợ",
+    "examples": [
+      {
+        "word": "負債",
+        "hiragana": "ふさい",
+        "meaning": "Khoản nợ, mắc nợ"
+      },
+      {
+        "word": "国債",
+        "hiragana": "こくさい",
+        "meaning": "Công trái nhà nước, trái phiếu chính phủ"
+      },
+      {
+        "word": "債務",
+        "hiragana": "さいむ",
+        "meaning": "Nghĩa vụ nợ"
+      },
+      {
+        "word": "債券",
+        "hiragana": "さいけん",
+        "meaning": "trái phiếu, phiếu nợ",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "さい"
+    ],
+    "jlpt_level": "N2"
+  },
+  {
+    "kanji": "傑",
+    "han_viet": "KIỆT",
+    "meaning": "Kiệt xuất",
+    "examples": [
+      {
+        "word": "傑作",
+        "hiragana": "けっさく",
+        "meaning": "Kiệt tác"
+      },
+      {
+        "word": "豪傑",
+        "hiragana": "ごうけつ",
+        "meaning": "Hào kiệt"
+      },
+      {
+        "word": "傑物",
+        "hiragana": "けつぶつ",
+        "meaning": "nhân vật kiệt xuất",
+        "type": "on"
+      },
+      {
+        "word": "傑出",
+        "hiragana": "けっしゅつ",
+        "meaning": "kiệt xuất, xuất chúng",
+        "type": "on"
+      },
+      {
+        "word": "女傑",
+        "hiragana": "じょけつ",
+        "meaning": "nữ anh hùng",
+        "type": "on"
+      },
+      {
+        "word": "怪傑",
+        "hiragana": "かいけつ",
+        "meaning": "người có tài năng lạ",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "けつ"
+    ],
+    "jlpt_level": "N2"
+  },
+  {
+    "kanji": "僅",
+    "han_viet": "CẬN",
+    "meaning": "Ít ỏi",
+    "examples": [
+      {
+        "word": "僅か",
+        "hiragana": "わずか",
+        "meaning": "Chỉ một chút, ít ỏi"
+      },
+      {
+        "word": "僅差",
+        "hiragana": "きんさ",
+        "meaning": "đường tơ kẻ tóc",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "きん"
+    ],
+    "jlpt_level": "N2"
+  },
+  {
+    "kanji": "傲",
+    "han_viet": "NGẠO",
+    "meaning": "Ngạo mạn",
+    "examples": [
+      {
+        "word": "傲慢",
+        "hiragana": "ごうまん",
+        "meaning": "Ngạo mạn, kiêu ngạo"
+      },
+      {
+        "word": "傲岸",
+        "hiragana": "ごうがん",
+        "meaning": "tiính kiêu kỳ",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "ごう"
+    ],
+    "jlpt_level": "N2"
+  },
+  {
+    "kanji": "像",
+    "han_viet": "TƯỢNG",
+    "meaning": "Hình tượng",
+    "examples": [
+      {
+        "word": "想像",
+        "hiragana": "そうぞう",
+        "meaning": "Tưởng tượng"
+      },
+      {
+        "word": "画像",
+        "hiragana": "がぞう",
+        "meaning": "Hình ảnh, hình họa"
+      },
+      {
+        "word": "仏像",
+        "hiragana": "ぶつぞう",
+        "meaning": "Tượng Phật"
+      },
+      {
+        "word": "映像",
+        "hiragana": "えいぞう",
+        "meaning": "hình ảnh",
+        "type": "on"
+      },
+      {
+        "word": "銅像",
+        "hiragana": "どうぞう",
+        "meaning": "tượng đồng",
+        "type": "on"
+      },
+      {
+        "word": "彫像",
+        "hiragana": "ちょうぞう",
+        "meaning": "bức tượng",
+        "type": "on"
+      },
+      {
+        "word": "実像",
+        "hiragana": "じつぞう",
+        "meaning": "bức tượng",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "ぞう"
+    ],
+    "jlpt_level": "N3"
+  },
+  {
+    "kanji": "僕",
+    "han_viet": "BỘC",
+    "meaning": "Tôi (nam xưng)",
+    "examples": [
+      {
+        "word": "僕",
+        "hiragana": "ぼく",
+        "meaning": "Tôi, tớ (cách xưng hô lịch sự, thân thiện của nam)"
+      },
+      {
+        "word": "公僕",
+        "hiragana": "こうぼく",
+        "meaning": "Công bộc, đầy tớ của nhân dân"
+      },
+      {
+        "word": "家僕",
+        "hiragana": "かぼく",
+        "meaning": "nô bộc",
+        "type": "on"
+      },
+      {
+        "word": "下僕",
+        "hiragana": "げぼく",
+        "meaning": "người hầu",
+        "type": "on"
+      },
+      {
+        "word": "老僕",
+        "hiragana": "ろうぼく",
+        "meaning": "lão nô bộc",
+        "type": "on"
+      },
+      {
+        "word": "忠僕",
+        "hiragana": "ちゅうぼく",
+        "meaning": "người hầu trung thành",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "ぼく"
+    ],
+    "jlpt_level": "N3"
+  },
+  {
+    "kanji": "僚",
+    "han_viet": "LIÊU",
+    "meaning": "Bạn, viên chức",
+    "examples": [
+      {
+        "word": "同僚",
+        "hiragana": "どうりょう",
+        "meaning": "Đồng nghiệp"
+      },
+      {
+        "word": "官僚",
+        "hiragana": "かんりょう",
+        "meaning": "Quan liêu, giới chức trách"
+      },
+      {
+        "word": "僚友",
+        "hiragana": "りょうゆう",
+        "meaning": "đồng nghiệp",
+        "type": "on"
+      },
+      {
+        "word": "閣僚",
+        "hiragana": "かくりょう",
+        "meaning": "nội các, chính phủ",
+        "type": "on"
+      },
+      {
+        "word": "下僚",
+        "hiragana": "かりょう",
+        "meaning": "nhân viên cấp thấp",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "りょう"
+    ],
+    "jlpt_level": "N3"
+  },
+  {
+    "kanji": "億",
+    "han_viet": "ỨC",
+    "meaning": "Trăm triệu",
+    "examples": [
+      {
+        "word": "一億",
+        "hiragana": "いちおく",
+        "meaning": "Một trăm triệu"
+      },
+      {
+        "word": "億万長者",
+        "hiragana": "おくまんちょうじゃ",
+        "meaning": "Tỷ phú, triệu phú"
+      },
+      {
+        "word": "巨億",
+        "hiragana": "きょおく",
+        "meaning": "hàng triệu",
+        "type": "on"
+      },
+      {
+        "word": "千億",
+        "hiragana": "せんおく",
+        "meaning": "một trăm tỉ",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "おく"
+    ],
+    "jlpt_level": "N4"
+  },
+  {
+    "kanji": "儀",
+    "han_viet": "NGHI",
+    "meaning": "Lễ nghi",
+    "examples": [
+      {
+        "word": "儀式",
+        "hiragana": "ぎしき",
+        "meaning": "Nghi thức, nghi lễ"
+      },
+      {
+        "word": "お辞儀",
+        "hiragana": "おじぎ",
+        "meaning": "Sự cúi đầu chào"
+      },
+      {
+        "word": "礼儀",
+        "hiragana": "れいぎ",
+        "meaning": "Lễ nghĩa, phép lịch sự"
+      },
+      {
+        "word": "儀礼",
+        "hiragana": "ぎれい",
+        "meaning": "lễ tiết",
+        "type": "on"
+      },
+      {
+        "word": "葬儀",
+        "hiragana": "そうぎ",
+        "meaning": "hậu sự",
+        "type": "on"
+      },
+      {
+        "word": "行儀",
+        "hiragana": "ぎょうぎ",
+        "meaning": "cách cư xử",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "ぎ"
+    ],
+    "jlpt_level": "N3"
+  },
+  {
+    "kanji": "儒",
+    "han_viet": "NHO",
+    "meaning": "Nho giáo",
+    "examples": [
+      {
+        "word": "儒教",
+        "hiragana": "じゅきょう",
+        "meaning": "Nho giáo"
+      },
+      {
+        "word": "儒生",
+        "hiragana": "じゅせい",
+        "meaning": "Nho sinh, học trò đạo Khổng"
+      },
+      {
+        "word": "儒学",
+        "hiragana": "じゅがく",
+        "meaning": "nho học",
+        "type": "on"
+      },
+      {
+        "word": "儒家",
+        "hiragana": "じゅか",
+        "meaning": "người theo đạo khổng",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "じゅ"
+    ],
+    "jlpt_level": "N2"
+  },
+  {
+    "kanji": "優",
+    "han_viet": "ƯU",
+    "meaning": "Ưu việt",
+    "examples": [
+      {
+        "word": "優しい",
+        "hiragana": "やさしい",
+        "meaning": "Hiền lành, dịu dàng"
+      },
+      {
+        "word": "優先",
+        "hiragana": "ゆうせん",
+        "meaning": "Ưu tiên"
+      },
+      {
+        "word": "優秀",
+        "hiragana": "ゆうしゅう",
+        "meaning": "Ưu tú, xuất sắc"
+      },
+      {
+        "word": "優れる",
+        "hiragana": "すぐれる",
+        "meaning": "ưu việt",
+        "type": "kun"
+      },
+      {
+        "word": "優勝",
+        "hiragana": "ゆうしょう",
+        "meaning": "chiến thắng",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "ゆう"
+    ],
+    "jlpt_level": "N4"
+  },
+  {
+    "kanji": "償",
+    "han_viet": "THƯƠNG",
+    "meaning": "Bồi thường, đền",
+    "examples": [
+      {
+        "word": "弁償",
+        "hiragana": "べんしょう",
+        "meaning": "Biện bồi, bồi thường (vật chất)"
+      },
+      {
+        "word": "償う",
+        "hiragana": "つぐなう",
+        "meaning": "Đền bù, chuộc lỗi"
+      },
+      {
+        "word": "補償",
+        "hiragana": "ほしょう",
+        "meaning": "Bồi thường, đền bù (tổn thất)"
+      },
+      {
+        "word": "賠償",
+        "hiragana": "ばいしょう",
+        "meaning": "sự bồi thường",
+        "type": "on"
+      },
+      {
+        "word": "無償",
+        "hiragana": "むしょう",
+        "meaning": "ko bồi thường",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "しょう"
+    ],
+    "jlpt_level": "N3"
+  },
+  {
+    "kanji": "儲",
+    "han_viet": "Trữ",
+    "meaning": "Kiếm lời, lợi nhuận",
+    "on_yomi": [],
+    "jlpt_level": "N2",
+    "is_radical": false,
+    "examples": [
+      {
+        "word": "儲ける",
+        "hiragana": "もうける",
+        "meaning": "kiếm lời",
+        "type": "kun"
+      },
+      {
+        "word": "儲かる",
+        "hiragana": "もうかる",
+        "meaning": "lợi nhuận",
+        "type": "kun"
+      }
+    ]
+  },
+  {
+    "kanji": "元",
+    "han_viet": "NGUYÊN",
+    "meaning": "Căn bản, nguồn",
+    "examples": [
+      {
+        "word": "元気",
+        "hiragana": "げんき",
+        "meaning": "Khỏe mạnh"
+      },
+      {
+        "word": "足元",
+        "hiragana": "あしもと",
+        "meaning": "Dưới chân, bước đi"
+      },
+      {
+        "word": "元々",
+        "hiragana": "موتموتو",
+        "meaning": "Vốn dĩ, nguyên gốc"
+      },
+      {
+        "word": "元",
+        "hiragana": "もと",
+        "meaning": "nguồn gốc",
+        "type": "kun"
+      },
+      {
+        "word": "元首",
+        "hiragana": "げんしゅ",
+        "meaning": "nguyên thủ",
+        "type": "on"
+      },
+      {
+        "word": "元日",
+        "hiragana": "がんじつ",
+        "meaning": "mùng một tết",
+        "type": "on"
+      },
+      {
+        "word": "元旦",
+        "hiragana": "がんたん",
+        "meaning": "tết tây",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "げん",
+      "がん"
+    ],
+    "jlpt_level": "N5"
+  },
+  {
+    "kanji": "兄",
+    "han_viet": "HUYNH",
+    "meaning": "Anh trai",
+    "examples": [
+      {
+        "word": "兄",
+        "hiragana": "あに",
+        "meaning": "Anh trai (của mình)"
+      },
+      {
+        "word": "お兄さん",
+        "hiragana": "おにいさん",
+        "meaning": "Anh trai (của người khác)"
+      },
+      {
+        "word": "兄弟",
+        "hiragana": "きょうだい",
+        "meaning": "Anh em"
+      },
+      {
+        "word": "実兄",
+        "hiragana": "じっけい",
+        "meaning": "anh ruột",
+        "type": "on"
+      },
+      {
+        "word": "長兄",
+        "hiragana": "ちょうけい",
+        "meaning": "huynh trưởng",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "けい",
+      "きょう"
+    ],
+    "jlpt_level": "N5"
+  },
+  {
+    "kanji": "先",
+    "han_viet": "TIÊN",
+    "meaning": "Trước, tổ tiên",
+    "examples": [
+      {
+        "word": "先生",
+        "hiragana": "せんせい",
+        "meaning": "Thầy giáo, bác sĩ"
+      },
+      {
+        "word": "先週",
+        "hiragana": "せんしゅう",
+        "meaning": "Tuần trước"
+      },
+      {
+        "word": "先に",
+        "hiragana": "さきに",
+        "meaning": "Trước tiên, làm trước"
+      },
+      {
+        "word": "先",
+        "hiragana": "さき",
+        "meaning": "trước đây",
+        "type": "kun"
+      },
+      {
+        "word": "先ず",
+        "hiragana": "まず",
+        "meaning": "trước hết",
+        "type": "kun"
+      },
+      {
+        "word": "先発",
+        "hiragana": "せんぱつ",
+        "meaning": "người báo hiệu",
+        "type": "on"
+      },
+      {
+        "word": "先進",
+        "hiragana": "せんしん",
+        "meaning": "tiên tiến",
+        "type": "on"
+      },
+      {
+        "word": "先輩",
+        "hiragana": "せんぱい",
+        "meaning": "đàn anh",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "せん"
+    ],
+    "jlpt_level": "N5"
+  },
+  {
+    "kanji": "光",
+    "han_viet": "QUANG",
+    "meaning": "Ánh sáng",
+    "examples": [
+      {
+        "word": "光る",
+        "hiragana": "ひかる",
+        "meaning": "Tỏa sáng, phát sáng"
+      },
+      {
+        "word": "観光",
+        "hiragana": "かんこう",
+        "meaning": "Tham quan, du lịch"
+      },
+      {
+        "word": "日光",
+        "hiragana": "にっこう",
+        "meaning": "Ánh sáng mặt trời"
+      },
+      {
+        "word": "光",
+        "hiragana": "ひかり",
+        "meaning": "ánh sáng",
+        "type": "kun"
+      },
+      {
+        "word": "光景",
+        "hiragana": "こうけい",
+        "meaning": "quang cảnh",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "こう"
+    ],
+    "jlpt_level": "N4"
+  },
+  {
+    "kanji": "兆",
+    "han_viet": "TRIỆU",
+    "meaning": "1 nghìn tỷ, dấu hiệu",
+    "examples": [
+      {
+        "word": "兆",
+        "hiragana": "ちょう",
+        "meaning": "Nghìn tỷ (đơn vị số đếm)"
+      },
+      {
+        "word": "兆候",
+        "hiragana": "ちょうこう",
+        "meaning": "Triệu chứng, dấu hiệu báo trước"
+      },
+      {
+        "word": "前兆",
+        "hiragana": "ぜんちょう",
+        "meaning": "Điềm báo, tiền triệu"
+      },
+      {
+        "word": "兆す",
+        "hiragana": "きざす",
+        "meaning": "cảm thấy có điềm",
+        "type": "kun"
+      },
+      {
+        "word": "兆し",
+        "hiragana": "きざし",
+        "meaning": "dấu hiệu",
+        "type": "kun"
+      },
+      {
+        "word": "吉兆",
+        "hiragana": "きっちょう",
+        "meaning": "điềm lành",
+        "type": "on"
+      },
+      {
+        "word": "凶兆",
+        "hiragana": "きょうちょう",
+        "meaning": "điềm xấu",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "ちょう"
+    ],
+    "jlpt_level": "N2"
+  },
+  {
+    "kanji": "充",
+    "han_viet": "SUNG",
+    "meaning": "Sung túc, đầy",
+    "examples": [
+      {
+        "word": "充実",
+        "hiragana": "じゅうじつ",
+        "meaning": "Đầy đủ, ý nghĩa, sung túc"
+      },
+      {
+        "word": "充電",
+        "hiragana": "じゅうでん",
+        "meaning": "Sạc pin, nạp điện"
+      },
+      {
+        "word": "充当",
+        "hiragana": "じゅうとう",
+        "meaning": "Áp vào, dành cho"
+      },
+      {
+        "word": "充てる",
+        "hiragana": "あてる",
+        "meaning": "đầy đủ",
+        "type": "kun"
+      },
+      {
+        "word": "充分",
+        "hiragana": "じゅうぶん",
+        "meaning": "sự đầy đủ",
+        "type": "on"
+      },
+      {
+        "word": "充満",
+        "hiragana": "じゅうまん",
+        "meaning": "tràn trề, sung mãn",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "じゅう"
+    ],
+    "jlpt_level": "N3"
+  },
+  {
+    "kanji": "児",
+    "han_viet": "NHI",
+    "meaning": "Nhi đồng",
+    "examples": [
+      {
+        "word": "児童",
+        "hiragana": "じどう",
+        "meaning": "Nhi đồng, trẻ em"
+      },
+      {
+        "word": "育児",
+        "hiragana": "いくじ",
+        "meaning": "Chăm sóc con cái, nuôi dạy trẻ"
+      },
+      {
+        "word": "小児科",
+        "hiragana": "しょうにか",
+        "meaning": "Khoa nhi"
+      },
+      {
+        "word": "孤児",
+        "hiragana": "こじ",
+        "meaning": "mồ côi",
+        "type": "on"
+      },
+      {
+        "word": "幼児",
+        "hiragana": "ようじ",
+        "meaning": "trẻ con",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "じ",
+      "に"
+    ],
+    "jlpt_level": "N3"
+  },
+  {
+    "kanji": "克",
+    "han_viet": "KHẮC",
+    "meaning": "Khắc phục",
+    "examples": [
+      {
+        "word": "克服",
+        "hiragana": "こくふく",
+        "meaning": "Khắc phục, vượt qua"
+      },
+      {
+        "word": "超克",
+        "hiragana": "ちょうこく",
+        "meaning": "Vượt qua khó khăn"
+      },
+      {
+        "word": "克明",
+        "hiragana": "こくめい",
+        "meaning": "chi tiết",
+        "type": "on"
+      },
+      {
+        "word": "克己",
+        "hiragana": "こっき",
+        "meaning": "tự chủ",
+        "type": "on"
+      },
+      {
+        "word": "相克",
+        "hiragana": "そうこく",
+        "meaning": "cạnh tranh",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "こく"
+    ],
+    "jlpt_level": "N3"
+  },
+  {
+    "kanji": "免",
+    "han_viet": "MIỄN",
+    "meaning": "Bãi miễn",
+    "examples": [
+      {
+        "word": "免許",
+        "hiragana": "めんきょ",
+        "meaning": "Giấy phép, bằng lái xe"
+      },
+      {
+        "word": "免税",
+        "hiragana": "めんぜい",
+        "meaning": "Miễn thuế"
+      },
+      {
+        "word": "免除",
+        "hiragana": "めんじょ",
+        "meaning": "Miễn trừ"
+      },
+      {
+        "word": "免れる",
+        "hiragana": "まぬかれる",
+        "meaning": "được miễn",
+        "type": "kun"
+      },
+      {
+        "word": "免疫",
+        "hiragana": "めんえき",
+        "meaning": "sự miễn dịch",
+        "type": "on"
+      },
+      {
+        "word": "減免",
+        "hiragana": "げんめん",
+        "meaning": "miễn giảm",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "めん"
+    ],
+    "jlpt_level": "N3"
+  },
+  {
+    "kanji": "党",
+    "han_viet": "ĐẢNG",
+    "meaning": "Phe đảng",
+    "examples": [
+      {
+        "word": "政党",
+        "hiragana": "せいとう",
+        "meaning": "Đảng phái chính trị"
+      },
+      {
+        "word": "与党",
+        "hiragana": "よとう",
+        "meaning": "Đảng cầm quyền"
+      },
+      {
+        "word": "野党",
+        "hiragana": "やとう",
+        "meaning": "Đảng đối lập"
+      },
+      {
+        "word": "党内",
+        "hiragana": "とうない",
+        "meaning": "nội bộ đảng",
+        "type": "on"
+      },
+      {
+        "word": "党首",
+        "hiragana": "とうしゅ",
+        "meaning": "chủ tịch đảng",
+        "type": "on"
+      },
+      {
+        "word": "新党",
+        "hiragana": "しんとう",
+        "meaning": "đảng mới",
+        "type": "on"
+      },
+      {
+        "word": "自民党",
+        "hiragana": "じみんとう",
+        "meaning": "đảng tự do",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "とう"
+    ],
+    "jlpt_level": "N2"
+  },
+  {
+    "kanji": "入",
+    "han_viet": "NHẬP",
+    "meaning": "Vào",
+    "examples": [
+      {
+        "word": "入る",
+        "hiragana": "はいる",
+        "meaning": "Đi vào, bước vào"
+      },
+      {
+        "word": "入れる",
+        "hiragana": "いれる",
+        "meaning": "Cho vào, bỏ vào"
+      },
+      {
+        "word": "入口",
+        "hiragana": "いりぐち",
+        "meaning": "Lối vào"
+      },
+      {
+        "word": "気に入る",
+        "hiragana": "きにいる",
+        "meaning": "thích",
+        "type": "kun"
+      },
+      {
+        "word": "入院",
+        "hiragana": "にゅういん",
+        "meaning": "nhập viện",
+        "type": "on"
+      },
+      {
+        "word": "輸入",
+        "hiragana": "ゆにゅう",
+        "meaning": "nhập khẩu",
+        "type": "on"
+      }
+    ],
+    "on_yomi": [
+      "にゅう"
+    ],
+    "jlpt_level": "N5"
+  }
+]

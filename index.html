@@ -27,7 +27,9 @@
   </head>
   <body>
     <div class="topbar">
-      <div class="brand"><b>漢字</b><span class="brand-sub"> · Flashcards</span></div>
+      <div class="brand">
+        <b>漢字</b><span class="brand-sub"> · Flashcards</span>
+      </div>
 
       <!-- ── Search ───────────────────────────────────────────────── -->
       <div class="search-wrap" id="searchWrap">
@@ -39,8 +41,19 @@
             autocomplete="off"
             aria-label="Tìm kiếm kanji"
           />
-          <button class="search-close-btn" id="searchCloseBtn" aria-label="Đóng tìm kiếm">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <button
+            class="search-close-btn"
+            id="searchCloseBtn"
+            aria-label="Đóng tìm kiếm"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
               <line x1="18" y1="6" x2="6" y2="18"></line>
               <line x1="6" y1="6" x2="18" y2="18"></line>
             </svg>
@@ -53,15 +66,34 @@
       <div class="topbar-actions">
         <!-- Search Toggle Button -->
         <button class="icon-btn" id="searchToggleBtn" aria-label="Mở tìm kiếm">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
             <circle cx="11" cy="11" r="8"></circle>
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
           </svg>
         </button>
 
         <!-- Review button -->
-        <button class="icon-btn" id="reviewBtn" aria-label="Chế độ ôn tập" style="display: none;">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <button
+          class="icon-btn"
+          id="reviewBtn"
+          aria-label="Chế độ ôn tập"
+          style="display: none"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
             <rect x="3" y="3" width="14" height="14" rx="2" ry="2"></rect>
             <path d="M7 21h10a2 2 0 0 0 2-2V7"></path>
           </svg>
@@ -69,17 +101,50 @@
         </button>
 
         <!-- Theme toggle button -->
-        <button class="icon-btn theme-toggle" id="themeToggle" aria-label="Đổi giao diện sáng / tối">
-          <svg id="iconSun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+        <button
+          class="icon-btn theme-toggle"
+          id="themeToggle"
+          aria-label="Đổi giao diện sáng / tối"
+        >
+          <svg
+            id="iconSun"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+          >
             <circle cx="12" cy="12" r="4" />
-            <path d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" />
+            <path
+              d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"
+            />
           </svg>
-          <svg id="iconMoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" style="display: none">
+          <svg
+            id="iconMoon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            style="display: none"
+          >
             <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z" />
           </svg>
         </button>
       </div>
     </div>
+
+    <!-- ── Deck Source Selector ────────────────────────────────────── -->
+    <div class="deck-bar" id="deckBar">
+      <label class="deck-select-label" for="deckSourceSelect"
+        >Bộ dữ liệu:</label
+      >
+      <select class="deck-select" id="deckSourceSelect">
+        <option value="kanji2k">Kanji 2k2 - Chuẩn Cơm Mẹ Nấu</option>
+        <option value="default">Kanji 2136 - Dân chơi đồ cổ</option>
+      </select>
+    </div>
+
     <div class="stage">
       <div class="scene" id="scene">
         <div class="card" id="card">
@@ -137,6 +202,7 @@
               <div class="back-kanji-mini" id="miniKanji">一</div>
             </div>
             <div class="meaning" id="meaningText">Một, số một</div>
+            <div class="tags-row" id="tagsRow"></div>
             <div class="divider"></div>
             <div class="examples-label">Từ vựng liên quan</div>
             <ul class="examples" id="examplesList"></ul>
@@ -192,12 +258,18 @@
         <!-- Hàng nút lật thẻ (hiển thị khi chưa lật) -->
         <div class="review-flip-row" id="reviewFlipRow">
           <button class="review-flip-btn" id="reviewFlipBtn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                 stroke-linecap="round" stroke-linejoin="round">
-              <path d="M17 2.1l4 4-4 4"/>
-              <path d="M3 12.9V11a4 4 0 0 1 4-4h14"/>
-              <path d="M7 21.9l-4-4 4-4"/>
-              <path d="M21 11.1V13a4 4 0 0 1-4 4H3"/>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M17 2.1l4 4-4 4" />
+              <path d="M3 12.9V11a4 4 0 0 1 4-4h14" />
+              <path d="M7 21.9l-4-4 4-4" />
+              <path d="M21 11.1V13a4 4 0 0 1-4 4H3" />
             </svg>
             Lật thẻ
           </button>
@@ -225,8 +297,12 @@
       <div class="review-complete" id="reviewComplete" hidden>
         <div class="review-complete-icon">&#x2713;</div>
         <div class="review-complete-title">Hoàn thành ôn tập hôm nay!</div>
-        <div class="review-complete-sub" id="reviewCompleteStats">Bạn đã ôn xong tất cả các thẻ.</div>
-        <button class="review-back-btn" id="reviewBackBtn">Quay lại duyệt</button>
+        <div class="review-complete-sub" id="reviewCompleteStats">
+          Bạn đã ôn xong tất cả các thẻ.
+        </div>
+        <button class="review-back-btn" id="reviewBackBtn">
+          Quay lại duyệt
+        </button>
       </div>
 
       <div class="progress">
@@ -261,26 +337,51 @@
       </div>
     </div>
 
+    <script src="kanji-csv-parser.js"></script>
+    <script src="kanji-merge.js"></script>
     <script src="search.js"></script>
     <script src="srs.js"></script>
     <script>
       // ══════════════════════════════════════════════════════════════════
-      //  STATE  (DATA được load động từ kanji-sample.json)
+      //  STATE & DATA SOURCES
       // ══════════════════════════════════════════════════════════════════
+      const DECKS = {
+        default: {
+          id: "default",
+          name: "Kanji N3 / 2136 Hán tự (Mặc định)",
+          pageTotal: 27,
+          pagePath: (p) => `./data/pages/page-${p}.json`,
+          indexPath: "./data/index.json",
+          storageKey: "nihongo_last_position_v1",
+        },
+        kanji2k: {
+          id: "kanji2k",
+          name: "Kanji N5-N1 Âm/Huấn",
+          pageTotal: 28,
+          pagePath: (p) => `./data/kanji2k-pages/page-${p}.json`,
+          indexPath: "./data/kanji2k-index.json",
+          storageKey: "nihongo_last_position_kanji2k_v1",
+        },
+      };
+
+      let currentDeck =
+        localStorage.getItem("nihongo_deck_source_v1") || "default";
+      if (!DECKS[currentDeck]) currentDeck = "default";
+
       let DATA = [];
-      let INDEX = []; // full search index from data/index.json
+      let INDEX = []; // full search index
       let idx = 0;
       let pageNumber = 1;
-      let pageTotal = 27;
+      let pageTotal = DECKS[currentDeck].pageTotal;
       let flipped = false;
       let animating = false;
       let animTimers = [];
 
       // ── SRS / review state ────────────────────────────────────────────
-      let appMode = 'browse';   // 'browse' | 'review'
-      let reviewQueue = [];     // mảng item cần ôn hôm nay
-      let reviewPos = 0;        // vị trí hiện tại trong queue
-      let reviewTotal = 0;      // tổng thẻ khi bắt đầu phiên
+      let appMode = "browse"; // 'browse' | 'review'
+      let reviewQueue = []; // mảng item cần ôn hôm nay
+      let reviewPos = 0; // vị trí hiện tại trong queue
+      let reviewTotal = 0; // tổng thẻ khi bắt đầu phiên
 
       const svgCache = new Map(); // ch → raw SVG text (or null if not found)
 
@@ -291,6 +392,7 @@
       const miniKanji = document.getElementById("miniKanji");
       const hanViet = document.getElementById("hanViet");
       const meaningText = document.getElementById("meaningText");
+      const tagsRow = document.getElementById("tagsRow");
       const examplesList = document.getElementById("examplesList");
       const indexMark = document.getElementById("indexMark");
       const posNow = document.getElementById("posNow");
@@ -301,24 +403,27 @@
       const cardJumpInput = document.getElementById("cardJumpInput");
       const pageJumpInput = document.getElementById("pageJumpInput");
       const jumpBtn = document.getElementById("jumpBtn");
+      const deckSourceSelect = document.getElementById("deckSourceSelect");
 
       const reducedMotion = window.matchMedia(
         "(prefers-reduced-motion: reduce)",
       ).matches;
 
       // ── Review DOM refs ───────────────────────────────────────────────
-      const reviewControls   = document.getElementById("reviewControls");
-      const reviewFlipRow    = document.getElementById("reviewFlipRow");
-      const reviewGradeRow   = document.getElementById("reviewGradeRow");
-      const reviewProgress   = document.getElementById("reviewProgress");
-      const reviewComplete   = document.getElementById("reviewComplete");
-      const reviewCompleteStats = document.getElementById("reviewCompleteStats");
-      const reviewBadge      = document.getElementById("reviewBadge");
-      const browseControls   = document.querySelector(".controls");
-      const jumpControls     = document.querySelector(".jump-controls");
-      const progressEl       = document.querySelector(".progress");
-      const pageProgressTrack= document.querySelector(".progress-track");
-      const pageLabelEl      = document.getElementById("pageLabel");
+      const reviewControls = document.getElementById("reviewControls");
+      const reviewFlipRow = document.getElementById("reviewFlipRow");
+      const reviewGradeRow = document.getElementById("reviewGradeRow");
+      const reviewProgress = document.getElementById("reviewProgress");
+      const reviewComplete = document.getElementById("reviewComplete");
+      const reviewCompleteStats = document.getElementById(
+        "reviewCompleteStats",
+      );
+      const reviewBadge = document.getElementById("reviewBadge");
+      const browseControls = document.querySelector(".controls");
+      const jumpControls = document.querySelector(".jump-controls");
+      const progressEl = document.querySelector(".progress");
+      const pageProgressTrack = document.querySelector(".progress-track");
+      const pageLabelEl = document.getElementById("pageLabel");
 
       // ══════════════════════════════════════════════════════════════════
       //  KANJIVG FETCH  (unchanged from NihonGo/kanji.html approach)
@@ -560,7 +665,8 @@
 
       async function loadPage(pageNo) {
         const safePage = Math.min(Math.max(1, pageNo), pageTotal);
-        const url = `./data/pages/page-${safePage}.json`;
+        const deckConfig = DECKS[currentDeck] || DECKS.default;
+        const url = deckConfig.pagePath(safePage);
         const res = await fetch(url);
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
@@ -572,6 +678,7 @@
         pageLabel.textContent = `Trang ${pageNumber} / ${pageTotal}`;
         const nextUrl = new URL(window.location.href);
         nextUrl.searchParams.set("page", String(pageNumber));
+        nextUrl.searchParams.set("deck", currentDeck);
         window.history.replaceState({}, "", nextUrl);
         void preloadPageSvgs(DATA);
         return DATA;
@@ -583,29 +690,50 @@
       // ══════════════════════════════════════════════════════════════════
 
       function saveLastPosition() {
-        if (appMode !== 'browse') return; // không lưu vị trí khi đang ở chế độ Ôn tập
+        if (appMode !== "browse") return; // không lưu vị trí khi đang ở chế độ Ôn tập
         try {
-          localStorage.setItem('nihongo_last_position_v1', JSON.stringify({
-            page: pageNumber,
-            idx: idx,
-            savedAt: Date.now(),
-          }));
+          const deckConfig = DECKS[currentDeck] || DECKS.default;
+          localStorage.setItem(
+            deckConfig.storageKey,
+            JSON.stringify({
+              page: pageNumber,
+              idx: idx,
+              savedAt: Date.now(),
+            }),
+          );
         } catch (err) {
-          console.warn('[kanji] Không thể lưu vị trí:', err.message);
+          console.warn("[kanji] Không thể lưu vị trí:", err.message);
         }
       }
 
       async function render() {
         saveLastPosition();
         const item = DATA[idx];
+        if (!item) return;
         const displayKanji = getDisplayKanji(item);
 
         // Back-face text content (sync, fast)
-        miniKanji.textContent = item.kanji;
-        hanViet.textContent = item.han_viet;
-        meaningText.textContent = item.meaning;
+        miniKanji.textContent = item.kanji || "";
+        hanViet.textContent = item.han_viet || "";
+        meaningText.textContent = item.meaning || "";
         indexMark.textContent = String(idx + 1).padStart(2, "0");
-        examplesList.innerHTML = item.examples
+
+        // Render tags (On-yomi, JLPT level, Radical)
+        if (tagsRow) {
+          let tagsHtml = "";
+          if (Array.isArray(item.on_yomi) && item.on_yomi.length > 0) {
+            tagsHtml += `<span class="tag-badge onyomi">音: ${item.on_yomi.join("、")}</span>`;
+          }
+          if (item.jlpt_level) {
+            tagsHtml += `<span class="tag-badge jlpt">${item.jlpt_level}</span>`;
+          }
+          if (item.is_radical) {
+            tagsHtml += `<span class="tag-badge radical">Bộ thủ</span>`;
+          }
+          tagsRow.innerHTML = tagsHtml;
+        }
+
+        examplesList.innerHTML = (item.examples || [])
           .map(
             (ex) => `
         <li class="example-item">
@@ -613,7 +741,8 @@
           <div class="example-body">
             <div class="example-top">
               <span class="example-word">${ex.word}</span>
-              <span class="example-hira">${ex.hiragana}</span>
+              <span class="example-hira">${ex.hiragana || ex.reading || ""}</span>
+              ${ex.type ? `<span class="example-type-tag">${ex.type === "kun" ? "訓" : "音"}</span>` : ""}
             </div>
             <div class="example-meaning">${ex.meaning}</div>
           </div>
@@ -762,9 +891,13 @@
         handleStrokeOrder();
       });
 
+      examplesList.addEventListener("click", (e) => {
+        e.stopPropagation();
+      });
+
       card.addEventListener("click", () => {
         abortAnimation();
-        if (appMode === 'review') {
+        if (appMode === "review") {
           if (!flipped) {
             setFlipped(true);
             showReviewGradeButtons();
@@ -812,7 +945,7 @@
         if (e.code === "Space" || e.code === "Enter") {
           e.preventDefault();
           abortAnimation();
-          if (appMode === 'review') {
+          if (appMode === "review") {
             // Space/Enter lật thẻ trong review mode
             if (!flipped) {
               setFlipped(true);
@@ -822,15 +955,15 @@
             setFlipped(!flipped);
           }
         }
-        if (appMode === 'browse') {
+        if (appMode === "browse") {
           if (e.code === "ArrowRight") go(1);
           if (e.code === "ArrowLeft") go(-1);
-        } else if (appMode === 'review' && flipped) {
+        } else if (appMode === "review" && flipped) {
           // Phím 1/2/3/4 → chấm điểm
-          if (e.key === '1') submitGrade(0);
-          if (e.key === '2') submitGrade(1);
-          if (e.key === '3') submitGrade(2);
-          if (e.key === '4') submitGrade(3);
+          if (e.key === "1") submitGrade(0);
+          if (e.key === "2") submitGrade(1);
+          if (e.key === "3") submitGrade(2);
+          if (e.key === "4") submitGrade(3);
         }
         if (e.key === "s" || e.key === "S") handleStrokeOrder();
       });
@@ -845,23 +978,23 @@
         const state = KanjiSRS.loadState();
         const count = KanjiSRS.getLearnableCount(INDEX, state);
         if (count > 0) {
-          reviewBadge.textContent = count > 99 ? '99+' : String(count);
-          reviewBadge.removeAttribute('hidden');
+          reviewBadge.textContent = count > 99 ? "99+" : String(count);
+          reviewBadge.removeAttribute("hidden");
         } else {
-          reviewBadge.setAttribute('hidden', '');
+          reviewBadge.setAttribute("hidden", "");
         }
       }
 
       /** Hiện/ẩn 4 nút chấm điểm khi thẻ đã lật */
       function showReviewGradeButtons() {
-        reviewFlipRow.setAttribute('hidden', '');
-        reviewGradeRow.removeAttribute('hidden');
+        reviewFlipRow.setAttribute("hidden", "");
+        reviewGradeRow.removeAttribute("hidden");
       }
 
       /** Reset về trạng thái "chưa lật" trong review */
       function resetReviewFlipState() {
-        reviewFlipRow.removeAttribute('hidden');
-        reviewGradeRow.setAttribute('hidden', '');
+        reviewFlipRow.removeAttribute("hidden");
+        reviewGradeRow.setAttribute("hidden", "");
       }
 
       /** Cập nhật dòng tiến trình */
@@ -882,7 +1015,7 @@
           try {
             await loadPage(item.page);
           } catch (err) {
-            console.error('[kanji] Review loadPage failed:', err);
+            console.error("[kanji] Review loadPage failed:", err);
           }
         }
         // Đặt idx đến đúng vị trí thẻ trong trang
@@ -906,34 +1039,34 @@
           return;
         }
         reviewQueue = tempQueue;
-        reviewPos   = 0;
+        reviewPos = 0;
         reviewTotal = reviewQueue.length;
-        appMode     = 'review';
+        appMode = "review";
 
         // Ẩn browse UI, hiện review UI
-        browseControls.style.display = 'none';
-        jumpControls.style.display   = 'none';
-        progressEl.style.display     = 'none';
-        pageProgressTrack.style.display = 'none';
-        pageLabelEl.style.display    = 'none';
-        reviewControls.removeAttribute('hidden');
-        reviewComplete.setAttribute('hidden', '');
+        browseControls.style.display = "none";
+        jumpControls.style.display = "none";
+        progressEl.style.display = "none";
+        pageProgressTrack.style.display = "none";
+        pageLabelEl.style.display = "none";
+        reviewControls.removeAttribute("hidden");
+        reviewComplete.setAttribute("hidden", "");
 
         await loadReviewCard();
       }
 
       /** Thoát khỏi chế độ ôn tập, quay về browse */
       function exitReviewMode() {
-        appMode = 'browse';
+        appMode = "browse";
 
         // Ẩn review UI, hiện browse UI
-        reviewControls.setAttribute('hidden', '');
-        reviewComplete.setAttribute('hidden', '');
-        browseControls.style.display = '';
-        jumpControls.style.display   = '';
-        progressEl.style.display     = '';
-        pageProgressTrack.style.display = '';
-        pageLabelEl.style.display    = '';
+        reviewControls.setAttribute("hidden", "");
+        reviewComplete.setAttribute("hidden", "");
+        browseControls.style.display = "";
+        jumpControls.style.display = "";
+        progressEl.style.display = "";
+        pageProgressTrack.style.display = "";
+        pageLabelEl.style.display = "";
 
         // Cập nhật badge
         updateReviewBadge();
@@ -941,10 +1074,9 @@
 
       /** Hiện màn hoàn thành ôn tập */
       function showReviewComplete() {
-        reviewControls.setAttribute('hidden', '');
-        reviewComplete.removeAttribute('hidden');
-        reviewCompleteStats.textContent =
-          `Bạn đã ôn xong ${reviewTotal} thẻ trong phiên này.`;
+        reviewControls.setAttribute("hidden", "");
+        reviewComplete.removeAttribute("hidden");
+        reviewCompleteStats.textContent = `Bạn đã ôn xong ${reviewTotal} thẻ trong phiên này.`;
         // Cập nhật badge (có thể còn thẻ learning quay lại)
         updateReviewBadge();
       }
@@ -955,7 +1087,7 @@
         const item = reviewQueue[reviewPos];
         if (!item) return;
 
-        const state   = KanjiSRS.loadState();
+        const state = KanjiSRS.loadState();
         const oldCard = KanjiSRS.getCard(state, item.id);
         const newCard = KanjiSRS.reviewCard(oldCard, grade);
         state[item.id] = newCard;
@@ -968,14 +1100,14 @@
       /** Thông báo nhẹ "Chưa có thẻ nào cần ôn" */
       function showEmptyNotice() {
         // Xóa notice cũ nếu có
-        const old = document.querySelector('.review-empty-notice');
+        const old = document.querySelector(".review-empty-notice");
         if (old) old.remove();
 
-        const notice = document.createElement('div');
-        notice.className = 'review-empty-notice';
-        notice.textContent = 'Chưa có thẻ nào cần ôn hôm nay.';
+        const notice = document.createElement("div");
+        notice.className = "review-empty-notice";
+        notice.textContent = "Chưa có thẻ nào cần ôn hôm nay.";
         // Chèn vào dưới .stage
-        document.querySelector('.stage').appendChild(notice);
+        document.querySelector(".stage").appendChild(notice);
         setTimeout(() => notice.remove(), 3000);
       }
 
@@ -1006,8 +1138,11 @@
       const iconSun = document.getElementById("iconSun");
       const iconMoon = document.getElementById("iconMoon");
       // Ưu tiên giá trị đã lưu trong localStorage, fallback về prefers-color-scheme
-      let theme = localStorage.getItem("nihongo_theme_v1") ||
-        (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      let theme =
+        localStorage.getItem("nihongo_theme_v1") ||
+        (window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light");
 
       function applyTheme() {
         root.setAttribute("data-theme", theme);
@@ -1026,7 +1161,8 @@
 
       async function loadIndex() {
         try {
-          const res = await fetch("./data/index.json");
+          const deckConfig = DECKS[currentDeck] || DECKS.default;
+          const res = await fetch(deckConfig.indexPath);
           if (!res.ok) throw new Error(`HTTP ${res.status}`);
           INDEX = await res.json();
           if (window.KanjiSearch) KanjiSearch.init(INDEX);
@@ -1063,7 +1199,7 @@
         }
         searchDropdown.innerHTML = results
           .map((item, k) => {
-             return `
+            return `
              <div class="search-item" data-k="${k}">
                <span class="si-kanji">${item.kanji}</span>
                <div class="si-body">
@@ -1108,16 +1244,20 @@
       function wireSearch() {
         let debounceTimer = null;
 
-        document.getElementById("searchToggleBtn").addEventListener("click", (e) => {
-          e.stopPropagation();
-          document.getElementById("searchWrap").classList.add("is-open");
-          searchInput.focus();
-        });
+        document
+          .getElementById("searchToggleBtn")
+          .addEventListener("click", (e) => {
+            e.stopPropagation();
+            document.getElementById("searchWrap").classList.add("is-open");
+            searchInput.focus();
+          });
 
-        document.getElementById("searchCloseBtn").addEventListener("click", (e) => {
-          e.stopPropagation();
-          closeSearch();
-        });
+        document
+          .getElementById("searchCloseBtn")
+          .addEventListener("click", (e) => {
+            e.stopPropagation();
+            closeSearch();
+          });
 
         searchInput.addEventListener("input", () => {
           clearTimeout(debounceTimer);
@@ -1142,7 +1282,10 @@
         document.addEventListener("click", (e) => {
           const searchWrap = document.getElementById("searchWrap");
           const searchToggleBtn = document.getElementById("searchToggleBtn");
-          if (!searchWrap.contains(e.target) && !searchToggleBtn.contains(e.target)) {
+          if (
+            !searchWrap.contains(e.target) &&
+            !searchToggleBtn.contains(e.target)
+          ) {
             closeSearch();
           }
         });
@@ -1161,20 +1304,54 @@
         kanjiSvgCont.innerHTML = `<div class="kanji-placeholder" style="font-size:14px;color:var(--muted)">読み込み中…</div>`;
 
         const urlParams = new URLSearchParams(window.location.search);
+        const requestedDeck = urlParams.get("deck");
+        if (requestedDeck && DECKS[requestedDeck]) {
+          currentDeck = requestedDeck;
+          localStorage.setItem("nihongo_deck_source_v1", currentDeck);
+        }
+        pageTotal = DECKS[currentDeck].pageTotal;
+
+        if (deckSourceSelect) {
+          deckSourceSelect.value = currentDeck;
+          deckSourceSelect.addEventListener("change", async (e) => {
+            const newDeck = e.target.value;
+            if (!DECKS[newDeck] || newDeck === currentDeck) return;
+            currentDeck = newDeck;
+            localStorage.setItem("nihongo_deck_source_v1", currentDeck);
+            pageTotal = DECKS[currentDeck].pageTotal;
+            pageNumber = 1;
+            idx = 0;
+
+            kanjiSvgCont.innerHTML = `<div class="kanji-placeholder" style="font-size:14px;color:var(--muted)">Đang đổi bộ dữ liệu…</div>`;
+            await loadIndex();
+            await loadPage(1);
+            render();
+          });
+        }
+
         const requestedPage = Number(urlParams.get("page"));
-        
         let initialPage = 1;
         let savedIdx = 0;
         let restoredFromStorage = false;
 
-        if (Number.isInteger(requestedPage) && requestedPage >= 1 && requestedPage <= pageTotal) {
+        if (
+          Number.isInteger(requestedPage) &&
+          requestedPage >= 1 &&
+          requestedPage <= pageTotal
+        ) {
           initialPage = requestedPage;
         } else {
           try {
-            const raw = localStorage.getItem('nihongo_last_position_v1');
+            const storageKey = DECKS[currentDeck].storageKey;
+            const raw = localStorage.getItem(storageKey);
             if (raw) {
               const pos = JSON.parse(raw);
-              if (pos && Number.isInteger(pos.page) && pos.page >= 1 && pos.page <= pageTotal) {
+              if (
+                pos &&
+                Number.isInteger(pos.page) &&
+                pos.page >= 1 &&
+                pos.page <= pageTotal
+              ) {
                 initialPage = pos.page;
                 if (Number.isInteger(pos.idx)) {
                   savedIdx = pos.idx;
@@ -1183,7 +1360,7 @@
               }
             }
           } catch (e) {
-            console.warn('[kanji] Không thể khôi phục vị trí:', e.message);
+            console.warn("[kanji] Không thể khôi phục vị trí:", e.message);
           }
         }
 
@@ -1213,30 +1390,36 @@
 
       document.getElementById("reviewBtn").addEventListener("click", (e) => {
         e.stopPropagation();
-        if (appMode === 'review') return; // đã ở review mode
+        if (appMode === "review") return; // đã ở review mode
         enterReviewMode();
       });
 
-      document.getElementById("reviewFlipBtn").addEventListener("click", (e) => {
-        e.stopPropagation();
-        abortAnimation();
-        setFlipped(true);
-        showReviewGradeButtons();
-      });
+      document
+        .getElementById("reviewFlipBtn")
+        .addEventListener("click", (e) => {
+          e.stopPropagation();
+          abortAnimation();
+          setFlipped(true);
+          showReviewGradeButtons();
+        });
 
       // Event delegation cho 4 nút chấm điểm
-      document.getElementById("reviewGradeRow").addEventListener("click", (e) => {
-        const btn = e.target.closest(".grade-btn");
-        if (!btn) return;
-        e.stopPropagation();
-        const grade = Number(btn.dataset.grade);
-        submitGrade(grade);
-      });
+      document
+        .getElementById("reviewGradeRow")
+        .addEventListener("click", (e) => {
+          const btn = e.target.closest(".grade-btn");
+          if (!btn) return;
+          e.stopPropagation();
+          const grade = Number(btn.dataset.grade);
+          submitGrade(grade);
+        });
 
-      document.getElementById("reviewBackBtn").addEventListener("click", (e) => {
-        e.stopPropagation();
-        exitReviewMode();
-      });
+      document
+        .getElementById("reviewBackBtn")
+        .addEventListener("click", (e) => {
+          e.stopPropagation();
+          exitReviewMode();
+        });
 
       applyTheme();
       init();

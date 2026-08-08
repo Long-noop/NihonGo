@@ -1,0 +1,1933 @@
+[
+  {
+    "id": "一",
+    "kanji": "一",
+    "han_viet": "NHẤT",
+    "meaning": "Một",
+    "on_yomi": [
+      "いち",
+      "いつ"
+    ],
+    "jlpt_level": "N5",
+    "page": 1,
+    "i": 0
+  },
+  {
+    "id": "丁",
+    "kanji": "丁",
+    "han_viet": "ĐINH",
+    "meaning": "Can thứ tư",
+    "on_yomi": [
+      "てい",
+      "ちょう"
+    ],
+    "jlpt_level": "N3",
+    "page": 1,
+    "i": 1
+  },
+  {
+    "id": "七",
+    "kanji": "七",
+    "han_viet": "THẤT",
+    "meaning": "Bảy",
+    "on_yomi": [
+      "しち"
+    ],
+    "jlpt_level": "N5",
+    "page": 1,
+    "i": 2
+  },
+  {
+    "id": "丈",
+    "kanji": "丈",
+    "han_viet": "TRƯỢNG",
+    "meaning": "Chiều cao người",
+    "on_yomi": [
+      "じょう"
+    ],
+    "jlpt_level": "N5",
+    "page": 1,
+    "i": 3
+  },
+  {
+    "id": "三",
+    "kanji": "三",
+    "han_viet": "TAM",
+    "meaning": "Ba",
+    "on_yomi": [
+      "さん"
+    ],
+    "jlpt_level": "N5",
+    "page": 1,
+    "i": 4
+  },
+  {
+    "id": "上",
+    "kanji": "上",
+    "han_viet": "THƯỢNG",
+    "meaning": "Trên",
+    "on_yomi": [
+      "じょう"
+    ],
+    "jlpt_level": "N5",
+    "page": 1,
+    "i": 5
+  },
+  {
+    "id": "下",
+    "kanji": "下",
+    "han_viet": "HẠ",
+    "meaning": "Dưới",
+    "on_yomi": [
+      "か",
+      "げ"
+    ],
+    "jlpt_level": "N5",
+    "page": 1,
+    "i": 6
+  },
+  {
+    "id": "与",
+    "kanji": "与",
+    "han_viet": "DỰ",
+    "meaning": "Cho, cấp",
+    "on_yomi": [
+      "よ"
+    ],
+    "jlpt_level": "N3",
+    "page": 1,
+    "i": 7
+  },
+  {
+    "id": "万",
+    "kanji": "万",
+    "han_viet": "VẠN",
+    "meaning": "Mười nghìn",
+    "on_yomi": [
+      "まん",
+      "ばん"
+    ],
+    "jlpt_level": "N5",
+    "page": 1,
+    "i": 8
+  },
+  {
+    "id": "不",
+    "kanji": "不",
+    "han_viet": "BẤT",
+    "meaning": "Không",
+    "on_yomi": [
+      "ふ",
+      "ぶ"
+    ],
+    "jlpt_level": "N5",
+    "page": 1,
+    "i": 9
+  },
+  {
+    "id": "且",
+    "kanji": "且",
+    "han_viet": "THẢ",
+    "meaning": "Và",
+    "on_yomi": [],
+    "jlpt_level": "N3",
+    "page": 1,
+    "i": 10
+  },
+  {
+    "id": "世",
+    "kanji": "世",
+    "han_viet": "THẾ",
+    "meaning": "Thế giới",
+    "on_yomi": [
+      "せ",
+      "せい"
+    ],
+    "jlpt_level": "N5",
+    "page": 1,
+    "i": 11
+  },
+  {
+    "id": "丘",
+    "kanji": "丘",
+    "han_viet": "KHÂU",
+    "meaning": "Đồi",
+    "on_yomi": [
+      "きゅう"
+    ],
+    "jlpt_level": "N2",
+    "page": 1,
+    "i": 12
+  },
+  {
+    "id": "丙",
+    "kanji": "丙",
+    "han_viet": "BÍNH",
+    "meaning": "Can thứ ba",
+    "on_yomi": [
+      "へい"
+    ],
+    "jlpt_level": "N2",
+    "page": 1,
+    "i": 13
+  },
+  {
+    "id": "両",
+    "kanji": "両",
+    "han_viet": "LƯỠNG",
+    "meaning": "Cả hai",
+    "on_yomi": [
+      "りょう"
+    ],
+    "jlpt_level": "N5",
+    "page": 1,
+    "i": 14
+  },
+  {
+    "id": "並",
+    "kanji": "並",
+    "han_viet": "TỊNH",
+    "meaning": "Xếp, xếp hàng",
+    "on_yomi": [
+      "へい"
+    ],
+    "jlpt_level": "N4",
+    "page": 1,
+    "i": 15
+  },
+  {
+    "id": "中",
+    "kanji": "中",
+    "han_viet": "TRUNG",
+    "meaning": "Bên trong",
+    "on_yomi": [
+      "ちゅう",
+      "じゅう"
+    ],
+    "jlpt_level": "N5",
+    "page": 1,
+    "i": 16
+  },
+  {
+    "id": "串",
+    "kanji": "串",
+    "han_viet": "XUYẾN",
+    "meaning": "Que xiên",
+    "on_yomi": [],
+    "jlpt_level": "N2",
+    "page": 1,
+    "i": 17
+  },
+  {
+    "id": "丸",
+    "kanji": "丸",
+    "han_viet": "HOÀN",
+    "meaning": "Tròn",
+    "on_yomi": [
+      "がん"
+    ],
+    "jlpt_level": "N5",
+    "page": 1,
+    "i": 18
+  },
+  {
+    "id": "丹",
+    "kanji": "丹",
+    "han_viet": "ĐAN",
+    "meaning": "Tiên đan",
+    "on_yomi": [
+      "たん"
+    ],
+    "jlpt_level": "N2",
+    "page": 1,
+    "i": 19
+  },
+  {
+    "id": "主",
+    "kanji": "主",
+    "han_viet": "CHỦ",
+    "meaning": "Chính yếu",
+    "on_yomi": [
+      "しゅ"
+    ],
+    "jlpt_level": "N5",
+    "page": 1,
+    "i": 20
+  },
+  {
+    "id": "丼",
+    "kanji": "丼",
+    "han_viet": "ĐẢM",
+    "meaning": "Cái tô",
+    "on_yomi": [
+      "どん"
+    ],
+    "jlpt_level": "N2",
+    "page": 1,
+    "i": 21
+  },
+  {
+    "id": "久",
+    "kanji": "久",
+    "han_viet": "CỬU",
+    "meaning": "Lâu dài",
+    "on_yomi": [
+      "きゅう"
+    ],
+    "jlpt_level": "N4",
+    "page": 1,
+    "i": 22
+  },
+  {
+    "id": "乏",
+    "kanji": "乏",
+    "han_viet": "PHẠP",
+    "meaning": "Nghèo, thiếu thốn",
+    "on_yomi": [
+      "ぼう"
+    ],
+    "jlpt_level": "N3",
+    "page": 1,
+    "i": 23
+  },
+  {
+    "id": "乗",
+    "kanji": "乗",
+    "han_viet": "THỪA",
+    "meaning": "Lên xe",
+    "on_yomi": [
+      "じょう"
+    ],
+    "jlpt_level": "N5",
+    "page": 1,
+    "i": 24
+  },
+  {
+    "id": "乙",
+    "kanji": "乙",
+    "han_viet": "ẤT",
+    "meaning": "Can thứ hai",
+    "on_yomi": [
+      "おつ"
+    ],
+    "jlpt_level": "N2",
+    "page": 1,
+    "i": 25
+  },
+  {
+    "id": "九",
+    "kanji": "九",
+    "han_viet": "CỬU",
+    "meaning": "Chín",
+    "on_yomi": [
+      "きゅう",
+      "く"
+    ],
+    "jlpt_level": "N5",
+    "page": 1,
+    "i": 26
+  },
+  {
+    "id": "乞",
+    "kanji": "乞",
+    "han_viet": "KHẤT",
+    "meaning": "Hành khất",
+    "on_yomi": [
+      "こ"
+    ],
+    "jlpt_level": "N2",
+    "page": 1,
+    "i": 27
+  },
+  {
+    "id": "乳",
+    "kanji": "乳",
+    "han_viet": "NHŨ",
+    "meaning": "Vú, sữa mẹ",
+    "on_yomi": [
+      "にゅう"
+    ],
+    "jlpt_level": "N5",
+    "page": 1,
+    "i": 28
+  },
+  {
+    "id": "乾",
+    "kanji": "乾",
+    "han_viet": "CAN",
+    "meaning": "Làm khô",
+    "on_yomi": [
+      "かん"
+    ],
+    "jlpt_level": "N3",
+    "page": 1,
+    "i": 29
+  },
+  {
+    "id": "乱",
+    "kanji": "乱",
+    "han_viet": "LOẠN",
+    "meaning": "Rối loạn",
+    "on_yomi": [
+      "らん"
+    ],
+    "jlpt_level": "N3",
+    "page": 1,
+    "i": 30
+  },
+  {
+    "id": "了",
+    "kanji": "了",
+    "han_viet": "LIỄU",
+    "meaning": "Hoàn tất, hiểu",
+    "on_yomi": [
+      "りょう"
+    ],
+    "jlpt_level": "N3",
+    "page": 1,
+    "i": 31
+  },
+  {
+    "id": "予",
+    "kanji": "予",
+    "han_viet": "DỰ",
+    "meaning": "Dự định, liệu trước",
+    "on_yomi": [
+      "よ"
+    ],
+    "jlpt_level": "N4",
+    "page": 1,
+    "i": 32
+  },
+  {
+    "id": "争",
+    "kanji": "争",
+    "han_viet": "TRANH",
+    "meaning": "Giành nhau",
+    "on_yomi": [
+      "そう"
+    ],
+    "jlpt_level": "N3",
+    "page": 1,
+    "i": 33
+  },
+  {
+    "id": "事",
+    "kanji": "事",
+    "han_viet": "SỰ",
+    "meaning": "Sự việc",
+    "on_yomi": [
+      "じ"
+    ],
+    "jlpt_level": "N5",
+    "page": 1,
+    "i": 34
+  },
+  {
+    "id": "二",
+    "kanji": "二",
+    "han_viet": "NHI",
+    "meaning": "Hai",
+    "on_yomi": [
+      "に"
+    ],
+    "jlpt_level": "N5",
+    "page": 1,
+    "i": 35
+  },
+  {
+    "id": "互",
+    "kanji": "互",
+    "han_viet": "HỖ",
+    "meaning": "Giúp lẫn nhau",
+    "on_yomi": [
+      "ご"
+    ],
+    "jlpt_level": "N3",
+    "page": 1,
+    "i": 36
+  },
+  {
+    "id": "五",
+    "kanji": "五",
+    "han_viet": "NGŨ",
+    "meaning": "Năm",
+    "on_yomi": [
+      "ご"
+    ],
+    "jlpt_level": "N5",
+    "page": 1,
+    "i": 37
+  },
+  {
+    "id": "井",
+    "kanji": "井",
+    "han_viet": "TỈNH",
+    "meaning": "Cái giếng",
+    "on_yomi": [
+      "せい",
+      "じょう"
+    ],
+    "jlpt_level": "N2",
+    "page": 1,
+    "i": 38
+  },
+  {
+    "id": "亜",
+    "kanji": "亜",
+    "han_viet": "Á",
+    "meaning": "Châu Á",
+    "on_yomi": [
+      "あ"
+    ],
+    "jlpt_level": "N2",
+    "page": 1,
+    "i": 39
+  },
+  {
+    "id": "亡",
+    "kanji": "亡",
+    "han_viet": "VONG",
+    "meaning": "Chết, mất",
+    "on_yomi": [
+      "ぼう"
+    ],
+    "jlpt_level": "N5",
+    "page": 1,
+    "i": 40
+  },
+  {
+    "id": "交",
+    "kanji": "交",
+    "han_viet": "GIAO",
+    "meaning": "Qua lại, trộn lẫn",
+    "on_yomi": [
+      "こう"
+    ],
+    "jlpt_level": "N5",
+    "page": 1,
+    "i": 41
+  },
+  {
+    "id": "享",
+    "kanji": "享",
+    "han_viet": "HƯỞNG",
+    "meaning": "Nhận được",
+    "on_yomi": [
+      "きょう"
+    ],
+    "jlpt_level": "N2",
+    "page": 1,
+    "i": 42
+  },
+  {
+    "id": "京",
+    "kanji": "京",
+    "han_viet": "KINH",
+    "meaning": "Kinh đô",
+    "on_yomi": [
+      "きょう",
+      "けい"
+    ],
+    "jlpt_level": "N5",
+    "page": 1,
+    "i": 43
+  },
+  {
+    "id": "亭",
+    "kanji": "亭",
+    "han_viet": "ĐÌNH",
+    "meaning": "Nhà nhỏ",
+    "on_yomi": [
+      "てい"
+    ],
+    "jlpt_level": "N2",
+    "page": 1,
+    "i": 44
+  },
+  {
+    "id": "人",
+    "kanji": "人",
+    "han_viet": "NHÂN",
+    "meaning": "Người",
+    "on_yomi": [
+      "にん",
+      "じん"
+    ],
+    "jlpt_level": "N5",
+    "page": 1,
+    "i": 45
+  },
+  {
+    "id": "イ",
+    "kanji": "イ",
+    "han_viet": "Bộ nhân đứng",
+    "meaning": "",
+    "on_yomi": [],
+    "jlpt_level": null,
+    "page": 1,
+    "i": 46
+  },
+  {
+    "id": "儿",
+    "kanji": "儿",
+    "han_viet": "Bộ nhân đi",
+    "meaning": "",
+    "on_yomi": [],
+    "jlpt_level": null,
+    "page": 1,
+    "i": 47
+  },
+  {
+    "id": "𠆢",
+    "kanji": "𠆢",
+    "han_viet": "Bộ nhân nón",
+    "meaning": "",
+    "on_yomi": [],
+    "jlpt_level": null,
+    "page": 1,
+    "i": 48
+  },
+  {
+    "id": "今",
+    "kanji": "今",
+    "han_viet": "KIM",
+    "meaning": "Bây giờ",
+    "on_yomi": [
+      "こん",
+      "きん"
+    ],
+    "jlpt_level": "N5",
+    "page": 1,
+    "i": 49
+  },
+  {
+    "id": "仏",
+    "kanji": "仏",
+    "han_viet": "PHẬT",
+    "meaning": "Phật giáo",
+    "on_yomi": [
+      "ぶつ"
+    ],
+    "jlpt_level": "N3",
+    "page": 1,
+    "i": 50
+  },
+  {
+    "id": "仁",
+    "kanji": "仁",
+    "han_viet": "NHÂN",
+    "meaning": "Nhân nghĩa",
+    "on_yomi": [
+      "じん"
+    ],
+    "jlpt_level": "N2",
+    "page": 1,
+    "i": 51
+  },
+  {
+    "id": "介",
+    "kanji": "介",
+    "han_viet": "GIỚI",
+    "meaning": "Giới thiệu",
+    "on_yomi": [
+      "かい"
+    ],
+    "jlpt_level": "N5",
+    "page": 1,
+    "i": 52
+  },
+  {
+    "id": "仕",
+    "kanji": "仕",
+    "han_viet": "SĨ",
+    "meaning": "Làm việc",
+    "on_yomi": [
+      "し"
+    ],
+    "jlpt_level": "N5",
+    "page": 1,
+    "i": 53
+  },
+  {
+    "id": "他",
+    "kanji": "他",
+    "han_viet": "THA",
+    "meaning": "Khác",
+    "on_yomi": [
+      "た"
+    ],
+    "jlpt_level": "N4",
+    "page": 1,
+    "i": 54
+  },
+  {
+    "id": "代",
+    "kanji": "代",
+    "han_viet": "ĐẠI",
+    "meaning": "Thay thế",
+    "on_yomi": [
+      "だい"
+    ],
+    "jlpt_level": "N4",
+    "page": 1,
+    "i": 55
+  },
+  {
+    "id": "以",
+    "kanji": "以",
+    "han_viet": "DĨ",
+    "meaning": "Lấy làm mốc, từ",
+    "on_yomi": [
+      "い"
+    ],
+    "jlpt_level": "N5",
+    "page": 1,
+    "i": 56
+  },
+  {
+    "id": "付",
+    "kanji": "付",
+    "han_viet": "PHÓ",
+    "meaning": "Gắn vào",
+    "on_yomi": [
+      "ふ"
+    ],
+    "jlpt_level": "N5",
+    "page": 1,
+    "i": 57
+  },
+  {
+    "id": "令",
+    "kanji": "令",
+    "han_viet": "LỆNH",
+    "meaning": "Mệnh lệnh",
+    "on_yomi": [
+      "れい"
+    ],
+    "jlpt_level": "N4",
+    "page": 1,
+    "i": 58
+  },
+  {
+    "id": "仙",
+    "kanji": "仙",
+    "han_viet": "TIÊN",
+    "meaning": "Ông (bà) tiên",
+    "on_yomi": [
+      "せん"
+    ],
+    "jlpt_level": "N2",
+    "page": 1,
+    "i": 59
+  },
+  {
+    "id": "会",
+    "kanji": "会",
+    "han_viet": "HỘI",
+    "meaning": "Gặp, họp lại",
+    "on_yomi": [
+      "かい",
+      "え"
+    ],
+    "jlpt_level": "N5",
+    "page": 1,
+    "i": 60
+  },
+  {
+    "id": "休",
+    "kanji": "休",
+    "han_viet": "HƯU",
+    "meaning": "Nghỉ",
+    "on_yomi": [
+      "きゅう"
+    ],
+    "jlpt_level": "N5",
+    "page": 1,
+    "i": 61
+  },
+  {
+    "id": "仲",
+    "kanji": "仲",
+    "han_viet": "TRỌNG",
+    "meaning": "Tình bạn",
+    "on_yomi": [
+      "ちゅう"
+    ],
+    "jlpt_level": "N4",
+    "page": 1,
+    "i": 62
+  },
+  {
+    "id": "伝",
+    "kanji": "伝",
+    "han_viet": "TRUYỀN",
+    "meaning": "Truyền đạt",
+    "on_yomi": [
+      "でん"
+    ],
+    "jlpt_level": "N5",
+    "page": 1,
+    "i": 63
+  },
+  {
+    "id": "仮",
+    "kanji": "仮",
+    "han_viet": "GIẢ",
+    "meaning": "Giả định",
+    "on_yomi": [
+      "か",
+      "け"
+    ],
+    "jlpt_level": "N2",
+    "page": 1,
+    "i": 64
+  },
+  {
+    "id": "件",
+    "kanji": "件",
+    "han_viet": "KIỆN",
+    "meaning": "Vụ việc",
+    "on_yomi": [
+      "けん"
+    ],
+    "jlpt_level": "N4",
+    "page": 1,
+    "i": 65
+  },
+  {
+    "id": "任",
+    "kanji": "任",
+    "han_viet": "NHIỆM",
+    "meaning": "Nhiệm vụ",
+    "on_yomi": [
+      "にん"
+    ],
+    "jlpt_level": "N3",
+    "page": 1,
+    "i": 66
+  },
+  {
+    "id": "仰",
+    "kanji": "仰",
+    "han_viet": "NGƯỠNG",
+    "meaning": "Tín ngưỡng",
+    "on_yomi": [
+      "ぎょう",
+      "こう"
+    ],
+    "jlpt_level": "N3",
+    "page": 1,
+    "i": 67
+  },
+  {
+    "id": "企",
+    "kanji": "企",
+    "han_viet": "XÍ",
+    "meaning": "Kế hoạch",
+    "on_yomi": [
+      "き"
+    ],
+    "jlpt_level": "N2",
+    "page": 1,
+    "i": 68
+  },
+  {
+    "id": "伐",
+    "kanji": "伐",
+    "han_viet": "PHẠT",
+    "meaning": "Đánh, chinh phạt",
+    "on_yomi": [
+      "ばつ"
+    ],
+    "jlpt_level": "N3",
+    "page": 1,
+    "i": 69
+  },
+  {
+    "id": "伏",
+    "kanji": "伏",
+    "han_viet": "PHỤC",
+    "meaning": "Úp xuống",
+    "on_yomi": [
+      "ふく"
+    ],
+    "jlpt_level": "N2",
+    "page": 1,
+    "i": 70
+  },
+  {
+    "id": "伎",
+    "kanji": "伎",
+    "han_viet": "KỸ",
+    "meaning": "Ca kỹ",
+    "on_yomi": [
+      "き",
+      "ぎ"
+    ],
+    "jlpt_level": "N2",
+    "page": 1,
+    "i": 71
+  },
+  {
+    "id": "何",
+    "kanji": "何",
+    "han_viet": "HÀ",
+    "meaning": "Cái gì",
+    "on_yomi": [
+      "か"
+    ],
+    "jlpt_level": "N5",
+    "page": 1,
+    "i": 72
+  },
+  {
+    "id": "作",
+    "kanji": "作",
+    "han_viet": "TÁC",
+    "meaning": "Làm ra",
+    "on_yomi": [
+      "さく",
+      "さ"
+    ],
+    "jlpt_level": "N5",
+    "page": 1,
+    "i": 73
+  },
+  {
+    "id": "体",
+    "kanji": "体",
+    "han_viet": "THỂ",
+    "meaning": "Thân thể",
+    "on_yomi": [
+      "たい"
+    ],
+    "jlpt_level": "N5",
+    "page": 1,
+    "i": 74
+  },
+  {
+    "id": "住",
+    "kanji": "住",
+    "han_viet": "TRÚ",
+    "meaning": "Cư trú",
+    "on_yomi": [
+      "じゅう"
+    ],
+    "jlpt_level": "N5",
+    "page": 1,
+    "i": 75
+  },
+  {
+    "id": "位",
+    "kanji": "位",
+    "han_viet": "VỊ",
+    "meaning": "Vị trí",
+    "on_yomi": [
+      "い"
+    ],
+    "jlpt_level": "N4",
+    "page": 1,
+    "i": 76
+  },
+  {
+    "id": "低",
+    "kanji": "低",
+    "han_viet": "ĐÊ",
+    "meaning": "Thấp",
+    "on_yomi": [
+      "てい"
+    ],
+    "jlpt_level": "N5",
+    "page": 1,
+    "i": 77
+  },
+  {
+    "id": "似",
+    "kanji": "似",
+    "han_viet": "TỰ",
+    "meaning": "Giống nhau",
+    "on_yomi": [
+      "じ"
+    ],
+    "jlpt_level": "N4",
+    "page": 1,
+    "i": 78
+  },
+  {
+    "id": "余",
+    "kanji": "余",
+    "han_viet": "DƯ",
+    "meaning": "Dư thừa",
+    "on_yomi": [
+      "よ"
+    ],
+    "jlpt_level": "N3",
+    "page": 1,
+    "i": 79
+  },
+  {
+    "id": "伺",
+    "kanji": "伺",
+    "han_viet": "TỨ",
+    "meaning": "Thăm hỏi",
+    "on_yomi": [
+      "し"
+    ],
+    "jlpt_level": "N4",
+    "page": 2,
+    "i": 0
+  },
+  {
+    "id": "伸",
+    "kanji": "伸",
+    "han_viet": "THÂN",
+    "meaning": "Duỗi ra",
+    "on_yomi": [
+      "しん"
+    ],
+    "jlpt_level": "N3",
+    "page": 2,
+    "i": 1
+  },
+  {
+    "id": "伴",
+    "kanji": "伴",
+    "han_viet": "BẠN",
+    "meaning": "Đi cùng",
+    "on_yomi": [
+      "はん",
+      "ばん"
+    ],
+    "jlpt_level": "N3",
+    "page": 2,
+    "i": 2
+  },
+  {
+    "id": "佐",
+    "kanji": "佐",
+    "han_viet": "TÁ",
+    "meaning": "Phụ tá",
+    "on_yomi": [
+      "さ"
+    ],
+    "jlpt_level": "N2",
+    "page": 2,
+    "i": 3
+  },
+  {
+    "id": "但",
+    "kanji": "但",
+    "han_viet": "ĐẢN",
+    "meaning": "Tuy nhiên, nhưng",
+    "on_yomi": [],
+    "jlpt_level": "N2",
+    "page": 2,
+    "i": 4
+  },
+  {
+    "id": "伯",
+    "kanji": "伯",
+    "han_viet": "BÁ",
+    "meaning": "Bác",
+    "on_yomi": [
+      "はく"
+    ],
+    "jlpt_level": "N2",
+    "page": 2,
+    "i": 5
+  },
+  {
+    "id": "使",
+    "kanji": "使",
+    "han_viet": "SỬ",
+    "meaning": "Sử dụng, dùng",
+    "on_yomi": [
+      "し"
+    ],
+    "jlpt_level": "N5",
+    "page": 2,
+    "i": 6
+  },
+  {
+    "id": "例",
+    "kanji": "例",
+    "han_viet": "LỆ",
+    "meaning": "Luật lệ",
+    "on_yomi": [
+      "れい"
+    ],
+    "jlpt_level": "N4",
+    "page": 2,
+    "i": 7
+  },
+  {
+    "id": "価",
+    "kanji": "価",
+    "han_viet": "GIÁ",
+    "meaning": "Giá trị",
+    "on_yomi": [
+      "か"
+    ],
+    "jlpt_level": "N5",
+    "page": 2,
+    "i": 8
+  },
+  {
+    "id": "供",
+    "kanji": "供",
+    "han_viet": "CUNG",
+    "meaning": "Cung cấp",
+    "on_yomi": [
+      "きょう",
+      "く"
+    ],
+    "jlpt_level": "N5",
+    "page": 2,
+    "i": 9
+  },
+  {
+    "id": "依",
+    "kanji": "依",
+    "han_viet": "Y",
+    "meaning": "Dựa vào",
+    "on_yomi": [
+      "い",
+      "え"
+    ],
+    "jlpt_level": "N3",
+    "page": 2,
+    "i": 10
+  },
+  {
+    "id": "佳",
+    "kanji": "佳",
+    "han_viet": "GIAI",
+    "meaning": "Tốt đẹp",
+    "on_yomi": [
+      "か"
+    ],
+    "jlpt_level": "N2",
+    "page": 2,
+    "i": 11
+  },
+  {
+    "id": "侍",
+    "kanji": "侍",
+    "han_viet": "THỊ",
+    "meaning": "Võ sĩ đạo",
+    "on_yomi": [
+      "じ",
+      "し"
+    ],
+    "jlpt_level": "N2",
+    "page": 2,
+    "i": 12
+  },
+  {
+    "id": "侮",
+    "kanji": "侮",
+    "han_viet": "VỤ",
+    "meaning": "Khinh rẻ",
+    "on_yomi": [
+      "ぶ"
+    ],
+    "jlpt_level": "N2",
+    "page": 2,
+    "i": 13
+  },
+  {
+    "id": "併",
+    "kanji": "併",
+    "han_viet": "TÍNH",
+    "meaning": "Sáp nhập",
+    "on_yomi": [
+      "へい"
+    ],
+    "jlpt_level": "N2",
+    "page": 2,
+    "i": 14
+  },
+  {
+    "id": "係",
+    "kanji": "係",
+    "han_viet": "HỆ",
+    "meaning": "Quan hệ",
+    "on_yomi": [
+      "けい"
+    ],
+    "jlpt_level": "N4",
+    "page": 2,
+    "i": 15
+  },
+  {
+    "id": "信",
+    "kanji": "信",
+    "han_viet": "TÍN",
+    "meaning": "Tin tưởng",
+    "on_yomi": [
+      "しん"
+    ],
+    "jlpt_level": "N5",
+    "page": 2,
+    "i": 16
+  },
+  {
+    "id": "便",
+    "kanji": "便",
+    "han_viet": "TIỆN",
+    "meaning": "Tiện lợi",
+    "on_yomi": [
+      "べん",
+      "びん"
+    ],
+    "jlpt_level": "N5",
+    "page": 2,
+    "i": 17
+  },
+  {
+    "id": "保",
+    "kanji": "保",
+    "han_viet": "BẢO",
+    "meaning": "Bảo đảm",
+    "on_yomi": [
+      "ほ"
+    ],
+    "jlpt_level": "N3",
+    "page": 2,
+    "i": 18
+  },
+  {
+    "id": "侵",
+    "kanji": "侵",
+    "han_viet": "XÂM",
+    "meaning": "Xâm lấn",
+    "on_yomi": [
+      "しん"
+    ],
+    "jlpt_level": "N2",
+    "page": 2,
+    "i": 19
+  },
+  {
+    "id": "俗",
+    "kanji": "俗",
+    "han_viet": "TỤC",
+    "meaning": "Phong tục",
+    "on_yomi": [
+      "ぞく"
+    ],
+    "jlpt_level": "N2",
+    "page": 2,
+    "i": 20
+  },
+  {
+    "id": "促",
+    "kanji": "促",
+    "han_viet": "XÚC",
+    "meaning": "Thúc giục",
+    "on_yomi": [
+      "そく"
+    ],
+    "jlpt_level": "N2",
+    "page": 2,
+    "i": 21
+  },
+  {
+    "id": "侯",
+    "kanji": "侯",
+    "han_viet": "HẦU",
+    "meaning": "Tước hầu",
+    "on_yomi": [
+      "こう"
+    ],
+    "jlpt_level": "N2",
+    "page": 2,
+    "i": 22
+  },
+  {
+    "id": "俊",
+    "kanji": "俊",
+    "han_viet": "TUẤN",
+    "meaning": "Tài trí",
+    "on_yomi": [
+      "しゅん"
+    ],
+    "jlpt_level": "N2",
+    "page": 2,
+    "i": 23
+  },
+  {
+    "id": "侶",
+    "kanji": "侶",
+    "han_viet": "LỮ",
+    "meaning": "Tăng lữ",
+    "on_yomi": [
+      "りょ"
+    ],
+    "jlpt_level": "N2",
+    "page": 2,
+    "i": 24
+  },
+  {
+    "id": "倍",
+    "kanji": "倍",
+    "han_viet": "BỘI",
+    "meaning": "Gấp mấy lần",
+    "on_yomi": [
+      "ばい"
+    ],
+    "jlpt_level": "N3",
+    "page": 2,
+    "i": 25
+  },
+  {
+    "id": "候",
+    "kanji": "候",
+    "han_viet": "HẬU",
+    "meaning": "Khí hậu, thời tiết",
+    "on_yomi": [
+      "こう"
+    ],
+    "jlpt_level": "N4",
+    "page": 2,
+    "i": 26
+  },
+  {
+    "id": "借",
+    "kanji": "借",
+    "han_viet": "TÁ",
+    "meaning": "Mượn, vay",
+    "on_yomi": [
+      "しゃく"
+    ],
+    "jlpt_level": "N5",
+    "page": 2,
+    "i": 27
+  },
+  {
+    "id": "倉",
+    "kanji": "倉",
+    "han_viet": "THƯƠNG",
+    "meaning": "Kho hàng",
+    "on_yomi": [
+      "そう"
+    ],
+    "jlpt_level": "N3",
+    "page": 2,
+    "i": 28
+  },
+  {
+    "id": "個",
+    "kanji": "個",
+    "han_viet": "CÁ",
+    "meaning": "Cá nhân",
+    "on_yomi": [
+      "こ",
+      "か"
+    ],
+    "jlpt_level": "N3",
+    "page": 2,
+    "i": 29
+  },
+  {
+    "id": "修",
+    "kanji": "修",
+    "han_viet": "TU",
+    "meaning": "Sửa chữa",
+    "on_yomi": [
+      "しゅう",
+      "しゅ"
+    ],
+    "jlpt_level": "N4",
+    "page": 2,
+    "i": 30
+  },
+  {
+    "id": "俵",
+    "kanji": "俵",
+    "han_viet": "BIỂU",
+    "meaning": "Cái bao",
+    "on_yomi": [
+      "ひょう"
+    ],
+    "jlpt_level": "N2",
+    "page": 2,
+    "i": 31
+  },
+  {
+    "id": "値",
+    "kanji": "値",
+    "han_viet": "TRỊ",
+    "meaning": "Giá trị",
+    "on_yomi": [
+      "ち"
+    ],
+    "jlpt_level": "N4",
+    "page": 2,
+    "i": 32
+  },
+  {
+    "id": "俳",
+    "kanji": "俳",
+    "han_viet": "BÀI",
+    "meaning": "Nghệ sĩ",
+    "on_yomi": [
+      "はい"
+    ],
+    "jlpt_level": "N3",
+    "page": 2,
+    "i": 33
+  },
+  {
+    "id": "倒",
+    "kanji": "倒",
+    "han_viet": "ĐẢO",
+    "meaning": "Ngã đổ",
+    "on_yomi": [
+      "とう"
+    ],
+    "jlpt_level": "N4",
+    "page": 2,
+    "i": 34
+  },
+  {
+    "id": "倹",
+    "kanji": "倹",
+    "han_viet": "KIỆM",
+    "meaning": "Tiết kiệm",
+    "on_yomi": [
+      "けん"
+    ],
+    "jlpt_level": "N2",
+    "page": 2,
+    "i": 35
+  },
+  {
+    "id": "倣",
+    "kanji": "倣",
+    "han_viet": "PHỎNG",
+    "meaning": "Bắt chước",
+    "on_yomi": [
+      "ほう"
+    ],
+    "jlpt_level": "N2",
+    "page": 2,
+    "i": 36
+  },
+  {
+    "id": "俸",
+    "kanji": "俸",
+    "han_viet": "BỔNG",
+    "meaning": "Lương bổng",
+    "on_yomi": [
+      "ほう"
+    ],
+    "jlpt_level": "N2",
+    "page": 2,
+    "i": 37
+  },
+  {
+    "id": "倫",
+    "kanji": "倫",
+    "han_viet": "LUÂN",
+    "meaning": "Đạo lý",
+    "on_yomi": [
+      "りん"
+    ],
+    "jlpt_level": "N2",
+    "page": 2,
+    "i": 38
+  },
+  {
+    "id": "俺",
+    "kanji": "俺",
+    "han_viet": "YÊM",
+    "meaning": "Tôi",
+    "on_yomi": [],
+    "jlpt_level": "N2",
+    "page": 2,
+    "i": 39
+  },
+  {
+    "id": "健",
+    "kanji": "健",
+    "han_viet": "KIỆN",
+    "meaning": "Khỏe mạnh",
+    "on_yomi": [
+      "けん"
+    ],
+    "jlpt_level": "N4",
+    "page": 2,
+    "i": 40
+  },
+  {
+    "id": "側",
+    "kanji": "側",
+    "han_viet": "TRẮC",
+    "meaning": "Phía, bên",
+    "on_yomi": [
+      "そく"
+    ],
+    "jlpt_level": "N4",
+    "page": 2,
+    "i": 41
+  },
+  {
+    "id": "停",
+    "kanji": "停",
+    "han_viet": "ĐÌNH",
+    "meaning": "Ngừng, lưu lại",
+    "on_yomi": [
+      "てい"
+    ],
+    "jlpt_level": "N4",
+    "page": 2,
+    "i": 42
+  },
+  {
+    "id": "偶",
+    "kanji": "偶",
+    "han_viet": "NGẪU",
+    "meaning": "Ngẫu nhiên",
+    "on_yomi": [
+      "ぐう"
+    ],
+    "jlpt_level": "N3",
+    "page": 2,
+    "i": 43
+  },
+  {
+    "id": "偽",
+    "kanji": "偽",
+    "han_viet": "NGUY",
+    "meaning": "Giả mạo",
+    "on_yomi": [
+      "ぎ"
+    ],
+    "jlpt_level": "N2",
+    "page": 2,
+    "i": 44
+  },
+  {
+    "id": "偵",
+    "kanji": "偵",
+    "han_viet": "TRINH",
+    "meaning": "Trinh thám",
+    "on_yomi": [
+      "てい"
+    ],
+    "jlpt_level": "N2",
+    "page": 2,
+    "i": 45
+  },
+  {
+    "id": "偏",
+    "kanji": "偏",
+    "han_viet": "THIÊN",
+    "meaning": "Thiên lệch",
+    "on_yomi": [
+      "へん"
+    ],
+    "jlpt_level": "N2",
+    "page": 2,
+    "i": 46
+  },
+  {
+    "id": "備",
+    "kanji": "備",
+    "han_viet": "BỊ",
+    "meaning": "Chuẩn bị",
+    "on_yomi": [
+      "び"
+    ],
+    "jlpt_level": "N4",
+    "page": 2,
+    "i": 47
+  },
+  {
+    "id": "偉",
+    "kanji": "偉",
+    "han_viet": "VĨ",
+    "meaning": "Vĩ đại",
+    "on_yomi": [
+      "い"
+    ],
+    "jlpt_level": "N3",
+    "page": 2,
+    "i": 48
+  },
+  {
+    "id": "傍",
+    "kanji": "傍",
+    "han_viet": "BÀNG",
+    "meaning": "Bên cạnh",
+    "on_yomi": [
+      "ぼう"
+    ],
+    "jlpt_level": "N2",
+    "page": 2,
+    "i": 49
+  },
+  {
+    "id": "傘",
+    "kanji": "傘",
+    "han_viet": "TẢN",
+    "meaning": "Ô, dù",
+    "on_yomi": [
+      "さん"
+    ],
+    "jlpt_level": "N3",
+    "page": 2,
+    "i": 50
+  },
+  {
+    "id": "働",
+    "kanji": "働",
+    "han_viet": "ĐỘNG",
+    "meaning": "Làm việc",
+    "on_yomi": [
+      "どう"
+    ],
+    "jlpt_level": "N5",
+    "page": 2,
+    "i": 51
+  },
+  {
+    "id": "傷",
+    "kanji": "傷",
+    "han_viet": "THƯƠNG",
+    "meaning": "Vết thương",
+    "on_yomi": [
+      "しょう"
+    ],
+    "jlpt_level": "N4",
+    "page": 2,
+    "i": 52
+  },
+  {
+    "id": "傾",
+    "kanji": "傾",
+    "han_viet": "KHUYNH",
+    "meaning": "Khuynh hướng",
+    "on_yomi": [
+      "けい"
+    ],
+    "jlpt_level": "N3",
+    "page": 2,
+    "i": 53
+  },
+  {
+    "id": "僧",
+    "kanji": "僧",
+    "han_viet": "TĂNG",
+    "meaning": "Tăng ni",
+    "on_yomi": [
+      "そう"
+    ],
+    "jlpt_level": "N2",
+    "page": 2,
+    "i": 54
+  },
+  {
+    "id": "催",
+    "kanji": "催",
+    "han_viet": "THÔI",
+    "meaning": "Hối thúc",
+    "on_yomi": [
+      "さい"
+    ],
+    "jlpt_level": "N2",
+    "page": 2,
+    "i": 55
+  },
+  {
+    "id": "債",
+    "kanji": "債",
+    "han_viet": "TRÁI",
+    "meaning": "Công trái, nợ",
+    "on_yomi": [
+      "さい"
+    ],
+    "jlpt_level": "N2",
+    "page": 2,
+    "i": 56
+  },
+  {
+    "id": "傑",
+    "kanji": "傑",
+    "han_viet": "KIỆT",
+    "meaning": "Kiệt xuất",
+    "on_yomi": [
+      "けつ"
+    ],
+    "jlpt_level": "N2",
+    "page": 2,
+    "i": 57
+  },
+  {
+    "id": "僅",
+    "kanji": "僅",
+    "han_viet": "CẬN",
+    "meaning": "Ít ỏi",
+    "on_yomi": [
+      "きん"
+    ],
+    "jlpt_level": "N2",
+    "page": 2,
+    "i": 58
+  },
+  {
+    "id": "傲",
+    "kanji": "傲",
+    "han_viet": "NGẠO",
+    "meaning": "Ngạo mạn",
+    "on_yomi": [
+      "ごう"
+    ],
+    "jlpt_level": "N2",
+    "page": 2,
+    "i": 59
+  },
+  {
+    "id": "像",
+    "kanji": "像",
+    "han_viet": "TƯỢNG",
+    "meaning": "Hình tượng",
+    "on_yomi": [
+      "ぞう"
+    ],
+    "jlpt_level": "N3",
+    "page": 2,
+    "i": 60
+  },
+  {
+    "id": "僕",
+    "kanji": "僕",
+    "han_viet": "BỘC",
+    "meaning": "Tôi (nam xưng)",
+    "on_yomi": [
+      "ぼく"
+    ],
+    "jlpt_level": "N3",
+    "page": 2,
+    "i": 61
+  },
+  {
+    "id": "僚",
+    "kanji": "僚",
+    "han_viet": "LIÊU",
+    "meaning": "Bạn, viên chức",
+    "on_yomi": [
+      "りょう"
+    ],
+    "jlpt_level": "N3",
+    "page": 2,
+    "i": 62
+  },
+  {
+    "id": "億",
+    "kanji": "億",
+    "han_viet": "ỨC",
+    "meaning": "Trăm triệu",
+    "on_yomi": [
+      "おく"
+    ],
+    "jlpt_level": "N4",
+    "page": 2,
+    "i": 63
+  },
+  {
+    "id": "儀",
+    "kanji": "儀",
+    "han_viet": "NGHI",
+    "meaning": "Lễ nghi",
+    "on_yomi": [
+      "ぎ"
+    ],
+    "jlpt_level": "N3",
+    "page": 2,
+    "i": 64
+  },
+  {
+    "id": "儒",
+    "kanji": "儒",
+    "han_viet": "NHO",
+    "meaning": "Nho giáo",
+    "on_yomi": [
+      "じゅ"
+    ],
+    "jlpt_level": "N2",
+    "page": 2,
+    "i": 65
+  },
+  {
+    "id": "優",
+    "kanji": "優",
+    "han_viet": "ƯU",
+    "meaning": "Ưu việt",
+    "on_yomi": [
+      "ゆう"
+    ],
+    "jlpt_level": "N4",
+    "page": 2,
+    "i": 66
+  },
+  {
+    "id": "償",
+    "kanji": "償",
+    "han_viet": "THƯƠNG",
+    "meaning": "Bồi thường, đền",
+    "on_yomi": [
+      "しょう"
+    ],
+    "jlpt_level": "N3",
+    "page": 2,
+    "i": 67
+  },
+  {
+    "id": "儲",
+    "kanji": "儲",
+    "han_viet": "Trữ",
+    "meaning": "Kiếm lời, lợi nhuận",
+    "on_yomi": [],
+    "jlpt_level": "N2",
+    "page": 2,
+    "i": 68
+  },
+  {
+    "id": "元",
+    "kanji": "元",
+    "han_viet": "NGUYÊN",
+    "meaning": "Căn bản, nguồn",
+    "on_yomi": [
+      "げん",
+      "がん"
+    ],
+    "jlpt_level": "N5",
+    "page": 2,
+    "i": 69
+  },
+  {
+    "id": "兄",
+    "kanji": "兄",
+    "han_viet": "HUYNH",
+    "meaning": "Anh trai",
+    "on_yomi": [
+      "けい",
+      "きょう"
+    ],
+    "jlpt_level": "N5",
+    "page": 2,
+    "i": 70
+  },
+  {
+    "id": "先",
+    "kanji": "先",
+    "han_viet": "TIÊN",
+    "meaning": "Trước, tổ tiên",
+    "on_yomi": [
+      "せん"
+    ],
+    "jlpt_level": "N5",
+    "page": 2,
+    "i": 71
+  },
+  {
+    "id": "光",
+    "kanji": "光",
+    "han_viet": "QUANG",
+    "meaning": "Ánh sáng",
+    "on_yomi": [
+      "こう"
+    ],
+    "jlpt_level": "N4",
+    "page": 2,
+    "i": 72
+  },
+  {
+    "id": "兆",
+    "kanji": "兆",
+    "han_viet": "TRIỆU",
+    "meaning": "1 nghìn tỷ, dấu hiệu",
+    "on_yomi": [
+      "ちょう"
+    ],
+    "jlpt_level": "N2",
+    "page": 2,
+    "i": 73
+  },
+  {
+    "id": "充",
+    "kanji": "充",
+    "han_viet": "SUNG",
+    "meaning": "Sung túc, đầy",
+    "on_yomi": [
+      "じゅう"
+    ],
+    "jlpt_level": "N3",
+    "page": 2,
+    "i": 74
+  },
+  {
+    "id": "児",
+    "kanji": "児",
+    "han_viet": "NHI",
+    "meaning": "Nhi đồng",
+    "on_yomi": [
+      "じ",
+      "に"
+    ],
+    "jlpt_level": "N3",
+    "page": 2,
+    "i": 75
+  },
+  {
+    "id": "克",
+    "kanji": "克",
+    "han_viet": "KHẮC",
+    "meaning": "Khắc phục",
+    "on_yomi": [
+      "こく"
+    ],
+    "jlpt_level": "N3",
+    "page": 2,
+    "i": 76
+  },
+  {
+    "id": "免",
+    "kanji": "免",
+    "han_viet": "MIỄN",
+    "meaning": "Bãi miễn",
+    "on_yomi": [
+      "めん"
+    ],
+    "jlpt_level": "N3",
+    "page": 2,
+    "i": 77
+  },
+  {
+    "id": "党",
+    "kanji": "党",
+    "han_viet": "ĐẢNG",
+    "meaning": "Phe đảng",
+    "on_yomi": [
+      "とう"
+    ],
+    "jlpt_level": "N2",
+    "page": 2,
+    "i": 78
+  },
+  {
+    "id": "入",
+    "kanji": "入",
+    "han_viet": "NHẬP",
+    "meaning": "Vào",
+    "on_yomi": [
+      "にゅう"
+    ],
+    "jlpt_level": "N5",
+    "page": 2,
+    "i": 79
+  }
+]

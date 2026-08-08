@@ -22,6 +22,8 @@ const STATIC_ASSETS = [
   "./manifest.json",
   "./search.js",
   "./srs.js",
+  "./kanji-csv-parser.js",
+  "./kanji-merge.js",
   // Font files (will attempt to cache, but won't fail if not available)
   "./asserts/fonts/v15-rg-kR9Q9UFVG-xI5L5RivnA-Xg.woff2",
   "./asserts/fonts/v15-rg-kR9Q9UFVG-xI5L5RivnA-Xw.woff2",
